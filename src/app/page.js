@@ -24,9 +24,11 @@ export const metadata = {
 };
 
 import BookDemo from "./components/BookDemo";
+import PartnershipShowcase from "./components/Certificates";
 import CourseCatalog from "./components/CourseCatalog";
 import Hero from "./components/Hero";
 import LearningJourney from "./components/LearningJourney";
+import LogoMarquee from "./components/LogoSlider";
 import OurTeam from "./components/OurTeam";
 import PopularCourses from "./components/PopularCourses";
 import ReviewsSlider from "./components/ReviewsSlider";
@@ -37,9 +39,12 @@ export default function Page() {
   return (
     <>
       <Hero />
-      <PopularCourses />
-      <WhyChooseUs/>
+      <LogoMarquee />
+      <PartnershipShowcase />
       <CourseCatalog />
+
+      {/* <PopularCourses /> */}
+      <WhyChooseUs/>
       <ReviewsSlider />
       <LearningJourney/>
       <OurTeam/>

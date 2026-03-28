@@ -4,7 +4,9 @@
   --background: #ffffff;
   --foreground: #171717;
   --font-oswald: "Oswald", sans-serif;
-
+  --font-geist-sans: "Geist Sans", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+  --font-nunito-sans: "Nunito Sans", sans-serif;
 }
 
 @theme inline {
@@ -28,5 +30,58 @@ body {
 }
 
 .heading-oswald {
-  font-family: var(--font-oswald);
+  font-family: var(--font-nunito-sans);
+}
+
+
+@layer utilities {
+  @keyframes marquee-loop {
+   0%,100% {
+    transform: translateX(0);
+  }
+  99.999% {
+    transform: translateX(-50%);
+  }
+
+  }
+
+  .animate-marquee-loop {
+    animation: marquee-loop 20s linear infinite;
+  }
+    .animate-marquee-loop2 {
+    animation: marquee-loop 10s linear infinite;
+  }
+
+  /* .animate-marquee-loop:hover {
+    animation-play-state: paused;
+  } */
+
+  @keyframes marquee-loop-reverse {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+
+     0%,100% {
+    transform: translateX(-50%);
+  }
+  99.999% {
+    transform: translateX(0);
+  }
+  }
+
+  .animate-marquee-loop-reverse {
+    animation: marquee-loop-reverse 20s linear infinite;
+  }
+
+  /* .animate-marquee-loop-reverse:hover {
+    animation-play-state: paused;
+  } */
+
+
+
+
 }

@@ -26,7 +26,7 @@ const HERO_IMG = heroImg;
 
 // Public royalty-free loop from Pixabay / Coverr proxy
 // Fallback: soft animated gradient shown if video doesn't load
-const VIDEO_SRC = "https://assets.mixkit.co/videos/preview/mixkit-children-using-computers-in-the-classroom-4829-large.mp4";
+const VIDEO_SRC = "/hero.mp4";
 
 const FEATURES = [
   { icon: Code2,  label: "Live Coding Classes",  color: BRAND.blue   },
@@ -87,7 +87,7 @@ export default function Hero() {
           muted
           playsInline
           preload="auto"
-          poster="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&h=900&fit=crop&q=60"
+          poster="="
           className="h-full w-full object-cover scale-105"
         >
           <source src={VIDEO_SRC} type="video/mp4" />
@@ -96,47 +96,19 @@ export default function Hero() {
 
       {/* Layer 1 — primary light wash (keeps it warm & parent-friendly) */}
       <div
-        className="absolute inset-0 z-[1]"
-        style={{
-          background: "linear-gradient(120deg, rgba(245,248,255,0.93) 0%, rgba(255,249,244,0.90) 55%, rgba(230,243,255,0.82) 100%)",
-        }}
+        className="absolute inset-0 z-[1] bg-linear-120 from-[#f5f8ff]/90 via-[#fff9f4]/70 to-[#e6f3ff]/80"
+        // style={{
+        //   background: "linear-gradient(120deg, rgba(245,248,255,0.93) 0%, rgba(255,249,244,0.90) 55%, rgba(230,243,255,0.82) 100%)",
+        // }}
         aria-hidden="true"
       />
 
-      {/* Layer 2 — decorative colour blobs */}
-      <div className="absolute inset-0 z-[2] pointer-events-none overflow-hidden" aria-hidden="true">
-        {/* top-left blue bloom */}
-        <div
-          className="absolute rounded-full blur-3xl opacity-20"
-          style={{ width: 680, height: 680, top: "-180px", left: "-160px",
-            background: `radial-gradient(circle, ${BRAND.blue} 0%, transparent 68%)` }}
-        />
-        {/* bottom-right orange bloom */}
-        <div
-          className="absolute rounded-full blur-3xl opacity-15"
-          style={{ width: 520, height: 520, bottom: "-120px", right: "-80px",
-            background: `radial-gradient(circle, ${BRAND.orange} 0%, transparent 68%)` }}
-        />
-        {/* centre accent */}
-        <div
-          className="absolute rounded-full blur-2xl opacity-10"
-          style={{ width: 360, height: 360, top: "30%", left: "42%",
-            background: `radial-gradient(circle, ${BRAND.lightBlue} 0%, transparent 70%)` }}
-        />
-        {/* dot-grid texture */}
-        <div
-          className="absolute inset-0 opacity-[0.055]"
-          style={{
-            backgroundImage: `radial-gradient(${BRAND.blue} 1px, transparent 1px)`,
-            backgroundSize: "36px 36px",
-          }}
-        />
-      </div>
+
 
       {/* ═══════════════════════════════════
           CONTENT
       ═══════════════════════════════════ */}
-      <div className="
+      {/* <div className="
         relative z-10
         mx-auto w-full 
         px-5 sm:px-8 lg:px-12
@@ -144,7 +116,8 @@ export default function Hero() {
         grid lg:grid-cols-[1fr_480px] xl:grid-cols-[1fr_520px]
         gap-10 xl:gap-14
         items-center
-      ">
+      "> */}
+      <div className="relative z-10 mx-auto w-full px-5 sm:px-8 lg:px-12 py-16 lg:py-0 grid lg:grid-cols-[1fr_480px] xl:grid-cols-[1fr_520px] gap-10 xl:gap-14 items-center">
 
         {/* ──── LEFT — copy & CTAs ──── */}
         <motion.div
@@ -177,7 +150,7 @@ export default function Hero() {
           {/* Headline */}
           <motion.h1
             variants={fadeSlide}
-            className="heading-oswald font-bold uppercase leading-[1.01] tracking-tighter text-gray-900"
+            className="heading-oswald font-black leading-[1.01] tracking-tighter text-gray-800 max-w-4xl"
             style={{ fontSize: "clamp(2.1rem, 4.5vw, 3.6rem)" }}
           >
             Prepare Young Minds for the Future with{" "}

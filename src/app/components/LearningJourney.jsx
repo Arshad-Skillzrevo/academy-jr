@@ -117,9 +117,7 @@ function StepCard({ step, index, total }) {
   return (
     <div ref={ref} className="relative flex flex-col items-center"
     style={{ fontFamily: "'Nunito', sans-serif" }}>
-      <FontLoader />
-      <WavyTop fill="#ffffff" />
-      <WavyBottom fill="#ffffff" />
+      
 
       {/* ── connector line (desktop: horizontal, mobile: vertical) ── */}
       {!isLast && (

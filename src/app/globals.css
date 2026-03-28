@@ -18,7 +18,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffffff;
     --foreground: #ededed;
   }
 }
@@ -121,4 +121,49 @@ body {
   .kid-btn-orange {
     @apply bg-orange-500 hover:bg-orange-600 hover:shadow-orange-200;
   }
+}
+
+
+/* ─────────────────────────────────────────
+   CUSTOM SCROLLBAR — Kids Design System
+───────────────────────────────────────── */
+
+/* Width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #f5f0ff, #fff0f7);
+  border-radius: 100px;
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a855f7, #7c3aed);
+  border-radius: 100px;
+  border: 2px solid #f5f0ff;
+}
+
+/* Thumb hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7c3aed, #6d28d9);
+}
+
+/* Thumb active (clicking) */
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, #f97316, #ea580c);
+}
+
+/* Corner (where horizontal + vertical meet) */
+::-webkit-scrollbar-corner {
+  background: #f5f0ff;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a855f7 #f5f0ff;
 }

@@ -13,6 +13,55 @@ import {
   ExternalLink,
   ChevronRight,
 } from "lucide-react";
+function WavyTop({ fill = "#ffffff" }) {
+  return (
+    <div
+      className="absolute top-0 left-0 w-full pointer-events-none z-[4]"
+      style={{ lineHeight: 0 }}
+      aria-hidden="true"
+    >
+      <svg
+        viewBox="0 0 1440 56"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,28 C240,56 480,0 720,28 C960,56 1200,0 1440,28 L1440,0 L0,0 Z"
+          fill={fill}
+        />
+      </svg>
+    </div>
+  );
+}
+
+function WavyBottom({ fill = "#ffffff" }) {
+  return (
+    <div
+      className="absolute bottom-0 left-0 w-full pointer-events-none z-[4]"
+      style={{ lineHeight: 0 }}
+      aria-hidden="true"
+    >
+      <svg
+        viewBox="0 0 1440 56"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,28 C240,56 480,0 720,28 C960,56 1200,0 1440,28 L1440,56 L0,56 Z"
+          fill={fill}
+        />
+      </svg>
+    </div>
+  );
+}
+
+
+const FontLoader = () => (
+  <style>{`
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+  `}</style>
+);
 
 const B = { blue: "#1642d6", light: "#1d8fff", orange: "#ff6900" };
 
@@ -357,17 +406,21 @@ export default function OurTeam() {
 
   return (
     <>
-      <section className="relative py-20 overflow-hidden" style={{ background: "#ffffff" }}>
+    <FontLoader />
+   
+      <section className="relative py-20 overflow-hidden bg-linear-120 from-[#1d8fff]/10 to-[#1642d6]/10" style={{ fontFamily: "'Nunito', sans-serif",  }}>
+         <WavyTop fill="#ffffff" />
+      <WavyBottom fill="#ffffff" />
 
         {/* blobs */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-          <div className="absolute rounded-full blur-3xl opacity-[0.06]"
+          <div className="absolute rounded-full blur-3xl opacity-[0.4]"
             style={{ width: 640, height: 640, top: "-160px", right: "-160px",
               background: `radial-gradient(circle, ${B.blue}, transparent 70%)` }} />
-          <div className="absolute rounded-full blur-3xl opacity-[0.05]"
+          <div className="absolute rounded-full blur-3xl opacity-[0.4]"
             style={{ width: 480, height: 480, bottom: "-100px", left: "-80px",
               background: `radial-gradient(circle, ${B.orange}, transparent 70%)` }} />
-          <div className="absolute inset-0 opacity-[0.025]"
+          <div className="absolute inset-0 opacity-[0.4]"
             style={{ backgroundImage: `radial-gradient(${B.blue} 1px, transparent 1px)`,
               backgroundSize: "40px 40px" }} />
         </div>
@@ -391,8 +444,8 @@ export default function OurTeam() {
             </span>
 
             <h2
-              className="heading-oswald font-bold uppercase leading-tight tracking-tight text-gray-900"
-              style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.9rem)" }}
+              className="heading-oswald font-normal leading-loose tracking-normal text-gray-900"
+              style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.9rem)", fontFamily: "'Fredoka One', cursive" }}
             >
               Learn from{" "}
               <span style={{

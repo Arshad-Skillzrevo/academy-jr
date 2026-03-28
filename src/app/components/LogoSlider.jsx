@@ -269,7 +269,7 @@ const LogoMarquee = () => {
                 }}
               >
                 <div
-                  className="w-full h-full rounded-2xl overflow-hidden"
+                  className="relative w-full h-full rounded-2xl overflow-hidden"
                   style={{
                     background: "rgba(255,255,255,0.92)",
                     border: "1.5px solid rgba(124,58,237,0.10)",
@@ -283,6 +283,7 @@ const LogoMarquee = () => {
                     className="object-contain p-3"
                     fill
                     sizes="168px"
+                    loading="eager"
                   />
                 </div>
               </motion.div>

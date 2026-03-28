@@ -20,6 +20,57 @@ import {
 
 const B = { blue: "#1642d6", light: "#1d8fff", orange: "#ff6900" };
 
+
+function WavyTop({ fill = "#ffffff" }) {
+  return (
+    <div
+      className="absolute top-0 left-0 w-full pointer-events-none z-[4]"
+      style={{ lineHeight: 0 }}
+      aria-hidden="true"
+    >
+      <svg
+        viewBox="0 0 1440 56"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,28 C240,56 480,0 720,28 C960,56 1200,0 1440,28 L1440,0 L0,0 Z"
+          fill={fill}
+        />
+      </svg>
+    </div>
+  );
+}
+
+function WavyBottom({ fill = "#ffffff" }) {
+  return (
+    <div
+      className="absolute bottom-0 left-0 w-full pointer-events-none z-[4]"
+      style={{ lineHeight: 0 }}
+      aria-hidden="true"
+    >
+      <svg
+        viewBox="0 0 1440 56"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,28 C240,56 480,0 720,28 C960,56 1200,0 1440,28 L1440,56 L0,56 Z"
+          fill={fill}
+        />
+      </svg>
+    </div>
+  );
+}
+
+
+const FontLoader = () => (
+  <style>{`
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+  `}</style>
+);
+
 const COURSES = [
   "Web Development for Beginners (HTML & CSS)",
   "Interactive Web Development (HTML, CSS & JS)",
@@ -98,10 +149,15 @@ export default function BookDemo() {
   }
 
   return (
+    <>
+      <FontLoader />
+    
     <section
-      className="relative overflow-hidden py-0"
-      style={{ background: `linear-gradient(135deg, ${B.blue} 0%, ${B.light} 100%)` }}
+      className="relative overflow-hidden py-22"
+      style={{ background: `linear-gradient(135deg, ${B.blue} 0%, ${B.light} 100%)`, fontFamily: "'Nunito', sans-serif" }}
     >
+       <WavyTop fill="#ffffff" />
+       <WavyBottom fill="#ffffff" />
       {/* ── decorative dot grid ── */}
       <div className="absolute inset-0 opacity-[0.07] pointer-events-none"
         style={{ backgroundImage: `radial-gradient(rgba(255,255,255,0.8) 1px, transparent 1px)`,
@@ -154,8 +210,8 @@ export default function BookDemo() {
           </span>
 
           <h2
-            className="heading-oswald font-bold uppercase leading-[1.05] tracking-tight"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
+            className="font-light leading-normal tracking-tight"
+            style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)", fontFamily: "'Fredoka One', cursive" }}
           >
             Empower Your Child with{" "}
             <span style={{
@@ -413,5 +469,6 @@ export default function BookDemo() {
 
       </div>
     </section>
+    </>
   );
 }

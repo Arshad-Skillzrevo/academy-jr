@@ -53,7 +53,7 @@ export function HeroSection({
             <WobblyStarSVG size={16} color="#f97316" className="inline-block ml-1" />
           </div>
 
-          <h1 className="font-fredoka text-5xl md:text-6xl lg:text-7xl leading-tight text-gray-900 mb-2">
+          <h1 className="font-fredoka text-4xl md:text-5xl lg:text-6xl leading-tighter text-gray-900 mb-2">
             <span className="squiggle-underline">{title}</span>
           </h1>
           <p className="font-fredoka text-2xl md:text-3xl text-indigo-500 mb-4">{subtitle}</p>

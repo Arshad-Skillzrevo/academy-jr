@@ -1,8 +1,8 @@
 export const courses = [
   {
     slug: "web-development-for-kids",
-    title: "Create Your First Website",
-    subtitle: "Fun Web Development Course for Kids",
+    title: "Fun Web Development Course for Kids",
+    subtitle: "Create Your First Website",
     description:
       "Students learn how to design, build, and launch their own websites with HTML, CSS, and JavaScript.",
     grade: "9-12",

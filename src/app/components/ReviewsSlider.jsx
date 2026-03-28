@@ -13,7 +13,8 @@ const REVIEWS = [
     name: "Aarav Sharma",
     role: "Web Development Student",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1545696968-1a5245650b36?w=120&h=120&fit=crop&crop=face&q=80",
+    avatar:
+      "https://images.unsplash.com/photo-1545696968-1a5245650b36?w=120&h=120&fit=crop&crop=face&q=80",
     course: "Web Development",
     accent: B.blue,
     bg: "#dbeafe",
@@ -24,7 +25,8 @@ const REVIEWS = [
     name: "Riya Gupta",
     role: "AI & ML Student",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=120&h=120&fit=crop&crop=face&q=80",
+    avatar:
+      "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=120&h=120&fit=crop&crop=face&q=80",
     course: "AI & Machine Learning",
     accent: "#6d28d9",
     bg: "#ede9fe",
@@ -35,20 +37,85 @@ const REVIEWS = [
     name: "Aditya Verma",
     role: "Full Stack Student",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&h=120&fit=crop&crop=face&q=80",
+    avatar:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&h=120&fit=crop&crop=face&q=80",
     course: "Full Stack Development",
     accent: B.orange,
     bg: "#ffedd5",
   },
 ];
 
+function DottedBg({ color = "#7c3aed", opacity = 0.04, size = 28 }) {
+  return (
+    <div
+      className="absolute inset-0 pointer-events-none"
+      aria-hidden="true"
+      style={{
+        backgroundImage: `radial-gradient(circle, ${color} 1.5px, transparent 1.5px)`,
+        backgroundSize: `${size}px ${size}px`,
+        opacity,
+      }}
+    />
+  );
+}
+
+function WavyTop({ fill = "#ffffff" }) {
+  return (
+    <div
+      className="absolute top-0 left-0 w-full pointer-events-none z-[4]"
+      style={{ lineHeight: 0 }}
+      aria-hidden="true"
+    >
+      <svg
+        viewBox="0 0 1440 56"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,28 C240,56 480,0 720,28 C960,56 1200,0 1440,28 L1440,0 L0,0 Z"
+          fill={fill}
+        />
+      </svg>
+    </div>
+  );
+}
+
+function WavyBottom({ fill = "#ffffff" }) {
+  return (
+    <div
+      className="absolute bottom-0 left-0 w-full pointer-events-none z-[4]"
+      style={{ lineHeight: 0 }}
+      aria-hidden="true"
+    >
+      <svg
+        viewBox="0 0 1440 56"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,28 C240,56 480,0 720,28 C960,56 1200,0 1440,28 L1440,56 L0,56 Z"
+          fill={fill}
+        />
+      </svg>
+    </div>
+  );
+}
+
+
+const FontLoader = () => (
+  <style>{`
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+  `}</style>
+);
+
 const DURATION = 5000;
 
 export default function ReviewsSlider() {
   const [current, setCurrent] = useState(0);
-  const [dir, setDir]         = useState(1);
-  const [paused, setPaused]   = useState(false);
-  const timerRef              = useRef(null);
+  const [dir, setDir] = useState(1);
+  const [paused, setPaused] = useState(false);
+  const timerRef = useRef(null);
 
   const review = REVIEWS[current];
 
@@ -65,35 +132,69 @@ export default function ReviewsSlider() {
   }
 
   const variants = {
-    enter:  (d) => ({ opacity: 0, x: d > 0 ? 60 : -60, scale: 0.97 }),
-    center: { opacity: 1, x: 0, scale: 1,
-      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
-    exit:   (d) => ({ opacity: 0, x: d > 0 ? -60 : 60, scale: 0.97,
-      transition: { duration: 0.3 } }),
+    enter: (d) => ({ opacity: 0, x: d > 0 ? 60 : -60, scale: 0.97 }),
+    center: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+    },
+    exit: (d) => ({
+      opacity: 0,
+      x: d > 0 ? -60 : 60,
+      scale: 0.97,
+      transition: { duration: 0.3 },
+    }),
   };
 
   return (
     <section
       className="relative py-20 overflow-hidden"
-      style={{ background: "#f8faff" }}
+      style={{ background: "#f8faff",
+         fontFamily: "'Nunito', sans-serif",
+       }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
+      <FontLoader />
+      {/* <DottedBg color={slide.accent} opacity={0.035} size={30} /> */}
+      <WavyTop fill="#ffffff" />
+      <WavyBottom fill="#ffffff" />
       {/* blobs */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <div className="absolute rounded-full blur-3xl opacity-[0.08]"
-          style={{ width: 600, height: 600, top: "-150px", left: "-150px",
-            background: `radial-gradient(circle, ${B.blue}, transparent 70%)` }} />
-        <div className="absolute rounded-full blur-3xl opacity-[0.07]"
-          style={{ width: 480, height: 480, bottom: "-100px", right: "-80px",
-            background: `radial-gradient(circle, ${B.orange}, transparent 70%)` }} />
-        <div className="absolute inset-0 opacity-[0.03]"
-          style={{ backgroundImage: `radial-gradient(${B.blue} 1px, transparent 1px)`,
-            backgroundSize: "36px 36px" }} />
+      <div
+        className="absolute inset-0 pointer-events-none overflow-hidden"
+        aria-hidden="true"
+      >
+        <div
+          className="absolute rounded-full blur-3xl opacity-[0.08]"
+          style={{
+            width: 600,
+            height: 600,
+            top: "-150px",
+            left: "-150px",
+            background: `radial-gradient(circle, ${B.blue}, transparent 70%)`,
+          }}
+        />
+        <div
+          className="absolute rounded-full blur-3xl opacity-[0.07]"
+          style={{
+            width: 480,
+            height: 480,
+            bottom: "-100px",
+            right: "-80px",
+            background: `radial-gradient(circle, ${B.orange}, transparent 70%)`,
+          }}
+        />
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `radial-gradient(${B.blue} 1px, transparent 1px)`,
+            backgroundSize: "36px 36px",
+          }}
+        />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 lg:px-12">
-
         {/* header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -104,21 +205,31 @@ export default function ReviewsSlider() {
         >
           <span
             className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-widest border mb-5"
-            style={{ color: B.blue, borderColor: `${B.blue}30`, background: `${B.blue}0d` }}
+            style={{
+              color: B.blue,
+              borderColor: `${B.blue}30`,
+              background: `${B.blue}0d`,
+            }}
           >
             <Sparkles size={11} style={{ color: B.orange }} />
             Student Reviews
           </span>
 
           <h2
-            className="heading-oswald font-bold uppercase leading-tight tracking-tight text-gray-900"
-            style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.8rem)" }}
+            className="font-normal leading-normal tracking-normal text-gray-900"
+            style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.8rem)",
+                fontFamily: "'Fredoka One', cursive",
+             }}
           >
             What Our{" "}
-            <span style={{
-              background: `linear-gradient(105deg, ${B.light}, ${B.blue})`,
-              WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
-            }}>
+            <span
+              style={{
+                background: `linear-gradient(105deg, ${B.light}, ${B.blue})`,
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
               Students Say
             </span>
           </h2>
@@ -129,7 +240,9 @@ export default function ReviewsSlider() {
               <Star key={i} size={18} fill={B.orange} color={B.orange} />
             ))}
             <span className="text-sm font-bold text-gray-700 ml-1">4.9</span>
-            <span className="text-sm text-gray-400">· Trusted by 2,000+ parents</span>
+            <span className="text-sm text-gray-400">
+              · Trusted by 2,000+ parents
+            </span>
           </div>
         </motion.div>
 
@@ -140,7 +253,9 @@ export default function ReviewsSlider() {
             className="absolute -top-8 left-1/2 -translate-x-1/2 select-none pointer-events-none font-black leading-none opacity-[0.04] text-[200px]"
             style={{ color: B.blue, lineHeight: 1 }}
             aria-hidden="true"
-          >"</div>
+          >
+            "
+          </div>
 
           <AnimatePresence mode="wait" custom={dir}>
             <motion.div
@@ -159,7 +274,9 @@ export default function ReviewsSlider() {
               {/* accent top bar */}
               <div
                 className="absolute top-0 left-8 right-8 h-1 rounded-b-full"
-                style={{ background: `linear-gradient(90deg, ${review.accent}, ${B.orange})` }}
+                style={{
+                  background: `linear-gradient(90deg, ${review.accent}, ${B.orange})`,
+                }}
               />
 
               {/* quote icon */}
@@ -205,7 +322,9 @@ export default function ReviewsSlider() {
                     <p className="heading-oswald font-bold text-gray-900 text-[1rem] leading-tight">
                       {review.name}
                     </p>
-                    <p className="text-[12px] text-gray-400 mt-0.5 font-medium">{review.role}</p>
+                    <p className="text-[12px] text-gray-400 mt-0.5 font-medium">
+                      {review.role}
+                    </p>
                     <span
                       className="inline-block mt-1 rounded-full px-2 py-0.5 text-[10px] font-bold"
                       style={{ background: review.bg, color: review.accent }}
@@ -219,10 +338,17 @@ export default function ReviewsSlider() {
                 <div className="flex flex-col items-end gap-1">
                   <div className="flex gap-0.5">
                     {Array.from({ length: review.rating }).map((_, i) => (
-                      <Star key={i} size={16} fill={B.orange} color={B.orange} />
+                      <Star
+                        key={i}
+                        size={16}
+                        fill={B.orange}
+                        color={B.orange}
+                      />
                     ))}
                   </div>
-                  <span className="text-[11px] text-gray-400 font-medium">Verified Student</span>
+                  <span className="text-[11px] text-gray-400 font-medium">
+                    Verified Student
+                  </span>
                 </div>
               </div>
             </motion.div>
@@ -235,7 +361,11 @@ export default function ReviewsSlider() {
           <button
             onClick={() => go(-1)}
             className="w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95"
-            style={{ borderColor: `${B.blue}30`, background: `${B.blue}0d`, color: B.blue }}
+            style={{
+              borderColor: `${B.blue}30`,
+              background: `${B.blue}0d`,
+              color: B.blue,
+            }}
             aria-label="Previous review"
           >
             <ChevronLeft size={18} />
@@ -248,7 +378,10 @@ export default function ReviewsSlider() {
               return (
                 <button
                   key={r.id}
-                  onClick={() => { setDir(i > current ? 1 : -1); setCurrent(i); }}
+                  onClick={() => {
+                    setDir(i > current ? 1 : -1);
+                    setCurrent(i);
+                  }}
                   aria-label={`Go to review ${i + 1}`}
                   className="relative flex items-center justify-center transition-all duration-300"
                   style={{
@@ -312,7 +445,6 @@ export default function ReviewsSlider() {
             );
           })}
         </div> */}
-
       </div>
 
       {/* keyframe for dot progress */}

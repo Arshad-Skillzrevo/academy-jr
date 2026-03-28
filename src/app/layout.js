@@ -24,6 +24,7 @@ const nunitoSans = Nunito_Sans({
   variable: "--font-nunito-sans",
 });
 
+
 export const metadata = {
   title: "SkillzRevo | Best Data Science, AI & Cybersecurity Training Institute in India 2025",
   description:

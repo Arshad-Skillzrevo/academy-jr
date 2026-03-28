@@ -57,6 +57,56 @@ const STEPS = [
   },
 ];
 
+function WavyTop({ fill = "#ffffff" }) {
+  return (
+    <div
+      className="absolute top-0 left-0 w-full pointer-events-none z-[4]"
+      style={{ lineHeight: 0 }}
+      aria-hidden="true"
+    >
+      <svg
+        viewBox="0 0 1440 56"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,28 C240,56 480,0 720,28 C960,56 1200,0 1440,28 L1440,0 L0,0 Z"
+          fill={fill}
+        />
+      </svg>
+    </div>
+  );
+}
+
+function WavyBottom({ fill = "#ffffff" }) {
+  return (
+    <div
+      className="absolute bottom-0 left-0 w-full pointer-events-none z-[4]"
+      style={{ lineHeight: 0 }}
+      aria-hidden="true"
+    >
+      <svg
+        viewBox="0 0 1440 56"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,28 C240,56 480,0 720,28 C960,56 1200,0 1440,28 L1440,56 L0,56 Z"
+          fill={fill}
+        />
+      </svg>
+    </div>
+  );
+}
+
+
+const FontLoader = () => (
+  <style>{`
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+  `}</style>
+);
+
 /* single step card */
 function StepCard({ step, index, total }) {
   const ref    = useRef(null);
@@ -65,7 +115,11 @@ function StepCard({ step, index, total }) {
   const isLast = index === total - 1;
 
   return (
-    <div ref={ref} className="relative flex flex-col items-center">
+    <div ref={ref} className="relative flex flex-col items-center"
+    style={{ fontFamily: "'Nunito', sans-serif" }}>
+      <FontLoader />
+      <WavyTop fill="#ffffff" />
+      <WavyBottom fill="#ffffff" />
 
       {/* ── connector line (desktop: horizontal, mobile: vertical) ── */}
       {!isLast && (
@@ -188,9 +242,13 @@ export default function LearningJourney() {
 
   return (
     <section
-      className="relative py-12 overflow-hidden"
-      style={{ background: "#e6edff" }}
+      className="relative py-22 overflow-hidden"
+      style={{ background: "#e6edff", fontFamily: "'Nunito', sans-serif" }}
     >
+
+       <FontLoader />
+      <WavyTop fill="#ffffff" />
+      <WavyBottom fill="#ffffff" />
       {/* blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
         <div className="absolute rounded-full blur-3xl opacity-[0.07]"
@@ -223,8 +281,10 @@ export default function LearningJourney() {
             initial={{ opacity: 0, y: 18 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.55, delay: 0.1 }}
-            className="heading-oswald font-bold uppercase leading-tight tracking-tight text-gray-900"
-            style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.9rem)" }}
+            className="heading-oswald font-normal  leading-tight tracking-tight text-gray-900"
+            style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.9rem)",
+               fontFamily: "'Fredoka One', cursive"
+             }}
           >
             How Our{" "}
             <span style={{

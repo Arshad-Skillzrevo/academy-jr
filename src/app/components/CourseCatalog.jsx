@@ -588,150 +588,259 @@ const LEVEL_STYLE = {
 };
 
 /* ─────────────────────────────────────────
-   COURSES DATA
+   COURSES DATA — complete
 ───────────────────────────────────────── */
 const COURSES = [
+  /* ── Web Dev ── */
   {
     id: "web-1", cat: "web",
     title: "Web Development for Beginners",
     subtitle: "HTML & CSS Fundamentals",
+    grade: "Grade 9–10",
+    lessons: 25,
+    activities: "50+",
+    duration: "3–4 Months",
     desc: "Build and design websites using HTML for structure and CSS for styling. Create responsive webpages and understand the foundations of modern web design.",
+    achievements: [
+      "Build websites with HTML & CSS",
+      "Design responsive web pages",
+      "Create layouts with UI components",
+      "Understand structure & styling",
+      "Develop a static website project",
+    ],
     price: 34999,
     level: "Beginner",
-    duration: "8 weeks",
     students: "1.2k",
     Icon: Globe,
     accent: "#1642d6",
     img: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=640&h=400&fit=crop&q=80",
-    tags: ["HTML", "CSS", "Responsive"],
+    tags: ["HTML", "CSS", "Beginner"],
   },
   {
     id: "web-2", cat: "web",
     title: "Interactive Web Development",
     subtitle: "HTML, CSS & JavaScript",
+    grade: "Grade 9–12",
+    lessons: 30,
+    activities: "50+",
+    duration: "3–4 Months",
     desc: "Build interactive, dynamic websites using HTML, CSS, and JavaScript. Add animations, handle events, and implement real-world functionality to web pages.",
+    achievements: [
+      "Build websites with HTML, CSS & JS",
+      "Design responsive web pages",
+      "Create interactive projects",
+      "Understand website structure",
+      "Develop and present portfolio",
+    ],
     price: 49999,
     level: "Intermediate",
-    duration: "12 weeks",
     students: "980",
     Icon: Globe,
     accent: "#0284c7",
     img: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=640&h=400&fit=crop&q=80",
-    tags: ["JavaScript", "DOM", "APIs"],
+    tags: ["HTML", "CSS", "JavaScript"],
   },
   {
     id: "web-3", cat: "web",
     title: "Advanced Full Stack Development",
     subtitle: "Complete Web Applications",
-    desc: "Build complete web applications from frontend to backend using modern technologies, including database integration and deployment workflows.",
+    grade: "Grade 9–12",
+    lessons: 70,
+    activities: "80+",
+    duration: "5–6 Months",
+    desc: "Build complete web applications from frontend to backend using modern technologies, including database integration and industry best practices.",
+    achievements: [
+      "Work with real-world data",
+      "Clean, analyze & visualize data",
+      "Build logic-based programs",
+      "Apply basic ML concepts",
+      "Develop and present projects",
+    ],
     price: 89999,
     level: "Advanced",
-    duration: "20 weeks",
     students: "750",
     Icon: Globe,
     accent: "#7c3aed",
     img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=640&h=400&fit=crop&q=80",
-    tags: ["Full Stack", "Backend", "Databases"],
+    tags: ["Full Stack", "Web Apps", "Projects", "Portfolio"],
     featured: true,
   },
+
+  /* ── AI & ML ── */
   {
     id: "aiml-1", cat: "aiml",
     title: "Data Analysis Foundations",
     subtitle: "Excel · Python · Power BI",
-    desc: "Analyze and visualize data using industry tools like Excel, Python, SQL, and Power BI. Understand how data is collected, cleaned, and converted into insights.",
+    grade: "Grade 9–12",
+    lessons: 47,
+    activities: "50+",
+    duration: "4–5 Months",
+    desc: "Analyze and visualize data using industry tools like Excel, Python, SQL, and Power BI. Understand how data is collected, cleaned, and converted into meaningful insights.",
+    achievements: [
+      "Analyze data with Excel & Python",
+      "Clean and organize datasets",
+      "Create charts & dashboards",
+      "Build tools like calculators",
+      "Develop and present projects",
+    ],
     price: 34999,
     level: "Beginner",
-    duration: "10 weeks",
     students: "1.5k",
     Icon: Brain,
     accent: "#059669",
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=640&h=400&fit=crop&q=80",
-    tags: ["Excel", "Python", "Power BI"],
+    tags: ["Excel", "Python", "Power BI", "Beginner"],
   },
   {
     id: "aiml-2", cat: "aiml",
     title: "AI & Machine Learning Foundations",
     subtitle: "Python · ML Algorithms",
+    grade: "Grade 9–12",
+    lessons: 40,
+    activities: "50+",
+    duration: "4–5 Months",
     desc: "Explore the fundamentals of AI and Machine Learning using Python. Learn data analysis, statistics, ML algorithms, and build beginner AI projects.",
+    achievements: [
+      "Understand AI & ML basics",
+      "Analyze data with Python, NumPy & Pandas",
+      "Build prediction models",
+      "Apply ML algorithms",
+      "Create AI-based projects",
+    ],
     price: 44999,
     level: "Intermediate",
-    duration: "14 weeks",
     students: "890",
     Icon: Brain,
     accent: "#7c3aed",
     img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=640&h=400&fit=crop&q=80",
-    tags: ["Python", "ML", "Neural Nets"],
+    tags: ["Python", "Machine Learning", "AI"],
     featured: true,
   },
   {
     id: "aiml-3", cat: "aiml",
     title: "Full Stack AI & Machine Learning",
     subtitle: "Complete AI Engineering",
+    grade: "Grade 9–12",
+    lessons: 70,
+    activities: "70+",
+    duration: "5–6 Months",
     desc: "Master the complete AI workflow from data analysis to ML and real-world AI applications. Build dashboards, predictive models, and AI-powered tools.",
+    achievements: [
+      "Analyze & clean data using Excel & Python",
+      "Build charts, dashboards & KPI reports",
+      "Apply data & statistical concepts",
+      "Create basic ML models",
+      "Build and present data projects",
+    ],
     price: 89999,
     level: "Advanced",
-    duration: "22 weeks",
     students: "620",
     Icon: Brain,
     accent: "#db2777",
     img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=640&h=400&fit=crop&q=80",
-    tags: ["Deep Learning", "NLP", "MLOps"],
+    tags: ["Python", "Machine Learning", "AI"],
   },
+
+  /* ── Cyber Security ── */
   {
     id: "cyber-1", cat: "cyber",
     title: "Cybersecurity Foundations",
     subtitle: "Ethical Hacking · Digital Safety",
+    grade: "Grade 9–12",
+    lessons: 30,
+    activities: "30+",
+    duration: "4–5 Months",
     desc: "Learn the fundamentals of Cybersecurity, ethical hacking, and digital safety. Understand cyber threats, encryption, network security, and security tools.",
+    achievements: [
+      "Identify cyber threats & attacks",
+      "Apply security for devices & networks",
+      "Understand encryption & system security",
+      "Perform basic security analysis",
+      "Practice real-world cyber labs",
+    ],
     price: 44999,
     level: "Beginner",
-    duration: "12 weeks",
     students: "1.1k",
     Icon: ShieldCheck,
     accent: "#dc2626",
     img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=640&h=400&fit=crop&q=80",
-    tags: ["Ethical Hacking", "Networks", "Encryption"],
+    tags: ["Cyber Security", "Ethical Hacking", "Beginner"],
   },
+
+  /* ── Cloud Computing ── */
   {
     id: "cloud-1", cat: "cloud",
     title: "Cloud Computing Foundations",
     subtitle: "Cloud Infrastructure · DevOps",
-    desc: "Learn cloud computing fundamentals and modern infrastructure. Explore platforms, virtual machines, networking, and deploy applications using real cloud services.",
+    grade: "Grade 9–12",
+    lessons: 17,
+    activities: "30+",
+    duration: "2–3 Months",
+    desc: "Learn cloud computing fundamentals and modern cloud infrastructure. Explore platforms, virtual machines, storage, networking, and deploy applications using real cloud services.",
+    achievements: [
+      "Understand cloud basics & use cases",
+      "Deploy apps and host websites",
+      "Manage VMs, networks & storage",
+      "Apply security, monitoring & backup",
+      "Build scalable cloud projects",
+    ],
     price: 44999,
     level: "Beginner",
-    duration: "12 weeks",
     students: "870",
     Icon: Cloud,
     accent: "#0284c7",
     img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=640&h=400&fit=crop&q=80",
-    tags: ["AWS", "Docker", "DevOps"],
+    tags: ["Cloud Computing", "DevOps", "Beginner"],
   },
+
+  /* ── Programming ── */
   {
     id: "prog-1", cat: "prog",
     title: "Python Programming Foundations",
     subtitle: "Python · Problem Solving",
+    grade: "Grade 9–12",
+    lessons: 30,
+    activities: "50+",
+    duration: "3–4 Months",
     desc: "Learn the fundamentals of Python programming. Explore variables, conditions, loops, functions, OOP, and build practical Python applications step by step.",
+    achievements: [
+      "Understand programming basics & logic",
+      "Write code using loops, conditions & functions",
+      "Work with lists, files & objects",
+      "Build apps like calculators & games",
+      "Debug and present projects",
+    ],
     price: 34999,
     level: "Beginner",
-    duration: "10 weeks",
     students: "2.1k",
     Icon: Terminal,
     accent: "#ea580c",
     img: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=640&h=400&fit=crop&q=80",
-    tags: ["Python", "Algorithms", "OOP"],
+    tags: ["Python", "Programming", "Beginner"],
   },
   {
     id: "prog-2", cat: "prog",
     title: "Java Programming Foundations",
     subtitle: "Java · OOP Concepts",
+    grade: "Grade 9–12",
+    lessons: 40,
+    activities: "50+",
+    duration: "3–4 Months",
     desc: "Master Java programming and object-oriented development. Learn Java syntax, OOP principles, and develop real-world applications using industry best practices.",
+    achievements: [
+      "Understand programming logic",
+      "Write code with arrays & OOP",
+      "Build apps like calculator & systems",
+      "Debug and fix errors",
+      "Develop and present projects",
+    ],
     price: 34999,
     level: "Beginner",
-    duration: "10 weeks",
     students: "1.3k",
     Icon: Terminal,
     accent: "#b45309",
     img: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=640&h=400&fit=crop&q=80",
-    tags: ["Java", "OOP", "Data Structures"],
+    tags: ["Java", "OOP", "Programming"],
   },
 ];
 
@@ -783,6 +892,14 @@ function CourseCard({ course, index }) {
           </div>
         )}
 
+        {/* Grade badge */}
+        <div
+          className="absolute top-3 right-3 rounded-full px-2.5 py-0.5 text-[10px] font-semibold text-white"
+          style={{ background: "rgba(0,0,0,0.45)", backdropFilter: "blur(6px)" }}
+        >
+          {course.grade}
+        </div>
+
         {/* Icon */}
         <div
           className="absolute bottom-3 left-4 w-9 h-9 rounded-xl flex items-center justify-center"
@@ -816,9 +933,24 @@ function CourseCard({ course, index }) {
         </div>
 
         {/* Description */}
-        <p className="text-[13px] text-gray-500 leading-relaxed line-clamp-2 flex-1">
+        <p className="text-[13px] text-gray-500 leading-relaxed line-clamp-2">
           {course.desc}
         </p>
+
+        {/* Achievements */}
+        <ul className="flex flex-col gap-1">
+          {course.achievements.slice(0, 3).map((item) => (
+            <li key={item} className="flex items-start gap-1.5 text-[12px] text-gray-500">
+              <CheckCircle2
+                size={12}
+                strokeWidth={2.5}
+                className="mt-0.5 shrink-0"
+                style={{ color: course.accent }}
+              />
+              {item}
+            </li>
+          ))}
+        </ul>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-1.5">
@@ -846,6 +978,11 @@ function CourseCard({ course, index }) {
           <span className="flex items-center gap-1.5">
             <Users size={12} strokeWidth={2} />
             {course.students} enrolled
+          </span>
+          <span className="flex items-center gap-1.5 ml-auto">
+            <span className="font-medium text-gray-500">{course.lessons} lessons</span>
+            <span className="text-gray-300">·</span>
+            <span className="font-medium text-gray-500">{course.activities} activities</span>
           </span>
         </div>
 
@@ -930,7 +1067,7 @@ export default function CourseCatalog() {
             <div>
               <h2
                 className="font-bold leading-tight tracking-tight text-3xl md:text-4xl xl:text-5xl"
-                style={{  color: BRAND.navy }}
+                style={{ color: BRAND.navy }}
               >
                 Learning programs for{" "}
                 <span style={{ color: BRAND.blue }}>every skill level</span>
@@ -985,7 +1122,7 @@ export default function CourseCatalog() {
                   boxShadow:   isActive ? `0 4px 14px ${tab.accent}30` : "0 1px 3px rgba(0,0,0,0.05)",
                 }}
               >
-                <tab.Icon size={13} strokeWidth={2} />
+                <tab.Icon size={16} strokeWidth={2} />
                 {tab.label}
                 <span
                   className="rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold"

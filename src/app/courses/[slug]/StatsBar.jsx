@@ -7,6 +7,52 @@ import { CountUp } from "./CountUp";
  * A vibrant, gradient-background section that displays animated counting statistics
  * with playful icons for student engagement.
  */
+
+
+function WavyTop({ fill = "#ffffff" }) {
+  return (
+    <div
+      className="absolute top-0 left-0 w-full pointer-events-none z-[4]"
+      style={{ lineHeight: 0 }}
+      aria-hidden="true"
+    >
+      <svg
+        viewBox="0 0 1440 56"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,28 C240,56 480,0 720,28 C960,56 1200,0 1440,28 L1440,0 L0,0 Z"
+          fill={fill}
+        />
+      </svg>
+    </div>
+  );
+}
+
+function WavyBottom({ fill = "#ffffff" }) {
+  return (
+    <div
+      className="absolute bottom-0 left-0 w-full pointer-events-none z-[4]"
+      style={{ lineHeight: 0 }}
+      aria-hidden="true"
+    >
+      <svg
+        viewBox="0 0 1440 56"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,28 C240,56 480,0 720,28 C960,56 1200,0 1440,28 L1440,56 L0,56 Z"
+          fill={fill}
+        />
+      </svg>
+    </div>
+  );
+}
+
+
+
 export function StatsBar({ lessons, activities }) {
   const stats = [
     { num: "5000", suffix: "+", label: "Happy Students", icon: Smile     },
@@ -15,11 +61,18 @@ export function StatsBar({ lessons, activities }) {
     { num: "98",   suffix: "%", label: "Love It!",       icon: Heart     },
   ];
 
+
   return (
-    <section
-      className="py-12"
+
+    <>
+  
+    
+    <div className="relative py-22"
       style={{ background: "linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%)" }}
     >
+      <WavyTop fill="#ffffff" />
+      {/* <WavyBottom fill="#ffffff" /> */}
+      
       <div className="max-w-5xl mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
           {stats.map((s, i) => (
@@ -42,6 +95,8 @@ export function StatsBar({ lessons, activities }) {
           ))}
         </div>
       </div>
-    </section>
+    </div>
+          
+    </>
   );
 }

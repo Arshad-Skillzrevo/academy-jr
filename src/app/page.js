@@ -24,6 +24,7 @@ export const metadata = {
 };
 
 import BookDemo from "./components/BookDemo";
+import BundleSlider from "./components/BundleSection";
 import PartnershipShowcase from "./components/Certificates";
 import CourseCatalog from "./components/CourseCatalog";
 import Hero from "./components/Hero";
@@ -33,6 +34,7 @@ import OurTeam from "./components/OurTeam";
 import PopularCourses from "./components/PopularCourses";
 import ReviewsSlider from "./components/ReviewsSlider";
 import WhyChooseUs from "./components/Whychooseus";
+import BundleSection from "./components/BundleSection";
 
 
 export default function Page() {
@@ -41,6 +43,7 @@ export default function Page() {
       <Hero />
       <LogoMarquee />
       <PartnershipShowcase />
+      <BundleSection />
       <CourseCatalog />
 
       {/* <PopularCourses /> */}

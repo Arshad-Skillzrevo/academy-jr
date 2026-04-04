@@ -883,6 +883,1149 @@ export const courses = [
       },
     ],
   },
+  {
+    slug: "cloud-champions",
+    title: "Cloud Champions",
+    subtitle: "Learn Cloud the Easy Way",
+    description:
+      "Students learn how modern applications run on the cloud and how to deploy servers, websites, and applications using cloud platforms.",
+    grade: "8-12",
+    lessons: 17,
+    activities: "30+",
+    durationMonths: 3,
+    heroImage: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
+    color: "#1d8fff",
+
+    journeySection: {
+      heading: "Start Your Cloud Computing Journey",
+      subtitle:
+        "Learn how cloud computing powers modern websites, apps, and digital services while building hands-on projects using cloud platforms",
+      cards: [
+        {
+          icon: "📚",
+          title: "What You'll Learn",
+          type: "checklist",
+          items:[
+  "Fundamentals of cloud computing",
+  "Difference between traditional IT and cloud systems",
+  "Cloud service models like IaaS, PaaS, and SaaS",
+  "Deploying servers and applications in the cloud",
+  "Cloud storage and networking basics",
+  "Identity and access management (IAM)",
+  "Cloud monitoring, security, and automation",
+  "Designing real-world cloud architectures"
+],
+        },
+        {
+          icon: "🚀",
+          title: "Skills You'll Gain",
+          type: "bullets",
+          items: [
+  "Cloud computing fundamentals",
+  "Deploying servers and applications in the cloud",
+  "Understanding cloud networking and storage",
+  "Managing users and permissions",
+  "Monitoring cloud systems",
+  "Basic DevOps and CI/CD concepts",
+  "Designing scalable cloud architectures"
+],
+        },
+        {
+          icon: "🏆",
+          title: "What You'll Achieve",
+          type: "trophy",
+          items: [
+  " Cloud Computing Foundations Certificate",
+  "Hands-on cloud projects and labs",
+  "Real experience with cloud platforms",
+  "Access to cloud learning resources"
+],
+        },
+      ],
+    },
+
+    programOverview: {
+      heading: "Program Overview",
+      description:
+        "The Cloud Computing Foundations Program introduces students to the technology that powers modern digital services. Students will learn how companies host websites, store data, and run applications using cloud platforms. The course covers cloud infrastructure, computing services, storage, networking, and DevOps basics.Structured into 4 modules, the program includes hands-on labs, real-world cloud deployments, and practical exercises that help students understand how cloud platforms operate. By the end of the program, students will deploy a complete cloud-based application architecture as their final project.",
+      highlights: [
+        { icon: "🎓", label: "17 Live Instructor-Led Lectures" },
+        { icon: "📅", label: "3-Month Structured Learning Program" },
+        { icon: "📦", label: "4 Modules Covering Cloud Computing Concepts" },
+        { icon: "🛠️", label: "Hands-on Cloud Labs and Projects" },
+        { icon: "🖥️", label: "Final Cloud Architecture Capstone Project" },
+        { icon: "🕐", label: "Weekend & Weekday Batch Options" },
+      ],
+    },
+
+    curriculum: {
+      heading: "Course Delivery Plan",
+      modules: [
+            {
+              id: "01",
+              title: "Cloud Basics",
+              lectures: [
+                {
+                  num: 1,
+                  title: "Introduction to Cloud Computing",
+                  desc: "Understand cloud computing concepts and the difference between traditional IT infrastructure and cloud systems."
+                },
+                {
+                  num: 2,
+                  title: "Cloud Service Models (IaaS)",
+                  desc: "Learn the fundamentals of Infrastructure as a Service and explore real-world examples."
+                },
+                {
+                  num: 3,
+                  title: "PaaS, SaaS & Deployment Models",
+                  desc: "Understand Platform as a Service, Software as a Service, and cloud deployment models."
+                },
+                {
+                  num: 4,
+                  title: "Cloud Providers & Pricing",
+                  desc: "Explore major cloud providers, regions, and billing dashboards."
+                }
+              ]
+            },
+            {
+              id: "02",
+              title: "Core Cloud Services",
+              lectures: [
+                {
+                  num: 5,
+                  title: "Compute Services",
+                  desc: "Launch virtual machines and connect to them using SSH."
+                },
+                {
+                  num: 6,
+                  title: "Cloud Storage",
+                  desc: "Understand object, block, and file storage while hosting a static website."
+                },
+                {
+                  num: 7,
+                  title: "Cloud Networking",
+                  desc: "Learn about VPC, subnets, and load balancers."
+                },
+                {
+                  num: 8,
+                  title: "Identity & Access Management",
+                  desc: "Create users, roles, and manage cloud access permissions."
+                }
+              ]
+            },
+            {
+              id: "03",
+              title: "Administration & DevOps",
+              lectures: [
+                {
+                  num: 9,
+                  title: "Monitoring & Logging",
+                  desc: "Monitor cloud systems and configure alerts."
+                },
+                {
+                  num: 10,
+                  title: "Backup & Security",
+                  desc: "Understand cloud security basics and configure backup policies."
+                },
+                {
+                  num: 11,
+                  title: "Containers & Serverless",
+                  desc: "Learn container deployment and serverless computing concepts."
+                },
+                {
+                  num: 12,
+                  title: "CI/CD Fundamentals",
+                  desc: "Understand Continuous Integration and Continuous Deployment concepts."
+                },
+                {
+                  num: 13,
+                  title: "CI/CD Pipeline",
+                  desc: "Build a simple automated deployment pipeline."
+                }
+              ]
+            },
+            {
+              id: "04",
+              title: "Projects & Cloud Architecture",
+              lectures: [
+                {
+                  num: 14,
+                  title: "Cloud Architecture Design",
+                  desc: "Design scalable cloud infrastructure diagrams."
+                },
+                {
+                  num: 15,
+                  title: "High Availability & Cost Optimization",
+                  desc: "Learn how to design cost-efficient and highly available systems."
+                },
+                {
+                  num: 16,
+                  title: "Migration & Security Best Practices",
+                  desc: "Understand how organizations migrate applications to the cloud."
+                },
+                {
+                  num: 17,
+                  title: "Capstone Project",
+                  desc: "Deploy a 3-tier cloud application architecture."
+                }
+              ]
+            }
+          ],
+        },
+    projects: {
+      heading: "Hands-on Activities & Student Projects",
+      description:
+        "The Cloud Computing Foundations program focuses on hands-on cloud labs and deployment activities where students build and manage cloud infrastructure.Students will learn how to deploy servers, configure networking, host websites, and design scalable cloud systems.",
+      activities: [
+        "Cloud Console Exploration",
+        "Virtual Machine Deployment",
+        "Static Website Hosting",
+        "Networking Setup",
+        "Cloud Monitoring Setup",
+        "Architecture Design Activity",
+      ],
+      capstoneProjects: [
+        { num: 1, title: "Cloud Console Exploration", desc: "Explore cloud platform dashboards." },
+        { num: 2, title: "Virtual Machine Deployment", desc: "Launch and manage cloud servers." },
+        { num: 3, title: "Static Website Hosting", desc: "Host a website using cloud storage." },
+        { num: 4, title: "Networking Configuration", desc: "Create VPCs and subnets." },
+        { num: 5, title: "IAM Security Setup", desc: "Configure user roles and permissions." },
+        { num: 6, title: "Monitoring Setup", desc: "Create alerts for cloud services." },
+        { num: 7, title: "CI/CD Pipeline Demo", desc: "Build a simple automated deployment pipeline." },
+        { num: 8, title: "Cloud Cost Optimization", desc: "Analyze cloud pricing and cost strategies." },
+        { num: 9, title: "Cloud Migration Case Study", desc: "Plan migration of an application to the cloud." },
+        { num: 10, title: "Final Cloud Architecture Project", desc: "Deploy a 3-tier cloud application architecture." }
+      ],
+    },
+
+    certificate: {
+      heading: "Program Certificate & Learning Recognition",
+      description:
+        "Students who successfully complete the Cyber Security Foundations Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final website project.",
+      requirements: [
+        "Attend the required live sessions",
+        "Complete all assignments and assessments",
+        "Actively participate in hands-on activities",
+        "Complete the final cloud architecture project",
+      ],
+    },
+
+    reviews: [
+  {
+    name: "Arnav Khanna",
+    rating: 5,
+    text: "The cloud computing course helped me understand how websites and apps run on cloud platforms.",
+    avatar: "AK",
+  },
+  {
+    name: "Tanya Mehra",
+    rating: 5,
+    text: "Launching my first cloud server was very exciting. The hands-on labs were very helpful.",
+    avatar: "TM",
+  },
+  {
+    name: "Karan Shah",
+    rating: 5,
+    text: "I liked learning about virtual machines and cloud networking.",
+    avatar: "KS",
+  },
+  {
+    name: "Ritika Malhotra",
+    rating: 5,
+    text: "The instructors explained cloud concepts in a simple way and the projects made learning practical.",
+    avatar: "RM",
+  },
+  {
+    name: "Aditya Jain",
+    rating: 5,
+    text: "The final cloud architecture project helped me understand how real applications run in the cloud.",
+    avatar: "AJ",
+  },
+  {
+    name: "Meera Bansal",
+    rating: 5,
+    text: "Hosting a website on the cloud was my favorite activity in this course.",
+    avatar: "MB",
+  }
+],
+
+    faqs: [
+  {
+    q: "Who is this course designed for?",
+    a: "This course is designed for beginners who want to learn cloud computing and how modern applications run on the cloud.",
+  },
+  {
+    q: "Do students need coding experience?",
+    a: "No prior coding experience is required.",
+  },
+  {
+    q: "What will students learn in this course?",
+    a: "Students will learn cloud computing fundamentals, cloud services, deployment, and cloud architecture design.",
+  },
+  {
+    q: "How long is the course?",
+    a: "The course duration is 2 months with 17 live lectures.",
+  },
+  {
+    q: "Are the classes live or recorded?",
+    a: "Classes are live instructor-led and recorded sessions are available for revision.",
+  },
+  {
+    q: "Will students perform hands-on labs?",
+    a: "Yes. Students will deploy servers, host websites, and configure cloud services.",
+  },
+  {
+    q: "What platforms will students use?",
+    a: "Students will work with cloud platforms and cloud dashboards.",
+  },
+  {
+    q: "Will students receive a certificate?",
+    a: "Yes. Students will receive a Certificate of Completion from SkillzRevo Solutions.",
+  },
+  {
+    q: "What is the class schedule?",
+    a: "Weekend and weekday batches are available.",
+  },
+  {
+    q: "How can students enroll?",
+    a: "Students can enroll through the website or by booking a free demo class.",
+  }
+],
+
+    recommendedCourses: [
+      
+      {
+        title: "Python Pros",
+        desc: "Learn programming fundamentals with Python through fun projects.",
+        grade: "8-12",
+        slug: "python-pros",
+        icon: "🐍",
+      },
+      {
+        title: "Web Wizards",
+        desc: "Explore the world of  and build smart apps.",
+        grade: "8-12",
+        slug: "web-wizards",
+        icon: "*",
+      },
+      {
+        title: "Java Juniors",
+        desc: "Design and build your own Java App",
+        grade: "8-12",
+        slug: "java-juniors",
+        icon: "*",
+      },
+    ],
+  },
+  {
+    slug: "cpp-coders",
+    title: "C++ Coders",
+    subtitle: "Build Strong Programming Skills",
+    description:
+      "Students learn how to code using C++, build logical thinking, and create real-world applications through structured learning and hands-on practice.",
+    grade: "9-12",
+    lessons: 27,
+    activities: "40+",
+    durationMonths: 3-4,
+    heroImage: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
+    color: "#1d8fff",
+
+    journeySection: {
+      heading: "Start Your C++ Programming Journey",
+      subtitle:
+        " Learn one of the most powerful and widely used programming languages used in apps, software, and enterprise systems while building strong problem-solving skills.",
+      cards: [
+        {
+          icon: "📚",
+          title: "What You'll Learn",
+          type: "checklist",
+          items:[
+  "Fundamentals of programming using C++",
+  "C++ syntax and program structure",
+  "Variables, data types, and operators",
+  "Conditional statements and logic building",
+  "Loops and problem-solving techniques",
+  "Functions (methods) and reusable code",
+  "Arrays and string handling",
+  "Object-Oriented Programming (OOP) concepts",
+  "Debugging and error handling"
+],
+        },
+        {
+          icon: "🚀",
+          title: "Skills You'll Gain",
+          type: "bullets",
+          items: [
+  "Strong logical thinking and problem-solving",
+  "Writing structured and efficient C++ code",
+  "Understanding object-oriented programming",
+  "Building real-world programs and applications",
+  "Debugging and fixing errors",
+  "Preparing foundation for advanced technologies",
+],
+        },
+        {
+          icon: "🏆",
+          title: "What You'll Achieve",
+          type: "trophy",
+          items: [
+  "C++ Programming Certificate",
+  "Hands-on coding experience",
+  "Mini projects & real-world applications",
+  "Strong foundation for software development"
+],
+        },
+      ],
+    },
+
+    programOverview: {
+      heading: "Program Overview",
+      description:
+        "The C++ Programming Foundations Program is designed to help students learn coding from scratch using C++. It focuses on building strong programming fundamentals, logic, and problem-solving skills.Students will learn how to write structured programs, understand object-oriented programming, and build real-world applications. The course includes hands-on practice, coding exercises, and projects.By the end of the program, students will be able to build complete C++ applications and present their final projects.",
+      highlights: [
+        { icon: "🎓", label: "27 Live Instructor-Led Lectures" },
+        { icon: "📅", label: "4-Month Structured Learning Program" },
+        { icon: "📦", label: "10 Modules Covering C++ programming Concepts" },
+        { icon: "🛠️", label: "Beginner to Intermediate Level" },
+        { icon: "🖥️", label: "Final C++ programming Capstone Project" },
+        { icon: "🕐", label: "Weekend & Weekday Batch Options" },
+      ],
+    },
+
+    curriculum: {
+      heading: "Course Delivery Plan",
+      modules: [
+  {
+    id: "01",
+    title: "Cloud Basics",
+    lectures: [
+      {
+        num: 1,
+        title: "Introduction to Cloud Computing",
+        desc: "Understand cloud computing concepts and the difference between traditional IT infrastructure and cloud systems."
+      },
+      {
+        num: 2,
+        title: "Cloud Service Models (IaaS)",
+        desc: "Learn the fundamentals of Infrastructure as a Service and explore real-world examples."
+      },
+      {
+        num: 3,
+        title: "PaaS, SaaS & Deployment Models",
+        desc: "Understand Platform as a Service, Software as a Service, and cloud deployment models."
+      },
+      {
+        num: 4,
+        title: "Cloud Providers & Pricing",
+        desc: "Explore major cloud providers, regions, and billing dashboards."
+      }
+    ]
+  },
+  {
+    id: "02",
+    title: "Core Cloud Services",
+    lectures: [
+      {
+        num: 5,
+        title: "Compute Services",
+        desc: "Launch virtual machines and connect to them using SSH."
+      },
+      {
+        num: 6,
+        title: "Cloud Storage",
+        desc: "Understand object, block, and file storage while hosting a static website."
+      },
+      {
+        num: 7,
+        title: "Cloud Networking",
+        desc: "Learn about VPC, subnets, and load balancers."
+      },
+      {
+        num: 8,
+        title: "Identity & Access Management",
+        desc: "Create users, roles, and manage cloud access permissions."
+      }
+    ]
+  },
+  {
+    id: "03",
+    title: "Administration & DevOps",
+    lectures: [
+      {
+        num: 9,
+        title: "Monitoring & Logging",
+        desc: "Monitor cloud systems and configure alerts."
+      },
+      {
+        num: 10,
+        title: "Backup & Security",
+        desc: "Understand cloud security basics and configure backup policies."
+      },
+      {
+        num: 11,
+        title: "Containers & Serverless",
+        desc: "Learn container deployment and serverless computing concepts."
+      },
+      {
+        num: 12,
+        title: "CI/CD Fundamentals",
+        desc: "Understand Continuous Integration and Continuous Deployment concepts."
+      },
+      {
+        num: 13,
+        title: "CI/CD Pipeline",
+        desc: "Build a simple automated deployment pipeline."
+      }
+    ]
+  },
+  {
+    id: "04",
+    title: "Projects & Cloud Architecture",
+    lectures: [
+      {
+        num: 14,
+        title: "Cloud Architecture Design",
+        desc: "Design scalable cloud infrastructure diagrams."
+      },
+      {
+        num: 15,
+        title: "High Availability & Cost Optimization",
+        desc: "Learn how to design cost-efficient and highly available systems."
+      },
+      {
+        num: 16,
+        title: "Migration & Security Best Practices",
+        desc: "Understand how organizations migrate applications to the cloud."
+      },
+      {
+        num: 17,
+        title: "Capstone Project",
+        desc: "Deploy a 3-tier cloud application architecture."
+      }
+    ]
+  }
+],
+        },
+
+    projects: {
+      heading: "Hands-on Activities & Student Projects",
+      description:
+        "Students will build multiple programs and applications to strengthen their understanding of C++.",
+      activities: [
+        "Writing First C++ Program",
+        "Logic Building Exercises",
+        "Loop-Based Problem Solving",
+        "Function-Based Programs",
+        "String & List Manipulation",
+      ],
+      capstoneProjects: [
+  { num: 1, title: "C++ Basics Practice", desc: "Write simple programs to understand syntax, input-output, and variables." },
+  { num: 2, title: "Calculator Application", desc: "Build a calculator using operators and conditional logic." },
+  { num: 3, title: "Number Guessing Game", desc: "Create an interactive game using loops and logic." },
+  { num: 4, title: "Student Management System", desc: "Store and manage student data using arrays and basic operations." },
+  { num: 5, title: "Pattern Generator Program", desc: "Generate different patterns using loops to improve logic." },
+  { num: 6, title: "Matrix Operations Program", desc: "Perform operations on 2D arrays like addition and multiplication." },
+  { num: 7, title: "String Utility Tool", desc: "Perform operations like reverse, palindrome check, and formatting." },
+  { num: 8, title: "File Handling Project", desc: "Read and write data using files in C++." },
+  { num: 9, title: "Simple Login System", desc: "Create a basic login system using conditions and validation." },
+  { num: 10, title: "Quiz Game Application", desc: "Build a quiz game with score tracking and user interaction." }
+],
+    },
+
+    certificate: {
+      heading: "Program Certificate & Learning Recognition",
+      description:
+        "Students who successfully complete the C++ Programming Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final website project.",
+      requirements: [
+        "Attend the required live sessions",
+        "Complete all assignments and assessments",
+        "Actively participate in hands-on activities",
+        "Complete the final C++ programming project",
+      ],
+    },
+
+    reviews: [
+  {
+    name: "Arnav Khanna",
+    rating: 5,
+    text: "C++ course helped me understand programming basics clearly.",
+    avatar: "AK",
+  },
+  {
+    name: "Tanya Mehra",
+    rating: 5,
+    text: "Building my first C++ application was exciting!",
+    avatar: "TM",
+  },
+  {
+    name: "Karan Shah",
+    rating: 5,
+    text: "OOP concepts became very easy to understand.",
+    avatar: "KS",
+  },
+  {
+    name: "Ritika Malhotra",
+    rating: 5,
+    text: "Teaching style is very simple and practical.",
+    avatar: "RM",
+  },
+  {
+    name: "Aditya Jain",
+    rating: 5,
+    text: "The final project helped me gain real confidence.",
+    avatar: "AJ",
+  },
+  {
+    name: "Meera Bansal",
+    rating: 5,
+    text: "I enjoyed building projects and learning C++.",
+    avatar: "MB",
+  }
+],
+
+    faqs: [
+  {
+    q: "Who is this course for?",
+    a: "Students of Grade 9–12 interested in learning programming.",
+  },
+  {
+    q: "Do I need prior coding knowledge?",
+    a: "No, this course starts from the basics.",
+  },
+  {
+    q: "What will I learn?",
+    a: "C++ programming, OOP, logic building, and project development.",
+  },
+  {
+    q: "Course duration?",
+    a: "2–3 months structured program.",
+  },
+  {
+    q: "Live or recorded classes?",
+    a: "Live + recorded sessions.",
+  },
+  {
+    q: "Are there projects?",
+    a: "Yes, multiple mini + final project.",
+  },
+  {
+    q: "Will I get a certificate?",
+    a: "Yes.",
+  },
+  {
+    q: "Is C++ useful?",
+    a: "Yes, widely used in app development and enterprise systems.",
+  }
+],
+    recommendedCourses: [
+      {
+        title: "Python Pros",
+        desc: "Learn programming fundamentals with Python through fun projects.",
+        grade: "8-12",
+        slug: "python-pros",
+        icon: "🐍",
+      },
+      {
+        title: "Web Wizards",
+        desc: "Explore the world of  and build smart apps.",
+        grade: "8-12",
+        slug: "web-wizards",
+        icon: "*",
+      },
+      {
+        title: "Cloud Champions",
+        desc: "Design and build your own Cloud Application",
+        grade: "8-12",
+        slug: "cloud-champions",
+        icon: "*",
+      },
+    ],
+  },
+  {
+    slug: "code-builders",
+    title: "Code Builders",
+    subtitle: "Power Websites from Behind the Scenes",
+    description:
+      "A hands-on backend development program where students learn to build APIs, manage databases, implement authentication, and deploy real-world applications using Node.js, Express, and MongoDB.",
+    grade: "8-12",
+    lessons: 32,
+    activities: "60+",
+    durationMonths: 4,
+    heroImage: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
+    color: "#1d8fff",
+
+    journeySection: {
+      heading: "Start Your Backend Development Journey",
+      subtitle:
+        "Learn how the server-side of applications works and gain the skills to build scalable and secure backend systems. This program helps students understand APIs, databases, authentication, and deployment through real-world projects.",
+      cards: [
+        {
+          icon: "📚",
+          title: "What You'll Learn",
+          type: "checklist",
+          items: [
+            "Understanding backend development and client-server architecture",
+            "Working with Node.js and server-side JavaScript",
+            "Building APIs using Express framework",
+            "Designing RESTful services and handling CRUD operations",
+            "Working with databases like MongoDB",
+            "Integrating backend with frontend applications",
+            "Implementing authentication using JWT",
+            "Handling file uploads and API integrations",
+          ],
+        },
+        {
+          icon: "🚀",
+          title: "Skills You'll Gain",
+          type: "bullets",
+          items: [
+            "Backend Development & API Building",
+            "Server-side Programming with Node.js",
+            "Database Management (MongoDB)",
+            "REST API Design & Implementation",
+            "Authentication & Security Concepts",
+            "Debugging & Error Handling",
+            "System Design Basics",
+	    "Project Building & Presentation Skills",
+          ],
+        },
+        {
+          icon: "🏆",
+          title: "What You'll Achieve",
+          type: "trophy",
+          items: [
+            "Build scalable backend systems and APIs",
+            "Create and manage databases effectively",
+            "Develop secure authentication systems",
+            "Integrate frontend with backend services",
+	    "Deploy live backend applications",
+	    "Work on real-world projects with industry practices",
+          ],
+        },
+      ],
+    },
+
+    programOverview: {
+      heading: "Program Overview",
+      description:
+        "This Backend Development Program is designed to help students master server-side programming and application logic. Starting from backend fundamentals, students gradually learn Node.js, Express framework, REST APIs, and database integration.The program emphasizes practical learning, where students build multiple APIs and backend systems throughout the course. By the end, students will develop and deploy a complete backend project with authentication, database integration, and real-world functionality.",
+      highlights: [
+        { icon: "🎓", label: "32 Live Instructor-Led Lectures" },
+        { icon: "📅", label: "4-5-Month Structured Learning Program" },
+        { icon: "📦", label: "11 Modules Covering Under Code Builders" },
+        { icon: "🛠️", label: "Hands-on Activities and Real Projects" },
+        { icon: "🖥️", label: "Final Back-End Project Presentation" },
+        { icon: "🕐", label: "Weekend & Weekday Batch Options" },
+      ],
+    },
+
+    curriculum: {
+      heading: "Course Delivery Plan",
+      modules: [
+        {
+          id: "01",
+          title: "AI Around Us",
+          lectures: [
+            {
+              num: 1,
+              title: "What is AI?",
+              desc: "Understand what Artificial Intelligence is, how AI differs from human intelligence, and explore AI applications used in daily life.",
+            },
+            {
+              num: 2,
+              title: "How AI Learns",
+              desc: "Learn how machines learn from data using machine learning concepts, recommendation systems, and bias in AI.",
+            },
+          ],
+        },
+        {
+          id: "02",
+          title: "Python for AI",
+          lectures: [
+            {
+              num: 3,
+              title: "Python Introduction",
+              desc: "Understand why Python is used in AI and set up the development environment.",
+            },
+            {
+              num: 4,
+              title: "Variables and Operators",
+              desc: "Learn Python variables, user input, and basic operators through coding exercises.",
+            },
+            {
+              num: 5,
+              title: "Conditions",
+              desc: "Understand if-else logic and build small decision-based programs.",
+            },
+            {
+              num: 6,
+              title: "Loops",
+              desc: "Use loops to automate repetitive tasks and build simple programs.",
+            },
+            {
+              num: 7,
+              title: "Data Structures",
+              desc: "Work with lists, dictionaries, tuples, and sets.",
+            },
+            {
+              num: 8,
+              title: "NumPy Fundamentals",
+              desc: "Understand arrays and numerical computing using NumPy.",
+            },
+            {
+              num: 9,
+              title: "Pandas Introduction",
+              desc: "Load datasets and explore tabular data using Pandas.",
+            },
+            {
+              num: 10,
+              title: "Data Analysis Basics",
+              desc: "Analyze datasets and extract insights.",
+            },
+            {
+              num: 11,
+              title: "Data Visualization",
+              desc: "Create simple charts and graphs using Python.",
+            },
+            {
+              num: 12,
+              title: "Python Mini Project",
+              desc: "Analyze a dataset and present insights.",
+            },
+
+          ],
+        },
+        {
+          id: "03",
+          title: "Statistics for AI",
+          lectures: [
+            {
+              num: 13,
+              title: "Introduction to Statistics",
+              desc: "Understand descriptive and inferential statistics.[-",
+            },
+            {
+              num: 14,
+              title: "Mean, Median, Mode",
+              desc: "Analyze datasets using measures of central tendency.",
+            },
+            {
+              num: 15,
+              title: "Probability Basics",
+              desc: "Understand probability through real-world examples.",
+            },
+            {
+              num: 16,
+              title: "Correlation",
+              desc: "Learn how relationships between variables work.",
+            },
+            {
+              num: 17,
+              title: "Data Cleaning & EDA",
+              desc: "Perform data type corrections and data exploration.",
+            },
+            {
+              num: 18,
+              title: "Visualization for Analysis",
+              desc: "Visualize data patterns and trends.",
+            },
+            {
+              num: 19,
+              title: "Hypothesis Testing",
+              desc: "Understand the basics of hypothesis testing.",
+            },
+          ],
+        },
+        {
+          id: "04",
+          title: "Machine Learning",
+          lectures: [
+            {
+              num: 20,
+              title: "Introduction to Machine Learning",
+              desc: "Understand how machine learning models work.",
+            },
+            {
+              num: 21,
+              title: "Types of Machine Learning",
+              desc: "Learn supervised and unsupervised learning.",
+            },
+            {
+              num: 22,
+              title: "Linear Regression",
+              desc: "Build models to predict numerical values.",
+            },
+            {
+              num: 23,
+              title: "Logistic Regression",
+              desc: "Understand classification problems.",
+            },
+            {
+              num: 24,
+              title: "Decision Trees",
+              desc: "Learn tree-based models for prediction.",
+            },
+            {
+              num: 25,
+              title: "Model Validation",
+              desc: "Understand train-test split and evaluation.",
+            },
+            {
+              num: 26,
+              title: "Clustering",
+              desc: "Group data using clustering algorithms.",
+            },
+            {
+              num: 27,
+              title: "Elbow Method",
+              desc: "Visualize clusters and determine optimal groups.",
+            },
+            {
+              num: 28,
+              title: "Market Basket Analysis",
+              desc: "Discover relationships between products.",
+            },
+            {
+              num: 29,
+              title: "Association Rules",
+              desc: "Generate frequent itemsets and rules.",
+            },
+            {
+              num: 30,
+              title: "Naive Bayes Classifier",
+              desc: "Build a simple email spam classifier.",
+            },
+            {
+              num: 31,
+              title: "Mini ML Project",
+              desc: "Develop a student performance prediction model.",
+            },
+          ],
+        },
+        {
+          id: "05",
+          title: "Artificial Intelligence",
+          lectures: [
+            {
+              num: 32,
+              title: " Deep Learning Introduction",
+              desc: "Understand neural networks and perceptrons.",
+            },
+            {
+              num: 33,
+              title: " Deep Learning Fundamentals",
+              desc: "Explore deep learning concepts and applications.",
+            },
+            {
+              num: 34,
+              title: "ANN and CNN",
+              desc: "Understand artificial neural networks and convolutional neural networks.",
+            },
+            {
+              num: 35,
+              title: "RNN, LSTM, GRU",
+              desc: "Learn sequence models and time-series analysis.",
+            },
+            {
+              num: 36,
+              title: "NLP Basics",
+              desc: "Understand natural language processing.",
+            },
+            {
+              num: 37,
+              title: "Text Classification",
+              desc: "Build models to classify text data.",
+            },
+            {
+              num: 38,
+              title: "NLP Project",
+              desc: "Perform sentiment analysis on text data.",
+            },
+          ],
+        },
+        {
+          id: "06",
+          title: "Final Capstone Project",
+          lectures: [
+            {
+              num: 39,
+              title: "Project Planning",
+              desc: "Select datasets and design the final AI project.",
+            },
+            {
+              num: 40,
+              title: "Final Capstone Project",
+              desc: "Build and present an AI-based project such as a sentiment analysis dashboard.",
+            },
+          ],
+        },
+      ],
+    },
+
+    projects: {
+      heading: "Hands-on Activities & Student Projects",
+      description:
+       "Students who successfully complete the Code Builders Program will receive an official Certificate of Completion by SkillzRevo Academy Junior. This certificate validates their practical skills in backend development, API building, and database management. Throughout the program, students actively participate in hands-on activities, assignments, and real-world backend projects, culminating in a final backend application built using Node.js, Express, and MongoDB.",
+	activities: [
+  "Understand how backend systems work and explore client-server architecture",
+  "Build basic servers using Node.js and handle HTTP requests",
+  "Create RESTful APIs using Express framework",
+  "Work with databases and perform CRUD operations using MongoDB",
+  "Implement authentication systems using JWT for secure access",
+  "Handle real-world backend features like file uploads and API integration",
+  "Debug, test, and optimize backend applications",
+  "Work on complete backend projects from API development to deployment",
+],     
+capstoneProjects: [
+  { num: 1, title: "Basic Node.js Server", desc: "Create a simple server using Node.js and handle HTTP requests." },
+  { num: 2, title: "File System Manager", desc: "Build a project to read, write, and manage files using Node.js." },
+  { num: 3, title: "Express API Starter", desc: "Create basic APIs using Express framework." },
+  { num: 4, title: "Student Management API", desc: "Build a REST API to manage student data with CRUD operations." },
+  { num: 5, title: "MongoDB CRUD Application", desc: "Develop an application to perform database operations using MongoDB." },
+  { num: 6, title: "User Authentication System", desc: "Implement login and registration system with secure authentication." },
+  { num: 7, title: "JWT Secure API", desc: "Protect APIs using JWT-based authentication and authorization." },
+  { num: 8, title: "File Upload System", desc: "Create backend functionality to upload and manage files." },
+  { num: 9, title: "Frontend-Backend Integration", desc: "Connect frontend application with backend APIs." },
+  { num: 10, title: "Final Backend Application", desc: "Design, build, and deploy a complete backend system with APIs, database, and authentication." },
+],
+    },
+
+    certificate: {
+      heading: "Program Certificate & Learning Recognition",
+      description:
+        "Students who successfully complete the Code Builders Program will receive an official Certificate of Completion. This certificate showcases their expertise in backend development, including API design, database integration, and authentication systems. It reflects their hands-on learning journey through assignments, real-world projects, and the successful development and deployment of a complete backend application.",
+      requirements: [
+        "Attend the required live sessions",
+        "Complete all assignments and assessments",
+        "Actively participate in hands-on activities",
+        "Successfully build and present the final Code Builder project",
+      ],
+    },
+
+    reviews: [
+  {
+    name: "Arjun Mehra",
+    rating: 5,
+    text: "The Code Builders course was amazing. I learned how to build APIs and understand how backend systems work.",
+    avatar: "AM",
+  },
+  {
+    name: "Sneha Verma",
+    rating: 5,
+    text: "The instructors explained backend concepts in a very simple way. I really enjoyed working with Node.js and databases.",
+    avatar: "SV",
+  },
+  {
+    name: "Rohit Yadav",
+    rating: 5,
+    text: "Building my own backend API was the best part. This course made server-side coding easy and interesting.",
+    avatar: "RY",
+  },
+  {
+    name: "Kavya Singh",
+    rating: 5,
+    text: "A perfect beginner-friendly course to understand backend development and real-world applications.",
+    avatar: "KS",
+  },
+  {
+    name: "Aditya Kapoor",
+    rating: 5,
+    text: "The projects were very practical. I built authentication systems, APIs, and learned database integration.",
+    avatar: "AK",
+  },
+  {
+    name: "Neha Joshi",
+    rating: 5,
+    text: "The final project helped me build a complete backend application with database and authentication. Great experience!",
+    avatar: "NJ",
+  },
+],
+    faqs: [
+  {
+    q: "What is this Code Builders course about?",
+    a: "This course teaches students how to build backend systems, APIs, and databases in a fun and practical way. Students learn Node.js, Express, and MongoDB while working on real-world backend projects.",
+  },
+  {
+    q: "Who is this program suitable for?",
+    a: "The program is designed for students aged 15–22 years. It is suitable for beginners as well as students who want to explore backend development.",
+  },
+  {
+    q: "Does my child need coding experience?",
+    a: "Basic understanding of JavaScript is helpful but not required. The course starts from fundamentals and gradually moves to advanced backend concepts.",
+  },
+  {
+    q: "What will my child be able to build after this course?",
+    a: "By the end of the program, students will be able to build APIs, database-driven applications, authentication systems, and a complete backend application as their final project.",
+  },
+  {
+    q: "How is this course different from regular coding classes?",
+    a: "This program focuses on real-world backend development, including API building, database integration, authentication systems, and deployment, instead of just theoretical coding.",
+  },
+  {
+    q: "Are the classes live or recorded?",
+    a: "Classes are live and instructor-led, allowing students to interact, ask questions, and participate in activities in real time.",
+  },
+  {
+    q: "How many students are there in one batch?",
+    a: "We maintain small batch sizes to ensure personalized attention and better learning for every student.",
+  },
+  {
+    q: "What kind of projects will students work on?",
+    a: "Students will work on projects like REST APIs, CRUD applications, authentication systems, file upload systems, and a final backend application project.",
+  },
+  {
+    q: "Is this course suitable for beginners?",
+    a: "Yes, the course is designed to start from basics and gradually build up to advanced backend development concepts.",
+  },
+  {
+    q: "What tools or software are required?",
+    a: "Students will need a laptop or desktop, internet connection, VS Code, Node.js, and MongoDB. All tools used are free.",
+  },
+  {
+    q: "Will my child get a certificate?",
+    a: "Yes, students will receive a Certificate of Completion after successfully finishing the course and submitting their final backend project.",
+  },
+  {
+    q: "How will this course help my child in the future?",
+    a: "This course helps students build strong logical thinking, backend development skills, and a foundation for full-stack development and future tech careers.",
+  },
+  {
+    q: "Can parents track their child’s progress?",
+    a: "Yes, parents can track progress through regular updates, project reviews, and final project presentations.",
+  },
+  {
+    q: "What if a student misses a class?",
+    a: "Recorded sessions or support materials will be provided so students can catch up easily without missing important content.",
+  },
+  {
+    q: "Is there a demo class available?",
+    a: "Yes, you can book a free demo class to experience the teaching style and course structure before enrolling.",
+  }
+],
+    recommendedCourses: [
+      {
+        title: "Python Pros",
+        desc: "Learn programming fundamentals with Python through fun projects.",
+        grade: "8-12",
+        slug: "python-pros",
+        icon: "",
+      },
+      {
+        title: "Web Wizards",
+        desc: "Explore the world of  and build smart apps.",
+        grade: "8-12",
+        slug: "web-wizards",
+        icon: "",
+      },
+      {
+        title: "Cloud Champions",
+        desc: "Design and build your own Cloud Application",
+        grade: "8-12",
+        slug: "cloud-champions",
+        icon: "",
+      },
+    ],
+  },
 ];
 
 export function getCourseBySlug(slug) {

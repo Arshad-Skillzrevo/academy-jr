@@ -34,6 +34,11 @@ body {
 }
 
 
+.heading-oswald-main {
+  font-family: var(--font-oswald);
+}
+
+
 @layer utilities {
   @keyframes marquee-loop {
    0%,100% {

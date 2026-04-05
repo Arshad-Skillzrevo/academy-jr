@@ -743,9 +743,34 @@
 //   );
 // }
 
-"use client";
 
-import React, { useEffect, useCallback, useState } from "react";
+
+
+
+
+
+
+
+
+
+
+
+
+// ___________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+"use client";
+import React, { useEffect, useCallback, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import {
   Brain, Globe, Terminal,
@@ -858,75 +883,78 @@ function SpinningStar({ size = 13, color, top, left, right, bottom, delay = 0 })
 }
 
 /* ─────────────────────────────────────────
-   SINGLE CARD
+   SINGLE CARD — taller, more rectangular, larger text
 ───────────────────────────────────────── */
-function BundleCard({ bundle, isActive, onClick }) {
+function BundleCard({ bundle, isActive, onClick, isTouched }) {
   const lvl = LEVEL_STYLE[bundle.level] || LEVEL_STYLE.Intermediate;
+  const highlighted = isActive || isTouched;
 
   return (
     <motion.div
       onClick={!isActive ? onClick : undefined}
-      animate={{ scale: isActive ? 1 : 0.77, opacity: isActive ? 1 : 0.6 }}
-      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      animate={{
+        scale: highlighted ? 1 : 0.82,
+        opacity: highlighted ? 1 : 0.55,
+        y: highlighted ? -6 : 0,
+      }}
+      transition={{ type: "spring", stiffness: 320, damping: 28 }}
       className="flex-shrink-0 flex flex-col rounded-3xl overflow-hidden"
       style={{
         width: "100%",
         cursor: isActive ? "default" : "pointer",
-        background: "rgba(255,255,255,0.95)",
-        border: `2px solid ${bundle.accent}${isActive ? "35" : "18"}`,
-        boxShadow: isActive
-          ? `0 16px 48px ${bundle.accent}25, 0 4px 14px rgba(0,0,0,0.10)`
+        background: "rgba(255,255,255,0.96)",
+        border: `2px solid ${bundle.accent}${highlighted ? "45" : "18"}`,
+        boxShadow: highlighted
+          ? `0 20px 56px ${bundle.accent}30, 0 6px 20px rgba(0,0,0,0.12)`
           : `0 2px 12px rgba(0,0,0,0.06)`,
         fontFamily: "'Nunito', sans-serif",
         transformOrigin: "center center",
+        position: "relative",
+        zIndex: highlighted ? 10 : 1,
       }}
     >
-      {/* Image */}
-      <div className="relative overflow-hidden" style={{ height: 172 }}>
+      {/* Image — taller to make card more rectangular */}
+      <div className="relative overflow-hidden" style={{ height: 220 }}>
         <img src={bundle.img} alt={bundle.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0"
-          style={{ background: `linear-gradient(135deg, ${bundle.accent}50 0%, transparent 55%)` }} />
+          style={{ background: `linear-gradient(135deg, ${bundle.accent}55 0%, transparent 55%)` }} />
         <div className="absolute inset-0"
-          style={{ background: "linear-gradient(to top, rgba(0,0,0,0.58) 0%, transparent 50%)" }} />
+          style={{ background: "linear-gradient(to top, rgba(0,0,0,0.62) 0%, transparent 52%)" }} />
 
         {bundle.featured && (
           <FloatBob amplitude={3} duration={2.6} className="absolute top-3 left-3 z-10">
-            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[10px] font-bold text-white"
-              style={{
-                background: `linear-gradient(135deg, ${BRAND.orange}, ${BRAND.rose})`,
-                fontFamily: "'Fredoka One', cursive",
-              }}>
-              <Star size={9} fill="white" /> Featured
+            <span className="inline-flex items-center gap-1 rounded-full px-3 py-1 text-[12px] font-bold text-white"
+              style={{ background: `linear-gradient(135deg, ${BRAND.orange}, ${BRAND.rose})`, fontFamily: "'Fredoka One', cursive" }}>
+              <Star size={10} fill="white" /> Featured
             </span>
           </FloatBob>
         )}
 
-        <div className="absolute top-3 right-3 rounded-full px-2 py-0.5 text-[10px] font-bold text-white"
+        <div className="absolute top-3 right-3 rounded-full px-2.5 py-1 text-[11px] font-bold text-white"
           style={{ background: "rgba(0,0,0,0.42)", backdropFilter: "blur(6px)" }}>
           {bundle.grade}
         </div>
 
         <div className="absolute bottom-3 left-3 flex items-center gap-2">
-          <div className="w-8 h-8 rounded-xl flex items-center justify-center"
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center"
             style={{ background: bundle.accent, boxShadow: `0 3px 10px ${bundle.accent}55` }}>
-            <bundle.Icon size={15} color="white" strokeWidth={2} />
+            <bundle.Icon size={18} color="white" strokeWidth={2} />
           </div>
-          <div className="flex items-center gap-1">
-            <motion.span className="w-1.5 h-1.5 rounded-full"
-              style={{ background: lvl.dot, display: "block" }}
-              animate={isActive ? { scale: [1, 1.5, 1], opacity: [1, 0.4, 1] } : {}}
+          <div className="flex items-center gap-1.5">
+            <motion.span className="w-2 h-2 rounded-full" style={{ background: lvl.dot, display: "block" }}
+              animate={highlighted ? { scale: [1, 1.5, 1], opacity: [1, 0.4, 1] } : {}}
               transition={{ duration: 1.8, repeat: Infinity }} />
-            <span className="text-[10px] font-bold text-white">{bundle.level}</span>
+            <span className="text-[12px] font-bold text-white">{bundle.level}</span>
           </div>
         </div>
 
         <div className="absolute bottom-3 right-3 flex flex-col items-end gap-1">
           {[
-            { icon: <Clock size={9} />, val: bundle.duration },
-            { icon: <Users size={9} />, val: `${bundle.students} enrolled` },
+            { icon: <Clock size={11} />, val: bundle.duration },
+            { icon: <Users size={11} />, val: `${bundle.students} enrolled` },
           ].map(({ icon, val }) => (
             <span key={val}
-              className="flex items-center gap-1 text-[9px] font-bold text-white px-1.5 py-0.5 rounded-full"
+              className="flex items-center gap-1 text-[11px] font-bold text-white px-2 py-1 rounded-full"
               style={{ background: "rgba(0,0,0,0.4)", backdropFilter: "blur(4px)" }}>
               {icon} {val}
             </span>
@@ -934,51 +962,57 @@ function BundleCard({ bundle, isActive, onClick }) {
         </div>
       </div>
 
-      {/* Body */}
-      <div className="flex flex-col flex-1 p-4 gap-2.5">
-        <div className="flex items-center gap-1.5 flex-wrap">
-          <span className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide"
+      {/* Body — more padding, larger text throughout */}
+      <div className="flex flex-col flex-1 p-5 gap-3">
+
+        {/* Level badge + subtitle */}
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide"
             style={{ color: lvl.color, background: lvl.bg }}>
-            <Zap size={7} /> {bundle.level}
+            <Zap size={9} /> {bundle.level}
           </span>
-          <span className="text-[10px] text-gray-400 font-bold truncate">{bundle.subtitle}</span>
+          <span className="text-[12px] text-gray-400 font-bold truncate">{bundle.subtitle}</span>
         </div>
 
-        <h3 style={{ fontFamily: "'Fredoka One', cursive", fontSize: "1.05rem", color: "#111827", lineHeight: 1.25 }}>
+        {/* Title */}
+        <h3 style={{ fontFamily: "'Fredoka One', cursive", fontSize: "1.3rem", color: "#111827", lineHeight: 1.25 }}>
           {bundle.title}
         </h3>
 
-        <p className="text-[12px] text-gray-500 leading-relaxed font-semibold line-clamp-2">
+        {/* Description */}
+        <p className="text-[13px] text-gray-500 leading-relaxed font-semibold line-clamp-2">
           {bundle.description}
         </p>
 
-        <div className="grid grid-cols-2 gap-1.5">
+        {/* Stats grid */}
+        <div className="grid grid-cols-2 gap-2">
           {[
-            { icon: <Milestone size={11} />, val: `${bundle.lessons} Lessons` },
-            { icon: <Activity size={11} />,  val: `${bundle.activities} Activities` },
-            { icon: <Clock size={11} />,     val: bundle.duration },
-            { icon: <Users size={11} />,     val: `${bundle.students} Enrolled` },
+            { icon: <Milestone size={13} />, val: `${bundle.lessons} Lessons` },
+            { icon: <Activity size={13} />,  val: `${bundle.activities} Activities` },
+            { icon: <Clock size={13} />,     val: bundle.duration },
+            { icon: <Users size={13} />,     val: `${bundle.students} Enrolled` },
           ].map(({ icon, val }) => (
-            <div key={val} className="flex items-center gap-1.5 rounded-xl px-2 py-1.5 text-[10px] font-bold"
+            <div key={val} className="flex items-center gap-2 rounded-xl px-3 py-2 text-[12px] font-bold"
               style={{ background: `${bundle.accent}0d`, color: bundle.accent }}>
               {icon} <span className="text-gray-600">{val}</span>
             </div>
           ))}
         </div>
 
-        <ul className="flex flex-col gap-1">
+        {/* Achievements */}
+        <ul className="flex flex-col gap-1.5">
           {bundle.achievements.slice(0, 3).map((item) => (
-            <li key={item} className="flex items-start gap-1.5 text-[11px] text-gray-600 font-bold">
-              <CheckCircle2 size={11} strokeWidth={2.5} className="mt-0.5 shrink-0"
-                style={{ color: bundle.accent }} />
+            <li key={item} className="flex items-start gap-2 text-[13px] text-gray-600 font-bold">
+              <CheckCircle2 size={13} strokeWidth={2.5} className="mt-0.5 shrink-0" style={{ color: bundle.accent }} />
               {item}
             </li>
           ))}
         </ul>
 
-        <div className="flex flex-wrap gap-1">
+        {/* Tags */}
+        <div className="flex flex-wrap gap-1.5">
           {bundle.tags.map((tag) => (
-            <span key={tag} className="rounded-full px-2 py-0.5 text-[10px] font-bold border"
+            <span key={tag} className="rounded-full px-2.5 py-1 text-[11px] font-bold border"
               style={{ color: bundle.accent, background: `${bundle.accent}10`, borderColor: `${bundle.accent}28` }}>
               {tag}
             </span>
@@ -987,31 +1021,32 @@ function BundleCard({ bundle, isActive, onClick }) {
 
         <div style={{ height: 1, background: `${bundle.accent}18` }} />
 
+        {/* Price + CTA */}
         <div className="flex items-center justify-between gap-2">
           <div className="flex items-baseline gap-0.5">
-            <IndianRupee size={11} strokeWidth={2.5} style={{ color: BRAND.orange, marginBottom: 1 }} />
-            <span style={{ fontFamily: "'Fredoka One', cursive", fontSize: "1.05rem", color: BRAND.navy, lineHeight: 1 }}>
+            <IndianRupee size={13} strokeWidth={2.5} style={{ color: BRAND.orange, marginBottom: 1 }} />
+            <span style={{ fontFamily: "'Fredoka One', cursive", fontSize: "1.3rem", color: BRAND.navy, lineHeight: 1 }}>
               {formatINR(bundle.price)}
             </span>
           </div>
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-2">
             <motion.button whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-1 rounded-xl px-3 py-1.5 text-[11px] text-white font-bold"
+              className="flex items-center gap-1.5 rounded-xl px-4 py-2 text-[13px] text-white font-bold"
               style={{
                 background: `linear-gradient(135deg, ${bundle.accent}, ${bundle.accentAlt})`,
                 boxShadow: `0 3px 12px ${bundle.accent}40`,
                 fontFamily: "'Fredoka One', cursive",
               }}>
-              Enroll <ArrowRight size={10} strokeWidth={2.5} />
+              Enroll <ArrowRight size={12} strokeWidth={2.5} />
             </motion.button>
             <motion.button whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-1 rounded-xl border-2 px-3 py-1.5 text-[11px] font-bold"
+              className="flex items-center gap-1.5 rounded-xl border-2 px-4 py-2 text-[13px] font-bold"
               style={{
                 color: bundle.accent, borderColor: `${bundle.accent}35`,
                 background: `${bundle.accent}08`,
                 fontFamily: "'Fredoka One', cursive",
               }}>
-              <CalendarDays size={11} strokeWidth={2} /> Demo
+              <CalendarDays size={13} strokeWidth={2} /> Demo
             </motion.button>
           </div>
         </div>
@@ -1030,20 +1065,29 @@ function BundleCard({ bundle, isActive, onClick }) {
 export default function BundleSection() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [touchedIdx, setTouchedIdx] = useState(null);
+  const intervalRef = useRef(null);
   const N = BUNDLES.length;
 
   const next = useCallback(() => setActive((a) => (a + 1) % N), [N]);
   const prev = useCallback(() => setActive((a) => (a - 1 + N) % N), [N]);
 
+  const startAuto = useCallback(() => {
+    clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(next, 2800);
+  }, [next]);
+
+  const stopAuto = useCallback(() => {
+    clearInterval(intervalRef.current);
+  }, []);
+
   useEffect(() => {
-    if (paused) return;
-    const id = setInterval(next, 3500);
-    return () => clearInterval(id);
-  }, [paused, next]);
+    if (paused) { stopAuto(); return; }
+    startAuto();
+    return stopAuto;
+  }, [paused, startAuto, stopAuto]);
 
   const activeBundle = BUNDLES[active];
-
-  // Ordered so active is always in the middle visually
   const order = [(active - 1 + N) % N, active, (active + 1) % N];
 
   return (
@@ -1063,7 +1107,7 @@ export default function BundleSection() {
             backgroundSize: "28px 28px", opacity: 0.035,
           }} />
 
-        {/* Wavy edges */}
+        {/* Wavy top/bottom */}
         <div className="absolute top-0 left-0 w-full pointer-events-none z-[4]" style={{ lineHeight: 0 }}>
           <svg viewBox="0 0 1440 56" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <path d="M0,28 C240,56 480,0 720,28 C960,56 1200,0 1440,28 L1440,0 L0,0 Z" fill="#fff" />
@@ -1091,7 +1135,7 @@ export default function BundleSection() {
           <SpinningStar size={12} color={BRAND.orange} top="48%" right="2%" delay={0.8} />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* ── HEADER ── */}
           <motion.div
@@ -1099,7 +1143,7 @@ export default function BundleSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-14"
+            className="mb-12"
           >
             <div className="flex justify-center sm:justify-start mb-4">
               <span className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-[12px] font-bold uppercase tracking-widest border-2"
@@ -1119,11 +1163,9 @@ export default function BundleSection() {
                   <span style={{
                     background: `linear-gradient(120deg, ${BRAND.sky}, ${BRAND.violet})`,
                     WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
-                  }}>
-                    Bundles
-                  </span>
+                  }}>Bundles</span>
                 </h2>
-                <p className="mt-3 text-[16px] text-gray-500 max-w-xl leading-relaxed font-bold">
+                <p className="mt-3 text-[15px] text-gray-500 max-w-xl leading-relaxed font-bold">
                   Power-packed programs combining{" "}
                   <span style={{ color: BRAND.violet, fontWeight: 900 }}>multiple tracks</span>{" "}
                   for maximum impact — designed for students who want it all.
@@ -1167,31 +1209,56 @@ export default function BundleSection() {
             </div>
           </motion.div>
 
-          {/* ── SLIDER ── */}
+          {/* ── CAROUSEL ── */}
           <div
-            className="relative"
+            className="relative select-none"
             onMouseEnter={() => setPaused(true)}
-            onMouseLeave={() => setPaused(false)}
+            onMouseLeave={() => { setPaused(false); setTouchedIdx(null); }}
           >
+            {/* Left fade mask */}
+            <div className="absolute left-0 top-0 bottom-0 w-[10%] pointer-events-none z-20"
+              style={{ background: "linear-gradient(to right, rgba(245,240,255,0.92), transparent)" }} />
+            {/* Right fade mask */}
+            <div className="absolute right-0 top-0 bottom-0 w-[10%] pointer-events-none z-20"
+              style={{ background: "linear-gradient(to left, rgba(240,249,255,0.92), transparent)" }} />
+
             {/*
-              Layout: 3 cards in a flex row.
-              Each card slot is 1/3 of 78% container width.
-              Center card is scaled 1.3x, side cards 1x (scale applied via motion.div).
-              We use padding on the row so the scaled center card doesn't clip.
+              Center card: wider (46vw) and taller image = more rectangular feel.
+              Side cards narrower to keep contrast.
             */}
             <div
-              className="flex items-center justify-center gap-4 mx-auto"
-              style={{ width: "78%", paddingTop: 40, paddingBottom: 40 }}
+              className="flex items-center justify-center"
+              style={{ paddingTop: 52, paddingBottom: 52 }}
             >
-              {order.map((idx) => {
+              {order.map((idx, pos) => {
                 const bundle = BUNDLES[idx];
-                const isCenter = idx === active;
+                const isCenter = pos === 1;
+                const isLeft   = pos === 0;
+                const isRight  = pos === 2;
+
                 return (
-                  <div key={bundle.slug} style={{ flex: 1, minWidth: 0 }}>
+                  <div
+                    key={bundle.slug}
+                    onTouchStart={() => { setTouchedIdx(idx); setPaused(true); }}
+                    onTouchEnd={() => { setTouchedIdx(null); setPaused(false); }}
+                    style={{
+                      /* Center card is wider for more rectangular shape */
+                      width: isCenter
+                        ? "clamp(300px, 46vw, 520px)"
+                        : "clamp(200px, 30vw, 360px)",
+                      flexShrink: 0,
+                      /* overlap: pull sides under center */
+                      marginLeft:  isRight  ? "clamp(-80px, -8vw, -110px)" : 0,
+                      marginRight: isLeft   ? "clamp(-80px, -8vw, -110px)" : 0,
+                      zIndex: isCenter ? 10 : 1,
+                      position: "relative",
+                    }}
+                  >
                     <BundleCard
                       bundle={bundle}
                       isActive={isCenter}
-                      onClick={() => { setActive(idx); setPaused(false); }}
+                      isTouched={touchedIdx === idx}
+                      onClick={() => { setActive(idx); startAuto(); }}
                     />
                   </div>
                 );
@@ -1200,8 +1267,8 @@ export default function BundleSection() {
           </div>
 
           {/* ── NAV ── */}
-          <div className="flex items-center justify-center gap-5 mt-2">
-            <motion.button onClick={prev}
+          <div className="flex items-center justify-center gap-5 mt-1">
+            <motion.button onClick={() => { prev(); startAuto(); }}
               whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.92 }}
               className="w-11 h-11 rounded-2xl flex items-center justify-center border-2"
               style={{
@@ -1215,7 +1282,7 @@ export default function BundleSection() {
 
             <div className="flex items-center gap-2.5">
               {BUNDLES.map((b, i) => (
-                <motion.button key={b.slug} onClick={() => setActive(i)}
+                <motion.button key={b.slug} onClick={() => { setActive(i); startAuto(); }}
                   whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}
                   animate={{ width: i === active ? 28 : 8, opacity: i === active ? 1 : 0.35 }}
                   transition={{ type: "spring", stiffness: 400, damping: 22 }}
@@ -1224,7 +1291,7 @@ export default function BundleSection() {
               ))}
             </div>
 
-            <motion.button onClick={next}
+            <motion.button onClick={() => { next(); startAuto(); }}
               whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.92 }}
               className="w-11 h-11 rounded-2xl flex items-center justify-center text-white"
               style={{
@@ -1236,7 +1303,7 @@ export default function BundleSection() {
           </div>
 
           <p className="text-center text-[11px] text-gray-400 font-bold mt-3">
-            Auto-playing · Hover to pause · Click side cards to focus
+            Auto-playing · Hover or touch to pause · Click side cards to focus
           </p>
 
         </div>
@@ -1244,3 +1311,564 @@ export default function BundleSection() {
     </>
   );
 }
+
+
+
+
+
+
+
+
+// ________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+// "use client";
+// import { useRef, useState, useEffect } from "react";
+
+// /* ── SCOPED STYLES — zero global resets ── */
+// const S = () => (
+//   <style>{`
+//     @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@600;700;800;900&display=swap');
+
+//     .bsc-wrap *, .bsc-wrap *::before, .bsc-wrap *::after { box-sizing: border-box; }
+//     .bsc-wrap { font-family: 'Nunito', sans-serif; }
+
+//     @keyframes bsc-float  { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+//     @keyframes bsc-pulse  { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.45;transform:scale(1.55)} }
+//     @keyframes bsc-spin   { to{transform:rotate(360deg)} }
+//     @keyframes bsc-mq     { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+//     @keyframes bsc-dot-w  { 0%,100%{transform:scaleX(1)} 50%{transform:scaleX(1.4)} }
+
+//     /* ── TRACK ── */
+//     .bsc-track {
+//       display: flex;
+//       gap: 20px;
+//       overflow-x: auto;
+//       scroll-snap-type: x mandatory;
+//       -webkit-overflow-scrolling: touch;
+//       scrollbar-width: none;
+//       padding: 24px 4px 32px;
+//       cursor: grab;
+//     }
+//     .bsc-track::-webkit-scrollbar { display:none; }
+//     .bsc-track.is-dragging { cursor: grabbing; }
+
+//     /* ── CARD ── */
+//     .bsc-card {
+//       flex: 0 0 min(82vw, 380px);
+//       scroll-snap-align: center;
+//       border-radius: 22px;
+//       overflow: hidden;
+//       background: rgba(255,255,255,0.96);
+//       border: 2px solid transparent;
+//       box-shadow: 0 6px 28px rgba(0,0,0,0.09);
+//       transition: transform .35s cubic-bezier(.22,1,.36,1),
+//                   box-shadow .35s ease,
+//                   border-color .35s ease;
+//       position: relative;
+//       will-change: transform;
+//     }
+//     .bsc-card:hover {
+//       transform: translateY(-8px) scale(1.025);
+//       box-shadow: 0 24px 56px rgba(0,0,0,0.15);
+//       z-index: 10;
+//     }
+//     .bsc-card.is-active {
+//       transform: translateY(-10px) scale(1.03);
+//       box-shadow: 0 28px 64px rgba(0,0,0,0.18);
+//       z-index: 10;
+//     }
+
+//     /* ── IMAGE ── */
+//     .bsc-img {
+//       width: 100%;
+//       height: 170px;
+//       object-fit: cover;
+//       display: block;
+//       transition: transform .6s ease;
+//     }
+//     .bsc-card:hover .bsc-img { transform: scale(1.06); }
+
+//     /* ── MARQUEE ── */
+//     .bsc-mq-track {
+//       display: flex;
+//       width: max-content;
+//       animation: bsc-mq 28s linear infinite;
+//     }
+//     .bsc-mq-track:hover { animation-play-state: paused; }
+
+//     /* ── BTN ── */
+//     .bsc-btn {
+//       cursor: pointer;
+//       border: none;
+//       transition: transform .18s cubic-bezier(.34,1.56,.64,1), box-shadow .18s ease, opacity .18s;
+//     }
+//     .bsc-btn:hover  { transform: scale(1.08); }
+//     .bsc-btn:active { transform: scale(.94);  }
+
+//     /* ── STARS (lg only) ── */
+//     .bsc-star { display: none; position: absolute; pointer-events: none; z-index: 2; animation: bsc-spin 10s linear infinite; }
+//     @media(min-width:1024px){ .bsc-star { display: block; } }
+
+//     /* ── DOT ── */
+//     .bsc-dot {
+//       height: 7px; border-radius: 999px; border: none; cursor: pointer;
+//       transition: width .38s cubic-bezier(.34,1.56,.64,1), background .25s;
+//     }
+
+//     /* ── RESPONSIVE ── */
+//     @media(max-width:480px){
+//       .bsc-card { flex: 0 0 88vw; }
+//     }
+//     @media(min-width:768px){
+//       .bsc-card { flex: 0 0 340px; }
+//     }
+//     @media(min-width:1024px){
+//       .bsc-card { flex: 0 0 360px; }
+//     }
+//   `}</style>
+// );
+
+// /* ── PALETTE ── */
+// const B = { violet:"#7c3aed", sky:"#0ea5e9", orange:"#f97316", rose:"#f43f5e", mint:"#10b981", amber:"#fbbf24", navy:"#0f1b4c" };
+
+// const LVL = {
+//   Intermediate: { dot:"#f59e0b", bg:"#fef3c7", color:"#b45309" },
+//   Advanced:     { dot:"#8b5cf6", bg:"#ede9fe", color:"#6d28d9" },
+//   Beginner:     { dot:"#22c55e", bg:"#dcfce7", color:"#15803d" },
+// };
+
+// /* ── DATA ── */
+// const BUNDLES = [
+//   {
+//     slug:"ai-innovators", title:"AI Innovators", subtitle:"Code, Create & Build the Future with AI",
+//     grade:"8–12", lessons:72, activities:"150+", duration:"9–10 Mo", students:"3.2k",
+//     image:"https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80",
+//     color:"#1d8fff", alt:"#7c3aed", icon:"🧠", level:"Intermediate", featured:true,
+//     tags:["Python","AI","ML","Gen AI"],
+//     points:["Build real AI applications","Master Python & ML","Generative AI projects","Career-ready cert"],
+//   },
+//   {
+//     slug:"programming-masters", title:"Programming Masters", subtitle:"Code Like a Pro in 3 Languages",
+//     grade:"8–12", lessons:73, activities:"150+", duration:"9–10 Mo", students:"2.8k",
+//     image:"https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=800&q=80",
+//     color:"#6366f1", alt:"#f97316", icon:"💻", level:"Intermediate", featured:false,
+//     tags:["Python","Java","C++","OOP"],
+//     points:["Master 3 languages","Logic-first thinking","Real-world apps","Industry code quality"],
+//   },
+//   {
+//     slug:"tech-titans", title:"Tech Titans", subtitle:"Become a Complete Tech Expert",
+//     grade:"8–12", lessons:68, activities:"140+", duration:"9–10 Mo", students:"1.9k",
+//     image:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+//     color:"#10b981", alt:"#0ea5e9", icon:"🌐", level:"Advanced", featured:false,
+//     tags:["Web Dev","Python","Cybersecurity"],
+//     points:["Build full-stack apps","Ethical hacking basics","Capstone project","Industry mentors"],
+//   },
+// ];
+
+// /* ── STAR ── */
+// const Star = ({ color, size, top, left, right, delay }) => (
+//   <div className="bsc-star" style={{ top, left, right, animationDelay:`${delay}s` }}>
+//     <svg width={size} height={size} viewBox="0 0 24 24" fill={color}>
+//       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+//     </svg>
+//   </div>
+// );
+
+// /* ── MARQUEE ── */
+// function Marquee() {
+//   const items = ["🧠 AI Innovators","💻 Programming Masters","🌐 Tech Titans","🚀 Real Projects","🏆 Certificates","🎓 Live Classes","🛠️ Hands-on Learning"];
+//   return (
+//     <div style={{ overflow:"hidden", borderTop:`1px solid ${B.violet}14`, borderBottom:`1px solid ${B.violet}14`, padding:"8px 0", marginBottom:32, background:`${B.violet}06` }}>
+//       <div className="bsc-mq-track">
+//         {[...items,...items].map((t,i) => (
+//           <span key={i} style={{ padding:"0 22px", fontSize:11.5, fontWeight:700, color:B.violet, whiteSpace:"nowrap", display:"inline-flex", alignItems:"center", gap:6 }}>
+//             {t}<span style={{ opacity:.28, fontSize:8 }}>◆</span>
+//           </span>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+// /* ── CARD ── */
+// function Card({ b, active, onHover }) {
+//   const lvl = LVL[b.level] || LVL.Intermediate;
+//   return (
+//     <div
+//       className={`bsc-card${active ? " is-active" : ""}`}
+//       style={{ borderColor: active ? `${b.color}55` : "transparent" }}
+//       onMouseEnter={() => onHover(true)}
+//       onMouseLeave={() => onHover(false)}
+//     >
+//       {/* ── IMAGE (horizontal, top) ── */}
+//       <div style={{ position:"relative", overflow:"hidden" }}>
+//         <img src={b.image} alt={b.title} className="bsc-img" />
+//         {/* overlays */}
+//         <div style={{ position:"absolute", inset:0, background:`linear-gradient(135deg, ${b.color}90 0%, transparent 55%)` }} />
+//         <div style={{ position:"absolute", inset:0, background:"linear-gradient(to bottom, transparent 45%, rgba(0,0,0,0.55))" }} />
+
+//         {/* icon bubble */}
+//         <div style={{
+//           position:"absolute", top:12, left:12,
+//           width:38, height:38, borderRadius:13,
+//           background:b.color, display:"flex", alignItems:"center", justifyContent:"center",
+//           fontSize:19, boxShadow:`0 4px 14px ${b.color}60`,
+//           animation:"bsc-float 3s ease-in-out infinite",
+//         }}>{b.icon}</div>
+
+//         {/* grade */}
+//         <div style={{
+//           position:"absolute", top:12, right:12,
+//           background:"rgba(0,0,0,0.42)", backdropFilter:"blur(6px)",
+//           color:"#fff", borderRadius:999, padding:"3px 10px",
+//           fontSize:10.5, fontWeight:800,
+//         }}>Grade {b.grade}</div>
+
+//         {/* featured */}
+//         {b.featured && (
+//           <div style={{
+//             position:"absolute", bottom:12, left:12,
+//             background:`linear-gradient(135deg, ${B.orange}, ${B.rose})`,
+//             color:"#fff", borderRadius:999, padding:"3px 10px",
+//             fontSize:9.5, fontWeight:800, fontFamily:"'Fredoka One',cursive",
+//             display:"inline-flex", alignItems:"center", gap:4,
+//             boxShadow:`0 3px 10px ${B.orange}55`,
+//             animation:"bsc-float 2.8s ease-in-out infinite",
+//           }}>⭐ Featured</div>
+//         )}
+
+//         {/* bottom stats bar over image */}
+//         <div style={{
+//           position:"absolute", bottom:12, right:12,
+//           display:"flex", gap:8,
+//         }}>
+//           {[{v:b.duration,i:"⏱"},{v:b.students,i:"👥"}].map(({v,i}) => (
+//             <span key={v} style={{
+//               display:"inline-flex", alignItems:"center", gap:4,
+//               background:"rgba(0,0,0,0.4)", backdropFilter:"blur(5px)",
+//               color:"#fff", borderRadius:999, padding:"3px 9px",
+//               fontSize:10.5, fontWeight:700,
+//             }}>{i} {v}</span>
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* ── CONTENT ── */}
+//       <div style={{ padding:"16px 16px 14px", display:"flex", flexDirection:"column", gap:10 }}>
+
+//         {/* level + subtitle */}
+//         <div style={{ display:"flex", alignItems:"center", gap:7, flexWrap:"wrap" }}>
+//           <span style={{
+//             background:lvl.bg, color:lvl.color, borderRadius:999,
+//             padding:"2px 9px", fontSize:9.5, fontWeight:800, textTransform:"uppercase", letterSpacing:"0.07em",
+//             display:"inline-flex", alignItems:"center", gap:4,
+//           }}>
+//             <span style={{ width:5, height:5, borderRadius:"50%", background:lvl.dot, display:"inline-block", animation:"bsc-pulse 1.8s ease-in-out infinite" }} />
+//             {b.level}
+//           </span>
+//           <span style={{ fontSize:11, color:"#9ca3af", fontWeight:700 }}>{b.subtitle}</span>
+//         </div>
+
+//         {/* title */}
+//         <h3 style={{ fontFamily:"'Fredoka One',cursive", fontSize:"clamp(1.15rem,2vw,1.45rem)", color:B.navy, lineHeight:1.15, margin:0 }}>{b.title}</h3>
+
+//         {/* stats row */}
+//         <div style={{ display:"flex", gap:16 }}>
+//           {[{icon:"📖",val:b.lessons,lbl:"Lessons"},{icon:"🎯",val:b.activities,lbl:"Activities"},{icon:"⏱",val:b.duration,lbl:"Duration"}].map(({icon,val,lbl}) => (
+//             <div key={lbl} style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:1 }}>
+//               <span style={{ fontFamily:"'Fredoka One',cursive", fontSize:"1rem", color:B.navy, lineHeight:1 }}>{val}</span>
+//               <span style={{ fontSize:9.5, color:"#9ca3af", fontWeight:700 }}>{lbl}</span>
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* points 2-col */}
+//         <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"4px 8px" }}>
+//           {b.points.map(p => (
+//             <div key={p} style={{ display:"flex", alignItems:"flex-start", gap:5, fontSize:11, color:"#374151", fontWeight:700, lineHeight:1.35 }}>
+//               <span style={{ color:b.color, flexShrink:0, fontSize:12 }}>✓</span>{p}
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* tags */}
+//         <div style={{ display:"flex", flexWrap:"wrap", gap:5 }}>
+//           {b.tags.map(t => (
+//             <span key={t} style={{
+//               background:`${b.color}10`, color:b.color,
+//               border:`1px solid ${b.color}28`, borderRadius:999,
+//               padding:"2px 9px", fontSize:10, fontWeight:800,
+//             }}>{t}</span>
+//           ))}
+//         </div>
+
+//         {/* divider */}
+//         <div style={{ height:1, background:`${b.color}18` }} />
+
+//         {/* CTA row */}
+//         <div style={{ display:"flex", gap:8, alignItems:"center" }}>
+//           <button className="bsc-btn" style={{
+//             flex:1, background:`linear-gradient(135deg, ${b.color}, ${b.color}cc)`,
+//             color:"#fff", borderRadius:11, padding:"10px 0",
+//             fontFamily:"'Fredoka One',cursive", fontSize:"0.88rem",
+//             boxShadow:`0 4px 14px ${b.color}40`,
+//             display:"flex", alignItems:"center", justifyContent:"center", gap:6,
+//           }}>Enroll Now →</button>
+//           <button className="bsc-btn" style={{
+//             background:`${b.color}0e`, color:b.color,
+//             border:`2px solid ${b.color}30`, borderRadius:11,
+//             padding:"9px 14px", fontFamily:"'Fredoka One',cursive", fontSize:"0.88rem",
+//             display:"flex", alignItems:"center", gap:5,
+//           }}>📅 Demo</button>
+//         </div>
+//       </div>
+
+//       {/* bottom accent bar */}
+//       <div style={{ height:4, background:`linear-gradient(90deg, ${b.color}, ${b.alt}, ${B.orange})` }} />
+//     </div>
+//   );
+// }
+
+// /* ── MAIN ── */
+// export default function BundleCarousel() {
+//   const trackRef = useRef(null);
+//   const [activeIdx, setActiveIdx] = useState(1); // center card default
+//   const [paused, setPaused] = useState(false);
+//   const [hovered, setHovered] = useState(null);
+//   const isDragging = useRef(false);
+//   const startX = useRef(0);
+//   const scrollLeft = useRef(0);
+//   const autoRef = useRef(null);
+//   const CARD_W = 380 + 20; // card width + gap
+
+//   /* ── scroll to index ── */
+//   const scrollTo = (idx) => {
+//     if (!trackRef.current) return;
+//     const clamped = Math.max(0, Math.min(BUNDLES.length - 1, idx));
+//     const track = trackRef.current;
+//     const card = track.children[clamped];
+//     if (!card) return;
+//     const offset = card.offsetLeft - track.offsetWidth / 2 + card.offsetWidth / 2;
+//     track.scrollTo({ left: offset, behavior: "smooth" });
+//     setActiveIdx(clamped);
+//   };
+
+//   /* ── detect active from scroll ── */
+//   const onScroll = () => {
+//     if (!trackRef.current) return;
+//     const track = trackRef.current;
+//     const center = track.scrollLeft + track.offsetWidth / 2;
+//     let closest = 0, minDist = Infinity;
+//     Array.from(track.children).forEach((card, i) => {
+//       const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+//       const dist = Math.abs(cardCenter - center);
+//       if (dist < minDist) { minDist = dist; closest = i; }
+//     });
+//     setActiveIdx(closest);
+//   };
+
+//   /* ── auto-scroll ── */
+//   const startAuto = () => {
+//     clearInterval(autoRef.current);
+//     autoRef.current = setInterval(() => {
+//       if (paused) return;
+//       const next = (activeIdx + 1) % BUNDLES.length;
+//       scrollTo(next);
+//     }, 4500);
+//   };
+//   useEffect(() => { startAuto(); return () => clearInterval(autoRef.current); }, [activeIdx, paused]);
+
+//   /* ── init scroll to center ── */
+//   useEffect(() => { setTimeout(() => scrollTo(1), 80); }, []);
+
+//   /* ── drag ── */
+//   const onMouseDown = (e) => {
+//     isDragging.current = true;
+//     startX.current = e.pageX - trackRef.current.offsetLeft;
+//     scrollLeft.current = trackRef.current.scrollLeft;
+//     trackRef.current.classList.add("is-dragging");
+//   };
+//   const onMouseMove = (e) => {
+//     if (!isDragging.current) return;
+//     e.preventDefault();
+//     const x = e.pageX - trackRef.current.offsetLeft;
+//     trackRef.current.scrollLeft = scrollLeft.current - (x - startX.current) * 1.4;
+//   };
+//   const stopDrag = () => {
+//     isDragging.current = false;
+//     trackRef.current?.classList.remove("is-dragging");
+//   };
+
+//   /* ── touch ── */
+//   const onTouchStart = (e) => { startX.current = e.touches[0].clientX; scrollLeft.current = trackRef.current.scrollLeft; };
+//   const onTouchMove = (e) => {
+//     const dx = startX.current - e.touches[0].clientX;
+//     trackRef.current.scrollLeft = scrollLeft.current + dx;
+//   };
+
+//   const active = BUNDLES[activeIdx];
+
+//   return (
+//     <div className="bsc-wrap" style={{ position:"relative", padding:"52px 0 60px", background:"linear-gradient(155deg,#f5f0ff 0%,#fff0f7 38%,#f0f9ff 70%,#f0fff8 100%)", overflow:"hidden" }}>
+//       <S />
+
+//       {/* bg blobs */}
+//       <div style={{ position:"absolute", inset:0, pointerEvents:"none" }}>
+//         <div style={{ position:"absolute", top:-110, right:-110, width:420, height:420, borderRadius:"50%", background:`radial-gradient(circle,${B.violet}16,transparent 70%)`, filter:"blur(72px)" }} />
+//         <div style={{ position:"absolute", bottom:-80, left:-80, width:360, height:360, borderRadius:"50%", background:`radial-gradient(circle,${B.orange}13,transparent 70%)`, filter:"blur(62px)" }} />
+//         <div style={{ position:"absolute", inset:0, opacity:.032, backgroundImage:`radial-gradient(circle,${B.violet} 1.5px,transparent 1.5px)`, backgroundSize:"26px 26px" }} />
+//       </div>
+
+//       {/* stars */}
+//       <Star color={B.amber}  size={14} top="7%"  left="2%"    delay={0}   />
+//       <Star color={B.rose}   size={10} top="87%" left="3%"    delay={1}   />
+//       <Star color={B.violet} size={12} top="5%"  right="3%"   delay={0.5} />
+//       <Star color={B.sky}    size={9}  top="88%" right="3.5%" delay={1.5} />
+//       <Star color={B.mint}   size={8}  top="47%" left="0.8%"  delay={2}   />
+//       <Star color={B.orange} size={11} top="45%" right="1%"   delay={0.8} />
+
+//       <div style={{ position:"relative", zIndex:10, maxWidth:1200, margin:"0 auto", padding:"0 20px" }}>
+
+//         {/* ── HEADER ── */}
+//         <div style={{ marginBottom:28 }}>
+//           <div style={{ display:"flex", justifyContent:"center", marginBottom:18 }}>
+//             <span style={{
+//               display:"inline-flex", alignItems:"center", gap:8,
+//               background:"linear-gradient(135deg,#ede9fe,#fce7f3)",
+//               color:B.violet, border:`2px solid ${B.violet}30`,
+//               borderRadius:999, padding:"6px 18px",
+//               fontSize:11, fontWeight:800, textTransform:"uppercase", letterSpacing:"0.12em",
+//             }}>
+//               <span style={{ animation:"bsc-float 2.2s ease-in-out infinite", display:"flex" }}>🏆</span>
+//               Bundle Programs
+//             </span>
+//           </div>
+
+//           <div style={{ display:"flex", flexWrap:"wrap", alignItems:"flex-end", justifyContent:"space-between", gap:16 }}>
+//             <div>
+//               <h2 style={{ fontFamily:"'Fredoka One',cursive", fontSize:"clamp(1.8rem,4vw,2.9rem)", color:B.navy, lineHeight:1.1, margin:"0 0 8px" }}>
+//                 All-in-One Learning{" "}
+//                 <span style={{ background:`linear-gradient(120deg,${B.sky},${B.violet})`, WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text" }}>Bundles</span>
+//               </h2>
+//               <p style={{ fontSize:14, color:"#6b7280", maxWidth:480, lineHeight:1.65, fontWeight:700, margin:0 }}>
+//                 Power-packed programs combining <span style={{ color:B.violet, fontWeight:900 }}>multiple tracks</span> for maximum impact — designed for students who want it all.
+//               </p>
+//               <div style={{ display:"flex", gap:7, marginTop:14 }}>
+//                 {[B.violet,B.sky,B.orange,B.mint,B.rose].map((c,i)=>(
+//                   <div key={i} style={{ width:7, height:7, borderRadius:"50%", background:c, animation:`bsc-pulse ${1.6+i*.2}s ease-in-out ${i*.15}s infinite` }} />
+//                 ))}
+//               </div>
+//             </div>
+
+//             {/* stats card */}
+//             <div style={{
+//               display:"flex", alignItems:"center", gap:20,
+//               background:"rgba(255,255,255,0.88)", backdropFilter:"blur(12px)",
+//               border:`2px solid ${B.violet}18`, borderRadius:20,
+//               padding:"14px 24px", boxShadow:`0 8px 28px ${B.violet}0e`,
+//               flexShrink:0,
+//             }}>
+//               {[{v:"3",l:"Bundles",c:B.violet},{v:"9–10",l:"Months",c:B.sky},{v:"8k+",l:"Students",c:B.orange}].map(({v,l,c},i,arr)=>(
+//                 <div key={l} style={{ display:"flex", alignItems:"center", gap:20 }}>
+//                   <div style={{ textAlign:"center" }}>
+//                     <p style={{ fontFamily:"'Fredoka One',cursive", fontSize:"1.6rem", color:c, lineHeight:1, margin:0 }}>{v}</p>
+//                     <p style={{ fontSize:11, color:"#9ca3af", fontWeight:700, margin:"2px 0 0" }}>{l}</p>
+//                   </div>
+//                   {i < arr.length-1 && <div style={{ width:1, height:32, background:`${B.violet}18` }} />}
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+
+//         <Marquee />
+
+//         {/* ── SCROLL TRACK ── */}
+//         <div style={{ position:"relative" }}>
+//           {/* left fade */}
+//           <div style={{ position:"absolute", left:0, top:0, bottom:0, width:60, background:"linear-gradient(to right, rgba(245,240,255,0.9), transparent)", zIndex:5, pointerEvents:"none" }} />
+//           {/* right fade */}
+//           <div style={{ position:"absolute", right:0, top:0, bottom:0, width:60, background:"linear-gradient(to left, rgba(240,255,248,0.9), transparent)", zIndex:5, pointerEvents:"none" }} />
+
+//           <div
+//             ref={trackRef}
+//             className="bsc-track"
+//             onScroll={onScroll}
+//             onMouseDown={onMouseDown}
+//             onMouseMove={onMouseMove}
+//             onMouseUp={stopDrag}
+//             onMouseLeave={stopDrag}
+//             onTouchStart={onTouchStart}
+//             onTouchMove={onTouchMove}
+//           >
+//             {/* left spacer */}
+//             <div style={{ flex:"0 0 calc(50% - 190px)", minWidth:20 }} />
+
+//             {BUNDLES.map((b, i) => (
+//               <Card
+//                 key={b.slug}
+//                 b={b}
+//                 active={i === activeIdx}
+//                 onHover={(h) => {
+//                   setPaused(h);
+//                   if (h) setHovered(i); else setHovered(null);
+//                 }}
+//               />
+//             ))}
+
+//             {/* right spacer */}
+//             <div style={{ flex:"0 0 calc(50% - 190px)", minWidth:20 }} />
+//           </div>
+//         </div>
+
+//         {/* ── NAV ── */}
+//         <div style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:24, marginTop:4 }}>
+//           {/* prev */}
+//           <button className="bsc-btn" onClick={() => { scrollTo(activeIdx - 1); clearInterval(autoRef.current); }} style={{
+//             width:38, height:38, borderRadius:12,
+//             border:`2px solid ${active.color}28`,
+//             background:"rgba(255,255,255,0.9)", color:active.color,
+//             display:"flex", alignItems:"center", justifyContent:"center",
+//             fontSize:20, fontWeight:700, boxShadow:"0 2px 8px rgba(0,0,0,0.07)",
+//           }}>‹</button>
+
+//           {/* dots */}
+//           <div style={{ display:"flex", gap:7, alignItems:"center" }}>
+//             {BUNDLES.map((b, i) => (
+//               <button key={i} className="bsc-dot" onClick={() => { scrollTo(i); clearInterval(autoRef.current); }} style={{
+//                 width: i === activeIdx ? 28 : 7,
+//                 background: i === activeIdx ? active.color : `${active.color}30`,
+//               }} aria-label={`Go to ${b.title}`} />
+//             ))}
+//           </div>
+
+//           {/* next */}
+//           <button className="bsc-btn" onClick={() => { scrollTo(activeIdx + 1); clearInterval(autoRef.current); }} style={{
+//             width:38, height:38, borderRadius:12, border:"none",
+//             background:`linear-gradient(135deg, ${active.color}, ${active.alt})`,
+//             color:"#fff", display:"flex", alignItems:"center", justifyContent:"center",
+//             fontSize:20, fontWeight:700, boxShadow:`0 4px 14px ${active.color}42`,
+//           }}>›</button>
+//         </div>
+
+//         {/* progress bar */}
+//         <div style={{ maxWidth:240, margin:"14px auto 0", height:2.5, background:`${active.color}14`, borderRadius:999, overflow:"hidden" }}>
+//           <div style={{
+//             height:"100%", background:`linear-gradient(90deg, ${active.color}, ${active.alt})`,
+//             width:`${((activeIdx+1)/BUNDLES.length)*100}%`,
+//             transition:"width .4s cubic-bezier(.22,1,.36,1)", borderRadius:999,
+//           }} />
+//         </div>
+
+//       </div>
+//     </div>
+//   );
+// }

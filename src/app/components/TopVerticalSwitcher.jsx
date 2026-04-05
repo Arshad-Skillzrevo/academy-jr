@@ -7,7 +7,7 @@ import {
   BriefcaseIcon,
   BuildingOffice2Icon,
 } from "@heroicons/react/24/outline"
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa"
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube, FaChild } from "react-icons/fa"
 import { Group } from "lucide-react"
 import { FaUsers } from "react-icons/fa6"
 
@@ -23,6 +23,12 @@ const verticals = [
     slug: "academy",
     href: "https://academy.skillzrevo.com",
     icon: AcademicCapIcon,
+  },
+  {
+    name: "Academy Junior",
+    slug: "academy-jr",
+    href: "#",
+    icon: FaChild,
   },
   {
     name: "Talent",
@@ -41,7 +47,8 @@ const verticals = [
     slug: "corporate-training",
     href: "https://corporatetraining.skillzrevo.com",
     icon: FaUsers,
-  }
+  },
+
 ]
 
 export default function TopVerticalSwitcher() {
@@ -65,7 +72,7 @@ export default function TopVerticalSwitcher() {
       {/* Navigation */}
       <div className="flex h-full items-end flex-wrap">
         {verticals.map((v) => {
-          const isActive = v.slug === "skillzrevo" // You can enhance this to dynamically check the current vertical
+          const isActive = v.slug === "academy-jr" // You can enhance this to dynamically check the current vertical
           const Icon = v.icon
 
           return (

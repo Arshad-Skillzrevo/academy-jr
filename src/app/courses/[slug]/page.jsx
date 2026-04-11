@@ -616,15 +616,158 @@
 // }
 
 
+// import { courses } from "../../data/courses";
+
+// export async function generateStaticParams() {
+//   return courses.map((course) => ({
+//     slug: course.slug,
+//   }));
+// }
+
+// export async function generateMetadata({ params }) {
+//   const { slug } = await params;
+//   const course = getCourseBySlug(slug);
+
+//   if (!course) return {};
+
+//   return {
+//     title: course.title,
+//     description: course.description,
+//   };
+// }
+
+
+
+
+// import React from "react";
+// import { notFound } from "next/navigation";
+// import { getCourseBySlug } from "../../data/courses";
+
+// // Import our design system and sections
+// import { GlobalStyles } from "./GlobalStyles";
+// import { HeroSection } from "./HeroSection";
+// import { StatsBar } from "./StatsBar";
+// import { ProgramOverview } from "./ProgramOverview";
+// import { JourneySection } from "./JourneySection";
+// import { CurriculumSection } from "./CurriculumSection";
+// import { ProjectsSection } from "./ProjectsSection";
+// import { CertificateSection } from "./CertificateSection";
+// import { ReviewsSection } from "./ReviewsSection";
+// import { FAQSection } from "./FAQSection";
+
+// // Icons for the ProgramOverview (customize based on your course needs)
+// import { Code, Rocket, Brain, Star, Palette, Zap } from "lucide-react";
+
+// export default function CoursePage({ params }) {
+//   const { slug } = params;
+//   const course = getCourseBySlug(slug);
+
+//   if (!course) {
+//     notFound();
+//   }
+
+//   const {
+//     title,
+//     subtitle,
+//     description,
+//     grade,
+//     lessons,
+//     activities,
+//     heroImage,
+//     journeySection,
+//     programOverview,
+//     curriculum,
+//     projects,
+//     certificate,
+//     reviews,
+//     faqs,
+//   } = course;
+
+//   // Icons used in the Program Overview highlights grid
+//   const overviewIcons = [Code, Brain, Rocket, Star, Palette, Zap];
+
+//   return (
+//     <main className="min-h-screen bg-white">
+//       {/* 1. Inject Global Design System */}
+//       <GlobalStyles />
+
+//       {/* 2. Hero Section */}
+//       <HeroSection
+//         title={title}
+//         subtitle={subtitle}
+//         description={description}
+//         grade={grade}
+//         lessons={lessons}
+//         activities={activities}
+//         heroImage={heroImage}
+//       />
+
+//       {/* 3. Stats Bar (Animated counters) */}
+//       <StatsBar lessons={lessons} activities={activities} />
+
+//       {/* 4. Program Overview (Highlights) */}
+//       <ProgramOverview
+//         heading={programOverview?.heading || "Program Highlights"}
+//         description={programOverview?.description || ""}
+//         highlights={programOverview?.highlights || []}
+//         highlightIcons={overviewIcons}
+//       />
+
+//       {/* 5. Journey Section (The Roadmap) */}
+//       <JourneySection
+//         heading={journeySection?.heading || "The Journey"}
+//         subtitle={journeySection?.subtitle || ""}
+//         cards={journeySection?.cards || []}
+//       />
+
+//       {/* 6. Curriculum Section (Expandable Modules) */}
+//       <CurriculumSection
+//         heading={curriculum?.heading || "Course Curriculum"}
+//         modules={curriculum?.modules || []}
+//         lessons={lessons}
+//       />
+
+//       {/* 7. Projects Section (Activities & Capstones) */}
+//       <ProjectsSection
+//         heading={projects?.heading || "Hands-on Projects"}
+//         description={projects?.description || ""}
+//         activities={projects?.activities || []}
+//         capstoneProjects={projects?.capstoneProjects || []}
+//       />
+
+//       {/* 8. Certificate Section (Rewards) */}
+//       <CertificateSection
+//         heading={certificate?.heading || "Get Recognized"}
+//         description={certificate?.description || ""}
+//         requirements={certificate?.requirements || []}
+//       />
+
+//       {/* 9. Reviews Section (Student Love) */}
+//       <ReviewsSection reviews={reviews || []} />
+
+//       {/* 10. FAQ Section */}
+//       <FAQSection faqs={faqs || []} />
+
+//       {/* Floating CTA / Footer could go here */}
+//     </main>
+//   );
+// }
+
+
+
+
+
+
+
 
 
 
 
 import React from "react";
 import { notFound } from "next/navigation";
-import { getCourseBySlug } from "../../data/courses";
+import { getCourseBySlug, courses } from "../../data/courses";
 
-// Import our design system and sections
+// UI Sections
 import { GlobalStyles } from "./GlobalStyles";
 import { HeroSection } from "./HeroSection";
 import { StatsBar } from "./StatsBar";
@@ -636,11 +779,40 @@ import { CertificateSection } from "./CertificateSection";
 import { ReviewsSection } from "./ReviewsSection";
 import { FAQSection } from "./FAQSection";
 
-// Icons for the ProgramOverview (customize based on your course needs)
+// Icons
 import { Code, Rocket, Brain, Star, Palette, Zap } from "lucide-react";
 
+
+// ✅ 1. STATIC PARAMS
+export async function generateStaticParams() {
+  return courses.map((course) => ({
+    slug: course.slug,
+  }));
+}
+
+
+// ✅ 2. METADATA (FIXED WITH AWAIT)
+export async function generateMetadata({ params }) {
+  const { slug } = await params; // ✅ REQUIRED
+  const course = getCourseBySlug(slug);
+
+  if (!course) {
+    return {
+      title: "Course Not Found",
+      description: "This course does not exist",
+    };
+  }
+
+  return {
+    title: course.title,
+    description: course.description,
+  };
+}
+
+
+// ✅ 3. PAGE (FIXED WITH AWAIT)
 export default async function CoursePage({ params }) {
-  const { slug } = await params;
+  const { slug } = await params; // ✅ REQUIRED
   const course = getCourseBySlug(slug);
 
   if (!course) {
@@ -662,17 +834,18 @@ export default async function CoursePage({ params }) {
     certificate,
     reviews,
     faqs,
+    age,
+    durationMonths,
+    durationClasses,
+    durationWeeks,
   } = course;
 
-  // Icons used in the Program Overview highlights grid
   const overviewIcons = [Code, Brain, Rocket, Star, Palette, Zap];
 
   return (
     <main className="min-h-screen bg-white">
-      {/* 1. Inject Global Design System */}
       <GlobalStyles />
 
-      {/* 2. Hero Section */}
       <HeroSection
         title={title}
         subtitle={subtitle}
@@ -683,10 +856,8 @@ export default async function CoursePage({ params }) {
         heroImage={heroImage}
       />
 
-      {/* 3. Stats Bar (Animated counters) */}
       <StatsBar lessons={lessons} activities={activities} />
 
-      {/* 4. Program Overview (Highlights) */}
       <ProgramOverview
         heading={programOverview?.heading || "Program Highlights"}
         description={programOverview?.description || ""}
@@ -694,21 +865,24 @@ export default async function CoursePage({ params }) {
         highlightIcons={overviewIcons}
       />
 
-      {/* 5. Journey Section (The Roadmap) */}
       <JourneySection
         heading={journeySection?.heading || "The Journey"}
         subtitle={journeySection?.subtitle || ""}
         cards={journeySection?.cards || []}
       />
 
-      {/* 6. Curriculum Section (Expandable Modules) */}
       <CurriculumSection
         heading={curriculum?.heading || "Course Curriculum"}
         modules={curriculum?.modules || []}
         lessons={lessons}
+        age={age}
+        durationMonths={durationMonths}
+        durationClasses={durationClasses}
+        durationWeeks={durationWeeks}
+        grade = {grade}
+        activities={activities}
       />
 
-      {/* 7. Projects Section (Activities & Capstones) */}
       <ProjectsSection
         heading={projects?.heading || "Hands-on Projects"}
         description={projects?.description || ""}
@@ -716,20 +890,15 @@ export default async function CoursePage({ params }) {
         capstoneProjects={projects?.capstoneProjects || []}
       />
 
-      {/* 8. Certificate Section (Rewards) */}
       <CertificateSection
         heading={certificate?.heading || "Get Recognized"}
         description={certificate?.description || ""}
         requirements={certificate?.requirements || []}
       />
 
-      {/* 9. Reviews Section (Student Love) */}
       <ReviewsSection reviews={reviews || []} />
 
-      {/* 10. FAQ Section */}
       <FAQSection faqs={faqs || []} />
-
-      {/* Floating CTA / Footer could go here */}
     </main>
   );
 }

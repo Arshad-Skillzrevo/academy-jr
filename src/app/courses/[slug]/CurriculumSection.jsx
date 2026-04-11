@@ -114,9 +114,11 @@
 
 "use client";
 import React, { useState } from "react";
-import { Layers, BookOpen, Brain, Atom, Box, Palette, Glasses, Code2, Music, Globe, Microscope } from "lucide-react";
+import { Layers, BookOpen, Brain, Atom, Box, Palette, Glasses, Code2, Music, Globe, Microscope, Clock } from "lucide-react";
 import { ModuleCard } from "./ModuleCard";
 import { CTARow } from "./CTARow";
+import { FaChild, FaTasks } from "react-icons/fa";
+import { MdClass } from "react-icons/md";
 
 // Branding colors cycling per module
 const MODULE_THEMES = [
@@ -129,9 +131,9 @@ const MODULE_THEMES = [
 ];
 
 // Map module index → lucide icon
-const MODULE_ICONS = [Atom, Box, Palette, Glasses, Code2, Music, Globe, Microscope];
+const MODULE_ICONS = [Atom, Box, Palette, Glasses, Code2, Music, Globe, Microscope, Clock];
 
-export function CurriculumSection({ heading, modules, lessons }) {
+export function CurriculumSection({ heading, modules, lessons, age, durationWeeks, durationClasses, grade, activities }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const toggleModule = (index) => {
@@ -236,6 +238,26 @@ export function CurriculumSection({ heading, modules, lessons }) {
               <span className="inline-flex items-center gap-1.5 text-xs px-4 py-2 rounded-full font-black text-white shadow-md"
                 style={{ background: "#ea580c" }}>
                 <BookOpen className="w-3.5 h-3.5" /> {lessons} Lectures
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-xs px-4 py-2 rounded-full font-black text-white shadow-md"
+                style={{ background: "#1642d6" }}>
+                <FaChild className="w-3.5 h-3.5" /> {age} Years Old
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-xs px-4 py-2 rounded-full font-black text-white shadow-md"
+                style={{ background: "#ea580c" }}>
+                <MdClass className="w-3.5 h-3.5" /> {grade} Grade
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-xs px-4 py-2 rounded-full font-black text-white shadow-md"
+                style={{ background: "#1642d6" }}>
+                <Clock className="w-3.5 h-3.5" /> {durationWeeks} Weeks
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-xs px-4 py-2 rounded-full font-black text-white shadow-md"
+                style={{ background: "#ea580c" }}>
+                <BookOpen className="w-3.5 h-3.5" /> {durationClasses} min Classes
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-xs px-4 py-2 rounded-full font-black text-white shadow-md"
+                style={{ background: "#1642d6" }}>
+                <FaTasks className="w-3.5 h-3.5" /> {activities} Activities
               </span>
             </div>
           </div>

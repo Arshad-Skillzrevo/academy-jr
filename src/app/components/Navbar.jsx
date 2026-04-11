@@ -23,7 +23,7 @@ const NAV_LINKS = [
       { title: "Consulting Partner", href: "https://consulting.skillzrevo.com/channel-partner/" },
     ],
   },
-  { title: "Our Team", href: "/our-team" },
+  // { title: "Our Team", href: "/our-team" },
   { title: "Career", href: "https://academy.skillzrevo.com/work-with-us" },
   { title: "Contact us", href: "/contact-us" },
 ];

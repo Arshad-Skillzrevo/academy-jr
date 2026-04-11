@@ -787,7 +787,7 @@ export default function Hero() {
               style={{ color: "#6b7280", fontFamily: "'Nunito', sans-serif", fontWeight: 600 }}
             >
               Expert-led, live online classes where kids aged{" "}
-              <span style={{ color: BRAND.violet, fontWeight: 800 }}>6–17</span>{" "}
+              <span style={{ color: BRAND.violet, fontWeight: 800 }}>12–18</span>{" "}
               build real games, apps &amp; creative digital projects — turning screen time into future-ready skills.
             </motion.p>
 

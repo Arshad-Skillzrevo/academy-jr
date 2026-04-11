@@ -339,15 +339,15 @@ function CourseCard({ course, index }) {
           />
           <span className="text-[11px] font-bold text-white">{lvl.label}</span>
         </div>
-        <div className="absolute w-20 h-10 rounded-lg top-2 left-5">
+        <div className="absolute w-22 h-11 rounded-lg top-4 left-4">
           <Image
             src="/logos/nasscom.webp"
             alt={course.title}
             fill
-            className="object-cover rounded-lg object-center "
+            className="object-cover rounded-xl object-center "
           />
         </div>
-        <div className="absolute w-20 h-10 rounded-lg top-2 left-30">
+        <div className="absolute w-22 h-11 rounded-lg top-4 left-30">
           <Image
             src="/logos/ites.webp"
             alt={course.title}

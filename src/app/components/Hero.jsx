@@ -103,14 +103,12 @@
 //         aria-hidden="true"
 //       />
 
-
-
 //       {/* ═══════════════════════════════════
 //           CONTENT
 //       ═══════════════════════════════════ */}
 //       {/* <div className="
 //         relative z-10
-//         mx-auto w-full 
+//         mx-auto w-full
 //         px-5 sm:px-8 lg:px-12
 //         py-16 lg:py-0
 //         grid lg:grid-cols-[1fr_480px] xl:grid-cols-[1fr_520px]
@@ -313,7 +311,6 @@
 //           </motion.p>
 //         </motion.div>
 
-
 //         {/* ──── RIGHT — image card ──── */}
 //         <motion.div
 //           initial={{ opacity: 0, x: 50, scale: 0.96 }}
@@ -437,13 +434,33 @@
 "use client";
 import heroImg from "./hero.jpg";
 import { useRef, useEffect, useState } from "react";
-import { motion, useScroll, useTransform, useInView, useSpring } from "framer-motion";
 import {
-  ArrowRight, Sparkles, Users, PlayCircle, Star,
-  Rocket, Brain, Code2, Zap, Trophy, Heart, BookOpen,
-  MousePointer2, Lightbulb, Gamepad2, Cpu
+  motion,
+  useScroll,
+  useTransform,
+  useInView,
+  useSpring,
+} from "framer-motion";
+import {
+  ArrowRight,
+  Sparkles,
+  Users,
+  PlayCircle,
+  Star,
+  Rocket,
+  Brain,
+  Code2,
+  Zap,
+  Trophy,
+  Heart,
+  BookOpen,
+  MousePointer2,
+  Lightbulb,
+  Gamepad2,
+  Cpu,
 } from "lucide-react";
 import Image from "next/image";
+import CTAButton from "./CTAbutton";
 
 /* ─────────────────────────────────────────
    GOOGLE FONTS IMPORT
@@ -458,16 +475,16 @@ const FontLoader = () => (
    BRAND TOKENS
 ───────────────────────────────────────── */
 const BRAND = {
-  violet:   "#7c3aed",
-  purple:   "#a855f7",
-  sky:      "#0ea5e9",
-  cyan:     "#22d3ee",
-  rose:     "#f43f5e",
-  orange:   "#f97316",
-  amber:    "#fbbf24",
-  mint:     "#10b981",
+  violet: "#7c3aed",
+  purple: "#a855f7",
+  sky: "#0ea5e9",
+  cyan: "#22d3ee",
+  rose: "#f43f5e",
+  orange: "#f97316",
+  amber: "#fbbf24",
+  mint: "#10b981",
   lavender: "#ede9fe",
-  peach:    "#fff1ee",
+  peach: "#fff1ee",
   skyLight: "#e0f2fe",
 };
 
@@ -482,34 +499,112 @@ const AVATARS = [
 ];
 
 const FEATURES = [
-  { icon: Code2,    label: "Live Coding",       sub: "Real-time classes",    color: BRAND.sky,    bg: "#e0f2fe" },
-  { icon: Brain,    label: "AI & Robotics",     sub: "Future-ready skills",  color: BRAND.violet, bg: "#ede9fe" },
-  { icon: Gamepad2, label: "Build Projects",    sub: "Games & apps",         color: BRAND.rose,   bg: "#ffe4e6" },
+  {
+    icon: Code2,
+    label: "Live Coding",
+    sub: "Real-time classes",
+    color: BRAND.sky,
+    bg: "#e0f2fe",
+  },
+  {
+    icon: Brain,
+    label: "AI & Robotics",
+    sub: "Future-ready skills",
+    color: BRAND.violet,
+    bg: "#ede9fe",
+  },
+  {
+    icon: Gamepad2,
+    label: "Build Projects",
+    sub: "Games & apps",
+    color: BRAND.rose,
+    bg: "#ffe4e6",
+  },
 ];
 
 const STATS = [
-  { value: 2000, suffix: "+", label: "Happy Parents", icon: Heart,   color: BRAND.rose   },
-  { value: 1000, suffix: "+", label: "Kids Learning",  icon: BookOpen, color: BRAND.violet },
-  { value: 4.9,  suffix: " ★", label: "Avg Rating",   icon: Star,    color: BRAND.amber  },
+  {
+    value: 2000,
+    suffix: "+",
+    label: "Happy Parents",
+    icon: Heart,
+    color: BRAND.rose,
+  },
+  {
+    value: 1000,
+    suffix: "+",
+    label: "Kids Learning",
+    icon: BookOpen,
+    color: BRAND.violet,
+  },
+  {
+    value: 4.9,
+    suffix: " ★",
+    label: "Avg Rating",
+    icon: Star,
+    color: BRAND.amber,
+  },
 ];
 
 /* Floating code chips */
 const DECO_CHIPS = [
-  { text: "<html>",         top: "8%",  left: "2%",   delay: 0,   dur: 7,  color: BRAND.sky    },
-  { text: "print('Hello')", top: "76%", left: "1%",   delay: 1.2, dur: 9,  color: BRAND.violet },
-  { text: "if (future) {",  top: "18%", right: "2%",  delay: 0.6, dur: 8,  color: BRAND.mint   },
-  { text: "ai.learn()",     top: "68%", right: "3%",  delay: 2,   dur: 11, color: BRAND.rose   },
-  { text: "for i in range", top: "44%", left: "0%",   delay: 1.8, dur: 10, color: BRAND.orange },
+  { text: "<html>", top: "8%", left: "2%", delay: 0, dur: 7, color: BRAND.sky },
+  {
+    text: "print('Hello')",
+    top: "76%",
+    left: "1%",
+    delay: 1.2,
+    dur: 9,
+    color: BRAND.violet,
+  },
+  {
+    text: "if (future) {",
+    top: "18%",
+    right: "2%",
+    delay: 0.6,
+    dur: 8,
+    color: BRAND.mint,
+  },
+  {
+    text: "ai.learn()",
+    top: "68%",
+    right: "3%",
+    delay: 2,
+    dur: 11,
+    color: BRAND.rose,
+  },
+  {
+    text: "for i in range",
+    top: "44%",
+    left: "0%",
+    delay: 1.8,
+    dur: 10,
+    color: BRAND.orange,
+  },
 ];
 
 /* Floating decorative stars/sparkle positions */
 const SPARKLE_POSITIONS = [
-  { top: "15%", left: "22%",  size: 16, delay: 0,   dur: 3.5, color: BRAND.amber  },
-  { top: "28%", right: "18%", size: 12, delay: 0.8, dur: 4,   color: BRAND.rose   },
-  { top: "60%", left: "15%",  size: 10, delay: 1.2, dur: 3,   color: BRAND.cyan   },
-  { top: "72%", right: "22%", size: 14, delay: 0.4, dur: 4.5, color: BRAND.violet },
-  { top: "42%", left: "48%",  size: 8,  delay: 2,   dur: 3.8, color: BRAND.mint   },
-  { top: "85%", left: "38%",  size: 11, delay: 1.6, dur: 5,   color: BRAND.orange },
+  { top: "15%", left: "22%", size: 16, delay: 0, dur: 3.5, color: BRAND.amber },
+  { top: "28%", right: "18%", size: 12, delay: 0.8, dur: 4, color: BRAND.rose },
+  { top: "60%", left: "15%", size: 10, delay: 1.2, dur: 3, color: BRAND.cyan },
+  {
+    top: "72%",
+    right: "22%",
+    size: 14,
+    delay: 0.4,
+    dur: 4.5,
+    color: BRAND.violet,
+  },
+  { top: "42%", left: "48%", size: 8, delay: 2, dur: 3.8, color: BRAND.mint },
+  {
+    top: "85%",
+    left: "38%",
+    size: 11,
+    delay: 1.6,
+    dur: 5,
+    color: BRAND.orange,
+  },
 ];
 
 /* ─────────────────────────────────────────
@@ -528,7 +623,11 @@ function WavyDivider({ color = "#fff", flip = false }) {
       }}
       aria-hidden="true"
     >
-      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <svg
+        viewBox="0 0 1440 60"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
         <path
           d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z"
           fill={color}
@@ -541,13 +640,24 @@ function WavyDivider({ color = "#fff", flip = false }) {
 /* ─────────────────────────────────────────
    SPINNING STAR
 ───────────────────────────────────────── */
-function SpinningStar({ size = 16, color, delay = 0, top, left, right, bottom }) {
+function SpinningStar({
+  size = 16,
+  color,
+  delay = 0,
+  top,
+  left,
+  right,
+  bottom,
+}) {
   return (
     <motion.div
       className="absolute pointer-events-none z-[3]"
       style={{ top, left, right, bottom }}
       animate={{ rotate: 360, scale: [1, 1.2, 1] }}
-      transition={{ rotate: { duration: 8, repeat: Infinity, ease: "linear", delay }, scale: { duration: 2, repeat: Infinity, ease: "easeInOut", delay } }}
+      transition={{
+        rotate: { duration: 8, repeat: Infinity, ease: "linear", delay },
+        scale: { duration: 2, repeat: Infinity, ease: "easeInOut", delay },
+      }}
     >
       <Star size={size} fill={color} color={color} />
     </motion.div>
@@ -557,13 +667,26 @@ function SpinningStar({ size = 16, color, delay = 0, top, left, right, bottom })
 /* ─────────────────────────────────────────
    FLOAT BOB WRAPPER
 ───────────────────────────────────────── */
-function FloatBob({ children, delay = 0, amplitude = 10, duration = 3.5, style, className }) {
+function FloatBob({
+  children,
+  delay = 0,
+  amplitude = 10,
+  duration = 3.5,
+  style,
+  className,
+}) {
   return (
     <motion.div
       className={className}
       style={style}
       animate={{ y: [0, -amplitude, 0] }}
-      transition={{ duration, delay, repeat: Infinity, ease: "easeInOut", repeatType: "mirror" }}
+      transition={{
+        duration,
+        delay,
+        repeat: Infinity,
+        ease: "easeInOut",
+        repeatType: "mirror",
+      }}
     >
       {children}
     </motion.div>
@@ -590,13 +713,22 @@ function CountUp({ target, suffix = "", decimals = 0 }) {
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
       const current = start + (end - start) * eased;
-      setDisplay(decimals > 0 ? current.toFixed(decimals) : Math.floor(current).toLocaleString());
+      setDisplay(
+        decimals > 0
+          ? current.toFixed(decimals)
+          : Math.floor(current).toLocaleString(),
+      );
       if (progress < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
   }, [isInView, target, decimals]);
 
-  return <span ref={ref}>{display}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      {display}
+      {suffix}
+    </span>
+  );
 }
 
 /* ─────────────────────────────────────────
@@ -622,7 +754,11 @@ function DottedBg({ color = "#7c3aed", opacity = 0.06, size = 28 }) {
 const stagger = { animate: { transition: { staggerChildren: 0.1 } } };
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+  },
 };
 const fadeIn = {
   initial: { opacity: 0 },
@@ -630,7 +766,11 @@ const fadeIn = {
 };
 const springPop = {
   initial: { opacity: 0, scale: 0.8 },
-  animate: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 380, damping: 22 } },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: { type: "spring", stiffness: 380, damping: 22 },
+  },
 };
 
 /* ─────────────────────────────────────────
@@ -638,7 +778,10 @@ const springPop = {
 ───────────────────────────────────────── */
 export default function Hero() {
   const sectionRef = useRef(null);
-  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
@@ -650,38 +793,59 @@ export default function Hero() {
         className="relative w-full overflow-hidden flex items-center min-h-screen"
         style={{
           maxHeight: 980,
-          background: "linear-gradient(135deg, #f5f0ff 0%, #fff0fb 30%, #fff8ee 60%, #edfff8 100%)",
+          background:
+            "linear-gradient(135deg, #f5f0ff 0%, #fff0fb 30%, #fff8ee 60%, #edfff8 100%)",
           fontFamily: "'Nunito', sans-serif",
         }}
       >
-
         {/* ══ BACKGROUND LAYERS ══ */}
         <div className="absolute inset-0 z-0" aria-hidden="true">
           <DottedBg color="#7c3aed" opacity={0.045} size={30} />
 
           {/* Pastel gradient blobs */}
-          <div className="absolute inset-0" style={{
-            background: `
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `
               radial-gradient(ellipse 70% 55% at 75% -10%, #c4b5fd40 0%, transparent 65%),
               radial-gradient(ellipse 55% 50% at -5% 85%,  #fda4af30 0%, transparent 60%),
               radial-gradient(ellipse 45% 50% at 50% 110%, #6ee7b730 0%, transparent 60%),
               radial-gradient(ellipse 40% 35% at 20% 20%,  #bae6fd25 0%, transparent 55%)
             `,
-          }} />
+            }}
+          />
 
           {/* Soft radial glow top right */}
-          <div className="absolute -top-24 -right-24 w-[600px] h-[600px] rounded-full pointer-events-none"
-            style={{ background: "radial-gradient(circle, #c4b5fd33 0%, transparent 70%)", filter: "blur(40px)" }}
+          <div
+            className="absolute -top-24 -right-24 w-[600px] h-[600px] rounded-full pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(circle, #c4b5fd33 0%, transparent 70%)",
+              filter: "blur(40px)",
+            }}
           />
-          <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] rounded-full pointer-events-none"
-            style={{ background: "radial-gradient(circle, #fda4af28 0%, transparent 70%)", filter: "blur(50px)" }}
+          <div
+            className="absolute -bottom-20 -left-20 w-[500px] h-[500px] rounded-full pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(circle, #fda4af28 0%, transparent 70%)",
+              filter: "blur(50px)",
+            }}
           />
         </div>
 
         {/* ══ SPINNING STARS (desktop) ══ */}
         <div className="hidden lg:block" aria-hidden="true">
           {SPARKLE_POSITIONS.map((s, i) => (
-            <SpinningStar key={i} size={s.size} color={s.color} delay={s.delay} top={s.top} left={s.left} right={s.right} />
+            <SpinningStar
+              key={i}
+              size={s.size}
+              color={s.color}
+              delay={s.delay}
+              top={s.top}
+              left={s.left}
+              right={s.right}
+            />
           ))}
         </div>
 
@@ -716,7 +880,6 @@ export default function Hero() {
           style={{ y: contentY }}
           className="relative z-10 mx-auto w-full max-w-7xl px-6 py-20 lg:py-0 grid lg:grid-cols-[1fr_500px] xl:grid-cols-[1fr_540px] gap-10 xl:gap-16 items-center"
         >
-
           {/* ──── LEFT COPY ──── */}
           <motion.div
             variants={stagger}
@@ -724,7 +887,6 @@ export default function Hero() {
             animate="animate"
             className="flex flex-col gap-5 lg:gap-6"
           >
-
             {/* Eyebrow badge */}
             <motion.div variants={springPop}>
               <span
@@ -737,7 +899,11 @@ export default function Hero() {
                   letterSpacing: "0.1em",
                 }}
               >
-                <FloatBob amplitude={5} duration={2.5} style={{ display: "flex" }}>
+                <FloatBob
+                  amplitude={5}
+                  duration={2.5}
+                  style={{ display: "flex" }}
+                >
                   <Rocket size={14} style={{ color: BRAND.orange }} />
                 </FloatBob>
                 Live Coding &amp; AI Classes for Kids
@@ -754,8 +920,7 @@ export default function Hero() {
                 fontWeight: 400,
               }}
             >
-              Prepare Young Minds{" "}
-              <br className="hidden sm:block" />
+              Prepare Young Minds <br className="hidden sm:block" />
               for the Future with{" "}
               <span
                 style={{
@@ -766,8 +931,8 @@ export default function Hero() {
                 }}
               >
                 Coding
-              </span>
-              {" "}&amp;{" "}
+              </span>{" "}
+              &amp;{" "}
               <span
                 style={{
                   background: `linear-gradient(120deg, ${BRAND.orange}, ${BRAND.rose})`,
@@ -784,11 +949,18 @@ export default function Hero() {
             <motion.p
               variants={fadeUp}
               className="text-[16px] leading-relaxed max-w-[460px]"
-              style={{ color: "#6b7280", fontFamily: "'Nunito', sans-serif", fontWeight: 600 }}
+              style={{
+                color: "#6b7280",
+                fontFamily: "'Nunito', sans-serif",
+                fontWeight: 600,
+              }}
             >
               Expert-led, live online classes where kids aged{" "}
-              <span style={{ color: BRAND.violet, fontWeight: 800 }}>12–18</span>{" "}
-              build real games, apps &amp; creative digital projects — turning screen time into future-ready skills.
+              <span style={{ color: BRAND.violet, fontWeight: 800 }}>
+                12–18
+              </span>{" "}
+              build real games, apps &amp; creative digital projects — turning
+              screen time into future-ready skills.
             </motion.p>
 
             {/* Feature cards */}
@@ -796,7 +968,11 @@ export default function Hero() {
               {FEATURES.map(({ icon: Icon, label, sub, color, bg }) => (
                 <motion.div
                   key={label}
-                  whileHover={{ y: -5, scale: 1.04, transition: { type: "spring", stiffness: 400, damping: 18 } }}
+                  whileHover={{
+                    y: -5,
+                    scale: 1.04,
+                    transition: { type: "spring", stiffness: 400, damping: 18 },
+                  }}
                   className="flex items-center gap-3 rounded-2xl px-4 py-3 border-2 cursor-default"
                   style={{
                     borderColor: `${color}30`,
@@ -811,40 +987,51 @@ export default function Hero() {
                     <Icon size={18} strokeWidth={2.2} style={{ color }} />
                   </div>
                   <div>
-                    <p className="text-[13px] leading-none mb-0.5" style={{ color, fontFamily: "'Fredoka One', cursive" }}>{label}</p>
-                    <p className="text-[11px] text-gray-400" style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 600 }}>{sub}</p>
+                    <p
+                      className="text-[13px] leading-none mb-0.5"
+                      style={{ color, fontFamily: "'Fredoka One', cursive" }}
+                    >
+                      {label}
+                    </p>
+                    <p
+                      className="text-[11px] text-gray-400"
+                      style={{
+                        fontFamily: "'Nunito', sans-serif",
+                        fontWeight: 600,
+                      }}
+                    >
+                      {sub}
+                    </p>
                   </div>
                 </motion.div>
               ))}
             </motion.div>
 
             {/* CTAs */}
-            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3 pt-1">
-              <motion.button
-                whileHover={{ scale: 1.04, boxShadow: `0 14px 36px ${BRAND.violet}50` }}
-                whileTap={{ scale: 0.97 }}
-                transition={{ type: "spring", stiffness: 400, damping: 18 }}
-                className="group inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-4 text-sm font-normal text-white"
+            <motion.div
+              variants={fadeUp}
+              className="flex flex-col sm:flex-row gap-3 pt-1"
+            >
+              <CTAButton
+                label="Book a Free Demo Class"
+                icon={Sparkles}
+                ctaLabel="Book Free Demo — Hero"
+                pageContext="Homepage Hero"
+                className="group inline-flex items-center gap-2 rounded-2xl px-7 py-4 text-white"
                 style={{
                   background: `linear-gradient(135deg, ${BRAND.purple}, ${BRAND.violet})`,
-                  boxShadow: `0 8px 28px ${BRAND.violet}38`,
-                  fontFamily: "'Fredoka One', cursive",
-                  fontSize: "1rem",
-                  letterSpacing: "0.02em",
                 }}
-              >
-                <FloatBob amplitude={4} duration={2} style={{ display: "flex" }}>
-                  <Sparkles size={16} />
-                </FloatBob>
-                Book a Free Demo Class
-                <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
-              </motion.button>
-
-              <motion.button
-                whileHover={{ scale: 1.04, boxShadow: `0 10px 28px ${BRAND.orange}35` }}
+                whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 400, damping: 18 }}
-                className="group inline-flex items-center justify-center gap-2 rounded-2xl border-2 px-7 py-4 text-sm font-normal"
+              />
+
+              <CTAButton
+                label="Join WhatsApp Community"
+                icon={PlayCircle}
+                ctaLabel="Join WhatsApp — Hero"
+                pageContext="Homepage Hero"
+                className="group inline-flex items-center gap-2 rounded-2xl border-2 px-7 py-4 text-sm font-normal"
                 style={{
                   color: BRAND.orange,
                   borderColor: `${BRAND.orange}50`,
@@ -852,14 +1039,20 @@ export default function Hero() {
                   fontFamily: "'Fredoka One', cursive",
                   fontSize: "1rem",
                 }}
-              >
-                <PlayCircle size={16} strokeWidth={2} />
-                Join WhatsApp Community
-              </motion.button>
+                whileHover={{
+                  scale: 1.04,
+                  boxShadow: `0 10px 28px ${BRAND.orange}35`,
+                }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: "spring", stiffness: 400, damping: 18 }}
+              />
             </motion.div>
 
             {/* Social proof + stats */}
-            <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-5 pt-1">
+            <motion.div
+              variants={fadeUp}
+              className="flex flex-wrap items-center gap-5 pt-1"
+            >
               {/* Avatars */}
               <div className="flex -space-x-2.5">
                 {AVATARS.map((src, i) => (
@@ -882,14 +1075,29 @@ export default function Hero() {
                     <motion.div
                       key={i}
                       animate={{ rotate: 360 }}
-                      transition={{ duration: 10 + i * 2, repeat: Infinity, ease: "linear" }}
+                      transition={{
+                        duration: 10 + i * 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                     >
-                      <Star key={i} size={13} fill={BRAND.amber} color={BRAND.amber} />
+                      <Star
+                        key={i}
+                        size={13}
+                        fill={BRAND.amber}
+                        color={BRAND.amber}
+                      />
                     </motion.div>
                   ))}
                 </div>
-                <p className="text-[11px] text-gray-400 mt-0.5" style={{ fontWeight: 700 }}>
-                  Trusted by <span className="font-bold text-gray-700">2,000+ parents</span>
+                <p
+                  className="text-[11px] text-gray-400 mt-0.5"
+                  style={{ fontWeight: 700 }}
+                >
+                  Trusted by{" "}
+                  <span className="font-bold text-gray-700">
+                    2,000+ parents
+                  </span>
                 </p>
               </div>
 
@@ -899,18 +1107,40 @@ export default function Hero() {
               {STATS.map((s) => {
                 const Icon = s.icon;
                 return (
-                  <div key={s.label} className="hidden sm:flex items-center gap-2">
+                  <div
+                    key={s.label}
+                    className="hidden sm:flex items-center gap-2"
+                  >
                     <div
                       className="w-8 h-8 rounded-xl flex items-center justify-center"
                       style={{ background: `${s.color}18` }}
                     >
-                      <Icon size={14} style={{ color: s.color }} fill={s.color} />
+                      <Icon
+                        size={14}
+                        style={{ color: s.color }}
+                        fill={s.color}
+                      />
                     </div>
                     <div>
-                      <p className="text-[15px] font-extrabold leading-none" style={{ color: s.color, fontFamily: "'Fredoka One', cursive" }}>
-                        <CountUp target={s.value} suffix={s.suffix} decimals={s.value % 1 !== 0 ? 1 : 0} />
+                      <p
+                        className="text-[15px] font-extrabold leading-none"
+                        style={{
+                          color: s.color,
+                          fontFamily: "'Fredoka One', cursive",
+                        }}
+                      >
+                        <CountUp
+                          target={s.value}
+                          suffix={s.suffix}
+                          decimals={s.value % 1 !== 0 ? 1 : 0}
+                        />
                       </p>
-                      <p className="text-[10px] text-gray-400 mt-0.5" style={{ fontWeight: 700 }}>{s.label}</p>
+                      <p
+                        className="text-[10px] text-gray-400 mt-0.5"
+                        style={{ fontWeight: 700 }}
+                      >
+                        {s.label}
+                      </p>
                     </div>
                   </div>
                 );
@@ -918,7 +1148,11 @@ export default function Hero() {
             </motion.div>
 
             {/* Live indicator */}
-            <motion.p variants={fadeIn} className="text-[12px] text-gray-400 flex items-center gap-2" style={{ fontWeight: 700 }}>
+            <motion.p
+              variants={fadeIn}
+              className="text-[12px] text-gray-400 flex items-center gap-2"
+              style={{ fontWeight: 700 }}
+            >
               <motion.span
                 className="inline-block w-2 h-2 rounded-full"
                 style={{ background: BRAND.mint }}
@@ -950,7 +1184,11 @@ export default function Hero() {
             {/* Wavy decorative border using SVG outline */}
             <div
               className="absolute pointer-events-none z-[2]"
-              style={{ inset: "-4px", borderRadius: "28px", border: `2.5px dashed ${BRAND.violet}30` }}
+              style={{
+                inset: "-4px",
+                borderRadius: "28px",
+                border: `2.5px dashed ${BRAND.violet}30`,
+              }}
               aria-hidden="true"
             />
 
@@ -997,14 +1235,27 @@ export default function Hero() {
               >
                 <div className="flex -space-x-2">
                   {AVATARS.slice(0, 3).map((src, i) => (
-                    <img key={i} src={src} alt="" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                    <img
+                      key={i}
+                      src={src}
+                      alt=""
+                      className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                    />
                   ))}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-[12px] font-normal text-gray-900 leading-none truncate" style={{ fontFamily: "'Fredoka One', cursive" }}>
+                  <p
+                    className="text-[12px] font-normal text-gray-900 leading-none truncate"
+                    style={{ fontFamily: "'Fredoka One', cursive" }}
+                  >
                     1,000+ Kids Learning Right Now
                   </p>
-                  <p className="text-[10px] text-gray-400 mt-0.5" style={{ fontWeight: 700 }}>Join the community today</p>
+                  <p
+                    className="text-[10px] text-gray-400 mt-0.5"
+                    style={{ fontWeight: 700 }}
+                  >
+                    Join the community today
+                  </p>
                 </div>
                 <motion.span
                   className="flex-shrink-0 w-2.5 h-2.5 rounded-full"
@@ -1027,7 +1278,10 @@ export default function Hero() {
               }}
             >
               <Cpu size={13} color="white" />
-              <span className="text-[12px] font-light text-white whitespace-nowrap" style={{ fontFamily: "'Fredoka One', cursive" }}>
+              <span
+                className="text-[12px] font-light text-white whitespace-nowrap"
+                style={{ fontFamily: "'Fredoka One', cursive" }}
+              >
                 AI-Powered Curriculum
               </span>
             </FloatBob>
@@ -1044,7 +1298,10 @@ export default function Hero() {
               }}
             >
               <Users size={13} color="white" />
-              <span className="text-[12px] font-light text-white whitespace-nowrap" style={{ fontFamily: "'Fredoka One', cursive" }}>
+              <span
+                className="text-[12px] font-light text-white whitespace-nowrap"
+                style={{ fontFamily: "'Fredoka One', cursive" }}
+              >
                 Expert Mentors
               </span>
             </FloatBob>
@@ -1066,11 +1323,25 @@ export default function Hero() {
                 className="w-8 h-8 rounded-xl flex items-center justify-center"
                 style={{ background: `${BRAND.violet}18` }}
               >
-                <Code2 size={15} style={{ color: BRAND.violet }} strokeWidth={2.2} />
+                <Code2
+                  size={15}
+                  style={{ color: BRAND.violet }}
+                  strokeWidth={2.2}
+                />
               </div>
               <div>
-                <p className="text-[12px] font-light text-gray-800 leading-none" style={{ fontFamily: "'Fredoka One', cursive" }}>500+ Projects</p>
-                <p className="text-[10px] text-gray-400 mt-0.5" style={{ fontWeight: 700 }}>Built by students</p>
+                <p
+                  className="text-[12px] font-light text-gray-800 leading-none"
+                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                >
+                  500+ Projects
+                </p>
+                <p
+                  className="text-[10px] text-gray-400 mt-0.5"
+                  style={{ fontWeight: 700 }}
+                >
+                  Built by students
+                </p>
               </div>
             </FloatBob>
 
@@ -1087,7 +1358,13 @@ export default function Hero() {
               }}
             >
               <Trophy size={14} style={{ color: BRAND.orange }} />
-              <span className="text-[11px] font-light" style={{ color: BRAND.orange, fontFamily: "'Fredoka One', cursive" }}>
+              <span
+                className="text-[11px] font-light"
+                style={{
+                  color: BRAND.orange,
+                  fontFamily: "'Fredoka One', cursive",
+                }}
+              >
                 Top Rated
               </span>
             </FloatBob>

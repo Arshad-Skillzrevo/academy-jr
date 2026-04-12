@@ -6,16 +6,16 @@ export const courses = [
     title: "Web Wizards",
     type: "single",
     price: 29500,
-    subtitle: "Create Your First Website",
+    subtitle: "Build Websites the Fun Way",
     description:
       "Students learn how to design, build, and launch their own websites with HTML, CSS, and JavaScript.",
-    lessons: 21,
+    lessons: 25,
     age: "12-18",
     grade: "8-12",
     durationMonths: "3 - 4",
-    durationWeeks: "11",
+    durationWeeks: "13",
     durationClasses: "45-60",
-    activities: "40+",
+    activities: "50+",
     heroImage: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=640&h=400&fit=crop&q=80",
     color: "#1d8fff",
 
@@ -72,7 +72,7 @@ export const courses = [
       description:
         "The Web Development Foundations Program is a beginner-friendly course designed to help students understand how websites are built and how the internet works. The program provides a structured learning path where students progress from basic web concepts to building interactive websites using modern technologies. Structured into 6 modules, the course includes hands-on activities, assignments, assessments, and project-based learning to help students apply their knowledge practically. By the end of the program, students will build and present their own interactive website project, demonstrating their understanding of core web development concepts.",
       highlights: [
-        { icon: "🎓", label: "30 Live Instructor-Led Lectures" },
+        { icon: "🎓", label: "25 Live Instructor-Led Lectures" },
         { icon: "📅", label: "3-Month Structured Learning Program" },
         { icon: "📦", label: "6 Modules Covering Web Development" },
         { icon: "🛠️", label: "Hands-on Activities and Real Projects" },
@@ -436,7 +436,7 @@ export const courses = [
       },
       {
         q: "How long is the course?",
-        a: "The course duration is 3 months and includes 30 live lectures, each lasting 90 minutes.",
+        a: "The course duration is 4 months and includes 25 live lectures, each lasting 45-60 minutes.",
       },
       {
         q: "Are the classes live or recorded?",
@@ -452,7 +452,7 @@ export const courses = [
       },
       {
         q: "Will students receive a certificate after completing the course?",
-        a: "Yes. Students who successfully complete the course will receive a Certificate of Completion issued by Skillzrevo Solutions.",
+        a: "Yes. Students who successfully complete the course will receive a Certificate of Completion issued by Skillzrevo Academy Junior",
       },
       {
         q: "What is the class schedule?",
@@ -887,7 +887,7 @@ export const courses = [
     certificate: {
       heading: "Program Certificate & Learning Recognition",
       description:
-        "Students who successfully complete the Artificial Intelligence & Machine Learning Foundations Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final AI Explorers project.",
+        "Students who successfully complete the Artificial Intelligence & Machine Learning Foundations Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior . This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final AI Explorers project. ",
       requirements: [
         "Attend the required live sessions",
         "Complete all assignments and assessments",
@@ -948,7 +948,7 @@ export const courses = [
       },
       {
         q: "How long is the course?",
-        a: "The course duration is 4 months and includes 40 live lectures, each lasting 90 minutes.",
+        a: "The course duration is 4 months and includes 30 live lectures, each lasting 45-60 minutes.",
       },
       {
         q: "Are the classes live or recorded?",
@@ -956,7 +956,7 @@ export const courses = [
       },
       {
         q: "Will students work on projects during the course?",
-        a: "Yes. Students will complete multiple hands-on activities, mini projects, and a final website project during the course.",
+        a: "Yes. Students will complete multiple hands-on activities, mini projects, and a final AI Explorers project during the course.",
       },
       {
         q: "What tools will students use during the course?",

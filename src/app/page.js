@@ -44,6 +44,7 @@ export default function Page() {
       <LogoMarquee />
       <PartnershipShowcase />
       <BundleSection />
+      <div id="courses" className=""></div>
       <CourseCatalog />
 
       {/* <PopularCourses /> */}

@@ -10,7 +10,9 @@ import {
   ArrowRight,
   Sparkles,
   CheckCircle2,
+  Phone,
 } from "lucide-react";
+import CTAButton from "./CTAbutton";
 
 const B = { blue: "#1642d6", light: "#1d8fff", orange: "#ff6900" };
 
@@ -321,17 +323,15 @@ export default function LearningJourney() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-16"
         >
-          <button
-            className="inline-flex items-center gap-2 rounded-2xl px-8 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95"
-            style={{
-              background: `linear-gradient(135deg, ${B.light}, ${B.blue})`,
-              boxShadow: `0 8px 28px ${B.blue}35`,
-            }}
-          >
-            <Rocket size={15} />
-            Book a Free Demo Class
-            <ArrowRight size={14} />
-          </button>
+          <CTAButton
+            label="Book a Free Demo Class"
+            Icon={Rocket}
+            text="Book a Free Demo Class"
+            className="bg-linear-120 from-blue-500 to-blue-700 text-white rounded-2xl px-8 py-3.5 text-sm font-bold transition-all duration-200 hover:scale-105 active:scale-95 "
+            ctaLabel="Book a Free Demo CLass"
+            pageContext="Homepage"
+          />
+          <a href="#courses">
           <button
             className="inline-flex items-center gap-2 rounded-2xl border px-8 py-3.5 text-sm font-bold transition-all duration-200 hover:scale-105 active:scale-95"
             style={{
@@ -340,9 +340,12 @@ export default function LearningJourney() {
               background: `${B.orange}0d`,
             }}
           >
+            
             <MonitorPlay size={15} />
             Explore Courses
+           
           </button>
+           </a>
         </motion.div>
 
       </div>

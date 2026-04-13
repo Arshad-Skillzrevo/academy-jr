@@ -13,9 +13,9 @@ export const courses = [
     age: "12-18",
     grade: "8-12",
     durationMonths: "3 - 4",
-    durationWeeks: "13",
+    durationWeeks: "11",
     durationClasses: "45-60",
-    activities: "50+",
+    activities: "40+",
     heroImage: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=640&h=400&fit=crop&q=80",
     color: "#1d8fff",
 
@@ -1390,13 +1390,13 @@ export const courses = [
     subtitle: "Build Strong Programming Skills",
     description:
       "Students learn how to code using C++, build logical thinking, and create real-world applications through structured learning and hands-on practice.",
-    lessons: 21,
+    lessons: 27,
     age: "12-18",
     grade: "8-12",
     durationMonths: "3 - 4",
-    durationWeeks: "11",
+    durationWeeks: "14",
     durationClasses: "45-60",
-    activities: "40+",
+    activities: "55+",
     heroImage:
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
     color: "#1d8fff",
@@ -1646,7 +1646,7 @@ export const courses = [
     certificate: {
       heading: "Program Certificate & Learning Recognition",
       description:
-        "Students who successfully complete the C++ Programming Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final website project.",
+        "Students who successfully complete the C++ Programming Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final C++ project.",
       requirements: [
         "Attend the required live sessions",
         "Complete all assignments and assessments",
@@ -1697,7 +1697,7 @@ export const courses = [
     faqs: [
       {
         q: "Who is this course for?",
-        a: "Students of Grade 9–12 interested in learning programming.",
+        a: "Students of Grade 8–12 interested in learning programming.",
       },
       {
         q: "Do I need prior coding knowledge?",
@@ -1709,7 +1709,7 @@ export const courses = [
       },
       {
         q: "Course duration?",
-        a: "2–3 months structured program.",
+        a: "3–4 months structured program.",
       },
       {
         q: "Live or recorded classes?",
@@ -1762,13 +1762,13 @@ export const courses = [
     subtitle: "Power Websites from Behind the Scenes",
     description:
       "A hands-on backend development program where students learn to build APIs, manage databases, implement authentication, and deploy real-world applications using Node.js, Express, and MongoDB.",
-    lessons: 21,
+    lessons: 32,
     age: "12-18",
     grade: "8-12",
     durationMonths: "3 - 4",
-    durationWeeks: "11",
+    durationWeeks: "16",
     durationClasses: "45-60",
-    activities: "40+",
+    activities: "60+",
     heroImage:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=640&h=400&fit=crop&q=80",
     color: "#1d8fff",
@@ -1830,7 +1830,7 @@ export const courses = [
         "This Backend Development Program is designed to help students master server-side programming and application logic. Starting from backend fundamentals, students gradually learn Node.js, Express framework, REST APIs, and database integration.The program emphasizes practical learning, where students build multiple APIs and backend systems throughout the course. By the end, students will develop and deploy a complete backend project with authentication, database integration, and real-world functionality.",
       highlights: [
         { icon: "🎓", label: "32 Live Instructor-Led Lectures" },
-        { icon: "📅", label: "4-5-Month Structured Learning Program" },
+        { icon: "📅", label: "3-4-Month Structured Learning Program" },
         { icon: "📦", label: "11 Modules Covering Under Code Builders" },
         { icon: "🛠️", label: "Hands-on Activities and Real Projects" },
         { icon: "🖥️", label: "Final Back-End Project Presentation" },
@@ -2205,7 +2205,7 @@ export const courses = [
       },
       {
         q: "Who is this program suitable for?",
-        a: "The program is designed for students aged 15–22 years. It is suitable for beginners as well as students who want to explore backend development.",
+        a: "The program is designed for students aged 12–18 years. It is suitable for beginners as well as students who want to explore backend development.",
       },
       {
         q: "Does my child need coding experience?",
@@ -2297,7 +2297,7 @@ export const courses = [
     lessons: 21,
     age: "12-18",
     grade: "8-12",
-    durationMonths: "3 - 4",
+    durationMonths: "2 - 3",
     durationWeeks: "11",
     durationClasses: "45-60",
     activities: "40+",
@@ -2615,7 +2615,7 @@ export const courses = [
     certificate: {
       heading: "Program Certificate & Learning Recognition",
       description:
-        "Students who successfully complete the Cyber Security Foundations Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final website project.",
+        "Students who successfully complete the Cyber Security Foundations Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final Cyber Heroes project.",
       requirements: [
         "Attend the required live sessions",
         "Complete all assignments and assessments",
@@ -2678,7 +2678,7 @@ export const courses = [
       },
       {
         q: "How long is the course?",
-        a: "The course duration is 3 months with 30 live lectures.",
+        a: "The course duration is 3 months with 21 live lectures.",
       },
       {
         q: "Are the classes live or recorded?",
@@ -2694,7 +2694,7 @@ export const courses = [
       },
       {
         q: "Will students receive a certificate?",
-        a: "Yes. Students will receive a Certificate of Completion from SkillzRevo Solutions.",
+        a: "Yes. Students will receive a Certificate of Completion from SkillzRevo Academy Junior.",
       },
       {
         q: "What is the class schedule?",
@@ -2740,13 +2740,13 @@ export const courses = [
     subtitle: "Learn Data Analytics the Fun Way",
     description:
       "Students learn how to analyze data, discover insights, and create dashboards using Excel, Python, SQL, and Power BI.",
-    lessons: 21,
+    lessons: 27,
     age: "12-18",
     grade: "8-12",
     durationMonths: "3 - 4",
-    durationWeeks: "11",
+    durationWeeks: "14",
     durationClasses: "45-60",
-    activities: "40+",
+    activities: "50+",
     heroImage:
       "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=1200&auto=format&fit=crop",
     color: "#1d8fff",
@@ -3159,7 +3159,7 @@ export const courses = [
     certificate: {
       heading: "Program Certificate & Learning Recognition",
       description:
-        "Students who successfully complete the Data Analysis Foundations Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final website project.",
+        "Students who successfully complete the Data Analysis Foundations Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final Data Detective project.",
       requirements: [
         "Attend the required live sessions",
         "Complete all assignments and assessments",
@@ -3222,7 +3222,7 @@ export const courses = [
       },
       {
         q: "How long is the course?",
-        a: "The course duration is 4 months with 47 live lectures.",
+        a: "The course duration is 4 months with 27 live lectures.",
       },
       {
         q: "Are classes live or recorded?",
@@ -3238,7 +3238,7 @@ export const courses = [
       },
       {
         q: "Will students receive a certificate?",
-        a: "Yes. Students will receive a Certificate of Completion from SkillzRevo Solutions.",
+        a: "Yes. Students will receive a Certificate of Completion from SkillzRevo Academy Junior.",
       },
       {
         q: "What is the class schedule?",
@@ -3285,13 +3285,13 @@ export const courses = [
       "Learn Generative AI & Build Smart Applications for Kids and Teens",
     description:
       "An interactive, project-based program where students explore AI, create chatbots, generate images, and build real-world applications using cutting-edge Generative AI tools.",
-    lessons: 21,
+    lessons: 20,
     age: "12-18",
     grade: "8-12",
-    durationMonths: "3 - 4",
-    durationWeeks: "11",
+    durationMonths: "2 - 3",
+    durationWeeks: "10",
     durationClasses: "45-60",
-    activities: "40+",
+    activities: "50+",
     heroImage:
       "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=640&h=400&fit=crop&q=80",
     color: "#1d8fff",
@@ -3608,7 +3608,7 @@ export const courses = [
     projects: {
       heading: "Hands-on Activities & Student Projects",
       description:
-        "Students who successfully complete the GenAI Explorer Program will receive an official Certificate of Completion by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final website project.",
+        "The GenAI Explorer Program focuses on interactive, hands-on learning with real-world Generative AI tools and applications. Students will explore how to create content, build AI-powered solutions, and improve outputs using prompt engineering techniques. Through practical activities and mini projects, learners will develop creativity, problem-solving skills, and a strong foundation in modern AI technologies.",
       activities: [
         "Explore popular Generative AI tools like ChatGPT, DALL·E, and others",
         "Write creative prompts to generate text, images, and ideas",
@@ -3675,7 +3675,7 @@ export const courses = [
     certificate: {
       heading: "Program Certificate & Learning Recognition",
       description:
-        "Students who successfully complete the Artificial Intelligence & Machine Learning Foundations Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final website project.",
+        "Students who successfully complete the Artificial Intelligence & Machine Learning Foundations Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final Gen AI project.",
       requirements: [
         "Attend the required live sessions",
         "Complete all assignments and assessments",
@@ -3729,7 +3729,7 @@ export const courses = [
       },
       {
         q: "Who is this program suitable for?",
-        a: "The program is designed for kids and teens aged 10–16 years. It is beginner-friendly and does not require any prior coding or technical knowledge.",
+        a: "The program is designed for kids and teens aged 12–18 years. It is beginner-friendly and does not require any prior coding or technical knowledge.",
       },
       {
         q: "Does my child need coding experience?",
@@ -3818,13 +3818,13 @@ export const courses = [
     subtitle: "Code Like a Pro",
     description:
       "Students learn how to code using Python, build real-world programs, and develop strong problem-solving skills through hands-on practice.",
-    lessons: 21,
+    lessons: 22,
     age: "12-18",
     grade: "8-12",
-    durationMonths: "3 - 4",
+    durationMonths: "2 - 3",
     durationWeeks: "11",
     durationClasses: "45-60",
-    activities: "40+",
+    activities: "50+",
     heroImage:"https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=900&auto=format&fit=crop&sat=-20&exp=-20",
     color: "#1d8fff",
 
@@ -3879,7 +3879,7 @@ export const courses = [
     programOverview: {
       heading: "Program Overview",
       description:
-        "The Python Programming Foundations Program is designed to introduce students to coding in a fun and practical way. Students will learn how to write programs, solve problems, and build real-world applications using Python.The course is structured into multiple modules covering programming basics, logic building, object-oriented concepts, and project development. With hands-on practice and guided sessions, students will gain confidence in coding and develop skills required for future technologies like AI and Data Science.By the end of the program, students will build their own projects and present them as a final showcase.",
+        "The Python Programming Foundations Program is designed to introduce students to coding in a fun and practical way. Students will learn how to write programs, solve problems, and build real-world applications using Python.The course is structured into multiple modules covering programming basics, logic building, object-oriented concepts, and project development. With hands-on practice and guided sessions, students will gain confidence in coding and develop skills required for future technologies like AI and Data Science.By the end of the program, students will build their own projects and present them as a showcase.",
       highlights: [
         { icon: "🎓", label: "22 Live Instructor-Led Lectures" },
         { icon: "📅", label: "3-Month Structured Learning Program" },
@@ -4200,7 +4200,7 @@ export const courses = [
     certificate: {
       heading: "Program Certificate & Learning Recognition",
       description:
-        "Students who successfully complete the Python Programming Program will receive an official Certificate of Completion by SkillzRevo Academy Juinor. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final website project.",
+        "Students who successfully complete the Python Programming Program will receive an official Certificate of Completion by SkillzRevo Academy Juinor. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final Python project.",
       requirements: [
         "Attend the required live sessions",
         "Complete all assignments and assessments",
@@ -4251,7 +4251,7 @@ export const courses = [
     faqs: [
       {
         q: "Who is this course for?",
-        a: "Students of Grade 9–12 who want to learn coding from scratch.",
+        a: "Students of Grade 8–12 who want to learn coding from scratch.",
       },
       {
         q: "Do I need prior coding knowledge?",
@@ -4317,13 +4317,13 @@ export const courses = [
     subtitle: "Design Websites the Fun Way",
     description:
       " A complete hands-on program where students learn how to design, develop, and deploy modern websites and applications using HTML, CSS, JavaScript, and Angular.",
-    lessons: 21,
+    lessons: 35,
     age: "12-18",
     grade: "8-12",
-    durationMonths: "3 - 4",
-    durationWeeks: "11",
+    durationMonths: "4 - 5",
+    durationWeeks: "18",
     durationClasses: "45-60",
-    activities: "40+",
+    activities: "70+",
     heroImage:
       "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1200&auto=format&fit=crop",
     color: "#1d8fff",
@@ -4705,7 +4705,7 @@ export const courses = [
     certificate: {
       heading: "Program Certificate & Learning Recognition",
       description:
-        "Students who successfully complete the UI Creators Program will receive an official Certificate of Completion. This certificate validates their skills in UI Creators, project building, and practical implementation. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final website project.",
+        "Students who successfully complete the UI Creators Program will receive an official Certificate of Completion. This certificate validates their skills in UI Creators, project building, and practical implementation. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final UI Creators project.",
       requirements: [
         "Attend the required live sessions",
         "Complete all assignments and assessments",
@@ -4850,13 +4850,13 @@ export const courses = [
     subtitle: "Start Your Coding Journey",
     description:
       "Students learn how to code using Java, build logical thinking, and create real-world applications through structured learning and hands-on practice.",
-    lessons: 21,
+    lessons: 24,
     age: "12-18",
     grade: "8-12",
-    durationMonths: "3 - 4",
-    durationWeeks: "11",
+    durationMonths: "2 - 3",
+    durationWeeks: "12",
     durationClasses: "45-60",
-    activities: "40+",
+    activities: "60+",
     heroImage: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
     color: "#1d8fff",
 
@@ -5134,7 +5134,7 @@ export const courses = [
     certificate: {
       heading: "Program Certificate & Learning Recognition",
       description:
-        "Students who successfully complete the Java Programming Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final website project.",
+        "Students who successfully complete the Java Programming Program will receive an official Certificate of Completion issued by SkillzRevo Academy Junior. This certificate recognizes the student's successful completion of the program, including participation in hands-on activities, assignments, assessments, and the final Java Programming project.",
       requirements: [
         "Attend the required live sessions",
         "Complete all assignments and assessments",
@@ -5185,7 +5185,7 @@ export const courses = [
     faqs: [
   {
     q: "Who is this course for?",
-    a: "Students of Grade 9–12 interested in learning programming.",
+    a: "Students of Grade 8–12 interested in learning programming.",
   },
   {
     q: "Do I need prior coding knowledge?",
@@ -5250,13 +5250,13 @@ export const courses = [
     subtitle: "Build, Deploy & Scale Applications",
     description:
       "Students learn how to design websites, build backend systems, and deploy applications on the cloud using modern technologies.",
-    lessons: 21,
+    lessons: 84,
     age: "12-18",
     grade: "8-12",
-    durationMonths: "3 - 4",
-    durationWeeks: "11",
+    durationMonths: "11 - 12",
+    durationWeeks: "43",
     durationClasses: "45-60",
-    activities: "40+",
+    activities: "150+",
     heroImage:
       "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
     color: "#1d8fff",
@@ -5315,10 +5315,10 @@ export const courses = [
       description:
         "The Full Stack Cloud Creators Program is designed to provide students with a complete learning path in frontend development, backend development, and cloud computing. Throughout the program, students learn how to build modern websites, develop scalable backend systems, and deploy applications on the cloud using industry-relevant tools and technologies. The course follows a structured, project-based approach, enabling students to gain practical experience through real-world applications. By the end of the program, students will be able to develop full stack applications, integrate APIs and databases, deploy projects on cloud platforms, and present a complete end-to-end capstone project with confidence.",
       highlights: [
-        { icon: "🎓", label: "70+ Live Instructor-Led Sessions" },
+        { icon: "🎓", label: "84 Live Instructor-Led Sessions" },
         { icon: "📅", label: "11–12 Month Structured Learning Program" },
-        { icon: "📚", label: "Comprehensive Curriculum Across 20+ Modules" },
-        { icon: "💻", label: "3-in-1 Learning (Python + AI + Generative AI)" },
+        { icon: "📚", label: "Comprehensive Curriculum Across 23 Modules" },
+        { icon: "💻", label: "3-in-1 Learning (UI Creators + Code Builders + Cloud Champions)" },
         { icon: "🛠️", label: "Hands-on Projects & Real-World Applications" },
         { icon: "🚀", label: "Final Capstone Project" },
         { icon: "🕐", label: "Flexible Weekend & Weekday Batches" },
@@ -5720,14 +5720,14 @@ export const courses = [
     type: "bundle",
     subtitle: "Become a Future Tech Pro",
     description:
-      "Students learn how to design websites, build backend systems, and deploy applications on the cloud using modern technologies.",
-    lessons: 21,
+      "Students learn how to code, analyze data, and build AI-powered applications using Python, Machine Learning, SQL, Excel, and Power BI.",
+    lessons: 79,
     age: "12-18",
     grade: "8-12",
-    durationMonths: "3 - 4",
-    durationWeeks: "11",
+    durationMonths: "9 - 11",
+    durationWeeks: "40",
     durationClasses: "45-60",
-    activities: "40+",
+    activities: "160+",
     heroImage:
       "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
     color: "#1d8fff",
@@ -5789,8 +5789,8 @@ export const courses = [
       description:
         "The Data & AI Innovators Program is designed to provide students with a complete learning path in Python programming, Data Analytics, and Artificial Intelligence. Throughout the program, students learn how to work with real-world data, create powerful dashboards, and build intelligent AI models using tools like Python, Excel, SQL, and Power BI. The course follows a structured, hands-on approach focused on real-world applications. By the end of the program, students will be able to analyze complex datasets, develop data-driven insights, build machine learning models, and present a comprehensive capstone project that showcases their skills in both data analytics and AI.",
       highlights: [
-        { icon: "🎓", label: "79+ Live Instructor-Led Sessions" },
-        { icon: "📅", label: "10–11 Month Structured Learning Program" },
+        { icon: "🎓", label: "79 Live Instructor-Led Sessions" },
+        { icon: "📅", label: "9–11 Month Structured Learning Program" },
         { icon: "📚", label: "Comprehensive Curriculum Across 25+ Modules" },
         { icon: "💻", label: "3-in-1 Learning (Python + Data Analytics + AI)" },
         { icon: "🛠️", label: "Hands-on Projects & Real-World Applications" },
@@ -6193,14 +6193,14 @@ export const courses = [
       type: "bundle",
       subtitle: "Code, Create & Build the Future with AI",
       description:
-        "Students learn how to code using Python, Java, and C++, build strong logic, and develop real-world applications through hands-on practice.",
-      lessons: 21,
+        "Students learn Python programming, Artificial Intelligence, Machine Learning, and Generative AI to build smart applications, chatbots, and real-world AI projects.",
+      lessons: 72,
     age: "12-18",
     grade: "8-12",
-    durationMonths: "3 - 4",
-    durationWeeks: "11",
+    durationMonths: "8 - 10",
+    durationWeeks: "36",
     durationClasses: "45-60",
-    activities: "40+",
+    activities: "150+",
       heroImage:
         "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
       color: "#1d8fff",
@@ -6264,7 +6264,7 @@ export const courses = [
           "The AI Innovators Bundle Program is designed to provide students with a complete learning path in Python Programming, Artificial Intelligence, and Generative AI. Throughout the program, students learn coding from scratch using Python, understand how AI systems work, build machine learning models, and create AI-powered applications and chatbots.The course follows a structured approach with hands-on projects and real-world applications, ensuring practical and engaging learning. By the end of the program, students will be able to build AI models and applications, develop chatbots and AI tools, create AI-generated content, and confidently present a final capstone project.",
         highlights: [
           { icon: "🎓", label: "72 Live Instructor-Led Lectures" },
-          { icon: "📅", label: "9-10-Month Structured Learning Program" },
+          { icon: "📅", label: "8-10-Month Structured Learning Program" },
           { icon: "📦", label: "28 Modules Covering Under Programming Masters" },
           {
             icon: "🛠️",
@@ -6672,13 +6672,13 @@ export const courses = [
       subtitle: "Code Like a Pro in 3 Languages",
       description:
         "Students learn how to code using Python, Java, and C++, build strong logic, and develop real-world applications through hands-on practice.", 
-      lessons: 21,
+      lessons: 73,
     age: "12-18",
     grade: "8-12",
-    durationMonths: "3 - 4",
-    durationWeeks: "11",
+    durationMonths: "8 - 10",
+    durationWeeks: "37",
     durationClasses: "45-60",
-    activities: "40+",
+    activities: "160+",
       heroImage: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
       color: "#1d8fff",
   
@@ -6740,7 +6740,7 @@ export const courses = [
           "The Programming Masters Bundle Program is designed to provide students with a complete foundation in coding using Python, Java, and C++. Throughout the program, students learn coding from scratch, build strong problem-solving skills, and gain an understanding of multiple programming paradigms that prepare them for future careers in software development. The course follows a structured learning path with hands-on coding, projects, and real-world applications, ensuring a practical and engaging learning experience. By the end of the program, students will be able to build applications in Python, Java, and C++, understand object-oriented programming and core programming logic in depth, develop multiple real-world projects, and confidently present a final capstone project.",
         highlights: [
           { icon: "🎓", label: "73 Live Instructor-Led Lectures" },
-          { icon: "📅", label: "9-10-Month Structured Learning Program" },
+          { icon: "📅", label: "8-10-Month Structured Learning Program" },
           { icon: "📦", label: "33 Modules Covering Under Programming Masters" },
           { icon: "💻", label: "3-in-1 Learning (Python + Java + C++)" },
           { icon: "🛠️", label: "Hands-on Activities and Real Projects" },
@@ -7014,67 +7014,73 @@ export const courses = [
     },
   ],
   faqs: [
-    {
-      q: "What is this Tech Titans course about?",
-      a: "This course teaches students web development, Python programming, and cyber security in a fun and practical way. Students learn to build websites, develop applications, and understand digital safety through real-world projects.",
-    },
-    {
-      q: "Who is this program suitable for?",
-      a: "The program is designed for students from Grade 8–12. It is beginner-friendly and suitable for students who want to learn coding and technology from scratch.",
-    },
-    {
-      q: "Does my child need coding experience?",
-      a: "No prior coding experience is required. The course starts from basics and gradually moves to intermediate-level concepts.",
-    },
-    {
-      q: "What will my child be able to build after this course?",
-      a: "By the end of the program, students will be able to build websites, create Python applications, perform basic cyber security analysis, and complete a final capstone project combining all skills.",
-    },
-    {
-      q: "How is this course different from regular coding classes?",
-      a: "This program offers a complete learning experience by combining web development, programming, and cyber security, focusing on practical projects instead of just theory.",
-    },
-    {
-      q: "Are the classes live or recorded?",
-      a: "Classes are live and instructor-led, allowing students to interact, ask questions, and participate in activities in real time.",
-    },
-    {
-      q: "How many students are there in one batch?",
-      a: "We maintain small batch sizes to ensure personalized attention and better learning for every student.",
-    },
-    {
-      q: "What kind of projects will students work on?",
-      a: "Students will work on projects like portfolio websites, JavaScript apps, Python programs, password generators, and basic cyber security analysis projects, along with a final capstone project.",
-    },
-    {
-      q: "Is this course suitable for beginners?",
-      a: "Yes, the course is designed for beginners and gradually builds up to intermediate-level skills across all three domains.",
-    },
-    {
-      q: "What tools or software are required?",
-      a: "Students will need a laptop or desktop, internet connection, browser, VS Code, Python, and basic security tools. All tools used are free.",
-    },
-    {
-      q: "Will my child get a certificate?",
-      a: "Yes, students will receive certificates for Web Development, Python Programming, and Cyber Security after successfully completing the course.",
-    },
-    {
-      q: "How will this course help my child in the future?",
-      a: "This course helps students build strong coding skills, problem-solving ability, and awareness of digital security, preparing them for future careers in technology.",
-    },
-    {
-      q: "Can parents track their child’s progress?",
-      a: "Yes, parents can track progress through regular updates, project reviews, and final project presentations.",
-    },
-    {
-      q: "What if a student misses a class?",
-      a: "Recorded sessions or support materials will be provided so students can catch up easily without missing important content.",
-    },
-    {
-      q: "Is there a demo class available?",
-      a: "Yes, you can book a free demo class to experience the teaching style and course structure before enrolling.",
-    }
-  ],
+  {
+    q: "What is this Programming Masters course about?",
+    a: "This course teaches students Python, Java, and C++ programming in a structured and practical way. Students build strong coding fundamentals, improve logic, and create real-world applications using multiple languages.",
+  },
+  {
+    q: "Who is this program suitable for?",
+    a: "The program is designed for students from Grade 8–12. It is beginner-friendly and ideal for students who want to learn programming from scratch.",
+  },
+  {
+    q: "Does my child need coding experience?",
+    a: "No prior coding experience is required. The course starts from basics and gradually moves to advanced programming concepts.",
+  },
+  {
+    q: "Why learn three programming languages in one course?",
+    a: "Learning Python, Java, and C++ helps students build strong logic, understand different programming styles, and become more confident coders.",
+  },
+  {
+    q: "What will my child be able to build after this course?",
+    a: "Students will be able to build programs, solve logic-based problems, create applications, and develop projects using Python, Java, and C++.",
+  },
+  {
+    q: "How is this course different from regular coding classes?",
+    a: "This course focuses on logic building and multi-language learning, helping students master programming concepts instead of learning just one language.",
+  },
+  {
+    q: "Are the classes live or recorded?",
+    a: "Classes are live and instructor-led, and recorded sessions are also provided for revision.",
+  },
+  {
+    q: "How many students are there in one batch?",
+    a: "We maintain small batch sizes to ensure personalized attention and better learning for every student.",
+  },
+  {
+    q: "What kind of projects will students work on?",
+    a: "Students will work on projects like calculators, games, data-based programs, and real-world applications, along with a final capstone project.",
+  },
+  {
+    q: "Is this course suitable for beginners?",
+    a: "Yes, the course is designed for beginners and gradually builds up to advanced-level programming skills.",
+  },
+  {
+    q: "What tools or software are required?",
+    a: "Students will need a laptop or desktop, internet connection, and tools like VS Code, Python, Java, and C++ compilers. All tools used are free.",
+  },
+  {
+    q: "Will my child get a certificate?",
+    a: "Yes, students will receive a Certificate of Completion after successfully completing the Programming Masters course.",
+  },
+  {
+    q: "How will this course help my child in the future?",
+    a: "This course builds strong programming and problem-solving skills, which are essential for careers in software development, AI, and technology.",
+  },
+  {
+    q: "Can parents track their child’s progress?",
+    a: "Yes, parents will receive regular updates, project reviews, and final project presentations to track progress.",
+  },
+  {
+    q: "What if a student misses a class?",
+    a: "Recorded sessions and support materials will be provided so students can catch up easily.",
+  },
+  {
+    q: "Is there a demo class available?",
+    a: "Yes, you can book a free demo class to experience the course before enrolling.",
+  }
+]
+
+  ,
       recommendedCourses: [
         {
           title: "Tech Titans",
@@ -7106,13 +7112,13 @@ export const courses = [
       subtitle: "Become a Complete Tech Expert",
       description:
         "Students learn how to build websites, write Python programs, and protect systems using cybersecurity skills.", 
-     lessons: 21,
+     lessons: 68,
     age: "12-18",
     grade: "8-12",
-    durationMonths: "3 - 4",
-    durationWeeks: "11",
+    durationMonths: "8 - 10",
+    durationWeeks: "35",
     durationClasses: "45-60",
-    activities: "40+",
+    activities: "140+",
       heroImage: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
       color: "#1d8fff",
   
@@ -7173,7 +7179,7 @@ export const courses = [
           "The Complete Tech Bundle Program is designed to provide students with a strong foundation in Web Development, Python Programming, and Cyber Security. Throughout the program, students learn how to build websites from scratch, develop real-world Python applications, and understand cyber threats along with essential digital safety practices. The course is carefully structured into multiple modules that combine coding, development, and security skills through hands-on projects and practical learning. By the end of the program, students will be able to build interactive websites, create Python-based applications, perform basic cyber security analysis, and confidently present a complete capstone project.",
         highlights: [
           { icon: "🎓", label: "68 Live Instructor-Led Lectures" },
-          { icon: "📅", label: "9-10-Month Structured Learning Program" },
+          { icon: "📅", label: "8-10-Month Structured Learning Program" },
           { icon: "📦", label: "22 Modules Covering Under Tech Titans" },
           { icon: "🛠️", label: "3-in-1 Learning (Web + Python + Cyber Security)" },
           { icon: "🛠️", label: "Hands-on Activities and Real Projects" },

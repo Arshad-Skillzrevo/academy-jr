@@ -22,11 +22,14 @@ import {
   Zap,
   Milestone,
   Activity,
+  CalendarDaysIcon,
 } from "lucide-react";
 
 import { useRouter } from "next/navigation";
 import { courses as COURSES_RAW } from "../data/courses"; // ✅ IMPORT DATA
 import Image from "next/image";
+import Link from "next/link";
+import CTAButton from "./CTAbutton";
 
 /* ─────────────────────────────────────────
    GOOGLE FONTS
@@ -490,22 +493,27 @@ function CourseCard({ course, index }) {
 
           <div className="flex items-center gap-2">
             {/* ✅ Enroll Now routes to course slug */}
-            <motion.button
-              onClick={() => router.push(`/courses/${course.slug}`)}
-              whileHover={{ scale: 1.06 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 18 }}
-              className="flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-[14px] font-light text-white"
-              style={{
-                background: `linear-gradient(135deg, ${course.accent}, ${course.accent}cc)`,
-                boxShadow: `0 4px 14px ${course.accent}40`,
-                fontFamily: "'Fredoka One', cursive",
-              }}
-            >
-              Enroll Now
-              <ArrowRight size={11} strokeWidth={2.5} />
-            </motion.button>
-            <motion.button
+
+            <Link href={`/courses/${course.slug}`} target="_blank">
+              <motion.button
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 18 }}
+                className="flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-[14px] font-light text-white"
+                style={{
+                  background: `linear-gradient(135deg, ${course.accent}, ${course.accent}cc)`,
+                  boxShadow: `0 4px 14px ${course.accent}40`,
+                  fontFamily: "'Fredoka One', cursive",
+                }}
+              >
+                View Course
+              </motion.button>
+            </Link>
+            <CTAButton
+              label="Demo"
+              ctaLabel={`Book Demo — ${course.title}`}
+              pageContext="Course Catalog"
+              courseName={course.title}
               whileHover={{ scale: 1.06 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 18 }}
@@ -517,9 +525,9 @@ function CourseCard({ course, index }) {
                 fontFamily: "'Fredoka One', cursive",
               }}
             >
-              <CalendarDays size={14} strokeWidth={2} />
+              <CalendarDaysIcon size={14} strokeWidth={2} />
               Demo
-            </motion.button>
+            </CTAButton>
           </div>
         </div>
       </div>

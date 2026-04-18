@@ -101,7 +101,6 @@ function WavyBottom({ fill = "#ffffff" }) {
   );
 }
 
-
 const FontLoader = () => (
   <style>{`
     @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -111,16 +110,17 @@ const FontLoader = () => (
 
 /* single step card */
 function StepCard({ step, index, total }) {
-  const ref    = useRef(null);
+  const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   const isLast = index === total - 1;
 
   return (
-    <div ref={ref} className="relative flex flex-col items-center"
-    style={{ fontFamily: "'Nunito', sans-serif" }}>
-      
-
+    <div
+      ref={ref}
+      className="relative flex flex-col items-center"
+      style={{ fontFamily: "'Nunito', sans-serif" }}
+    >
       {/* ── connector line (desktop: horizontal, mobile: vertical) ── */}
       {!isLast && (
         <>
@@ -128,7 +128,11 @@ function StepCard({ step, index, total }) {
           <motion.div
             initial={{ scaleX: 0 }}
             animate={inView ? { scaleX: 1 } : {}}
-            transition={{ duration: 0.7, delay: index * 0.18 + 0.5, ease: "easeInOut" }}
+            transition={{
+              duration: 0.7,
+              delay: index * 0.18 + 0.5,
+              ease: "easeInOut",
+            }}
             className="hidden lg:block absolute top-[52px] left-[calc(50%+52px)] right-0 h-0.5 origin-left z-0"
             style={{
               background: `linear-gradient(90deg, ${step.accent}80, ${STEPS[index + 1].accent}80)`,
@@ -151,7 +155,9 @@ function StepCard({ step, index, total }) {
             animate={inView ? { scaleY: 1 } : {}}
             transition={{ duration: 0.5, delay: index * 0.18 + 0.5 }}
             className="lg:hidden w-0.5 h-12 my-1 origin-top"
-            style={{ background: `linear-gradient(180deg, ${step.accent}80, ${STEPS[index + 1].accent}80)` }}
+            style={{
+              background: `linear-gradient(180deg, ${step.accent}80, ${STEPS[index + 1].accent}80)`,
+            }}
           />
         </>
       )}
@@ -160,14 +166,23 @@ function StepCard({ step, index, total }) {
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         animate={inView ? { scale: 1, opacity: 1 } : {}}
-        transition={{ type: "spring", stiffness: 260, damping: 18, delay: index * 0.18 }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 18,
+          delay: index * 0.18,
+        }}
         className="relative z-10 flex-shrink-0"
       >
         {/* outer glow ring — pulses once */}
         <motion.div
           initial={{ scale: 0.7, opacity: 0 }}
           animate={inView ? { scale: 1.45, opacity: 0 } : {}}
-          transition={{ duration: 1, delay: index * 0.18 + 0.3, ease: "easeOut" }}
+          transition={{
+            duration: 1,
+            delay: index * 0.18 + 0.3,
+            ease: "easeOut",
+          }}
           className="absolute inset-0 rounded-full"
           style={{ background: step.accent }}
         />
@@ -198,7 +213,11 @@ function StepCard({ step, index, total }) {
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.5, delay: index * 0.18 + 0.2, ease: [0.22, 1, 0.36, 1] }}
+        transition={{
+          duration: 0.5,
+          delay: index * 0.18 + 0.2,
+          ease: [0.22, 1, 0.36, 1],
+        }}
         className="mt-5 rounded-3xl p-6 w-full text-center flex flex-col items-center gap-3 group cursor-default"
         style={{
           background: "white",
@@ -237,7 +256,7 @@ function StepCard({ step, index, total }) {
 }
 
 export default function LearningJourney() {
-  const headerRef    = useRef(null);
+  const headerRef = useRef(null);
   const headerInView = useInView(headerRef, { once: true });
 
   return (
@@ -245,25 +264,44 @@ export default function LearningJourney() {
       className="relative py-22 overflow-hidden"
       style={{ background: "#e6edff", fontFamily: "'Nunito', sans-serif" }}
     >
-
-       <FontLoader />
+      <FontLoader />
       <WavyTop fill="#ffffff" />
       <WavyBottom fill="#ffffff" />
       {/* blobs */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <div className="absolute rounded-full blur-3xl opacity-[0.07]"
-          style={{ width: 640, height: 640, top: "-160px", left: "-160px",
-            background: `radial-gradient(circle, ${B.blue}, transparent 70%)` }} />
-        <div className="absolute rounded-full blur-3xl opacity-[0.06]"
-          style={{ width: 500, height: 500, bottom: "-100px", right: "-100px",
-            background: `radial-gradient(circle, ${B.orange}, transparent 70%)` }} />
-        <div className="absolute inset-0 opacity-[0.03]"
-          style={{ backgroundImage: `radial-gradient(${B.blue} 1px, transparent 1px)`,
-            backgroundSize: "36px 36px" }} />
+      <div
+        className="absolute inset-0 pointer-events-none overflow-hidden"
+        aria-hidden="true"
+      >
+        <div
+          className="absolute rounded-full blur-3xl opacity-[0.07]"
+          style={{
+            width: 640,
+            height: 640,
+            top: "-160px",
+            left: "-160px",
+            background: `radial-gradient(circle, ${B.blue}, transparent 70%)`,
+          }}
+        />
+        <div
+          className="absolute rounded-full blur-3xl opacity-[0.06]"
+          style={{
+            width: 500,
+            height: 500,
+            bottom: "-100px",
+            right: "-100px",
+            background: `radial-gradient(circle, ${B.orange}, transparent 70%)`,
+          }}
+        />
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `radial-gradient(${B.blue} 1px, transparent 1px)`,
+            backgroundSize: "36px 36px",
+          }}
+        />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-
         {/* header */}
         <div ref={headerRef} className="text-center max-w-2xl mx-auto mb-16">
           <motion.span
@@ -271,7 +309,11 @@ export default function LearningJourney() {
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-widest border mb-5"
-            style={{ color: B.blue, borderColor: `${B.blue}30`, background: `${B.blue}0d` }}
+            style={{
+              color: B.blue,
+              borderColor: `${B.blue}30`,
+              background: `${B.blue}0d`,
+            }}
           >
             <Sparkles size={11} style={{ color: B.orange }} />
             Learning Journey
@@ -282,15 +324,20 @@ export default function LearningJourney() {
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.55, delay: 0.1 }}
             className="heading-oswald font-normal  leading-tight tracking-tight text-gray-900"
-            style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.9rem)",
-               fontFamily: "'Fredoka One', cursive"
-             }}
+            style={{
+              fontSize: "clamp(1.9rem, 3.8vw, 2.9rem)",
+              fontFamily: "'Fredoka One', cursive",
+            }}
           >
             How Our{" "}
-            <span style={{
-              background: `linear-gradient(105deg, ${B.light}, ${B.blue})`,
-              WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
-            }}>
+            <span
+              style={{
+                background: `linear-gradient(105deg, ${B.light}, ${B.blue})`,
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
               Learning Program
             </span>{" "}
             Works
@@ -302,7 +349,8 @@ export default function LearningJourney() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 text-[15px] text-gray-500 leading-relaxed"
           >
-            A simple step-by-step journey to start learning future-ready technology skills.
+            A simple step-by-step journey to start learning future-ready
+            technology skills.
           </motion.p>
         </div>
 
@@ -311,7 +359,12 @@ export default function LearningJourney() {
         {/* Mobile: single column with vertical connectors */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-0 lg:gap-6 items-start">
           {STEPS.map((step, i) => (
-            <StepCard key={step.num} step={step} index={i} total={STEPS.length} />
+            <StepCard
+              key={step.num}
+              step={step}
+              index={i}
+              total={STEPS.length}
+            />
           ))}
         </div>
 
@@ -332,22 +385,19 @@ export default function LearningJourney() {
             pageContext="Homepage"
           />
           <a href="#courses">
-          <button
-            className="inline-flex items-center gap-2 rounded-2xl border px-8 py-3.5 text-sm font-bold transition-all duration-200 hover:scale-105 active:scale-95"
-            style={{
-              color: B.orange,
-              borderColor: `${B.orange}40`,
-              background: `${B.orange}0d`,
-            }}
-          >
-            
-            <MonitorPlay size={15} />
-            Explore Courses
-           
-          </button>
-           </a>
+            <button
+              className="inline-flex items-center gap-2 rounded-2xl border px-8 py-3.5 text-sm font-bold transition-all duration-200 hover:scale-105 active:scale-95"
+              style={{
+                color: B.orange,
+                borderColor: `${B.orange}40`,
+                background: `${B.orange}0d`,
+              }}
+            >
+              <MonitorPlay size={15} />
+              Explore Courses
+            </button>
+          </a>
         </motion.div>
-
       </div>
     </section>
   );

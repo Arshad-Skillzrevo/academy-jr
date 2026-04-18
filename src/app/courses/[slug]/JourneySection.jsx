@@ -16,7 +16,7 @@ const CARD_ICONS = [Target, Rocket, Trophy];
  * Displays a roadmap or "What you'll achieve" section using colorful cards 
  * and a call-to-action row.
  */
-export function JourneySection({ heading, subtitle, cards }) {
+export function JourneySection({ courseTitle, heading, subtitle, cards }) {
   return (
     <section className="py-20 bg-white relative">
       {/* Background Decorative Stars */}
@@ -68,7 +68,7 @@ export function JourneySection({ heading, subtitle, cards }) {
         </div>
 
         {/* Global CTA Buttons */}
-        <CTARow />
+        <CTARow  title={courseTitle}/>
       </div>
     </section>
   );

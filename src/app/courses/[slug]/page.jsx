@@ -781,6 +781,7 @@ import { FAQSection } from "./FAQSection";
 
 // Icons
 import { Code, Rocket, Brain, Star, Palette, Zap } from "lucide-react";
+import { CTARow } from "./CTARow";
 
 
 // ✅ 1. STATIC PARAMS
@@ -859,6 +860,7 @@ export default async function CoursePage({ params }) {
       <StatsBar lessons={lessons} activities={activities} />
 
       <ProgramOverview
+        courseTitle={title}
         heading={programOverview?.heading || "Program Highlights"}
         description={programOverview?.description || ""}
         highlights={programOverview?.highlights || []}
@@ -866,12 +868,14 @@ export default async function CoursePage({ params }) {
       />
 
       <JourneySection
+        courseTitle={title}
         heading={journeySection?.heading || "The Journey"}
         subtitle={journeySection?.subtitle || ""}
         cards={journeySection?.cards || []}
       />
 
       <CurriculumSection
+        courseTitle={title} 
         heading={curriculum?.heading || "Course Curriculum"}
         modules={curriculum?.modules || []}
         lessons={lessons}
@@ -884,6 +888,7 @@ export default async function CoursePage({ params }) {
       />
 
       <ProjectsSection
+        courseTitle={title}
         heading={projects?.heading || "Hands-on Projects"}
         description={projects?.description || ""}
         activities={projects?.activities || []}
@@ -891,14 +896,16 @@ export default async function CoursePage({ params }) {
       />
 
       <CertificateSection
+        courseTitle={title}
         heading={certificate?.heading || "Get Recognized"}
         description={certificate?.description || ""}
         requirements={certificate?.requirements || []}
       />
 
-      <ReviewsSection reviews={reviews || []} />
+      <ReviewsSection courseTitle={title} reviews={reviews || []} />
 
       <FAQSection faqs={faqs || []} />
+
     </main>
   );
 }

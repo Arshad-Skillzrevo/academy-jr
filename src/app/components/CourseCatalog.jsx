@@ -304,33 +304,17 @@ function CourseCard({ course, index }) {
 
         {/* Grade badge */}
         <div
-          className="absolute top-3 right-3 rounded-full px-2.5 py-1 text-[10px] font-bold text-white"
+          className="absolute bottom-3 left-3 rounded-full px-2.5 py-1 text-[12px] font-bold text-white"
           style={{
             background: "rgba(0,0,0,0.42)",
             backdropFilter: "blur(6px)",
-            fontWeight: 800,
+            fontWeight: 600,
           }}
         >
-          {course.grade}
+        Grade:   {course.grade}
         </div>
 
-        {/* Icon chip */}
-        <FloatBob
-          amplitude={5}
-          duration={3.2}
-          delay={index * 0.1}
-          className="absolute bottom-3 left-4"
-        >
-          <div
-            className="w-9 h-9 rounded-xl flex items-center justify-center"
-            style={{
-              background: course.accent,
-              boxShadow: `0 4px 14px ${course.accent}55`,
-            }}
-          >
-            <course.Icon size={17} color="white" strokeWidth={2} />
-          </div>
-        </FloatBob>
+
 
         {/* Level badge */}
         <div className="absolute bottom-3.5 right-4 flex items-center gap-1.5">
@@ -350,7 +334,7 @@ function CourseCard({ course, index }) {
             className="object-cover rounded-xl object-center "
           />
         </div>
-        <div className="absolute w-22 h-11 rounded-lg top-4 left-30">
+        <div className="absolute w-22 h-11 rounded-lg top-4 right-4">
           <Image
             src="/logos/ites.webp"
             alt={course.title}
@@ -473,9 +457,10 @@ function CourseCard({ course, index }) {
 
         {/* Price + CTAs */}
         <div className="flex items-center justify-between gap-2">
-          <div className="flex items-baseline gap-0.5">
+          <div className="flex flex-col">
+            <div className="flex  items-baseline gap-0.5">
             <IndianRupee
-              size={13}
+              size={15}
               strokeWidth={2.5}
               style={{ color: BRAND.orange, marginBottom: 1 }}
             />
@@ -490,6 +475,9 @@ function CourseCard({ course, index }) {
               {formatINR(course.price)}
             </span>
           </div>
+          <p className="text-xs text-gray-400">Inclusive of all taxes</p>
+          </div>
+
 
           <div className="flex items-center gap-2">
             {/* ✅ Enroll Now routes to course slug */}

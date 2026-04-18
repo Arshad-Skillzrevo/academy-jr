@@ -17,7 +17,7 @@ const ICON_BG_CLASSES = [
  * Provides a high-level summary of the program with a grid of highlight cards,
  * a rocket animation, and a call-to-action row.
  */
-export function ProgramOverview({ heading, description, highlights, highlightIcons }) {
+export function ProgramOverview({ courseTitle, heading, description, highlights, highlightIcons }) {
   return (
     <section
       className="py-20 relative overflow-hidden"
@@ -43,7 +43,7 @@ export function ProgramOverview({ heading, description, highlights, highlightIco
             <p className="text-gray-600 text-sm leading-relaxed mb-8 font-semibold">
               {description}
             </p>
-            <CTARow />
+            <CTARow title={courseTitle}/>
           </div>
 
           {/* Right Column: Highlight Grid */}

@@ -21,7 +21,7 @@ const NUM_COLORS = [
  * Showcases both quick learning activities and major capstone projects
  * with a playful, grid-based layout.
  */
-export function ProjectsSection({ heading, description, activities, capstoneProjects }) {
+export function ProjectsSection({ courseTitle, heading, description, activities, capstoneProjects }) {
   return (
     <section
       className="py-20 relative overflow-hidden"
@@ -84,7 +84,7 @@ export function ProjectsSection({ heading, description, activities, capstoneProj
           </div>
         </div>
 
-        <CTARow />
+        <CTARow title={courseTitle} />
       </div>
 
       {/* Decorative Wave Divider */}

@@ -16,7 +16,8 @@ export const courses = [
     durationWeeks: "11",
     durationClasses: "45-60",
     activities: "40+",
-    heroImage: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=640&h=400&fit=crop&q=80",
+    heroImage:
+      "https://images.unsplash.com/photo-1547658719-da2b51169166?w=640&h=400&fit=crop&q=80",
     color: "#1d8fff",
 
     journeySection: {
@@ -85,194 +86,104 @@ export const courses = [
       heading: "Course Delivery Plan",
       modules: [
         {
-          id: "01",
+          id: "m1",
           title: "Internet & Web Fundamentals",
-          lectures: [
-            {
-              num: 1,
-              title: "Internet & Website Basics",
-              desc: "Understand what the internet is, how browsers work, and explore real website examples.",
-            },
-            {
-              num: 2,
-              title: "Types of Websites",
-              desc: "Learn the difference between static and dynamic websites and identify different website types.",
-            },
-            {
-              num: 3,
-              title: "How the Web Works",
-              desc: "Understand domains, hosting, and how HTTP requests work in simple terms.",
-            },
-            {
-              num: 4,
-              title: "Developer Tools Setup",
-              desc: "Install and set up tools like VS Code and learn how to inspect websites using browser developer tools.",
-            },
-            {
-              num: 5,
-              title: "Website Planning",
-              desc: "Plan your first website by deciding pages, layouts, and design ideas.",
-            },
+          description:
+            "Understand internet basics, how websites work, and plan your own website using real-world concepts.",
+          outcomes: [
+            "Understand internet, websites & types",
+            "Learn how web works (domain, hosting, HTTP)",
+            "Plan website structure & layout",
           ],
+          language: "Basic Web Concepts",
+          platform: "Browser + VS Code",
+          lessons: 3,
+          activities: "8+",
         },
         {
-          id: "02",
+          id: "m2",
           title: "HTML (Website Structure)",
-          lectures: [
-            {
-              num: 6,
-              title: "HTML Introduction",
-              desc: "Learn HTML basics and create your first webpage.",
-            },
-            {
-              num: 7,
-              title: "Text & Media Elements",
-              desc: "Add headings, paragraphs, images, and links to webpages.",
-            },
-            {
-              num: 8,
-              title: "Lists & Tables",
-              desc: "Create structured content using lists and tables.",
-            },
-            {
-              num: 9,
-              title: "Forms",
-              desc: "Build interactive forms with input fields and buttons.",
-            },
-            {
-              num: 10,
-              title: "Semantic HTML",
-              desc: "Use modern HTML tags like header, footer, and section to structure webpages.",
-            },
+          description:
+            "Learn to build structured web pages using HTML elements and create multiple practical pages.",
+          outcomes: [
+            "Understand HTML structure & tags",
+            "Create pages with text & media",
+            "Build lists & tables",
+            "Create forms for user input",
+            "Use semantic HTML layout",
           ],
+          language: "HTML",
+          platform: "VS Code",
+          lessons: 5,
+          activities: "10+",
         },
         {
-          id: "03",
+          id: "m3",
           title: "CSS (Design & Layout)",
-          lectures: [
-            {
-              num: 11,
-              title: "CSS Basics",
-              desc: "Style webpages using colors, fonts, and selectors.",
-            },
-            {
-              num: 12,
-              title: "Box Model",
-              desc: "Understand margins, padding, and borders to control layouts.",
-            },
-            {
-              num: 13,
-              title: "Flexbox Layout",
-              desc: "Create flexible layouts and navigation bars using Flexbox.",
-            },
-            {
-              num: 14,
-              title: "Responsive Design Basics",
-              desc: "Learn how websites adapt to different screen sizes.",
-            },
-            {
-              num: 15,
-              title: "CSS Effects",
-              desc: "Add hover effects, shadows, and transitions.",
-            },
-            {
-              num: 16,
-              title: "Mini Project",
-              desc: "Build a portfolio-style website using HTML and CSS.",
-            },
+          description:
+            "Design visually appealing and responsive websites using CSS styling and layout techniques.",
+          outcomes: [
+            "Apply styling using colors & fonts",
+            "Understand spacing using box model",
+            "Create layouts using Flexbox",
+            "Build responsive designs",
+            "Add animations & effects",
           ],
+          language: "CSS",
+          platform: "VS Code",
+          lessons: 5,
+          activities: "10+",
         },
         {
-          id: "04",
+          id: "m4",
           title: "JavaScript Fundamentals",
-          lectures: [
-            {
-              num: 17,
-              title: "Introduction to JavaScript",
-              desc: "Learn how JavaScript adds interactivity to websites.",
-            },
-            {
-              num: 18,
-              title: "Variables & Alerts",
-              desc: "Use variables and create pop-up interactions.",
-            },
-            {
-              num: 19,
-              title: "Conditions",
-              desc: "Write logic using if–else statements.",
-            },
-            {
-              num: 20,
-              title: "Functions",
-              desc: "Create reusable blocks of code.",
-            },
-            {
-              num: 21,
-              title: "Events",
-              desc: "Respond to user actions like clicks and hovers.",
-            },
-            {
-              num: 22,
-              title: "Loops",
-              desc: "Automate repetitive tasks using loops.",
-            },
+          description:
+            "Learn programming basics and add interactivity to web pages using JavaScript.",
+          outcomes: [
+            "Understand variables & basic JavaScript",
+            "Apply conditions & functions",
+            "Work with events & loops",
+            "Build interactive logic-based features",
           ],
+          language: "JavaScript",
+          platform: "Browser + VS Code",
+          lessons: 4,
+          activities: "10+",
         },
         {
-          id: "05",
+          id: "m5",
           title: "DOM & Interactive Projects",
-          lectures: [
-            {
-              num: 23,
-              title: "DOM Basics",
-              desc: "Learn how to access and modify webpage elements using JavaScript.",
-            },
-            {
-              num: 24,
-              title: "Form Validation",
-              desc: "Validate user inputs in forms.",
-            },
-            {
-              num: 25,
-              title: "Dynamic Styling",
-              desc: "Change website styles dynamically using JavaScript.",
-            },
-            {
-              num: 26,
-              title: "Image Slider Project",
-              desc: "Build an interactive image slider.",
-            },
-            {
-              num: 27,
-              title: "To-Do List App",
-              desc: "Create a task management application.",
-            },
-            {
-              num: 28,
-              title: "Quiz Website",
-              desc: "Develop an interactive quiz application.",
-            },
+          description:
+            "Control and update web pages dynamically using DOM and build real-world applications.",
+          outcomes: [
+            "Manipulate webpage elements using DOM",
+            "Implement form validation",
+            "Create dynamic styling & UI features",
+            "Build To-Do and interactive apps",
+            "Develop quiz-based applications",
           ],
+          language: "JavaScript (DOM)",
+          platform: "Browser + VS Code",
+          lessons: 5,
+          activities: "10+",
         },
         {
-          id: "06",
+          id: "m6",
           title: "Final Website Project",
-          lectures: [
-            {
-              num: 29,
-              title: "Planning & Design",
-              desc: "Plan and design your final website project.",
-            },
-            {
-              num: 30,
-              title: "Interactivity & Final Demo",
-              desc: "Add JavaScript features, test your website, and present your final project.",
-            },
+          description:
+            "Apply all your learning to design, build, and present a complete interactive website project from scratch.",
+          outcomes: [
+            "Plan and design a complete website (idea, layout, wireframe)",
+            "Build a fully functional website using HTML, CSS & JavaScript",
+            "Present your project with proper explanation and real-world use",
           ],
+          language: "HTML + CSS + JavaScript",
+          platform: "VS Code + Browser",
+          lessons: 3,
+          activities: "10+",
         },
       ],
     },
-
     projects: {
       heading: "Hands-on Activities & Student Projects",
       description:
@@ -498,7 +409,7 @@ export const courses = [
     subtitle: " Learn Artificial Intelligence the Fun Way",
     description:
       "Students learn how Artificial Intelligence works and build real AI projects using Python, Machine Learning, and Statistics.",
-    
+
     lessons: 30,
     age: "12-18",
     grade: "8-12",
@@ -577,240 +488,108 @@ export const courses = [
       heading: "Course Delivery Plan",
       modules: [
         {
-          id: "01",
+          id: "m1",
           title: "AI Around Us",
-          lectures: [
-            {
-              num: 1,
-              title: "What is AI?",
-              desc: "Understand what Artificial Intelligence is, how AI differs from human intelligence, and explore AI applications used in daily life.",
-            },
-            {
-              num: 2,
-              title: "How AI Learns",
-              desc: "Learn how machines learn from data using machine learning concepts, recommendation systems, and bias in AI.",
-            },
+          description:
+            "Understand what AI is, how it is used in daily life, and how machines learn from data.",
+          outcomes: [
+            "Understand AI concepts and real-life applications",
+            "Explain how AI learns using data and basic ML ideas",
           ],
+          language: "AI Concepts",
+          platform: "Classroom + Activities",
+          lessons: 2,
+          activities: "5+",
         },
         {
-          id: "02",
+          id: "m2",
           title: "Python for AI",
-          lectures: [
-            {
-              num: 3,
-              title: "Python Introduction",
-              desc: "Understand why Python is used in AI and set up the development environment.",
-            },
-            {
-              num: 4,
-              title: "Variables and Operators",
-              desc: "Learn Python variables, user input, and basic operators through coding exercises.",
-            },
-            {
-              num: 5,
-              title: "Conditions",
-              desc: "Understand if-else logic and build small decision-based programs.",
-            },
-            {
-              num: 6,
-              title: "Loops",
-              desc: "Use loops to automate repetitive tasks and build simple programs.",
-            },
-            {
-              num: 7,
-              title: "Data Structures",
-              desc: "Work with lists, dictionaries, tuples, and sets.",
-            },
-            {
-              num: 8,
-              title: "NumPy Fundamentals",
-              desc: "Understand arrays and numerical computing using NumPy.",
-            },
-            {
-              num: 9,
-              title: "Pandas Introduction",
-              desc: "Load datasets and explore tabular data using Pandas.",
-            },
-            {
-              num: 10,
-              title: "Data Analysis Basics",
-              desc: "Analyze datasets and extract insights.",
-            },
-            {
-              num: 11,
-              title: "Data Visualization",
-              desc: "Create simple charts and graphs using Python.",
-            },
-            {
-              num: 12,
-              title: "Python Mini Project",
-              desc: "Analyze a dataset and present insights.",
-            },
+          description:
+            "Learn Python programming and use it for data handling, analysis, and visualization.",
+          outcomes: [
+            "Understand Python basics and environment setup",
+            "Write programs using variables, input, and operators",
+            "Apply conditions and loops for problem-solving",
+            "Work with data structures (list, tuple, dictionary, set)",
+            "Use NumPy for numerical operations",
+            "Analyze datasets using Pandas",
+            "Perform data cleaning using EDA techniques",
+            "Visualize data for insights",
           ],
+          language: "Python (NumPy, Pandas)",
+          platform: "Jupyter Notebook / VS Code",
+          lessons: 8,
+          activities: "20+",
         },
         {
-          id: "03",
+          id: "m3",
           title: "Statistics for AI",
-          lectures: [
-            {
-              num: 13,
-              title: "Introduction to Statistics",
-              desc: "Understand descriptive and inferential statistics.[-",
-            },
-            {
-              num: 14,
-              title: "Mean, Median, Mode",
-              desc: "Analyze datasets using measures of central tendency.",
-            },
-            {
-              num: 15,
-              title: "Probability Basics",
-              desc: "Understand probability through real-world examples.",
-            },
-            {
-              num: 16,
-              title: "Correlation",
-              desc: "Learn how relationships between variables work.",
-            },
-            {
-              num: 17,
-              title: "Data Cleaning & EDA",
-              desc: "Perform data type corrections and data exploration.",
-            },
-            {
-              num: 18,
-              title: "Visualization for Analysis",
-              desc: "Visualize data patterns and trends.",
-            },
-            {
-              num: 19,
-              title: "Hypothesis Testing",
-              desc: "Understand the basics of hypothesis testing.",
-            },
+          description:
+            "Understand statistical concepts required for data analysis and machine learning.",
+          outcomes: [
+            "Understand basic statistical concepts (mean, median, mode)",
+            "Apply descriptive statistics for data analysis",
+            "Perform data cleaning and visualization using EDA",
+            "Understand hypothesis testing fundamentals",
           ],
+          language: "Statistics + Python",
+          platform: "Jupyter Notebook",
+          lessons: 4,
+          activities: "10+",
         },
         {
-          id: "04",
+          id: "m4",
           title: "Machine Learning",
-          lectures: [
-            {
-              num: 20,
-              title: "Introduction to Machine Learning",
-              desc: "Understand how machine learning models work.",
-            },
-            {
-              num: 21,
-              title: "Types of Machine Learning",
-              desc: "Learn supervised and unsupervised learning.",
-            },
-            {
-              num: 22,
-              title: "Linear Regression",
-              desc: "Build models to predict numerical values.",
-            },
-            {
-              num: 23,
-              title: "Logistic Regression",
-              desc: "Understand classification problems.",
-            },
-            {
-              num: 24,
-              title: "Decision Trees",
-              desc: "Learn tree-based models for prediction.",
-            },
-            {
-              num: 25,
-              title: "Model Validation",
-              desc: "Understand train-test split and evaluation.",
-            },
-            {
-              num: 26,
-              title: "Clustering",
-              desc: "Group data using clustering algorithms.",
-            },
-            {
-              num: 27,
-              title: "Elbow Method",
-              desc: "Visualize clusters and determine optimal groups.",
-            },
-            {
-              num: 28,
-              title: "Market Basket Analysis",
-              desc: "Discover relationships between products.",
-            },
-            {
-              num: 29,
-              title: "Association Rules",
-              desc: "Generate frequent itemsets and rules.",
-            },
-            {
-              num: 30,
-              title: "Naive Bayes Classifier",
-              desc: "Build a simple email spam classifier.",
-            },
-            {
-              num: 31,
-              title: "Mini ML Project",
-              desc: "Develop a student performance prediction model.",
-            },
+          description:
+            "Learn core machine learning algorithms and build predictive models.",
+          outcomes: [
+            "Understand machine learning concepts and types",
+            "Explore ML concepts through guided discussion",
+            "Build regression models for prediction",
+            "Apply classification using logistic regression",
+            "Understand decision tree logic and structure",
+            "Apply Naive Bayes for classification problems",
+            "Evaluate models using validation techniques",
+            "Understand clustering concepts",
+            "Explore association and pattern discovery",
           ],
+          language: "Python (ML Basics)",
+          platform: "Jupyter Notebook",
+          lessons: 9,
+          activities: "20+",
         },
         {
-          id: "05",
-          title: "Artificial Intelligence",
-          lectures: [
-            {
-              num: 32,
-              title: " Deep Learning Introduction",
-              desc: "Understand neural networks and perceptrons.",
-            },
-            {
-              num: 33,
-              title: " Deep Learning Fundamentals",
-              desc: "Explore deep learning concepts and applications.",
-            },
-            {
-              num: 34,
-              title: "ANN and CNN",
-              desc: "Understand artificial neural networks and convolutional neural networks.",
-            },
-            {
-              num: 35,
-              title: "RNN, LSTM, GRU",
-              desc: "Learn sequence models and time-series analysis.",
-            },
-            {
-              num: 36,
-              title: "NLP Basics",
-              desc: "Understand natural language processing.",
-            },
-            {
-              num: 37,
-              title: "Text Classification",
-              desc: "Build models to classify text data.",
-            },
-            {
-              num: 38,
-              title: "NLP Project",
-              desc: "Perform sentiment analysis on text data.",
-            },
+          id: "m5",
+          title: "Advanced AI (Deep Learning & NLP)",
+          description:
+            "Explore advanced AI concepts including deep learning and natural language processing.",
+          outcomes: [
+            "Understand deep learning fundamentals and concepts",
+            "Explore deep learning applications and working",
+            "Understand ANN, CNN, and RNN architectures",
+            "Learn fundamentals of Natural Language Processing",
+            "Apply text processing and sentiment analysis",
+            "Explore advanced NLP concepts (NER, BERT, speech recognition)",
           ],
+          language: "Python (AI/Deep Learning)",
+          platform: "Jupyter Notebook",
+          lessons: 6,
+          activities: "15+",
         },
         {
-          id: "06",
-          title: "Final Capstone Project",
-          lectures: [
-            {
-              num: 39,
-              title: "Project Planning",
-              desc: "Select datasets and design the final AI project.",
-            },
-            {
-              num: 40,
-              title: "Final Capstone Project",
-              desc: "Build and present an AI-based project such as a sentiment analysis dashboard.",
-            },
+          id: "m6",
+          title: "Capstone AI Projects",
+          description:
+            "Apply all AI, ML, and Python skills to build real-world intelligent applications.",
+          outcomes: [
+            "Build predictive models for real-world problems",
+            "Perform sentiment analysis using NLP techniques",
+            "Present AI-based solutions with proper explanation",
           ],
+          language: "Python + Machine Learning + NLP",
+          platform: "Jupyter Notebook",
+          lessons: 1,
+          activities: "10+",
         },
       ],
     },
@@ -1005,7 +784,7 @@ export const courses = [
     id: "cloud",
     cat: "cloud",
     type: "single",
-    price:20060,
+    price: 20060,
     subtitle: "Learn Cloud the Easy Way",
     description:
       "Students learn how modern applications run on the cloud and how to deploy servers, websites, and applications using cloud platforms.",
@@ -1086,113 +865,69 @@ export const courses = [
       heading: "Course Delivery Plan",
       modules: [
         {
-          id: "01",
+          id: "m1",
           title: "Cloud Basics",
-          lectures: [
-            {
-              num: 1,
-              title: "Introduction to Cloud Computing",
-              desc: "Understand cloud computing concepts and the difference between traditional IT infrastructure and cloud systems.",
-            },
-            {
-              num: 2,
-              title: "Cloud Service Models (IaaS)",
-              desc: "Learn the fundamentals of Infrastructure as a Service and explore real-world examples.",
-            },
-            {
-              num: 3,
-              title: "PaaS, SaaS & Deployment Models",
-              desc: "Understand Platform as a Service, Software as a Service, and cloud deployment models.",
-            },
-            {
-              num: 4,
-              title: "Cloud Providers & Pricing",
-              desc: "Explore major cloud providers, regions, and billing dashboards.",
-            },
+          description:
+            "Understand cloud computing fundamentals and core concepts.",
+          outcomes: [
+            "Understand cloud computing and its benefits",
+            "Differentiate service and deployment models",
+            "Identify cloud providers, regions, and pricing basics",
+            "Explore cloud console and billing dashboard",
           ],
+          language: "Cloud Concepts",
+          platform: "AWS",
+          lessons: 4,
+          activities: "10+",
         },
         {
-          id: "02",
-          title: "Core Cloud Services",
-          lectures: [
-            {
-              num: 5,
-              title: "Compute Services",
-              desc: "Launch virtual machines and connect to them using SSH.",
-            },
-            {
-              num: 6,
-              title: "Cloud Storage",
-              desc: "Understand object, block, and file storage while hosting a static website.",
-            },
-            {
-              num: 7,
-              title: "Cloud Networking",
-              desc: "Learn about VPC, subnets, and load balancers.",
-            },
-            {
-              num: 8,
-              title: "Identity & Access Management",
-              desc: "Create users, roles, and manage cloud access permissions.",
-            },
+          id: "m2",
+          title: "Core Services",
+          description:
+            "Learn essential cloud services for compute, storage, networking, and access control.",
+          outcomes: [
+            "Launch and manage virtual machines",
+            "Work with different storage services",
+            "Configure networking (VPC, subnet, load balancer)",
+            "Manage identity and access using IAM",
           ],
+          language: "Cloud Services",
+          platform: "AWS & Services",
+          lessons: 4,
+          activities: "10+",
         },
         {
-          id: "03",
+          id: "m3",
           title: "Administration & DevOps",
-          lectures: [
-            {
-              num: 9,
-              title: "Monitoring & Logging",
-              desc: "Monitor cloud systems and configure alerts.",
-            },
-            {
-              num: 10,
-              title: "Backup & Security",
-              desc: "Understand cloud security basics and configure backup policies.",
-            },
-            {
-              num: 11,
-              title: "Containers & Serverless",
-              desc: "Learn container deployment and serverless computing concepts.",
-            },
-            {
-              num: 12,
-              title: "CI/CD Fundamentals",
-              desc: "Understand Continuous Integration and Continuous Deployment concepts.",
-            },
-            {
-              num: 13,
-              title: "CI/CD Pipeline",
-              desc: "Build a simple automated deployment pipeline.",
-            },
+          description:
+            "Manage cloud systems with monitoring, security, and DevOps practices.",
+          outcomes: [
+            "Monitor systems and configure alerts",
+            "Implement backup and basic security",
+            "Understand containers and serverless computing",
+            "Learn CI/CD fundamentals and pipelines",
+            "Build simple CI/CD pipeline",
           ],
+          language: "DevOps Basics",
+          platform: "AWS / Docker / GitHub",
+          lessons: 5,
+          activities: "10+",
         },
         {
-          id: "04",
-          title: "Projects & Cloud Architecture",
-          lectures: [
-            {
-              num: 14,
-              title: "Cloud Architecture Design",
-              desc: "Design scalable cloud infrastructure diagrams.",
-            },
-            {
-              num: 15,
-              title: "High Availability & Cost Optimization",
-              desc: "Learn how to design cost-efficient and highly available systems.",
-            },
-            {
-              num: 16,
-              title: "Migration & Security Best Practices",
-              desc: "Understand how organizations migrate applications to the cloud.",
-            },
-            {
-              num: 17,
-              title: "Capstone Project",
-              desc: "Deploy a 3-tier cloud application architecture.",
-            },
+          id: "m4",
+          title: "Projects & Architecture",
+          description:
+            "Design cloud architectures and build real-world applications.",
+          outcomes: [
+            "Design scalable cloud architecture",
+            "Optimize cost and ensure high availability",
+            "Apply migration and security best practices",
+            "Build and deploy complete cloud application",
           ],
+          language: "Cloud Architecture",
+          platform: "AWS",
+          lessons: 4,
+          activities: "10+",
         },
       ],
     },
@@ -1467,113 +1202,135 @@ export const courses = [
       heading: "Course Delivery Plan",
       modules: [
         {
-          id: "01",
-          title: "Cloud Basics",
-          lectures: [
-            {
-              num: 1,
-              title: "Introduction to Cloud Computing",
-              desc: "Understand cloud computing concepts and the difference between traditional IT infrastructure and cloud systems.",
-            },
-            {
-              num: 2,
-              title: "Cloud Service Models (IaaS)",
-              desc: "Learn the fundamentals of Infrastructure as a Service and explore real-world examples.",
-            },
-            {
-              num: 3,
-              title: "PaaS, SaaS & Deployment Models",
-              desc: "Understand Platform as a Service, Software as a Service, and cloud deployment models.",
-            },
-            {
-              num: 4,
-              title: "Cloud Providers & Pricing",
-              desc: "Explore major cloud providers, regions, and billing dashboards.",
-            },
+          id: "m1",
+          title: "C++ Foundations",
+          description: "Learn programming basics and get started with C++.",
+          outcomes: [
+            "Understand programming concepts and C++ basics",
+            "Write first program using input/output",
           ],
+          language: "C++",
+          platform: "VS Code / Code::Blocks",
+          lessons: 2,
+          activities: "5+",
         },
         {
-          id: "02",
-          title: "Core Cloud Services",
-          lectures: [
-            {
-              num: 5,
-              title: "Compute Services",
-              desc: "Launch virtual machines and connect to them using SSH.",
-            },
-            {
-              num: 6,
-              title: "Cloud Storage",
-              desc: "Understand object, block, and file storage while hosting a static website.",
-            },
-            {
-              num: 7,
-              title: "Cloud Networking",
-              desc: "Learn about VPC, subnets, and load balancers.",
-            },
-            {
-              num: 8,
-              title: "Identity & Access Management",
-              desc: "Create users, roles, and manage cloud access permissions.",
-            },
+          id: "m2",
+          title: "Variables & Operators",
+          description: "Work with data types and perform operations in C++.",
+          outcomes: [
+            "Use variables and data types",
+            "Apply operators in programs",
+            "Perform type casting and expressions",
           ],
+          language: "C++",
+          platform: "VS Code / Code::Blocks",
+          lessons: 3,
+          activities: "5+",
         },
         {
-          id: "03",
-          title: "Administration & DevOps",
-          lectures: [
-            {
-              num: 9,
-              title: "Monitoring & Logging",
-              desc: "Monitor cloud systems and configure alerts.",
-            },
-            {
-              num: 10,
-              title: "Backup & Security",
-              desc: "Understand cloud security basics and configure backup policies.",
-            },
-            {
-              num: 11,
-              title: "Containers & Serverless",
-              desc: "Learn container deployment and serverless computing concepts.",
-            },
-            {
-              num: 12,
-              title: "CI/CD Fundamentals",
-              desc: "Understand Continuous Integration and Continuous Deployment concepts.",
-            },
-            {
-              num: 13,
-              title: "CI/CD Pipeline",
-              desc: "Build a simple automated deployment pipeline.",
-            },
+          id: "m3",
+          title: "Decision Making",
+          description: "Implement logic using conditional statements.",
+          outcomes: [
+            "Apply if-else conditions",
+            "Use switch-case statements",
+            "Solve complex conditions using nested logic",
           ],
+          language: "C++",
+          platform: "VS Code / Code::Blocks",
+          lessons: 3,
+          activities: "5+",
         },
         {
-          id: "04",
-          title: "Projects & Cloud Architecture",
-          lectures: [
-            {
-              num: 14,
-              title: "Cloud Architecture Design",
-              desc: "Design scalable cloud infrastructure diagrams.",
-            },
-            {
-              num: 15,
-              title: "High Availability & Cost Optimization",
-              desc: "Learn how to design cost-efficient and highly available systems.",
-            },
-            {
-              num: 16,
-              title: "Migration & Security Best Practices",
-              desc: "Understand how organizations migrate applications to the cloud.",
-            },
-            {
-              num: 17,
-              title: "Capstone Project",
-              desc: "Deploy a 3-tier cloud application architecture.",
-            },
+          id: "m4",
+          title: "Loops",
+          description: "Automate repetitive tasks using loops.",
+          outcomes: ["Use loops for iteration", "Compare loop types and logic"],
+          language: "C++",
+          platform: "VS Code / Code::Blocks",
+          lessons: 2,
+          activities: "5+",
+        },
+        {
+          id: "m5",
+          title: "Functions",
+          description: "Write modular and reusable code using functions.",
+          outcomes: [
+            "Understand function structure",
+            "Use parameters and return values",
           ],
+          language: "C++",
+          platform: "VS Code / Code::Blocks",
+          lessons: 2,
+          activities: "5+",
+        },
+        {
+          id: "m6",
+          title: "Arrays & Strings",
+          description: "Work with collections of data and text.",
+          outcomes: [
+            "Use arrays for data storage",
+            "Work with 2D arrays",
+            "Apply string operations",
+          ],
+          language: "C++",
+          platform: "VS Code / Code::Blocks",
+          lessons: 3,
+          activities: "5+",
+        },
+        {
+          id: "m7",
+          title: "OOP Core",
+          description: "Learn object-oriented programming concepts in C++.",
+          outcomes: [
+            "Create classes and objects",
+            "Apply encapsulation",
+            "Use inheritance for reusability",
+            "Understand polymorphism",
+            "Apply abstraction concepts",
+          ],
+          language: "C++",
+          platform: "VS Code / Code::Blocks",
+          lessons: 5,
+          activities: "10+",
+        },
+        {
+          id: "m8",
+          title: "Exception Handling",
+          description: "Handle runtime errors effectively.",
+          outcomes: [
+            "Handle exceptions using try-catch",
+            "Implement custom exceptions",
+          ],
+          language: "C++",
+          platform: "VS Code / Code::Blocks",
+          lessons: 2,
+          activities: "5+",
+        },
+        {
+          id: "m9",
+          title: "File Handling",
+          description: "Store and manage data using files.",
+          outcomes: ["Read and write files", "Build file-based applications"],
+          language: "C++",
+          platform: "VS Code / Code::Blocks",
+          lessons: 2,
+          activities: "5+",
+        },
+        {
+          id: "m10",
+          title: "Capstone Projects",
+          description: "Build and present complete C++ applications.",
+          outcomes: [
+            "Build console-based applications",
+            "Apply OOP concepts in projects",
+            "Present final project",
+          ],
+          language: "C++",
+          platform: "VS Code / Code::Blocks",
+          lessons: 3,
+          activities: "5+",
         },
       ],
     },
@@ -1842,240 +1599,161 @@ export const courses = [
       heading: "Course Delivery Plan",
       modules: [
         {
-          id: "01",
-          title: "AI Around Us",
-          lectures: [
-            {
-              num: 1,
-              title: "What is AI?",
-              desc: "Understand what Artificial Intelligence is, how AI differs from human intelligence, and explore AI applications used in daily life.",
-            },
-            {
-              num: 2,
-              title: "How AI Learns",
-              desc: "Learn how machines learn from data using machine learning concepts, recommendation systems, and bias in AI.",
-            },
+          id: "m1",
+          title: "Backend Fundamentals",
+          description:
+            "Understand backend development, internet working, and Node.js basics.",
+          outcomes: [
+            "Understand backend vs frontend and client-server model",
+            "Learn HTTP, APIs, and request-response cycle",
+            "Setup Node.js and run first backend program",
           ],
+          language: "JavaScript (Node.js)",
+          platform: "VS Code",
+          lessons: 3,
+          activities: "5+",
         },
         {
-          id: "02",
-          title: "Python for AI",
-          lectures: [
-            {
-              num: 3,
-              title: "Python Introduction",
-              desc: "Understand why Python is used in AI and set up the development environment.",
-            },
-            {
-              num: 4,
-              title: "Variables and Operators",
-              desc: "Learn Python variables, user input, and basic operators through coding exercises.",
-            },
-            {
-              num: 5,
-              title: "Conditions",
-              desc: "Understand if-else logic and build small decision-based programs.",
-            },
-            {
-              num: 6,
-              title: "Loops",
-              desc: "Use loops to automate repetitive tasks and build simple programs.",
-            },
-            {
-              num: 7,
-              title: "Data Structures",
-              desc: "Work with lists, dictionaries, tuples, and sets.",
-            },
-            {
-              num: 8,
-              title: "NumPy Fundamentals",
-              desc: "Understand arrays and numerical computing using NumPy.",
-            },
-            {
-              num: 9,
-              title: "Pandas Introduction",
-              desc: "Load datasets and explore tabular data using Pandas.",
-            },
-            {
-              num: 10,
-              title: "Data Analysis Basics",
-              desc: "Analyze datasets and extract insights.",
-            },
-            {
-              num: 11,
-              title: "Data Visualization",
-              desc: "Create simple charts and graphs using Python.",
-            },
-            {
-              num: 12,
-              title: "Python Mini Project",
-              desc: "Analyze a dataset and present insights.",
-            },
+          id: "m2",
+          title: "Node Basics",
+          description: "Learn core Node.js concepts and build basic servers.",
+          outcomes: [
+            "Work with Node.js core modules and file system",
+            "Understand event loop and asynchronous behavior",
+            "Handle HTTP requests and responses",
           ],
+          language: "JavaScript",
+          platform: "Node.js",
+          lessons: 3,
+          activities: "5+",
         },
         {
-          id: "03",
-          title: "Statistics for AI",
-          lectures: [
-            {
-              num: 13,
-              title: "Introduction to Statistics",
-              desc: "Understand descriptive and inferential statistics.[-",
-            },
-            {
-              num: 14,
-              title: "Mean, Median, Mode",
-              desc: "Analyze datasets using measures of central tendency.",
-            },
-            {
-              num: 15,
-              title: "Probability Basics",
-              desc: "Understand probability through real-world examples.",
-            },
-            {
-              num: 16,
-              title: "Correlation",
-              desc: "Learn how relationships between variables work.",
-            },
-            {
-              num: 17,
-              title: "Data Cleaning & EDA",
-              desc: "Perform data type corrections and data exploration.",
-            },
-            {
-              num: 18,
-              title: "Visualization for Analysis",
-              desc: "Visualize data patterns and trends.",
-            },
-            {
-              num: 19,
-              title: "Hypothesis Testing",
-              desc: "Understand the basics of hypothesis testing.",
-            },
+          id: "m3",
+          title: "Express Framework",
+          description: "Build scalable backend using Express.js framework.",
+          outcomes: [
+            "Setup Express application",
+            "Create routes and APIs",
+            "Use route parameters",
+            "Implement middleware logic",
           ],
+          language: "JavaScript",
+          platform: "Node.js / Express",
+          lessons: 4,
+          activities: "10+",
         },
         {
-          id: "04",
-          title: "Machine Learning",
-          lectures: [
-            {
-              num: 20,
-              title: "Introduction to Machine Learning",
-              desc: "Understand how machine learning models work.",
-            },
-            {
-              num: 21,
-              title: "Types of Machine Learning",
-              desc: "Learn supervised and unsupervised learning.",
-            },
-            {
-              num: 22,
-              title: "Linear Regression",
-              desc: "Build models to predict numerical values.",
-            },
-            {
-              num: 23,
-              title: "Logistic Regression",
-              desc: "Understand classification problems.",
-            },
-            {
-              num: 24,
-              title: "Decision Trees",
-              desc: "Learn tree-based models for prediction.",
-            },
-            {
-              num: 25,
-              title: "Model Validation",
-              desc: "Understand train-test split and evaluation.",
-            },
-            {
-              num: 26,
-              title: "Clustering",
-              desc: "Group data using clustering algorithms.",
-            },
-            {
-              num: 27,
-              title: "Elbow Method",
-              desc: "Visualize clusters and determine optimal groups.",
-            },
-            {
-              num: 28,
-              title: "Market Basket Analysis",
-              desc: "Discover relationships between products.",
-            },
-            {
-              num: 29,
-              title: "Association Rules",
-              desc: "Generate frequent itemsets and rules.",
-            },
-            {
-              num: 30,
-              title: "Naive Bayes Classifier",
-              desc: "Build a simple email spam classifier.",
-            },
-            {
-              num: 31,
-              title: "Mini ML Project",
-              desc: "Develop a student performance prediction model.",
-            },
+          id: "m4",
+          title: "REST API",
+          description: "Design and build RESTful APIs for applications.",
+          outcomes: [
+            "Work with JSON APIs",
+            "Design RESTful architecture",
+            "Implement CRUD operations",
           ],
+          language: "JavaScript",
+          platform: "Node.js / Postman",
+          lessons: 3,
+          activities: "5+",
         },
         {
-          id: "05",
-          title: "Artificial Intelligence",
-          lectures: [
-            {
-              num: 32,
-              title: " Deep Learning Introduction",
-              desc: "Understand neural networks and perceptrons.",
-            },
-            {
-              num: 33,
-              title: " Deep Learning Fundamentals",
-              desc: "Explore deep learning concepts and applications.",
-            },
-            {
-              num: 34,
-              title: "ANN and CNN",
-              desc: "Understand artificial neural networks and convolutional neural networks.",
-            },
-            {
-              num: 35,
-              title: "RNN, LSTM, GRU",
-              desc: "Learn sequence models and time-series analysis.",
-            },
-            {
-              num: 36,
-              title: "NLP Basics",
-              desc: "Understand natural language processing.",
-            },
-            {
-              num: 37,
-              title: "Text Classification",
-              desc: "Build models to classify text data.",
-            },
-            {
-              num: 38,
-              title: "NLP Project",
-              desc: "Perform sentiment analysis on text data.",
-            },
+          id: "m5",
+          title: "Database Basics",
+          description:
+            "Understand database concepts and perform CRUD operations.",
+          outcomes: [
+            "Understand SQL vs NoSQL concepts",
+            "Work with MongoDB collections",
+            "Perform CRUD operations in database",
           ],
+          language: "Database (NoSQL)",
+          platform: "MongoDB",
+          lessons: 3,
+          activities: "5+",
         },
         {
-          id: "06",
-          title: "Final Capstone Project",
-          lectures: [
-            {
-              num: 39,
-              title: "Project Planning",
-              desc: "Select datasets and design the final AI project.",
-            },
-            {
-              num: 40,
-              title: "Final Capstone Project",
-              desc: "Build and present an AI-based project such as a sentiment analysis dashboard.",
-            },
+          id: "m6",
+          title: "Node + MongoDB",
+          description: "Integrate backend with database using Mongoose.",
+          outcomes: [
+            "Connect Node.js with MongoDB",
+            "Design schemas using Mongoose",
+            "Build APIs with database integration",
           ],
+          language: "JavaScript",
+          platform: "Node.js / MongoDB",
+          lessons: 3,
+          activities: "5+",
+        },
+        {
+          id: "m7",
+          title: "Authentication",
+          description: "Implement secure login and authentication systems.",
+          outcomes: [
+            "Understand authentication and password security",
+            "Implement JWT-based authentication and protected routes",
+          ],
+          language: "JavaScript",
+          platform: "Node.js",
+          lessons: 2,
+          activities: "4+",
+        },
+        {
+          id: "m8",
+          title: "Backend Logic",
+          description:
+            "Improve backend reliability with validation and error handling.",
+          outcomes: [
+            "Validate user input",
+            "Handle errors and manage environment variables",
+          ],
+          language: "JavaScript",
+          platform: "Node.js",
+          lessons: 2,
+          activities: "4+",
+        },
+        {
+          id: "m9",
+          title: "Backend Integration",
+          description: "Connect frontend with backend and manage file uploads.",
+          outcomes: [
+            "Integrate frontend with backend APIs",
+            "Handle CORS and file uploads",
+          ],
+          language: "JavaScript",
+          platform: "Angular / Node.js",
+          lessons: 2,
+          activities: "4+",
+        },
+        {
+          id: "m10",
+          title: "Deployment",
+          description:
+            "Deploy backend applications and manage cloud databases.",
+          outcomes: [
+            "Understand deployment process",
+            "Deploy Node.js applications",
+            "Connect to cloud databases",
+          ],
+          language: "Node",
+          platform: "Any Hosting Platforms",
+          lessons: 3,
+          activities: "5+",
+        },
+        {
+          id: "m11",
+          title: "Capstone Project",
+          description: "Build and deploy a complete backend system.",
+          outcomes: [
+            "Design backend architecture",
+            "Integrate database and authentication",
+            "Test APIs and deploy project",
+            "Present final project",
+          ],
+          language: "Full Backend Stack",
+          platform: "Node.js",
+          lessons: 4,
+          activities: "10+",
         },
       ],
     },
@@ -2371,178 +2049,73 @@ export const courses = [
       heading: "Course Delivery Plan",
       modules: [
         {
-          id: "01",
+          id: "m1",
           title: "Cyber Awareness & Digital Safety",
-          lectures: [
-            {
-              num: 1,
-              title: "Introduction to Cyber Security",
-              desc: "Understand the importance of cyber security and explore real-world cyber incidents.",
-            },
-            {
-              num: 2,
-              title: "Cyber Threats",
-              desc: "Learn about malware, phishing, and social engineering attacks.",
-            },
-            {
-              num: 3,
-              title: "Digital Footprint",
-              desc: "Understand how online activity leaves digital traces and how to protect privacy.",
-            },
-            {
-              num: 4,
-              title: "Safe Browsing",
-              desc: "Learn secure browsing practices and safe downloads.",
-            },
-            {
-              num: 5,
-              title: "Social Media Safety",
-              desc: "Identify risks of oversharing and detect fake profiles.",
-            },
-            {
-              num: 6,
-              title: "Cyber Laws",
-              desc: "Understand legal aspects of cyber security and online behavior.",
-            },
+          description:
+            "Learn how to stay safe online and understand common cyber threats.",
+          outcomes: [
+            "Understand importance of cyber security",
+            "Identify common cyber threats",
+            "Practice safe browsing and privacy protection",
+            "Understand social media safety and cyber laws",
           ],
+          language: "Cyber Concepts",
+          platform: "Classroom + Browser",
+          lessons: 4,
+          activities: "10+",
         },
         {
-          id: "02",
+          id: "m2",
           title: "Cyber Security Fundamentals",
-          lectures: [
-            {
-              num: 7,
-              title: "Networking Fundamentals",
-              desc: "Learn about network devices and how networks operate.",
-            },
-            {
-              num: 8,
-              title: "Internet Communication",
-              desc: "Understand IP, DNS, HTTP, and network ports.",
-            },
-            {
-              num: 9,
-              title: "Operating Systems Security",
-              desc: "Explore the role of operating systems in cyber security.",
-            },
-            {
-              num: 10,
-              title: "Linux Basics",
-              desc: "Learn basic Linux commands and terminal usage.",
-            },
-            {
-              num: 11,
-              title: "Cryptography Basics",
-              desc: "Understand encryption and how data is protected.",
-            },
-            {
-              num: 12,
-              title: "Encryption vs Hashing",
-              desc: "Learn differences between encryption and hashing techniques.",
-            },
-            {
-              num: 13,
-              title: "CIA Triad",
-              desc: "Understand the core principles of cyber security: Confidentiality, Integrity, and Availability.",
-            },
-            {
-              num: 14,
-              title: "Risk and Vulnerabilities",
-              desc: "Identify system weaknesses and potential risks.",
-            },
+          description:
+            "Build strong foundational knowledge of networking and security concepts.",
+          outcomes: [
+            "Understand networking basics and devices",
+            "Learn internet communication (IP, DNS, HTTP)",
+            "Explore OS security and Linux basics",
+            "Understand cryptography fundamentals",
+            "Differentiate encryption vs hashing",
+            "Apply CIA triad and identify vulnerabilities",
           ],
+          language: "Networking + Security",
+          platform: "Lab + Simulation Tools",
+          lessons: 6,
+          activities: "10+",
         },
         {
-          id: "03",
+          id: "m3",
           title: "Ethical Hacking & Security Tools",
-          lectures: [
-            {
-              num: 15,
-              title: "Ethical Hacking Lifecycle",
-              desc: "Understand the steps used in ethical hacking from reconnaissance to reporting.",
-            },
-            {
-              num: 16,
-              title: "Footprinting",
-              desc: "Learn information gathering techniques.",
-            },
-            {
-              num: 17,
-              title: "Network Scanning",
-              desc: "Understand port scanning and network discovery.",
-            },
-            {
-              num: 18,
-              title: "Vulnerability Assessment",
-              desc: "Identify weaknesses in systems and networks.",
-            },
-            {
-              num: 19,
-              title: "Web Security",
-              desc: "Explore common web vulnerabilities and security practices.",
-            },
-            {
-              num: 20,
-              title: "SQL Injection",
-              desc: "Understand injection attacks and prevention techniques.",
-            },
-            {
-              num: 21,
-              title: "Cross-Site Scripting (XSS)",
-              desc: "Learn about browser-based attacks and protection methods.",
-            },
-            {
-              num: 22,
-              title: "Wireless Security",
-              desc: "Understand Wi-Fi security risks and protection techniques.",
-            },
-            {
-              num: 23,
-              title: "Social Engineering",
-              desc: "Learn how attackers manipulate human behavior.",
-            },
+          description:
+            "Learn ethical hacking concepts and use tools to identify vulnerabilities.",
+          outcomes: [
+            "Understand ethical hacking lifecycle",
+            "Perform footprinting and network scanning",
+            "Identify vulnerabilities in systems",
+            "Understand web security and SQL injection",
+            "Learn XSS, malware, and wireless security",
+            "Understand social engineering attacks",
           ],
+          language: "Cyber Security Tools",
+          platform: "Kali Linux Lab",
+          lessons: 6,
+          activities: "10+",
         },
         {
-          id: "04",
+          id: "m4",
           title: "Cyber Range & Real-World Practice",
-          lectures: [
-            {
-              num: 24,
-              title: "Capture The Flag (CTF) Challenges",
-              desc: "Solve cybersecurity puzzles and hands-on security labs.",
-            },
-            {
-              num: 25,
-              title: "Incident Response",
-              desc: "Understand steps taken after a cyber attack.",
-            },
-            {
-              num: 26,
-              title: "Log Analysis",
-              desc: "Analyze security logs to identify suspicious activities.",
-            },
-            {
-              num: 27,
-              title: "Threat Hunting",
-              desc: "Learn proactive techniques to detect cyber threats.",
-            },
-            {
-              num: 28,
-              title: "Secure Configuration",
-              desc: "Understand system hardening and secure setup.",
-            },
-            {
-              num: 29,
-              title: "SOC Workflow",
-              desc: "Learn how Security Operations Centers monitor threats.",
-            },
-            {
-              num: 30,
-              title: "Capstone Project",
-              desc: "Perform a security audit and present a cybersecurity defense plan.",
-            },
+          description:
+            "Apply cybersecurity skills in real-world scenarios and simulations.",
+          outcomes: [
+            "Solve security challenges using CTF",
+            "Perform incident response and log analysis",
+            "Apply threat hunting and system hardening",
+            "Understand SOC workflow and monitoring",
+            "Build and present a security project",
           ],
+          language: "Practical Cyber Security",
+          platform: "Cyber Labs",
+          lessons: 5,
+          activities: "10+",
         },
       ],
     },
@@ -2817,275 +2390,104 @@ export const courses = [
       heading: "Course Delivery Plan",
       modules: [
         {
-          id: "01",
+          id: "m1",
           title: "Data Literacy",
-          lectures: [
-            {
-              num: 1,
-              title: "What is Data?",
-              desc: "Understand what data is, explore different types of data, and identify examples of data in daily life.",
-            },
-            {
-              num: 2,
-              title: "Data Around Us",
-              desc: "Explore how data is used in social media, sports, business, and everyday applications.",
-            },
-            {
-              num: 3,
-              title: "Data vs Information",
-              desc: "Understand the difference between raw data and meaningful insights.",
-            },
-            {
-              num: 4,
-              title: "Descriptive Statistics",
-              desc: "Learn basic statistical concepts used to summarize data.",
-            },
-            {
-              num: 5,
-              title: "Dataset Understanding",
-              desc: "Understand how datasets are structured and how to read data tables.",
-            },
-            {
-              num: 6,
-              title: "Mini Data Analysis Activity",
-              desc: "Analyze a dataset and discuss insights in groups.",
-            },
+          description:
+            "Understand the basics of data, how it is used in real life, and learn to interpret datasets.",
+          outcomes: [
+            "Identify types of data and real-world data usage",
+            "Differentiate data vs information using basic statistics",
+            "Analyze and interpret datasets effectively",
           ],
+          language: "Data Concepts",
+          platform: "Classroom + Activities",
+          lessons: 3,
+          activities: "8+",
         },
         {
-          id: "02",
-          title: "Excel for Data Analysis",
-          lectures: [
-            {
-              num: 7,
-              title: "Excel Introduction",
-              desc: "Learn the Excel interface and basic spreadsheet operations.",
-            },
-            {
-              num: 8,
-              title: "Data Entry and Formatting",
-              desc: "Organize and format datasets.",
-            },
-            {
-              num: 9,
-              title: "Basic Formulas",
-              desc: "Use formulas like SUM and AVERAGE to analyze data.",
-            },
-            {
-              num: 10,
-              title: "Functions and IF Statements",
-              desc: "Apply functions like COUNT, MIN, MAX, and logical IF.",
-            },
-            {
-              num: 11,
-              title: "Sorting and Filtering",
-              desc: "Organize and clean datasets.",
-            },
-            {
-              num: 12,
-              title: "Conditional Formatting",
-              desc: "Highlight patterns and important values in datasets.",
-            },
-            {
-              num: 13,
-              title: "Data Visualization with Charts",
-              desc: "Create bar charts and pie charts.",
-            },
-            {
-              num: 14,
-              title: "Pivot Tables",
-              desc: "Summarize large datasets using pivot tables.",
-            },
-            {
-              num: 15,
-              title: "Mini Dashboard Creation",
-              desc: "Combine charts and tables into a dashboard.",
-            },
-            {
-              num: 16,
-              title: "Excel Analysis Project",
-              desc: "Create a sales analysis dashboard.",
-            },
+          id: "m2",
+          title: "Microsoft Excel",
+          description:
+            "Learn to organize, analyze, and visualize data using Microsoft Excel.",
+          outcomes: [
+            "Enter, format, and manage data in Excel",
+            "Apply formulas and logical functions (SUM, IF, etc.)",
+            "Organize data using sorting and filtering",
+            "Highlight insights using conditional formatting",
+            "Create charts and pivot tables for analysis",
           ],
+          language: "Excel",
+          platform: "Microsoft Excel",
+          lessons: 5,
+          activities: "10+",
         },
         {
-          id: "03",
+          id: "m3",
           title: "Python for Data Analysis",
-          lectures: [
-            {
-              num: 17,
-              title: "Python Introduction",
-              desc: "Learn why Python is widely used for data analysis.",
-            },
-            {
-              num: 18,
-              title: "Variables and Operators",
-              desc: "Write simple programs using variables and operators.",
-            },
-            {
-              num: 19,
-              title: "Conditions",
-              desc: "Build logic using if–else statements.",
-            },
-            {
-              num: 20,
-              title: "Loops",
-              desc: "Automate repetitive tasks using loops.",
-            },
-            {
-              num: 21,
-              title: "Python Data Structures",
-              desc: "Work with lists, dictionaries, tuples, and sets.",
-            },
-            {
-              num: 22,
-              title: "NumPy Fundamentals",
-              desc: "Perform numerical operations using NumPy.",
-            },
-            {
-              num: 23,
-              title: "Pandas Introduction",
-              desc: "Load and explore datasets using Pandas.",
-            },
-            {
-              num: 24,
-              title: "Data Analysis Basics",
-              desc: "Analyze datasets and calculate insights.",
-            },
-            {
-              num: 25,
-              title: "Data Visualization",
-              desc: "Create charts using Python libraries.",
-            },
-            {
-              num: 26,
-              title: "Python Analysis Project",
-              desc: "Perform dataset analysis and present insights.",
-            },
-            {
-              num: 27,
-              title: "Data Cleaning (EDA)",
-              desc: "Fix data types and prepare datasets.",
-            },
-            {
-              num: 28,
-              title: "Exploratory Data Analysis",
-              desc: "Analyze patterns and feature distributions.",
-            },
+          description:
+            "Learn Python programming and use it for data analysis and visualization.",
+          outcomes: [
+            "Understand Python basics and environment setup",
+            "Write programs using variables, operators, and input",
+            "Apply conditions and loops for problem-solving",
+            "Work with data structures (list, tuple, dictionary, set)",
+            "Use NumPy for numerical operations",
+            "Analyze datasets using Pandas",
+            "Perform data cleaning and EDA",
+            "Visualize data for insights",
           ],
+          language: "Python (NumPy, Pandas)",
+          platform: "Jupyter Notebook / VS Code",
+          lessons: 8,
+          activities: "20+",
         },
         {
-          id: "04",
-          title: "SQL for Data Analysis",
-          lectures: [
-            {
-              num: 29,
-              title: "Database Concepts",
-              desc: "Understand tables, rows, columns, and relational databases.",
-            },
-            {
-              num: 30,
-              title: "SQL Basics",
-              desc: "Write basic SQL queries using SELECT, INSERT, DELETE, and WHERE.",
-            },
-            {
-              num: 31,
-              title: "Sorting and Aggregation",
-              desc: "Use ORDER BY, COUNT, and GROUP BY.",
-            },
-            {
-              num: 32,
-              title: "SQL Joins",
-              desc: "Combine multiple tables using JOIN operations.",
-            },
-            {
-              num: 33,
-              title: "SQL Dataset Practice",
-              desc: "Practice queries and solve SQL challenges.",
-            },
+          id: "m4",
+          title: "SQL",
+          description:
+            "Learn database concepts and perform data operations using SQL queries.",
+          outcomes: [
+            "Understand database structure and SQL basics",
+            "Retrieve and manipulate data using SQL queries",
+            "Apply sorting and aggregation functions",
+            "Use joins to combine multiple tables",
+            "Practice SQL queries through real datasets",
           ],
+          language: "SQL",
+          platform: "MySQL / SQLite",
+          lessons: 5,
+          activities: "10+",
         },
         {
-          id: "05",
+          id: "m5",
           title: "Power BI",
-          lectures: [
-            {
-              num: 34,
-              title: "Power BI Introduction",
-              desc: "Understand business intelligence and Power BI interface.",
-            },
-            {
-              num: 35,
-              title: "Importing Data",
-              desc: "Load datasets from Excel into Power BI.",
-            },
-            {
-              num: 36,
-              title: "Data Visualization",
-              desc: "Create charts and visualizations.",
-            },
-            {
-              num: 37,
-              title: "Filters and Interactions",
-              desc: "Add filters to create interactive dashboards.",
-            },
-            {
-              num: 38,
-              title: "Dashboard Design",
-              desc: "Combine multiple visuals into a dashboard.",
-            },
-            {
-              num: 39,
-              title: "Data Cleaning in Power BI",
-              desc: "Transform and prepare data.",
-            },
-            {
-              num: 40,
-              title: "KPI Metrics",
-              desc: "Design business metrics and indicators.",
-            },
-            {
-              num: 41,
-              title: "Dashboard Project",
-              desc: "Build a complete analysis dashboard.",
-            },
+          description:
+            "Create interactive dashboards and reports using Power BI.",
+          outcomes: [
+            "Understand Power BI interface and import data",
+            "Clean and transform data for visualization",
+            "Create interactive charts and filters",
+            "Design KPIs and build complete reports",
           ],
+          language: "Power BI",
+          platform: "Power BI Desktop",
+          lessons: 3,
+          activities: "8+",
         },
         {
-          id: "06",
-          title: "Final Capstone Project",
-          lectures: [
-            {
-              num: 42,
-              title: "Dataset Selection",
-              desc: "Choose a dataset and define project goals.",
-            },
-            {
-              num: 43,
-              title: "Data Cleaning",
-              desc: "Prepare datasets for analysis.",
-            },
-            {
-              num: 44,
-              title: "Data Analysis",
-              desc: "Analyze data using Excel and SQL.",
-            },
-            {
-              num: 45,
-              title: "Dashboard Development",
-              desc: "Build a Power BI dashboard.",
-            },
-            {
-              num: 46,
-              title: "Presentation Preparation",
-              desc: "Prepare and explain insights.",
-            },
-            {
-              num: 47,
-              title: "Final Project Demo",
-              desc: "Present the final analysis dashboard.",
-            },
+          id: "m6",
+          title: "Capstone Data Projects",
+          description:
+            "Apply all skills to build real-world data analysis and dashboard projects.",
+          outcomes: [
+            "Build interactive dashboards using Power BI & Excel",
+            "Perform complete dataset analysis using Python",
+            "Combine tools to create and present real-world data projects",
           ],
+          language: "Python + Excel + Power BI",
+          platform: "Jupyter + Excel + Power BI",
+          lessons: 3,
+          activities: "10+",
         },
       ],
     },
@@ -3280,7 +2682,7 @@ export const courses = [
     id: "aiml",
     cat: "aiml",
     type: "single",
-    price:23600,
+    price: 23600,
     subtitle:
       "Learn Generative AI & Build Smart Applications for Kids and Teens",
     description:
@@ -3367,240 +2769,128 @@ export const courses = [
       heading: "Course Delivery Plan",
       modules: [
         {
-          id: "01",
-          title: "AI Around Us",
-          lectures: [
-            {
-              num: 1,
-              title: "What is AI?",
-              desc: "Understand what Artificial Intelligence is, how AI differs from human intelligence, and explore AI applications used in daily life.",
-            },
-            {
-              num: 2,
-              title: "How AI Learns",
-              desc: "Learn how machines learn from data using machine learning concepts, recommendation systems, and bias in AI.",
-            },
+          id: "m1",
+          title: "Introduction to AI & GenAI",
+          description:
+            "Understand the basics of AI and Generative AI and explore how they are used in real life.",
+          outcomes: [
+            "Understand AI, ML, and Generative AI concepts",
+            "Identify real-life AI applications in daily life",
           ],
+          language: "AI Concepts",
+          platform: "AI Tools",
+          lessons: 2,
+          activities: "5+",
         },
         {
-          id: "02",
-          title: "Python for AI",
-          lectures: [
-            {
-              num: 3,
-              title: "Python Introduction",
-              desc: "Understand why Python is used in AI and set up the development environment.",
-            },
-            {
-              num: 4,
-              title: "Variables and Operators",
-              desc: "Learn Python variables, user input, and basic operators through coding exercises.",
-            },
-            {
-              num: 5,
-              title: "Conditions",
-              desc: "Understand if-else logic and build small decision-based programs.",
-            },
-            {
-              num: 6,
-              title: "Loops",
-              desc: "Use loops to automate repetitive tasks and build simple programs.",
-            },
-            {
-              num: 7,
-              title: "Data Structures",
-              desc: "Work with lists, dictionaries, tuples, and sets.",
-            },
-            {
-              num: 8,
-              title: "NumPy Fundamentals",
-              desc: "Understand arrays and numerical computing using NumPy.",
-            },
-            {
-              num: 9,
-              title: "Pandas Introduction",
-              desc: "Load datasets and explore tabular data using Pandas.",
-            },
-            {
-              num: 10,
-              title: "Data Analysis Basics",
-              desc: "Analyze datasets and extract insights.",
-            },
-            {
-              num: 11,
-              title: "Data Visualization",
-              desc: "Create simple charts and graphs using Python.",
-            },
-            {
-              num: 12,
-              title: "Python Mini Project",
-              desc: "Analyze a dataset and present insights.",
-            },
+          id: "m2",
+          title: "Prompt Engineering",
+          description:
+            "Learn how to effectively communicate with AI using structured prompts.",
+          outcomes: [
+            "Understand prompts and their importance",
+            "Differentiate between good and bad prompts",
+            "Create structured and advanced prompts",
           ],
+          language: "Prompt Design",
+          platform: "AI Chat Tools",
+          lessons: 3,
+          activities: "8+",
         },
         {
-          id: "03",
-          title: "Statistics for AI",
-          lectures: [
-            {
-              num: 13,
-              title: "Introduction to Statistics",
-              desc: "Understand descriptive and inferential statistics.[-",
-            },
-            {
-              num: 14,
-              title: "Mean, Median, Mode",
-              desc: "Analyze datasets using measures of central tendency.",
-            },
-            {
-              num: 15,
-              title: "Probability Basics",
-              desc: "Understand probability through real-world examples.",
-            },
-            {
-              num: 16,
-              title: "Correlation",
-              desc: "Learn how relationships between variables work.",
-            },
-            {
-              num: 17,
-              title: "Data Cleaning & EDA",
-              desc: "Perform data type corrections and data exploration.",
-            },
-            {
-              num: 18,
-              title: "Visualization for Analysis",
-              desc: "Visualize data patterns and trends.",
-            },
-            {
-              num: 19,
-              title: "Hypothesis Testing",
-              desc: "Understand the basics of hypothesis testing.",
-            },
+          id: "m3",
+          title: "AI Chatbots",
+          description:
+            "Build and customize chatbots with personality and contextual understanding.",
+          outcomes: [
+            "Understand chatbot fundamentals",
+            "Build a functional chatbot",
+            "Improve chatbot responses using context",
           ],
+          language: "AI Tools",
+          platform: "Chatbot Platforms",
+          lessons: 3,
+          activities: "8+",
         },
         {
-          id: "04",
-          title: "Machine Learning",
-          lectures: [
-            {
-              num: 20,
-              title: "Introduction to Machine Learning",
-              desc: "Understand how machine learning models work.",
-            },
-            {
-              num: 21,
-              title: "Types of Machine Learning",
-              desc: "Learn supervised and unsupervised learning.",
-            },
-            {
-              num: 22,
-              title: "Linear Regression",
-              desc: "Build models to predict numerical values.",
-            },
-            {
-              num: 23,
-              title: "Logistic Regression",
-              desc: "Understand classification problems.",
-            },
-            {
-              num: 24,
-              title: "Decision Trees",
-              desc: "Learn tree-based models for prediction.",
-            },
-            {
-              num: 25,
-              title: "Model Validation",
-              desc: "Understand train-test split and evaluation.",
-            },
-            {
-              num: 26,
-              title: "Clustering",
-              desc: "Group data using clustering algorithms.",
-            },
-            {
-              num: 27,
-              title: "Elbow Method",
-              desc: "Visualize clusters and determine optimal groups.",
-            },
-            {
-              num: 28,
-              title: "Market Basket Analysis",
-              desc: "Discover relationships between products.",
-            },
-            {
-              num: 29,
-              title: "Association Rules",
-              desc: "Generate frequent itemsets and rules.",
-            },
-            {
-              num: 30,
-              title: "Naive Bayes Classifier",
-              desc: "Build a simple email spam classifier.",
-            },
-            {
-              num: 31,
-              title: "Mini ML Project",
-              desc: "Develop a student performance prediction model.",
-            },
+          id: "m4",
+          title: "AI Image Generation",
+          description:
+            "Create visual content using AI-powered image generation tools.",
+          outcomes: [
+            "Understand text-to-image generation",
+            "Create creative visuals using prompts",
           ],
+          language: "Image AI Tools",
+          platform: "Image Generators",
+          lessons: 2,
+          activities: "5+",
         },
         {
-          id: "05",
-          title: "Artificial Intelligence",
-          lectures: [
-            {
-              num: 32,
-              title: " Deep Learning Introduction",
-              desc: "Understand neural networks and perceptrons.",
-            },
-            {
-              num: 33,
-              title: " Deep Learning Fundamentals",
-              desc: "Explore deep learning concepts and applications.",
-            },
-            {
-              num: 34,
-              title: "ANN and CNN",
-              desc: "Understand artificial neural networks and convolutional neural networks.",
-            },
-            {
-              num: 35,
-              title: "RNN, LSTM, GRU",
-              desc: "Learn sequence models and time-series analysis.",
-            },
-            {
-              num: 36,
-              title: "NLP Basics",
-              desc: "Understand natural language processing.",
-            },
-            {
-              num: 37,
-              title: "Text Classification",
-              desc: "Build models to classify text data.",
-            },
-            {
-              num: 38,
-              title: "NLP Project",
-              desc: "Perform sentiment analysis on text data.",
-            },
+          id: "m5",
+          title: "AI Applications (No-Code)",
+          description: "Build AI-powered applications using no-code tools.",
+          outcomes: [
+            "Understand AI app use cases",
+            "Build AI-based applications",
+            "Improve app outputs and performance",
           ],
+          language: "No-Code Tools",
+          platform: "AI App Builders",
+          lessons: 3,
+          activities: "8+",
         },
         {
-          id: "06",
-          title: "Final Capstone Project",
-          lectures: [
-            {
-              num: 39,
-              title: "Project Planning",
-              desc: "Select datasets and design the final AI project.",
-            },
-            {
-              num: 40,
-              title: "Final Capstone Project",
-              desc: "Build and present an AI-based project such as a sentiment analysis dashboard.",
-            },
+          id: "m6",
+          title: "Generative AI for Content",
+          description:
+            "Use AI tools to generate content like blogs, captions, and scripts.",
+          outcomes: [
+            "Create written content using AI",
+            "Build a content portfolio",
           ],
+          language: "AI Writing Tools",
+          platform: "Content Tools",
+          lessons: 2,
+          activities: "5+",
+        },
+        {
+          id: "m7",
+          title: "Voice & Multimodal AI",
+          description: "Explore voice-based AI and multimodal systems.",
+          outcomes: [
+            "Understand voice AI basics",
+            "Build simple multimodal applications",
+          ],
+          language: "Voice AI",
+          platform: "Multimodal Tools",
+          lessons: 2,
+          activities: "5+",
+        },
+        {
+          id: "m8",
+          title: "AI Ethics & Safety",
+          description: "Learn responsible AI usage and ethical considerations.",
+          outcomes: ["Understand AI risks, bias, and safety"],
+          language: "AI Ethics",
+          platform: "Discussion-Based",
+          lessons: 1,
+          activities: "2+",
+        },
+        {
+          id: "m9",
+          title: "Capstone AI Project",
+          description:
+            "Plan, build, and present a complete AI-powered project.",
+          outcomes: [
+            "Plan and design AI project",
+            "Build and test solution",
+            "Present final project",
+          ],
+          language: "AI Tools + GenAI",
+          platform: "Mixed Tools",
+          lessons: 2,
+          activities: "10+",
         },
       ],
     },
@@ -3825,7 +3115,8 @@ export const courses = [
     durationWeeks: "11",
     durationClasses: "45-60",
     activities: "50+",
-    heroImage:"https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=900&auto=format&fit=crop&sat=-20&exp=-20",
+    heroImage:
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=900&auto=format&fit=crop&sat=-20&exp=-20",
     color: "#1d8fff",
 
     journeySection: {
@@ -3894,240 +3185,156 @@ export const courses = [
       heading: "Course Delivery Plan",
       modules: [
         {
-          id: "01",
-          title: "AI Around Us",
-          lectures: [
-            {
-              num: 1,
-              title: "What is AI?",
-              desc: "Understand what Artificial Intelligence is, how AI differs from human intelligence, and explore AI applications used in daily life.",
-            },
-            {
-              num: 2,
-              title: "How AI Learns",
-              desc: "Learn how machines learn from data using machine learning concepts, recommendation systems, and bias in AI.",
-            },
+          id: "m1",
+          title: "Python Foundations",
+          description:
+            "Learn basics of programming and get started with Python.",
+          outcomes: [
+            "Understand programming concepts",
+            "Setup Python and run first program",
+            "Work with variables, data types, and input/output",
           ],
+          language: "Python",
+          platform: "VS Code / Jupyter",
+          lessons: 3,
+          activities: "5+",
         },
         {
-          id: "02",
-          title: "Python for AI",
-          lectures: [
-            {
-              num: 3,
-              title: "Python Introduction",
-              desc: "Understand why Python is used in AI and set up the development environment.",
-            },
-            {
-              num: 4,
-              title: "Variables and Operators",
-              desc: "Learn Python variables, user input, and basic operators through coding exercises.",
-            },
-            {
-              num: 5,
-              title: "Conditions",
-              desc: "Understand if-else logic and build small decision-based programs.",
-            },
-            {
-              num: 6,
-              title: "Loops",
-              desc: "Use loops to automate repetitive tasks and build simple programs.",
-            },
-            {
-              num: 7,
-              title: "Data Structures",
-              desc: "Work with lists, dictionaries, tuples, and sets.",
-            },
-            {
-              num: 8,
-              title: "NumPy Fundamentals",
-              desc: "Understand arrays and numerical computing using NumPy.",
-            },
-            {
-              num: 9,
-              title: "Pandas Introduction",
-              desc: "Load datasets and explore tabular data using Pandas.",
-            },
-            {
-              num: 10,
-              title: "Data Analysis Basics",
-              desc: "Analyze datasets and extract insights.",
-            },
-            {
-              num: 11,
-              title: "Data Visualization",
-              desc: "Create simple charts and graphs using Python.",
-            },
-            {
-              num: 12,
-              title: "Python Mini Project",
-              desc: "Analyze a dataset and present insights.",
-            },
+          id: "m2",
+          title: "Operators & Conditions",
+          description:
+            "Apply logic using operators and decision-making statements.",
+          outcomes: [
+            "Use operators for calculations and comparisons",
+            "Apply conditional logic using if-else",
           ],
+          language: "Python",
+          platform: "VS Code / Jupyter",
+          lessons: 2,
+          activities: "5+",
         },
         {
-          id: "03",
-          title: "Statistics for AI",
-          lectures: [
-            {
-              num: 13,
-              title: "Introduction to Statistics",
-              desc: "Understand descriptive and inferential statistics.[-",
-            },
-            {
-              num: 14,
-              title: "Mean, Median, Mode",
-              desc: "Analyze datasets using measures of central tendency.",
-            },
-            {
-              num: 15,
-              title: "Probability Basics",
-              desc: "Understand probability through real-world examples.",
-            },
-            {
-              num: 16,
-              title: "Correlation",
-              desc: "Learn how relationships between variables work.",
-            },
-            {
-              num: 17,
-              title: "Data Cleaning & EDA",
-              desc: "Perform data type corrections and data exploration.",
-            },
-            {
-              num: 18,
-              title: "Visualization for Analysis",
-              desc: "Visualize data patterns and trends.",
-            },
-            {
-              num: 19,
-              title: "Hypothesis Testing",
-              desc: "Understand the basics of hypothesis testing.",
-            },
-          ],
+          id: "m3",
+          title: "Loops",
+          description: "Automate repetitive tasks using loops.",
+          outcomes: ["Use loops for iteration and problem solving"],
+          language: "Python",
+          platform: "VS Code / Jupyter",
+          lessons: 1,
+          activities: "2+",
         },
         {
-          id: "04",
-          title: "Machine Learning",
-          lectures: [
-            {
-              num: 20,
-              title: "Introduction to Machine Learning",
-              desc: "Understand how machine learning models work.",
-            },
-            {
-              num: 21,
-              title: "Types of Machine Learning",
-              desc: "Learn supervised and unsupervised learning.",
-            },
-            {
-              num: 22,
-              title: "Linear Regression",
-              desc: "Build models to predict numerical values.",
-            },
-            {
-              num: 23,
-              title: "Logistic Regression",
-              desc: "Understand classification problems.",
-            },
-            {
-              num: 24,
-              title: "Decision Trees",
-              desc: "Learn tree-based models for prediction.",
-            },
-            {
-              num: 25,
-              title: "Model Validation",
-              desc: "Understand train-test split and evaluation.",
-            },
-            {
-              num: 26,
-              title: "Clustering",
-              desc: "Group data using clustering algorithms.",
-            },
-            {
-              num: 27,
-              title: "Elbow Method",
-              desc: "Visualize clusters and determine optimal groups.",
-            },
-            {
-              num: 28,
-              title: "Market Basket Analysis",
-              desc: "Discover relationships between products.",
-            },
-            {
-              num: 29,
-              title: "Association Rules",
-              desc: "Generate frequent itemsets and rules.",
-            },
-            {
-              num: 30,
-              title: "Naive Bayes Classifier",
-              desc: "Build a simple email spam classifier.",
-            },
-            {
-              num: 31,
-              title: "Mini ML Project",
-              desc: "Develop a student performance prediction model.",
-            },
+          id: "m4",
+          title: "Functions",
+          description: "Write reusable code using functions.",
+          outcomes: [
+            "Create and use functions with parameters",
+            "Build reusable programs",
           ],
+          language: "Python",
+          platform: "VS Code / Jupyter",
+          lessons: 2,
+          activities: "5+",
         },
         {
-          id: "05",
-          title: "Artificial Intelligence",
-          lectures: [
-            {
-              num: 32,
-              title: " Deep Learning Introduction",
-              desc: "Understand neural networks and perceptrons.",
-            },
-            {
-              num: 33,
-              title: " Deep Learning Fundamentals",
-              desc: "Explore deep learning concepts and applications.",
-            },
-            {
-              num: 34,
-              title: "ANN and CNN",
-              desc: "Understand artificial neural networks and convolutional neural networks.",
-            },
-            {
-              num: 35,
-              title: "RNN, LSTM, GRU",
-              desc: "Learn sequence models and time-series analysis.",
-            },
-            {
-              num: 36,
-              title: "NLP Basics",
-              desc: "Understand natural language processing.",
-            },
-            {
-              num: 37,
-              title: "Text Classification",
-              desc: "Build models to classify text data.",
-            },
-            {
-              num: 38,
-              title: "NLP Project",
-              desc: "Perform sentiment analysis on text data.",
-            },
-          ],
+          id: "m5",
+          title: "Lists & Tuple",
+          description: "Store and manipulate collections of data.",
+          outcomes: ["Work with lists and tuples for data storage"],
+          language: "Python",
+          platform: "VS Code / Jupyter",
+          lessons: 1,
+          activities: "2+",
         },
         {
-          id: "06",
-          title: "Final Capstone Project",
-          lectures: [
-            {
-              num: 39,
-              title: "Project Planning",
-              desc: "Select datasets and design the final AI project.",
-            },
-            {
-              num: 40,
-              title: "Final Capstone Project",
-              desc: "Build and present an AI-based project such as a sentiment analysis dashboard.",
-            },
+          id: "m6",
+          title: "Dict & Set",
+          description: "Manage structured and unique data collections.",
+          outcomes: ["Use dictionaries and sets effectively"],
+          language: "Python",
+          platform: "VS Code / Jupyter",
+          lessons: 1,
+          activities: "2+",
+        },
+        {
+          id: "m7",
+          title: "Strings",
+          description: "Manipulate and process text data.",
+          outcomes: ["Apply string operations and methods"],
+          language: "Python",
+          platform: "VS Code / Jupyter",
+          lessons: 1,
+          activities: "2+",
+        },
+        {
+          id: "m8",
+          title: "OOP (Object-Oriented Programming)",
+          description: "Understand object-oriented concepts in Python.",
+          outcomes: [
+            "Create classes and objects",
+            "Use constructors and methods",
+            "Apply encapsulation concepts",
           ],
+          language: "Python",
+          platform: "VS Code / Jupyter",
+          lessons: 3,
+          activities: "5+",
+        },
+        {
+          id: "m9",
+          title: "File Handling",
+          description: "Work with files to store and manage data.",
+          outcomes: ["Read and write files", "Build file-based programs"],
+          language: "Python",
+          platform: "VS Code / Jupyter",
+          lessons: 2,
+          activities: "5+",
+        },
+        {
+          id: "m10",
+          title: "Libraries & Projects",
+          description: "Use Python libraries to build fun applications.",
+          outcomes: ["Use built-in libraries for real-world programs"],
+          language: "Python",
+          platform: "VS Code / Jupyter",
+          lessons: 1,
+          activities: "2+",
+        },
+        {
+          id: "m11",
+          title: "Debugging",
+          description: "Identify and fix errors in code.",
+          outcomes: ["Debug common coding errors"],
+          language: "Python",
+          platform: "VS Code / Jupyter",
+          lessons: 1,
+          activities: "2+",
+        },
+        {
+          id: "m12",
+          title: "Exception Handling",
+          description: "Handle errors gracefully in programs.",
+          outcomes: [
+            "Use try-except for error handling",
+            "Implement finally and custom exceptions",
+          ],
+          language: "Python",
+          platform: "VS Code / Jupyter",
+          lessons: 2,
+          activities: "5+",
+        },
+        {
+          id: "m13",
+          title: "Capstone Project",
+          description: "Build and present a complete Python project.",
+          outcomes: [
+            "Integrate concepts into final project",
+            "Present working application",
+          ],
+          language: "Python",
+          platform: "VS Code / Jupyter",
+          lessons: 2,
+          activities: "10+",
         },
       ],
     },
@@ -4397,240 +3604,132 @@ export const courses = [
       heading: "Course Delivery Plan",
       modules: [
         {
-          id: "01",
-          title: "AI Around Us",
-          lectures: [
-            {
-              num: 1,
-              title: "What is AI?",
-              desc: "Understand what Artificial Intelligence is, how AI differs from human intelligence, and explore AI applications used in daily life.",
-            },
-            {
-              num: 2,
-              title: "How AI Learns",
-              desc: "Learn how machines learn from data using machine learning concepts, recommendation systems, and bias in AI.",
-            },
+          id: "m1",
+          title: "Internet & Web Fundamentals",
+          description:
+            "Understand internet basics, how websites work, and plan your own website using real-world concepts.",
+          outcomes: [
+            "Understand internet, websites & types",
+            "Learn how web works (domain, hosting, HTTP)",
+            "Plan website structure & layout",
           ],
+          language: "Basic Web Concepts",
+          platform: "Browser + VS Code",
+          lessons: 3,
+          activities: "8+",
         },
         {
-          id: "02",
-          title: "Python for AI",
-          lectures: [
-            {
-              num: 3,
-              title: "Python Introduction",
-              desc: "Understand why Python is used in AI and set up the development environment.",
-            },
-            {
-              num: 4,
-              title: "Variables and Operators",
-              desc: "Learn Python variables, user input, and basic operators through coding exercises.",
-            },
-            {
-              num: 5,
-              title: "Conditions",
-              desc: "Understand if-else logic and build small decision-based programs.",
-            },
-            {
-              num: 6,
-              title: "Loops",
-              desc: "Use loops to automate repetitive tasks and build simple programs.",
-            },
-            {
-              num: 7,
-              title: "Data Structures",
-              desc: "Work with lists, dictionaries, tuples, and sets.",
-            },
-            {
-              num: 8,
-              title: "NumPy Fundamentals",
-              desc: "Understand arrays and numerical computing using NumPy.",
-            },
-            {
-              num: 9,
-              title: "Pandas Introduction",
-              desc: "Load datasets and explore tabular data using Pandas.",
-            },
-            {
-              num: 10,
-              title: "Data Analysis Basics",
-              desc: "Analyze datasets and extract insights.",
-            },
-            {
-              num: 11,
-              title: "Data Visualization",
-              desc: "Create simple charts and graphs using Python.",
-            },
-            {
-              num: 12,
-              title: "Python Mini Project",
-              desc: "Analyze a dataset and present insights.",
-            },
+          id: "m2",
+          title: "HTML (Website Structure)",
+          description:
+            "Learn to build structured web pages using HTML elements and create multiple practical pages.",
+          outcomes: [
+            "Understand HTML structure & tags",
+            "Create pages with text & media",
+            "Build lists & tables",
+            "Create forms for user input",
+            "Use semantic HTML layout",
           ],
+          language: "HTML",
+          platform: "VS Code",
+          lessons: 5,
+          activities: "10+",
         },
         {
-          id: "03",
-          title: "Statistics for AI",
-          lectures: [
-            {
-              num: 13,
-              title: "Introduction to Statistics",
-              desc: "Understand descriptive and inferential statistics.[-",
-            },
-            {
-              num: 14,
-              title: "Mean, Median, Mode",
-              desc: "Analyze datasets using measures of central tendency.",
-            },
-            {
-              num: 15,
-              title: "Probability Basics",
-              desc: "Understand probability through real-world examples.",
-            },
-            {
-              num: 16,
-              title: "Correlation",
-              desc: "Learn how relationships between variables work.",
-            },
-            {
-              num: 17,
-              title: "Data Cleaning & EDA",
-              desc: "Perform data type corrections and data exploration.",
-            },
-            {
-              num: 18,
-              title: "Visualization for Analysis",
-              desc: "Visualize data patterns and trends.",
-            },
-            {
-              num: 19,
-              title: "Hypothesis Testing",
-              desc: "Understand the basics of hypothesis testing.",
-            },
+          id: "m3",
+          title: "CSS (Design & Layout)",
+          description:
+            "Design visually appealing and responsive websites using CSS styling and layout techniques.",
+          outcomes: [
+            "Apply styling using colors & fonts",
+            "Understand spacing using box model",
+            "Create layouts using Flexbox",
+            "Build responsive designs",
+            "Add animations & effects",
           ],
+          language: "CSS",
+          platform: "VS Code",
+          lessons: 5,
+          activities: "10+",
         },
         {
-          id: "04",
-          title: "Machine Learning",
-          lectures: [
-            {
-              num: 20,
-              title: "Introduction to Machine Learning",
-              desc: "Understand how machine learning models work.",
-            },
-            {
-              num: 21,
-              title: "Types of Machine Learning",
-              desc: "Learn supervised and unsupervised learning.",
-            },
-            {
-              num: 22,
-              title: "Linear Regression",
-              desc: "Build models to predict numerical values.",
-            },
-            {
-              num: 23,
-              title: "Logistic Regression",
-              desc: "Understand classification problems.",
-            },
-            {
-              num: 24,
-              title: "Decision Trees",
-              desc: "Learn tree-based models for prediction.",
-            },
-            {
-              num: 25,
-              title: "Model Validation",
-              desc: "Understand train-test split and evaluation.",
-            },
-            {
-              num: 26,
-              title: "Clustering",
-              desc: "Group data using clustering algorithms.",
-            },
-            {
-              num: 27,
-              title: "Elbow Method",
-              desc: "Visualize clusters and determine optimal groups.",
-            },
-            {
-              num: 28,
-              title: "Market Basket Analysis",
-              desc: "Discover relationships between products.",
-            },
-            {
-              num: 29,
-              title: "Association Rules",
-              desc: "Generate frequent itemsets and rules.",
-            },
-            {
-              num: 30,
-              title: "Naive Bayes Classifier",
-              desc: "Build a simple email spam classifier.",
-            },
-            {
-              num: 31,
-              title: "Mini ML Project",
-              desc: "Develop a student performance prediction model.",
-            },
+          id: "m4",
+          title: "JavaScript Fundamentals",
+          description:
+            "Learn programming basics and add interactivity to web pages using JavaScript.",
+          outcomes: [
+            "Understand variables & basic JavaScript",
+            "Apply conditions & functions",
+            "Work with events & loops",
+            "Build interactive logic-based features",
           ],
+          language: "JavaScript",
+          platform: "Browser + VS Code",
+          lessons: 4,
+          activities: "10+",
         },
         {
-          id: "05",
-          title: "Artificial Intelligence",
-          lectures: [
-            {
-              num: 32,
-              title: " Deep Learning Introduction",
-              desc: "Understand neural networks and perceptrons.",
-            },
-            {
-              num: 33,
-              title: " Deep Learning Fundamentals",
-              desc: "Explore deep learning concepts and applications.",
-            },
-            {
-              num: 34,
-              title: "ANN and CNN",
-              desc: "Understand artificial neural networks and convolutional neural networks.",
-            },
-            {
-              num: 35,
-              title: "RNN, LSTM, GRU",
-              desc: "Learn sequence models and time-series analysis.",
-            },
-            {
-              num: 36,
-              title: "NLP Basics",
-              desc: "Understand natural language processing.",
-            },
-            {
-              num: 37,
-              title: "Text Classification",
-              desc: "Build models to classify text data.",
-            },
-            {
-              num: 38,
-              title: "NLP Project",
-              desc: "Perform sentiment analysis on text data.",
-            },
+          id: "m5",
+          title: "DOM & Interactive Projects",
+          description:
+            "Control and update web pages dynamically using DOM and build real-world applications.",
+          outcomes: [
+            "Manipulate webpage elements using DOM",
+            "Implement form validation",
+            "Create dynamic styling & UI features",
+            "Build To-Do and interactive apps",
+            "Develop quiz-based applications",
           ],
+          language: "JavaScript (DOM)",
+          platform: "Browser + VS Code",
+          lessons: 5,
+          activities: "10+",
         },
         {
-          id: "06",
-          title: "Final Capstone Project",
-          lectures: [
-            {
-              num: 39,
-              title: "Project Planning",
-              desc: "Select datasets and design the final AI project.",
-            },
-            {
-              num: 40,
-              title: "Final Capstone Project",
-              desc: "Build and present an AI-based project such as a sentiment analysis dashboard.",
-            },
+          id: "m6",
+          title: "Final Website Project",
+          description:
+            "Apply all your learning to design, build, and present a complete interactive website project from scratch.",
+          outcomes: [
+            "Plan and design a complete website (idea, layout, wireframe)",
+            "Build a fully functional website using HTML, CSS & JavaScript",
+            "Present your project with proper explanation and real-world use",
           ],
+          language: "HTML + CSS + JavaScript",
+          platform: "VS Code + Browser",
+          lessons: 3,
+          activities: "10+",
+        },
+        {
+          id: "m7",
+          title: "Angular Framework Basics",
+          description:
+            "Learn modern frontend development using Angular and build dynamic web applications.",
+          outcomes: [
+            "Understand Angular structure & components",
+            "Work with data binding and directives",
+            "Implement routing and services",
+            "Handle forms and API integration",
+          ],
+          language: "Angular (TypeScript)",
+          platform: "VS Code + Browser",
+          lessons: 7,
+          activities: "15+",
+        },
+        {
+          id: "m8",
+          title: "Final Project & Application Development",
+          description:
+            "Apply all concepts to build and present a complete real-world web application.",
+          outcomes: [
+            "Plan and design full application architecture",
+            "Build a complete project using HTML, CSS, JS & Angular",
+            "Present project with proper explanation and demo",
+          ],
+          language: "Angular (TypeScript)",
+          platform: "VS Code + Browser",
+          lessons: 3,
+          activities: "10+",
         },
       ],
     },
@@ -4857,7 +3956,8 @@ export const courses = [
     durationWeeks: "12",
     durationClasses: "45-60",
     activities: "60+",
-    heroImage: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
+    heroImage:
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
     color: "#1d8fff",
 
     journeySection: {
@@ -4869,41 +3969,41 @@ export const courses = [
           icon: "📚",
           title: "What You'll Learn",
           type: "checklist",
-          items:[
-  "Fundamentals of programming using Java",
-  "Java syntax and program structure",
-  "Variables, data types, and operators",
-  "Conditional statements and logic building",
-  "Loops and problem-solving techniques",
-  "Functions (methods) and reusable code",
-  "Arrays and string handling",
-  "Object-Oriented Programming (OOP) concepts",
-  "Debugging and error handling"
-],
+          items: [
+            "Fundamentals of programming using Java",
+            "Java syntax and program structure",
+            "Variables, data types, and operators",
+            "Conditional statements and logic building",
+            "Loops and problem-solving techniques",
+            "Functions (methods) and reusable code",
+            "Arrays and string handling",
+            "Object-Oriented Programming (OOP) concepts",
+            "Debugging and error handling",
+          ],
         },
         {
           icon: "🚀",
           title: "Skills You'll Gain",
           type: "bullets",
           items: [
-  "Strong logical thinking and problem-solving",
-  "Writing structured and efficient Java code",
-  "Understanding object-oriented programming",
-  "Building real-world programs and applications",
-  "Debugging and fixing errors",
-  "Preparing foundation for advanced technologies",
-],
+            "Strong logical thinking and problem-solving",
+            "Writing structured and efficient Java code",
+            "Understanding object-oriented programming",
+            "Building real-world programs and applications",
+            "Debugging and fixing errors",
+            "Preparing foundation for advanced technologies",
+          ],
         },
         {
           icon: "🏆",
           title: "What You'll Achieve",
           type: "trophy",
           items: [
-  "Java Programming Certificate",
-  "Hands-on coding experience",
-  "Mini projects & real-world applications",
-  "Strong foundation for software development"
-],
+            "Java Programming Certificate",
+            "Hands-on coding experience",
+            "Mini projects & real-world applications",
+            "Strong foundation for software development",
+          ],
         },
       ],
     },
@@ -4922,187 +4022,142 @@ export const courses = [
       ],
     },
 
-     curriculum: {
+    curriculum: {
       heading: "Course Delivery Plan",
       modules: [
         {
-          id: "01",
-          title: "AI Around Us",
-          lectures: [
-            {
-              num: 1,
-              title: "What is AI?",
-              desc: "Understand what Artificial Intelligence is, how AI differs from human intelligence, and explore AI applications used in daily life.",
-            },
-            {
-              num: 2,
-              title: "How AI Learns",
-              desc: "Learn how machines learn from data using machine learning concepts, recommendation systems, and bias in AI.",
-            },
+          id: "m1",
+          title: "Java Foundations",
+          description:
+            "Learn programming basics and get started with Java development.",
+          outcomes: [
+            "Understand programming concepts",
+            "Setup Java environment and run first program",
           ],
+          language: "Java",
+          platform: "VS Code / IntelliJ IDEA",
+          lessons: 2,
+          activities: "5+",
         },
         {
-          id: "02",
-          title: "Python for AI",
-          lectures: [
-            {
-              num: 3,
-              title: "Python Introduction",
-              desc: "Understand why Python is used in AI and set up the development environment.",
-            },
-            {
-              num: 4,
-              title: "Variables and Operators",
-              desc: "Learn Python variables, user input, and basic operators through coding exercises.",
-            },
-            {
-              num: 5,
-              title: "Conditions",
-              desc: "Understand if-else logic and build small decision-based programs.",
-            },
-            {
-              num: 6,
-              title: "Loops",
-              desc: "Use loops to automate repetitive tasks and build simple programs.",
-            },
-            {
-              num: 7,
-              title: "Data Structures",
-              desc: "Work with lists, dictionaries, tuples, and sets.",
-            },
-            {
-              num: 8,
-              title: "NumPy Fundamentals",
-              desc: "Understand arrays and numerical computing using NumPy.",
-            },
-            {
-              num: 9,
-              title: "Pandas Introduction",
-              desc: "Load datasets and explore tabular data using Pandas.",
-            },
-            {
-              num: 10,
-              title: "Data Analysis Basics",
-              desc: "Analyze datasets and extract insights.",
-            },
-            {
-              num: 11,
-              title: "Data Visualization",
-              desc: "Create simple charts and graphs using Python.",
-            },
-            {
-              num: 12,
-              title: "Python Mini Project",
-              desc: "Analyze a dataset and present insights.",
-            },
+          id: "m2",
+          title: "Variables & Operators",
+          description: "Work with data types and perform operations in Java.",
+          outcomes: [
+            "Use variables and data types",
+            "Apply operators in programs",
+            "Perform type casting and input/output",
           ],
+          language: "Java",
+          platform: "VS Code / IntelliJ IDEA",
+          lessons: 3,
+          activities: "6+",
         },
         {
-          id: "03",
-          title: "Statistics for AI",
-          lectures: [
-            {
-              num: 13,
-              title: "Introduction to Statistics",
-              desc: "Understand descriptive and inferential statistics.[-",
-            },
-            {
-              num: 14,
-              title: "Mean, Median, Mode",
-              desc: "Analyze datasets using measures of central tendency.",
-            },
-            {
-              num: 15,
-              title: "Probability Basics",
-              desc: "Understand probability through real-world examples.",
-            },
-            {
-              num: 16,
-              title: "Correlation",
-              desc: "Learn how relationships between variables work.",
-            },
-            {
-              num: 17,
-              title: "Data Cleaning & EDA",
-              desc: "Perform data type corrections and data exploration.",
-            },
-            {
-              num: 18,
-              title: "Visualization for Analysis",
-              desc: "Visualize data patterns and trends.",
-            },
-            {
-              num: 19,
-              title: "Hypothesis Testing",
-              desc: "Understand the basics of hypothesis testing.",
-            },
+          id: "m3",
+          title: "Decision Making",
+          description: "Implement logic using conditional statements.",
+          outcomes: [
+            "Apply if-else and switch statements",
+            "Solve problems using nested conditions",
           ],
+          language: "Java",
+          platform: "VS Code / IntelliJ IDEA",
+          lessons: 2,
+          activities: "5+",
         },
         {
-          id: "04",
-          title: "Machine Learning",
-          lectures: [
-            {
-              num: 20,
-              title: "Introduction to Machine Learning",
-              desc: "Understand how machine learning models work.",
-            },
-            {
-              num: 21,
-              title: "Types of Machine Learning",
-              desc: "Learn supervised and unsupervised learning.",
-            },
-            {
-              num: 22,
-              title: "Linear Regression",
-              desc: "Build models to predict numerical values.",
-            },
-            {
-              num: 23,
-              title: "Logistic Regression",
-              desc: "Understand classification problems.",
-            },
-            {
-              num: 24,
-              title: "Decision Trees",
-              desc: "Learn tree-based models for prediction.",
-            },
-            {
-              num: 25,
-              title: "Model Validation",
-              desc: "Understand train-test split and evaluation.",
-            },
-            {
-              num: 26,
-              title: "Clustering",
-              desc: "Group data using clustering algorithms.",
-            },
-            {
-              num: 27,
-              title: "Elbow Method",
-              desc: "Visualize clusters and determine optimal groups.",
-            },
-            {
-              num: 28,
-              title: "Market Basket Analysis",
-              desc: "Discover relationships between products.",
-            },
-            {
-              num: 29,
-              title: "Association Rules",
-              desc: "Generate frequent itemsets and rules.",
-            },
-            {
-              num: 30,
-              title: "Naive Bayes Classifier",
-              desc: "Build a simple email spam classifier.",
-            },
-            {
-              num: 31,
-              title: "Mini ML Project",
-              desc: "Develop a student performance prediction model.",
-            },
+          id: "m4",
+          title: "Loops",
+          description: "Automate repetitive tasks using loops.",
+          outcomes: [
+            "Use for loop for iteration",
+            "Apply while loop logic",
+            "Compare loops using do-while",
           ],
+          language: "Java",
+          platform: "VS Code / IntelliJ IDEA",
+          lessons: 3,
+          activities: "6+",
+        },
+        {
+          id: "m5",
+          title: "Arrays & Strings",
+          description: "Work with collections and text data in Java.",
+          outcomes: [
+            "Use arrays for data storage",
+            "Work with 2D arrays",
+            "Apply string operations",
+          ],
+          language: "Java",
+          platform: "VS Code / IntelliJ IDEA",
+          lessons: 2,
+          activities: "5+",
+        },
+        {
+          id: "m6",
+          title: "OOP Core",
+          description: "Learn object-oriented programming concepts in Java.",
+          outcomes: [
+            "Create classes and objects",
+            "Apply encapsulation",
+            "Use inheritance",
+            "Understand polymorphism and abstraction",
+          ],
+          language: "Java",
+          platform: "VS Code / IntelliJ IDEA",
+          lessons: 4,
+          activities: "10+",
+        },
+        {
+          id: "m7",
+          title: "Collections",
+          description: "Manage dynamic data using Java collections framework.",
+          outcomes: [
+            "Use ArrayList for dynamic data",
+            "Understand collections framework (List, Set, Map)",
+          ],
+          language: "Java",
+          platform: "VS Code / IntelliJ IDEA",
+          lessons: 2,
+          activities: "5+",
+        },
+        {
+          id: "m8",
+          title: "Exception Handling",
+          description: "Handle runtime errors effectively.",
+          outcomes: [
+            "Handle exceptions using try-catch",
+            "Implement multiple and custom exceptions",
+          ],
+          language: "Java",
+          platform: "VS Code / IntelliJ IDEA",
+          lessons: 2,
+          activities: "5+",
+        },
+        {
+          id: "m9",
+          title: "File Handling",
+          description: "Store and manage data using files in Java.",
+          outcomes: ["Read and write files", "Build file-based applications"],
+          language: "Java",
+          platform: "VS Code / IntelliJ IDEA",
+          lessons: 2,
+          activities: "5+",
+        },
+        {
+          id: "m10",
+          title: "Capstone Project",
+          description: "Build and present a complete Java application.",
+          outcomes: [
+            "Integrate concepts into a real-world project",
+            "Build and test application",
+            "Present final project",
+          ],
+          language: "Java",
+          platform: "VS Code / IntelliJ IDEA",
+          lessons: 2,
+          activities: "10+",
         },
       ],
     },
@@ -5118,17 +4173,57 @@ export const courses = [
         "String & List Manipulation",
       ],
       capstoneProjects: [
-  { num: 1, title: "Java Basics Practice", desc: "Write simple programs to understand syntax, input-output, and variables." },
-  { num: 2, title: "Calculator Application", desc: "Build a calculator using operators and conditional logic." },
-  { num: 3, title: "Number Guessing Game", desc: "Create an interactive game using loops and logic." },
-  { num: 4, title: "Student Management System", desc: "Store and manage student data using arrays and basic operations." },
-  { num: 5, title: "Pattern Generator Program", desc: "Generate different patterns using loops to improve logic." },
-  { num: 6, title: "Matrix Operations Program", desc: "Perform operations on 2D arrays like addition and multiplication." },
-  { num: 7, title: "String Utility Tool", desc: "Perform operations like reverse, palindrome check, and formatting." },
-  { num: 8, title: "File Handling Project", desc: "Read and write data using files in Java." },
-  { num: 9, title: "Simple Login System", desc: "Create a basic login system using conditions and validation." },
-  { num: 10, title: "Quiz Game Application", desc: "Build a quiz game with score tracking and user interaction." }
-],
+        {
+          num: 1,
+          title: "Java Basics Practice",
+          desc: "Write simple programs to understand syntax, input-output, and variables.",
+        },
+        {
+          num: 2,
+          title: "Calculator Application",
+          desc: "Build a calculator using operators and conditional logic.",
+        },
+        {
+          num: 3,
+          title: "Number Guessing Game",
+          desc: "Create an interactive game using loops and logic.",
+        },
+        {
+          num: 4,
+          title: "Student Management System",
+          desc: "Store and manage student data using arrays and basic operations.",
+        },
+        {
+          num: 5,
+          title: "Pattern Generator Program",
+          desc: "Generate different patterns using loops to improve logic.",
+        },
+        {
+          num: 6,
+          title: "Matrix Operations Program",
+          desc: "Perform operations on 2D arrays like addition and multiplication.",
+        },
+        {
+          num: 7,
+          title: "String Utility Tool",
+          desc: "Perform operations like reverse, palindrome check, and formatting.",
+        },
+        {
+          num: 8,
+          title: "File Handling Project",
+          desc: "Read and write data using files in Java.",
+        },
+        {
+          num: 9,
+          title: "Simple Login System",
+          desc: "Create a basic login system using conditions and validation.",
+        },
+        {
+          num: 10,
+          title: "Quiz Game Application",
+          desc: "Build a quiz game with score tracking and user interaction.",
+        },
+      ],
     },
 
     certificate: {
@@ -5144,78 +4239,78 @@ export const courses = [
     },
 
     reviews: [
-  {
-    name: "Arnav Khanna",
-    rating: 5,
-    text: "Java course helped me understand programming basics clearly.",
-    avatar: "AK",
-  },
-  {
-    name: "Tanya Mehra",
-    rating: 5,
-    text: "Building my first Java application was exciting!",
-    avatar: "TM",
-  },
-  {
-    name: "Karan Shah",
-    rating: 5,
-    text: "OOP concepts became very easy to understand.",
-    avatar: "KS",
-  },
-  {
-    name: "Ritika Malhotra",
-    rating: 5,
-    text: "Teaching style is very simple and practical.",
-    avatar: "RM",
-  },
-  {
-    name: "Aditya Jain",
-    rating: 5,
-    text: "The final project helped me gain real confidence.",
-    avatar: "AJ",
-  },
-  {
-    name: "Meera Bansal",
-    rating: 5,
-    text: "I enjoyed building projects and learning Java.",
-    avatar: "MB",
-  }
-],
+      {
+        name: "Arnav Khanna",
+        rating: 5,
+        text: "Java course helped me understand programming basics clearly.",
+        avatar: "AK",
+      },
+      {
+        name: "Tanya Mehra",
+        rating: 5,
+        text: "Building my first Java application was exciting!",
+        avatar: "TM",
+      },
+      {
+        name: "Karan Shah",
+        rating: 5,
+        text: "OOP concepts became very easy to understand.",
+        avatar: "KS",
+      },
+      {
+        name: "Ritika Malhotra",
+        rating: 5,
+        text: "Teaching style is very simple and practical.",
+        avatar: "RM",
+      },
+      {
+        name: "Aditya Jain",
+        rating: 5,
+        text: "The final project helped me gain real confidence.",
+        avatar: "AJ",
+      },
+      {
+        name: "Meera Bansal",
+        rating: 5,
+        text: "I enjoyed building projects and learning Java.",
+        avatar: "MB",
+      },
+    ],
 
     faqs: [
-  {
-    q: "Who is this course for?",
-    a: "Students of Grade 8–12 interested in learning programming.",
-  },
-  {
-    q: "Do I need prior coding knowledge?",
-    a: "No, this course starts from the basics.",
-  },
-  {
-    q: "What will I learn?",
-    a: "Java programming, OOP, logic building, and project development.",
-  },
-  {
-    q: "Course duration?",
-    a: "2–3 months structured program.",
-  },
-  {
-    q: "Live or recorded classes?",
-    a: "Live + recorded sessions.",
-  },
-  {
-    q: "Are there projects?",
-    a: "Yes, multiple mini + final project.",
-  },
-  {
-    q: "Will I get a certificate?",
-    a: "Yes.",
-  },
-  {
-    q: "Is Java useful?",
-    a: "Yes, widely used in app development and enterprise systems.",
-  }
-],
+      {
+        q: "Who is this course for?",
+        a: "Students of Grade 8–12 interested in learning programming.",
+      },
+      {
+        q: "Do I need prior coding knowledge?",
+        a: "No, this course starts from the basics.",
+      },
+      {
+        q: "What will I learn?",
+        a: "Java programming, OOP, logic building, and project development.",
+      },
+      {
+        q: "Course duration?",
+        a: "2–3 months structured program.",
+      },
+      {
+        q: "Live or recorded classes?",
+        a: "Live + recorded sessions.",
+      },
+      {
+        q: "Are there projects?",
+        a: "Yes, multiple mini + final project.",
+      },
+      {
+        q: "Will I get a certificate?",
+        a: "Yes.",
+      },
+      {
+        q: "Is Java useful?",
+        a: "Yes, widely used in app development and enterprise systems.",
+      },
+    ],
 
     recommendedCourses: [
       {
@@ -5243,7 +4338,7 @@ export const courses = [
   },
 
   // bundle course
-    {
+  {
     slug: "full-stack-cloud-creators",
     title: "Full Stack Cloud Creators",
     type: "bundle",
@@ -5318,7 +4413,11 @@ export const courses = [
         { icon: "🎓", label: "84 Live Instructor-Led Sessions" },
         { icon: "📅", label: "11–12 Month Structured Learning Program" },
         { icon: "📚", label: "Comprehensive Curriculum Across 23 Modules" },
-        { icon: "💻", label: "3-in-1 Learning (UI Creators + Code Builders + Cloud Champions)" },
+        {
+          icon: "💻",
+          label:
+            "3-in-1 Learning (UI Creators + Code Builders + Cloud Champions)",
+        },
         { icon: "🛠️", label: "Hands-on Projects & Real-World Applications" },
         { icon: "🚀", label: "Final Capstone Project" },
         { icon: "🕐", label: "Flexible Weekend & Weekday Batches" },
@@ -5713,8 +4812,8 @@ export const courses = [
         icon: "",
       },
     ],
-    },
-    {
+  },
+  {
     slug: "data-ai-innovators",
     title: "Data & AI Innovators",
     type: "bundle",
@@ -6186,760 +5285,760 @@ export const courses = [
         icon: "",
       },
     ],
-    },
-    {
-      slug: "ai-innovators",
-      title: "AI Innovators",
-      type: "bundle",
-      subtitle: "Code, Create & Build the Future with AI",
-      description:
-        "Students learn Python programming, Artificial Intelligence, Machine Learning, and Generative AI to build smart applications, chatbots, and real-world AI projects.",
-      lessons: 72,
+  },
+  {
+    slug: "ai-innovators",
+    title: "AI Innovators",
+    type: "bundle",
+    subtitle: "Code, Create & Build the Future with AI",
+    description:
+      "Students learn Python programming, Artificial Intelligence, Machine Learning, and Generative AI to build smart applications, chatbots, and real-world AI projects.",
+    lessons: 72,
     age: "12-18",
     grade: "8-12",
     durationMonths: "8 - 10",
     durationWeeks: "36",
     durationClasses: "45-60",
     activities: "150+",
-      heroImage:
-        "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
-      color: "#1d8fff",
-  
-      journeySection: {
-        heading: "Start Your AI & Programming Journey",
-        subtitle:
-          "Students learn Python programming, Artificial Intelligence, Machine Learning, and Generative AI to build smart applications, chatbots, and real-world AI projects.",
-        cards: [
-          {
-            icon: "📚",
-            title: "What You'll Learn",
-            type: "checklist",
-            items: [
-              "Python programming fundamentals",
-              "Data analysis and visualization",
-              "Machine Learning concepts and algorithms",
-              "Artificial Intelligence fundamentals",
-              "Generative AI tools and applications",
-              "Prompt engineering techniques",
-              "Chatbot development",
-              "AI image and content creation",
-              "Deep learning and NLP basics",
-              "Building real-world AI applications",
-            ],
-          },
-          {
-            icon: "🚀",
-            title: "Skills You'll Gain",
-            type: "bullets",
-            items: [
-              "Strong coding and logical thinking",
-              "AI and Machine Learning fundamentals",
-              "Data analysis and visualization skills",
-              "Prompt engineering & AI communication",
-              "Chatbot and AI app development",
-              "Creative design using AI tools",
-              "Problem-solving and analytical thinking",
-              "Real-world project development",
-            ],
-          },
-          {
-            icon: "🏆",
-            title: "What You'll Achieve",
-            type: "trophy",
-            items: [
-              "Python Programming Certificate",
-              "AI & Machine Learning Certificate",
-              "Generative AI Certificate",
-              "10+ AI Projects Portfolio",
-              "Hands-on coding & AI experience",
-              "Future-ready tech skills",
-            ],
-          },
-        ],
-      },
-  
-      programOverview: {
-        heading: "Program Overview",
-        description:
-          "The AI Innovators Bundle Program is designed to provide students with a complete learning path in Python Programming, Artificial Intelligence, and Generative AI. Throughout the program, students learn coding from scratch using Python, understand how AI systems work, build machine learning models, and create AI-powered applications and chatbots.The course follows a structured approach with hands-on projects and real-world applications, ensuring practical and engaging learning. By the end of the program, students will be able to build AI models and applications, develop chatbots and AI tools, create AI-generated content, and confidently present a final capstone project.",
-        highlights: [
-          { icon: "🎓", label: "72 Live Instructor-Led Lectures" },
-          { icon: "📅", label: "8-10-Month Structured Learning Program" },
-          { icon: "📦", label: "28 Modules Covering Under Programming Masters" },
-          {
-            icon: "🛠️",
-            label: "3-in-1 Learning (Python, AI Explorers, Gen AI Explorer)",
-          },
-          { icon: "🛠️", label: "Hands-on Activities and Real Projects" },
-          { icon: "🖥️", label: "Final Capstone Project" },
-          { icon: "🕐", label: "Weekend & Weekday Batch Options" },
-        ],
-      },
-  
-      curriculum: {
-        heading: "Course Delivery Plan",
-        modules: [
-          {
-            id: "01",
-            title: "AI Around Us",
-            lectures: [
-              {
-                num: 1,
-                title: "What is AI?",
-                desc: "Understand what Artificial Intelligence is, how AI differs from human intelligence, and explore AI applications used in daily life.",
-              },
-              {
-                num: 2,
-                title: "How AI Learns",
-                desc: "Learn how machines learn from data using machine learning concepts, recommendation systems, and bias in AI.",
-              },
-            ],
-          },
-          {
-            id: "02",
-            title: "Python for AI",
-            lectures: [
-              {
-                num: 3,
-                title: "Python Introduction",
-                desc: "Understand why Python is used in AI and set up the development environment.",
-              },
-              {
-                num: 4,
-                title: "Variables and Operators",
-                desc: "Learn Python variables, user input, and basic operators through coding exercises.",
-              },
-              {
-                num: 5,
-                title: "Conditions",
-                desc: "Understand if-else logic and build small decision-based programs.",
-              },
-              {
-                num: 6,
-                title: "Loops",
-                desc: "Use loops to automate repetitive tasks and build simple programs.",
-              },
-              {
-                num: 7,
-                title: "Data Structures",
-                desc: "Work with lists, dictionaries, tuples, and sets.",
-              },
-              {
-                num: 8,
-                title: "NumPy Fundamentals",
-                desc: "Understand arrays and numerical computing using NumPy.",
-              },
-              {
-                num: 9,
-                title: "Pandas Introduction",
-                desc: "Load datasets and explore tabular data using Pandas.",
-              },
-              {
-                num: 10,
-                title: "Data Analysis Basics",
-                desc: "Analyze datasets and extract insights.",
-              },
-              {
-                num: 11,
-                title: "Data Visualization",
-                desc: "Create simple charts and graphs using Python.",
-              },
-              {
-                num: 12,
-                title: "Python Mini Project",
-                desc: "Analyze a dataset and present insights.",
-              },
-            ],
-          },
-          {
-            id: "03",
-            title: "Statistics for AI",
-            lectures: [
-              {
-                num: 13,
-                title: "Introduction to Statistics",
-                desc: "Understand descriptive and inferential statistics.[-",
-              },
-              {
-                num: 14,
-                title: "Mean, Median, Mode",
-                desc: "Analyze datasets using measures of central tendency.",
-              },
-              {
-                num: 15,
-                title: "Probability Basics",
-                desc: "Understand probability through real-world examples.",
-              },
-              {
-                num: 16,
-                title: "Correlation",
-                desc: "Learn how relationships between variables work.",
-              },
-              {
-                num: 17,
-                title: "Data Cleaning & EDA",
-                desc: "Perform data type corrections and data exploration.",
-              },
-              {
-                num: 18,
-                title: "Visualization for Analysis",
-                desc: "Visualize data patterns and trends.",
-              },
-              {
-                num: 19,
-                title: "Hypothesis Testing",
-                desc: "Understand the basics of hypothesis testing.",
-              },
-            ],
-          },
-          {
-            id: "04",
-            title: "Machine Learning",
-            lectures: [
-              {
-                num: 20,
-                title: "Introduction to Machine Learning",
-                desc: "Understand how machine learning models work.",
-              },
-              {
-                num: 21,
-                title: "Types of Machine Learning",
-                desc: "Learn supervised and unsupervised learning.",
-              },
-              {
-                num: 22,
-                title: "Linear Regression",
-                desc: "Build models to predict numerical values.",
-              },
-              {
-                num: 23,
-                title: "Logistic Regression",
-                desc: "Understand classification problems.",
-              },
-              {
-                num: 24,
-                title: "Decision Trees",
-                desc: "Learn tree-based models for prediction.",
-              },
-              {
-                num: 25,
-                title: "Model Validation",
-                desc: "Understand train-test split and evaluation.",
-              },
-              {
-                num: 26,
-                title: "Clustering",
-                desc: "Group data using clustering algorithms.",
-              },
-              {
-                num: 27,
-                title: "Elbow Method",
-                desc: "Visualize clusters and determine optimal groups.",
-              },
-              {
-                num: 28,
-                title: "Market Basket Analysis",
-                desc: "Discover relationships between products.",
-              },
-              {
-                num: 29,
-                title: "Association Rules",
-                desc: "Generate frequent itemsets and rules.",
-              },
-              {
-                num: 30,
-                title: "Naive Bayes Classifier",
-                desc: "Build a simple email spam classifier.",
-              },
-              {
-                num: 31,
-                title: "Mini ML Project",
-                desc: "Develop a student performance prediction model.",
-              },
-            ],
-          },
-        ],
-      },
-  
-      projects: {
-        heading: "Hands-on Activities & Student Projects",
-        description:
-          "Students will work on exciting real-world projects across Python programming, Artificial Intelligence, Machine Learning, and Generative AI, gaining strong technical and creative skills. Upon successful completion of the AI Innovators Program, students will receive an official Certificate of Completion by SkillzRevo Academy Junior, recognizing their expertise in AI, programming, and intelligent application development. Throughout the journey, students engage in hands-on coding exercises, assignments, and project-based learning, leading to a final capstone project that showcases their ability to build AI models, develop chatbots, and create smart applications using real-world data and AI tools.",
-        activities: [
-          "Learn Python programming and build a strong coding foundation",
-          "Explore datasets and understand how AI systems learn from data",
-          "Perform data analysis and create visualizations using charts and graphs",
-          "Build basic machine learning models for prediction and classification",
-          "Understand and apply deep learning and NLP concepts",
-          "Create AI chatbots using prompt engineering and AI tools",
-          "Generate images, text, and content using Generative AI tools",
-          "Work on real-world AI projects combining Python, ML, and GenAI concepts",
-        ],
-        capstoneProjects: [
-          {
-            num: 1,
-            title: "Python Basics Project",
-            desc: "Write simple Python programs using variables, input/output, and basic logic.",
-          },
-          {
-            num: 2,
-            title: "Calculator & Mini Apps",
-            desc: "Build small applications like calculators using Python.",
-          },
-          {
-            num: 3,
-            title: "Data Analysis Project",
-            desc: "Analyze datasets and extract meaningful insights using Python.",
-          },
-          {
-            num: 4,
-            title: "Data Visualization Dashboard",
-            desc: "Create charts and graphs to visualize real-world data.",
-          },
-          {
-            num: 5,
-            title: "Student Performance Predictor",
-            desc: "Build a machine learning model to predict student scores.",
-          },
-          {
-            num: 6,
-            title: "Email Spam Classifier",
-            desc: "Develop a classification model to detect spam emails.",
-          },
-          {
-            num: 7,
-            title: "Sentiment Analysis Tool",
-            desc: "Analyze text data to identify positive or negative sentiment.",
-          },
-          {
-            num: 8,
-            title: "AI Chatbot Project",
-            desc: "Create an intelligent chatbot using AI tools and prompt engineering.",
-          },
-          {
-            num: 9,
-            title: "AI Image & Content Generator",
-            desc: "Generate images, text, and creative content using Generative AI tools.",
-          },
-          {
-            num: 10,
-            title: "Final AI Capstone Project",
-            desc: "Design and build a complete AI-powered application combining Python, Machine Learning, and Generative AI.",
-          },
-        ],
-      },
-  
-      certificate: {
-        heading: "Program Certificate & Learning Recognition",
-        description:
-          "Students who successfully complete the AI Innovators Program will receive an official Certificate of Completion by SkillzRevo Academy Junior. This certificate showcases their expertise in Python, Artificial Intelligence, Machine Learning, and Generative AI. It reflects their hands-on learning journey through real-world projects, AI model development, and the successful creation of intelligent applications and a final capstone project.",
-        requirements: [
-          "Attend the required live sessions",
-          "Complete coding assignments and practice exercises in Python and AI concepts",
-          "Actively participate in hands-on activities and AI projects",
-          "Successfully build and present the final AI capstone project",
-        ],
-      },
-  
-      reviews: [
+    heroImage:
+      "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
+    color: "#1d8fff",
+
+    journeySection: {
+      heading: "Start Your AI & Programming Journey",
+      subtitle:
+        "Students learn Python programming, Artificial Intelligence, Machine Learning, and Generative AI to build smart applications, chatbots, and real-world AI projects.",
+      cards: [
         {
-          name: "Ayaan Khan",
-          rating: 5,
-          text: "The AI Innovators course was amazing. I learned Python and built my first AI project with real-world data.",
-          avatar: "AK",
+          icon: "📚",
+          title: "What You'll Learn",
+          type: "checklist",
+          items: [
+            "Python programming fundamentals",
+            "Data analysis and visualization",
+            "Machine Learning concepts and algorithms",
+            "Artificial Intelligence fundamentals",
+            "Generative AI tools and applications",
+            "Prompt engineering techniques",
+            "Chatbot development",
+            "AI image and content creation",
+            "Deep learning and NLP basics",
+            "Building real-world AI applications",
+          ],
         },
         {
-          name: "Riya Malhotra",
-          rating: 5,
-          text: "The instructors made AI and machine learning very easy to understand. I loved creating chatbots and AI tools.",
-          avatar: "RM",
+          icon: "🚀",
+          title: "Skills You'll Gain",
+          type: "bullets",
+          items: [
+            "Strong coding and logical thinking",
+            "AI and Machine Learning fundamentals",
+            "Data analysis and visualization skills",
+            "Prompt engineering & AI communication",
+            "Chatbot and AI app development",
+            "Creative design using AI tools",
+            "Problem-solving and analytical thinking",
+            "Real-world project development",
+          ],
         },
         {
-          name: "Kabir Arora",
-          rating: 5,
-          text: "Building machine learning models and working on datasets was the best part. It really improved my understanding of AI.",
-          avatar: "KA",
-        },
-        {
-          name: "Anaya Gupta",
-          rating: 5,
-          text: "A perfect course for beginners who want to explore AI, coding, and real-world applications in a simple way.",
-          avatar: "AG",
-        },
-        {
-          name: "Vihaan Sharma",
-          rating: 5,
-          text: "The projects were very exciting. I built chatbots, worked on data analysis, and created AI-generated content.",
-          avatar: "VS",
-        },
-        {
-          name: "Meher Kapoor",
-          rating: 5,
-          text: "The final AI project helped me combine everything I learned into one smart application. It was a great experience!",
-          avatar: "MK",
-        },
-      ],
-      faqs: [
-        {
-          q: "What is this AI Innovators course about?",
-          a: "This course teaches students Python programming, Artificial Intelligence, Machine Learning, and Generative AI in a practical and engaging way. Students learn to build AI models, chatbots, and smart applications through real-world projects.",
-        },
-        {
-          q: "Who is this program suitable for?",
-          a: "The program is designed for students from Grade 8–12. It is beginner-friendly and suitable for students who want to explore AI and coding from scratch.",
-        },
-        {
-          q: "Does my child need coding experience?",
-          a: "No prior coding experience is required. The course starts from Python basics and gradually moves to AI and machine learning concepts.",
-        },
-        {
-          q: "What will my child be able to build after this course?",
-          a: "By the end of the program, students will be able to build AI models, create chatbots, develop AI-powered applications, generate AI content, and complete a final capstone project.",
-        },
-        {
-          q: "How is this course different from regular coding classes?",
-          a: "This program combines coding with Artificial Intelligence and Generative AI, focusing on real-world projects like chatbots, ML models, and AI applications instead of just basic programming.",
-        },
-        {
-          q: "Are the classes live or recorded?",
-          a: "Classes are live and instructor-led, allowing students to interact, ask questions, and participate in activities in real time.",
-        },
-        {
-          q: "How many students are there in one batch?",
-          a: "We maintain small batch sizes to ensure personalized attention and better learning for every student.",
-        },
-        {
-          q: "What kind of projects will students work on?",
-          a: "Students will work on projects like AI chatbots, data analysis dashboards, machine learning models, sentiment analysis tools, and AI-generated content projects, along with a final capstone project.",
-        },
-        {
-          q: "Is this course suitable for beginners?",
-          a: "Yes, the course is designed for beginners and gradually builds up to intermediate-level skills in Python, AI, and machine learning.",
-        },
-        {
-          q: "What tools or software are required?",
-          a: "Students will need a laptop or desktop, internet connection, Python, and access to AI tools and platforms. All tools used are free.",
-        },
-        {
-          q: "Will my child get a certificate?",
-          a: "Yes, students will receive certificates for Python Programming, Artificial Intelligence & Machine Learning, and Generative AI after successfully completing the course.",
-        },
-        {
-          q: "How will this course help my child in the future?",
-          a: "This course helps students build future-ready skills in AI, improve logical thinking, and prepare for careers in data science, AI development, and technology.",
-        },
-        {
-          q: "Can parents track their child’s progress?",
-          a: "Yes, parents can track progress through regular updates, project reviews, and final project presentations.",
-        },
-        {
-          q: "What if a student misses a class?",
-          a: "Recorded sessions or support materials will be provided so students can catch up easily without missing important content.",
-        },
-        {
-          q: "Is there a demo class available?",
-          a: "Yes, you can book a free demo class to experience the teaching style and course structure before enrolling.",
-        },
-      ],
-      recommendedCourses: [
-        {
-          title: "Programming Masters",
-          desc: "Learn programming fundamentals with Python, Java and C++ through fun projects.",
-          grade: "8-12",
-          slug: "programming-masters",
-          icon: "",
-        },
-        {
-          title: "AI Innovators",
-          desc: "Discover the power of Artificial Intelligence and build smart applications that solve real-world problems.",
-          grade: "8-12",
-          slug: "ai-innovators",
-          icon: "",
-        },
-        {
-          title: "Full Stack Cloud Creators",
-          desc: "Design, build, and deploy full-stack cloud applications using modern technologies.",
-          grade: "8-12",
-          slug: "full-stack-cloud-creators",
-          icon: "",
+          icon: "🏆",
+          title: "What You'll Achieve",
+          type: "trophy",
+          items: [
+            "Python Programming Certificate",
+            "AI & Machine Learning Certificate",
+            "Generative AI Certificate",
+            "10+ AI Projects Portfolio",
+            "Hands-on coding & AI experience",
+            "Future-ready tech skills",
+          ],
         },
       ],
     },
-    {
-      slug: "programming-masters",
-      title: "Programming Masters",
-      type: "bundle",
-      subtitle: "Code Like a Pro in 3 Languages",
+
+    programOverview: {
+      heading: "Program Overview",
       description:
-        "Students learn how to code using Python, Java, and C++, build strong logic, and develop real-world applications through hands-on practice.", 
-      lessons: 73,
+        "The AI Innovators Bundle Program is designed to provide students with a complete learning path in Python Programming, Artificial Intelligence, and Generative AI. Throughout the program, students learn coding from scratch using Python, understand how AI systems work, build machine learning models, and create AI-powered applications and chatbots.The course follows a structured approach with hands-on projects and real-world applications, ensuring practical and engaging learning. By the end of the program, students will be able to build AI models and applications, develop chatbots and AI tools, create AI-generated content, and confidently present a final capstone project.",
+      highlights: [
+        { icon: "🎓", label: "72 Live Instructor-Led Lectures" },
+        { icon: "📅", label: "8-10-Month Structured Learning Program" },
+        { icon: "📦", label: "28 Modules Covering Under Programming Masters" },
+        {
+          icon: "🛠️",
+          label: "3-in-1 Learning (Python, AI Explorers, Gen AI Explorer)",
+        },
+        { icon: "🛠️", label: "Hands-on Activities and Real Projects" },
+        { icon: "🖥️", label: "Final Capstone Project" },
+        { icon: "🕐", label: "Weekend & Weekday Batch Options" },
+      ],
+    },
+
+    curriculum: {
+      heading: "Course Delivery Plan",
+      modules: [
+        {
+          id: "01",
+          title: "AI Around Us",
+          lectures: [
+            {
+              num: 1,
+              title: "What is AI?",
+              desc: "Understand what Artificial Intelligence is, how AI differs from human intelligence, and explore AI applications used in daily life.",
+            },
+            {
+              num: 2,
+              title: "How AI Learns",
+              desc: "Learn how machines learn from data using machine learning concepts, recommendation systems, and bias in AI.",
+            },
+          ],
+        },
+        {
+          id: "02",
+          title: "Python for AI",
+          lectures: [
+            {
+              num: 3,
+              title: "Python Introduction",
+              desc: "Understand why Python is used in AI and set up the development environment.",
+            },
+            {
+              num: 4,
+              title: "Variables and Operators",
+              desc: "Learn Python variables, user input, and basic operators through coding exercises.",
+            },
+            {
+              num: 5,
+              title: "Conditions",
+              desc: "Understand if-else logic and build small decision-based programs.",
+            },
+            {
+              num: 6,
+              title: "Loops",
+              desc: "Use loops to automate repetitive tasks and build simple programs.",
+            },
+            {
+              num: 7,
+              title: "Data Structures",
+              desc: "Work with lists, dictionaries, tuples, and sets.",
+            },
+            {
+              num: 8,
+              title: "NumPy Fundamentals",
+              desc: "Understand arrays and numerical computing using NumPy.",
+            },
+            {
+              num: 9,
+              title: "Pandas Introduction",
+              desc: "Load datasets and explore tabular data using Pandas.",
+            },
+            {
+              num: 10,
+              title: "Data Analysis Basics",
+              desc: "Analyze datasets and extract insights.",
+            },
+            {
+              num: 11,
+              title: "Data Visualization",
+              desc: "Create simple charts and graphs using Python.",
+            },
+            {
+              num: 12,
+              title: "Python Mini Project",
+              desc: "Analyze a dataset and present insights.",
+            },
+          ],
+        },
+        {
+          id: "03",
+          title: "Statistics for AI",
+          lectures: [
+            {
+              num: 13,
+              title: "Introduction to Statistics",
+              desc: "Understand descriptive and inferential statistics.[-",
+            },
+            {
+              num: 14,
+              title: "Mean, Median, Mode",
+              desc: "Analyze datasets using measures of central tendency.",
+            },
+            {
+              num: 15,
+              title: "Probability Basics",
+              desc: "Understand probability through real-world examples.",
+            },
+            {
+              num: 16,
+              title: "Correlation",
+              desc: "Learn how relationships between variables work.",
+            },
+            {
+              num: 17,
+              title: "Data Cleaning & EDA",
+              desc: "Perform data type corrections and data exploration.",
+            },
+            {
+              num: 18,
+              title: "Visualization for Analysis",
+              desc: "Visualize data patterns and trends.",
+            },
+            {
+              num: 19,
+              title: "Hypothesis Testing",
+              desc: "Understand the basics of hypothesis testing.",
+            },
+          ],
+        },
+        {
+          id: "04",
+          title: "Machine Learning",
+          lectures: [
+            {
+              num: 20,
+              title: "Introduction to Machine Learning",
+              desc: "Understand how machine learning models work.",
+            },
+            {
+              num: 21,
+              title: "Types of Machine Learning",
+              desc: "Learn supervised and unsupervised learning.",
+            },
+            {
+              num: 22,
+              title: "Linear Regression",
+              desc: "Build models to predict numerical values.",
+            },
+            {
+              num: 23,
+              title: "Logistic Regression",
+              desc: "Understand classification problems.",
+            },
+            {
+              num: 24,
+              title: "Decision Trees",
+              desc: "Learn tree-based models for prediction.",
+            },
+            {
+              num: 25,
+              title: "Model Validation",
+              desc: "Understand train-test split and evaluation.",
+            },
+            {
+              num: 26,
+              title: "Clustering",
+              desc: "Group data using clustering algorithms.",
+            },
+            {
+              num: 27,
+              title: "Elbow Method",
+              desc: "Visualize clusters and determine optimal groups.",
+            },
+            {
+              num: 28,
+              title: "Market Basket Analysis",
+              desc: "Discover relationships between products.",
+            },
+            {
+              num: 29,
+              title: "Association Rules",
+              desc: "Generate frequent itemsets and rules.",
+            },
+            {
+              num: 30,
+              title: "Naive Bayes Classifier",
+              desc: "Build a simple email spam classifier.",
+            },
+            {
+              num: 31,
+              title: "Mini ML Project",
+              desc: "Develop a student performance prediction model.",
+            },
+          ],
+        },
+      ],
+    },
+
+    projects: {
+      heading: "Hands-on Activities & Student Projects",
+      description:
+        "Students will work on exciting real-world projects across Python programming, Artificial Intelligence, Machine Learning, and Generative AI, gaining strong technical and creative skills. Upon successful completion of the AI Innovators Program, students will receive an official Certificate of Completion by SkillzRevo Academy Junior, recognizing their expertise in AI, programming, and intelligent application development. Throughout the journey, students engage in hands-on coding exercises, assignments, and project-based learning, leading to a final capstone project that showcases their ability to build AI models, develop chatbots, and create smart applications using real-world data and AI tools.",
+      activities: [
+        "Learn Python programming and build a strong coding foundation",
+        "Explore datasets and understand how AI systems learn from data",
+        "Perform data analysis and create visualizations using charts and graphs",
+        "Build basic machine learning models for prediction and classification",
+        "Understand and apply deep learning and NLP concepts",
+        "Create AI chatbots using prompt engineering and AI tools",
+        "Generate images, text, and content using Generative AI tools",
+        "Work on real-world AI projects combining Python, ML, and GenAI concepts",
+      ],
+      capstoneProjects: [
+        {
+          num: 1,
+          title: "Python Basics Project",
+          desc: "Write simple Python programs using variables, input/output, and basic logic.",
+        },
+        {
+          num: 2,
+          title: "Calculator & Mini Apps",
+          desc: "Build small applications like calculators using Python.",
+        },
+        {
+          num: 3,
+          title: "Data Analysis Project",
+          desc: "Analyze datasets and extract meaningful insights using Python.",
+        },
+        {
+          num: 4,
+          title: "Data Visualization Dashboard",
+          desc: "Create charts and graphs to visualize real-world data.",
+        },
+        {
+          num: 5,
+          title: "Student Performance Predictor",
+          desc: "Build a machine learning model to predict student scores.",
+        },
+        {
+          num: 6,
+          title: "Email Spam Classifier",
+          desc: "Develop a classification model to detect spam emails.",
+        },
+        {
+          num: 7,
+          title: "Sentiment Analysis Tool",
+          desc: "Analyze text data to identify positive or negative sentiment.",
+        },
+        {
+          num: 8,
+          title: "AI Chatbot Project",
+          desc: "Create an intelligent chatbot using AI tools and prompt engineering.",
+        },
+        {
+          num: 9,
+          title: "AI Image & Content Generator",
+          desc: "Generate images, text, and creative content using Generative AI tools.",
+        },
+        {
+          num: 10,
+          title: "Final AI Capstone Project",
+          desc: "Design and build a complete AI-powered application combining Python, Machine Learning, and Generative AI.",
+        },
+      ],
+    },
+
+    certificate: {
+      heading: "Program Certificate & Learning Recognition",
+      description:
+        "Students who successfully complete the AI Innovators Program will receive an official Certificate of Completion by SkillzRevo Academy Junior. This certificate showcases their expertise in Python, Artificial Intelligence, Machine Learning, and Generative AI. It reflects their hands-on learning journey through real-world projects, AI model development, and the successful creation of intelligent applications and a final capstone project.",
+      requirements: [
+        "Attend the required live sessions",
+        "Complete coding assignments and practice exercises in Python and AI concepts",
+        "Actively participate in hands-on activities and AI projects",
+        "Successfully build and present the final AI capstone project",
+      ],
+    },
+
+    reviews: [
+      {
+        name: "Ayaan Khan",
+        rating: 5,
+        text: "The AI Innovators course was amazing. I learned Python and built my first AI project with real-world data.",
+        avatar: "AK",
+      },
+      {
+        name: "Riya Malhotra",
+        rating: 5,
+        text: "The instructors made AI and machine learning very easy to understand. I loved creating chatbots and AI tools.",
+        avatar: "RM",
+      },
+      {
+        name: "Kabir Arora",
+        rating: 5,
+        text: "Building machine learning models and working on datasets was the best part. It really improved my understanding of AI.",
+        avatar: "KA",
+      },
+      {
+        name: "Anaya Gupta",
+        rating: 5,
+        text: "A perfect course for beginners who want to explore AI, coding, and real-world applications in a simple way.",
+        avatar: "AG",
+      },
+      {
+        name: "Vihaan Sharma",
+        rating: 5,
+        text: "The projects were very exciting. I built chatbots, worked on data analysis, and created AI-generated content.",
+        avatar: "VS",
+      },
+      {
+        name: "Meher Kapoor",
+        rating: 5,
+        text: "The final AI project helped me combine everything I learned into one smart application. It was a great experience!",
+        avatar: "MK",
+      },
+    ],
+    faqs: [
+      {
+        q: "What is this AI Innovators course about?",
+        a: "This course teaches students Python programming, Artificial Intelligence, Machine Learning, and Generative AI in a practical and engaging way. Students learn to build AI models, chatbots, and smart applications through real-world projects.",
+      },
+      {
+        q: "Who is this program suitable for?",
+        a: "The program is designed for students from Grade 8–12. It is beginner-friendly and suitable for students who want to explore AI and coding from scratch.",
+      },
+      {
+        q: "Does my child need coding experience?",
+        a: "No prior coding experience is required. The course starts from Python basics and gradually moves to AI and machine learning concepts.",
+      },
+      {
+        q: "What will my child be able to build after this course?",
+        a: "By the end of the program, students will be able to build AI models, create chatbots, develop AI-powered applications, generate AI content, and complete a final capstone project.",
+      },
+      {
+        q: "How is this course different from regular coding classes?",
+        a: "This program combines coding with Artificial Intelligence and Generative AI, focusing on real-world projects like chatbots, ML models, and AI applications instead of just basic programming.",
+      },
+      {
+        q: "Are the classes live or recorded?",
+        a: "Classes are live and instructor-led, allowing students to interact, ask questions, and participate in activities in real time.",
+      },
+      {
+        q: "How many students are there in one batch?",
+        a: "We maintain small batch sizes to ensure personalized attention and better learning for every student.",
+      },
+      {
+        q: "What kind of projects will students work on?",
+        a: "Students will work on projects like AI chatbots, data analysis dashboards, machine learning models, sentiment analysis tools, and AI-generated content projects, along with a final capstone project.",
+      },
+      {
+        q: "Is this course suitable for beginners?",
+        a: "Yes, the course is designed for beginners and gradually builds up to intermediate-level skills in Python, AI, and machine learning.",
+      },
+      {
+        q: "What tools or software are required?",
+        a: "Students will need a laptop or desktop, internet connection, Python, and access to AI tools and platforms. All tools used are free.",
+      },
+      {
+        q: "Will my child get a certificate?",
+        a: "Yes, students will receive certificates for Python Programming, Artificial Intelligence & Machine Learning, and Generative AI after successfully completing the course.",
+      },
+      {
+        q: "How will this course help my child in the future?",
+        a: "This course helps students build future-ready skills in AI, improve logical thinking, and prepare for careers in data science, AI development, and technology.",
+      },
+      {
+        q: "Can parents track their child’s progress?",
+        a: "Yes, parents can track progress through regular updates, project reviews, and final project presentations.",
+      },
+      {
+        q: "What if a student misses a class?",
+        a: "Recorded sessions or support materials will be provided so students can catch up easily without missing important content.",
+      },
+      {
+        q: "Is there a demo class available?",
+        a: "Yes, you can book a free demo class to experience the teaching style and course structure before enrolling.",
+      },
+    ],
+    recommendedCourses: [
+      {
+        title: "Programming Masters",
+        desc: "Learn programming fundamentals with Python, Java and C++ through fun projects.",
+        grade: "8-12",
+        slug: "programming-masters",
+        icon: "",
+      },
+      {
+        title: "AI Innovators",
+        desc: "Discover the power of Artificial Intelligence and build smart applications that solve real-world problems.",
+        grade: "8-12",
+        slug: "ai-innovators",
+        icon: "",
+      },
+      {
+        title: "Full Stack Cloud Creators",
+        desc: "Design, build, and deploy full-stack cloud applications using modern technologies.",
+        grade: "8-12",
+        slug: "full-stack-cloud-creators",
+        icon: "",
+      },
+    ],
+  },
+  {
+    slug: "programming-masters",
+    title: "Programming Masters",
+    type: "bundle",
+    subtitle: "Code Like a Pro in 3 Languages",
+    description:
+      "Students learn how to code using Python, Java, and C++, build strong logic, and develop real-world applications through hands-on practice.",
+    lessons: 73,
     age: "12-18",
     grade: "8-12",
     durationMonths: "8 - 10",
     durationWeeks: "37",
     durationClasses: "45-60",
     activities: "160+",
-      heroImage: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
-      color: "#1d8fff",
-  
-      journeySection: {
-        heading: "Start Your AI & Programming Journey",
-        subtitle:
-          "Learn Python, Machine Learning, and Generative AI in one powerful program. Build real-world AI projects, chatbots, and smart applications while developing strong logical and creative skills.",
-        cards: [
-          {
-            icon: "📚",
-            title: "What You'll Learn",
-            type: "checklist",
-            items: [
-      "Programming fundamentals using Python, Java & C++",
-      "Writing structured and efficient code",
-      "Variables, data types, and operators",
-      "Conditional statements and logic building",
-      "Loops and problem-solving techniques",
-      "Functions and reusable programming",
-      "Arrays, strings, and data handling",
-      "Object-Oriented Programming (OOP) concepts",
-      "File handling and debugging",
-      "Building real-world applications",
-            ],
-          },
-          {
-            icon: "🚀",
-            title: "Skills You'll Gain",
-            type: "bullets",
-            items: [
-      "Strong logical thinking and problem-solving",
-      "Multi-language programming expertise",
-      "Writing clean and optimized code",
-      "Understanding OOP concepts deeply",
-      "Debugging and error handling",
-      "Building real-world applications",
-      "Foundation for software development careers",
-            ],
-          },
-          {
-            icon: "🏆",
-            title: "What You'll Achieve",
-            type: "trophy",
-            items: [
-      "Python Programming Certificate",
-      "Java Programming Certificate",
-      "C++ Programming Certificate",
-      "10+ Real-world Projects",
-      "Hands-on coding experience",
-      "Strong programming foundation",
-            ],
-          },
-        ],
-      },
-  
-      programOverview: {
-        heading: "Program Overview",
-        description:
-          "The Programming Masters Bundle Program is designed to provide students with a complete foundation in coding using Python, Java, and C++. Throughout the program, students learn coding from scratch, build strong problem-solving skills, and gain an understanding of multiple programming paradigms that prepare them for future careers in software development. The course follows a structured learning path with hands-on coding, projects, and real-world applications, ensuring a practical and engaging learning experience. By the end of the program, students will be able to build applications in Python, Java, and C++, understand object-oriented programming and core programming logic in depth, develop multiple real-world projects, and confidently present a final capstone project.",
-        highlights: [
-          { icon: "🎓", label: "73 Live Instructor-Led Lectures" },
-          { icon: "📅", label: "8-10-Month Structured Learning Program" },
-          { icon: "📦", label: "33 Modules Covering Under Programming Masters" },
-          { icon: "💻", label: "3-in-1 Learning (Python + Java + C++)" },
-          { icon: "🛠️", label: "Hands-on Activities and Real Projects" },
-          { icon: "🚀", label: "Final Capstone Project" },
-          { icon: "🕐", label: "Weekend & Weekday Batch Options" },
-        ],
-      },
-  
-      curriculum: {
-        heading: "Course Delivery Plan",
-        modules: [
-          {
-            id: "01",
-            title: "AI Around Us",
-            lectures: [
-              {
-                num: 1,
-                title: "What is AI?",
-                desc: "Understand what Artificial Intelligence is, how AI differs from human intelligence, and explore AI applications used in daily life.",
-              },
-              {
-                num: 2,
-                title: "How AI Learns",
-                desc: "Learn how machines learn from data using machine learning concepts, recommendation systems, and bias in AI.",
-              },
-            ],
-          },
-          {
-            id: "02",
-            title: "Python for AI",
-            lectures: [
-              {
-                num: 3,
-                title: "Python Introduction",
-                desc: "Understand why Python is used in AI and set up the development environment.",
-              },
-              {
-                num: 4,
-                title: "Variables and Operators",
-                desc: "Learn Python variables, user input, and basic operators through coding exercises.",
-              },
-              {
-                num: 5,
-                title: "Conditions",
-                desc: "Understand if-else logic and build small decision-based programs.",
-              },
-              {
-                num: 6,
-                title: "Loops",
-                desc: "Use loops to automate repetitive tasks and build simple programs.",
-              },
-              {
-                num: 7,
-                title: "Data Structures",
-                desc: "Work with lists, dictionaries, tuples, and sets.",
-              },
-              {
-                num: 8,
-                title: "NumPy Fundamentals",
-                desc: "Understand arrays and numerical computing using NumPy.",
-              },
-              {
-                num: 9,
-                title: "Pandas Introduction",
-                desc: "Load datasets and explore tabular data using Pandas.",
-              },
-              {
-                num: 10,
-                title: "Data Analysis Basics",
-                desc: "Analyze datasets and extract insights.",
-              },
-              {
-                num: 11,
-                title: "Data Visualization",
-                desc: "Create simple charts and graphs using Python.",
-              },
-              {
-                num: 12,
-                title: "Python Mini Project",
-                desc: "Analyze a dataset and present insights.",
-              },
-  
-            ],
-          },
-          {
-            id: "03",
-            title: "Statistics for AI",
-            lectures: [
-              {
-                num: 13,
-                title: "Introduction to Statistics",
-                desc: "Understand descriptive and inferential statistics.[-",
-              },
-              {
-                num: 14,
-                title: "Mean, Median, Mode",
-                desc: "Analyze datasets using measures of central tendency.",
-              },
-              {
-                num: 15,
-                title: "Probability Basics",
-                desc: "Understand probability through real-world examples.",
-              },
-              {
-                num: 16,
-                title: "Correlation",
-                desc: "Learn how relationships between variables work.",
-              },
-              {
-                num: 17,
-                title: "Data Cleaning & EDA",
-                desc: "Perform data type corrections and data exploration.",
-              },
-              {
-                num: 18,
-                title: "Visualization for Analysis",
-                desc: "Visualize data patterns and trends.",
-              },
-              {
-                num: 19,
-                title: "Hypothesis Testing",
-                desc: "Understand the basics of hypothesis testing.",
-              },
-            ],
-          },
-          {
-            id: "04",
-            title: "Machine Learning",
-            lectures: [
-              {
-                num: 20,
-                title: "Introduction to Machine Learning",
-                desc: "Understand how machine learning models work.",
-              },
-              {
-                num: 21,
-                title: "Types of Machine Learning",
-                desc: "Learn supervised and unsupervised learning.",
-              },
-              {
-                num: 22,
-                title: "Linear Regression",
-                desc: "Build models to predict numerical values.",
-              },
-              {
-                num: 23,
-                title: "Logistic Regression",
-                desc: "Understand classification problems.",
-              },
-              {
-                num: 24,
-                title: "Decision Trees",
-                desc: "Learn tree-based models for prediction.",
-              },
-              {
-                num: 25,
-                title: "Model Validation",
-                desc: "Understand train-test split and evaluation.",
-              },
-              {
-                num: 26,
-                title: "Clustering",
-                desc: "Group data using clustering algorithms.",
-              },
-              {
-                num: 27,
-                title: "Elbow Method",
-                desc: "Visualize clusters and determine optimal groups.",
-              },
-              {
-                num: 28,
-                title: "Market Basket Analysis",
-                desc: "Discover relationships between products.",
-              },
-              {
-                num: 29,
-                title: "Association Rules",
-                desc: "Generate frequent itemsets and rules.",
-              },
-              {
-                num: 30,
-                title: "Naive Bayes Classifier",
-                desc: "Build a simple email spam classifier.",
-              },
-              {
-                num: 31,
-                title: "Mini ML Project",
-                desc: "Develop a student performance prediction model.",
-              },
+    heroImage:
+      "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
+    color: "#1d8fff",
+
+    journeySection: {
+      heading: "Start Your AI & Programming Journey",
+      subtitle:
+        "Learn Python, Machine Learning, and Generative AI in one powerful program. Build real-world AI projects, chatbots, and smart applications while developing strong logical and creative skills.",
+      cards: [
+        {
+          icon: "📚",
+          title: "What You'll Learn",
+          type: "checklist",
+          items: [
+            "Programming fundamentals using Python, Java & C++",
+            "Writing structured and efficient code",
+            "Variables, data types, and operators",
+            "Conditional statements and logic building",
+            "Loops and problem-solving techniques",
+            "Functions and reusable programming",
+            "Arrays, strings, and data handling",
+            "Object-Oriented Programming (OOP) concepts",
+            "File handling and debugging",
+            "Building real-world applications",
           ],
-          },
-        ],
-      },
-  
-      projects: {
-        heading: "Hands-on Activities & Student Projects",
-        description:
-         "Students will work on exciting real-world projects across Python, Java, and C++ programming, gaining strong coding skills and practical exposure to multiple programming languages. Upon successful completion of the Programming Masters Program, students will receive an official Certificate of Completion by SkillzRevo Academy Junior, recognizing their expertise in programming, problem-solving, and software development. Throughout the journey, students engage in hands-on coding exercises, assignments, and project-based learning, leading to a final capstone project that showcases their ability to build applications, apply programming logic, and solve real-world problems using multiple languages.",
-    activities: [
+        },
+        {
+          icon: "🚀",
+          title: "Skills You'll Gain",
+          type: "bullets",
+          items: [
+            "Strong logical thinking and problem-solving",
+            "Multi-language programming expertise",
+            "Writing clean and optimized code",
+            "Understanding OOP concepts deeply",
+            "Debugging and error handling",
+            "Building real-world applications",
+            "Foundation for software development careers",
+          ],
+        },
+        {
+          icon: "🏆",
+          title: "What You'll Achieve",
+          type: "trophy",
+          items: [
+            "Python Programming Certificate",
+            "Java Programming Certificate",
+            "C++ Programming Certificate",
+            "10+ Real-world Projects",
+            "Hands-on coding experience",
+            "Strong programming foundation",
+          ],
+        },
+      ],
+    },
+
+    programOverview: {
+      heading: "Program Overview",
+      description:
+        "The Programming Masters Bundle Program is designed to provide students with a complete foundation in coding using Python, Java, and C++. Throughout the program, students learn coding from scratch, build strong problem-solving skills, and gain an understanding of multiple programming paradigms that prepare them for future careers in software development. The course follows a structured learning path with hands-on coding, projects, and real-world applications, ensuring a practical and engaging learning experience. By the end of the program, students will be able to build applications in Python, Java, and C++, understand object-oriented programming and core programming logic in depth, develop multiple real-world projects, and confidently present a final capstone project.",
+      highlights: [
+        { icon: "🎓", label: "73 Live Instructor-Led Lectures" },
+        { icon: "📅", label: "8-10-Month Structured Learning Program" },
+        { icon: "📦", label: "33 Modules Covering Under Programming Masters" },
+        { icon: "💻", label: "3-in-1 Learning (Python + Java + C++)" },
+        { icon: "🛠️", label: "Hands-on Activities and Real Projects" },
+        { icon: "🚀", label: "Final Capstone Project" },
+        { icon: "🕐", label: "Weekend & Weekday Batch Options" },
+      ],
+    },
+
+    curriculum: {
+      heading: "Course Delivery Plan",
+      modules: [
+        {
+          id: "01",
+          title: "AI Around Us",
+          lectures: [
+            {
+              num: 1,
+              title: "What is AI?",
+              desc: "Understand what Artificial Intelligence is, how AI differs from human intelligence, and explore AI applications used in daily life.",
+            },
+            {
+              num: 2,
+              title: "How AI Learns",
+              desc: "Learn how machines learn from data using machine learning concepts, recommendation systems, and bias in AI.",
+            },
+          ],
+        },
+        {
+          id: "02",
+          title: "Python for AI",
+          lectures: [
+            {
+              num: 3,
+              title: "Python Introduction",
+              desc: "Understand why Python is used in AI and set up the development environment.",
+            },
+            {
+              num: 4,
+              title: "Variables and Operators",
+              desc: "Learn Python variables, user input, and basic operators through coding exercises.",
+            },
+            {
+              num: 5,
+              title: "Conditions",
+              desc: "Understand if-else logic and build small decision-based programs.",
+            },
+            {
+              num: 6,
+              title: "Loops",
+              desc: "Use loops to automate repetitive tasks and build simple programs.",
+            },
+            {
+              num: 7,
+              title: "Data Structures",
+              desc: "Work with lists, dictionaries, tuples, and sets.",
+            },
+            {
+              num: 8,
+              title: "NumPy Fundamentals",
+              desc: "Understand arrays and numerical computing using NumPy.",
+            },
+            {
+              num: 9,
+              title: "Pandas Introduction",
+              desc: "Load datasets and explore tabular data using Pandas.",
+            },
+            {
+              num: 10,
+              title: "Data Analysis Basics",
+              desc: "Analyze datasets and extract insights.",
+            },
+            {
+              num: 11,
+              title: "Data Visualization",
+              desc: "Create simple charts and graphs using Python.",
+            },
+            {
+              num: 12,
+              title: "Python Mini Project",
+              desc: "Analyze a dataset and present insights.",
+            },
+          ],
+        },
+        {
+          id: "03",
+          title: "Statistics for AI",
+          lectures: [
+            {
+              num: 13,
+              title: "Introduction to Statistics",
+              desc: "Understand descriptive and inferential statistics.[-",
+            },
+            {
+              num: 14,
+              title: "Mean, Median, Mode",
+              desc: "Analyze datasets using measures of central tendency.",
+            },
+            {
+              num: 15,
+              title: "Probability Basics",
+              desc: "Understand probability through real-world examples.",
+            },
+            {
+              num: 16,
+              title: "Correlation",
+              desc: "Learn how relationships between variables work.",
+            },
+            {
+              num: 17,
+              title: "Data Cleaning & EDA",
+              desc: "Perform data type corrections and data exploration.",
+            },
+            {
+              num: 18,
+              title: "Visualization for Analysis",
+              desc: "Visualize data patterns and trends.",
+            },
+            {
+              num: 19,
+              title: "Hypothesis Testing",
+              desc: "Understand the basics of hypothesis testing.",
+            },
+          ],
+        },
+        {
+          id: "04",
+          title: "Machine Learning",
+          lectures: [
+            {
+              num: 20,
+              title: "Introduction to Machine Learning",
+              desc: "Understand how machine learning models work.",
+            },
+            {
+              num: 21,
+              title: "Types of Machine Learning",
+              desc: "Learn supervised and unsupervised learning.",
+            },
+            {
+              num: 22,
+              title: "Linear Regression",
+              desc: "Build models to predict numerical values.",
+            },
+            {
+              num: 23,
+              title: "Logistic Regression",
+              desc: "Understand classification problems.",
+            },
+            {
+              num: 24,
+              title: "Decision Trees",
+              desc: "Learn tree-based models for prediction.",
+            },
+            {
+              num: 25,
+              title: "Model Validation",
+              desc: "Understand train-test split and evaluation.",
+            },
+            {
+              num: 26,
+              title: "Clustering",
+              desc: "Group data using clustering algorithms.",
+            },
+            {
+              num: 27,
+              title: "Elbow Method",
+              desc: "Visualize clusters and determine optimal groups.",
+            },
+            {
+              num: 28,
+              title: "Market Basket Analysis",
+              desc: "Discover relationships between products.",
+            },
+            {
+              num: 29,
+              title: "Association Rules",
+              desc: "Generate frequent itemsets and rules.",
+            },
+            {
+              num: 30,
+              title: "Naive Bayes Classifier",
+              desc: "Build a simple email spam classifier.",
+            },
+            {
+              num: 31,
+              title: "Mini ML Project",
+              desc: "Develop a student performance prediction model.",
+            },
+          ],
+        },
+      ],
+    },
+
+    projects: {
+      heading: "Hands-on Activities & Student Projects",
+      description:
+        "Students will work on exciting real-world projects across Python, Java, and C++ programming, gaining strong coding skills and practical exposure to multiple programming languages. Upon successful completion of the Programming Masters Program, students will receive an official Certificate of Completion by SkillzRevo Academy Junior, recognizing their expertise in programming, problem-solving, and software development. Throughout the journey, students engage in hands-on coding exercises, assignments, and project-based learning, leading to a final capstone project that showcases their ability to build applications, apply programming logic, and solve real-world problems using multiple languages.",
+      activities: [
         "Understand programming fundamentals and explore how code works in real-world applications",
         "Write programs using Python, Java, and C++ with proper syntax and structure",
         "Build strong logic using conditions, loops, and problem-solving exercises",
@@ -6948,437 +6047,479 @@ export const courses = [
         "Learn object-oriented programming concepts like classes, objects, inheritance, and polymorphism",
         "Debug and fix errors to improve code performance and efficiency",
         "Work on real-world projects using Python, Java, and C++ programming",
-  ], 
-    capstoneProjects: [
-        { num: 1, title: "Basic Programs", desc: "Write simple programs in Python, Java, and C++ using variables and input/output." },
-          { num: 2, title: "Calculator Application", desc: "Build a calculator using programming logic and operations." },
-          { num: 3, title: "Number Guessing Game", desc: "Create a game using conditions and loops." },
-          { num: 4, title: "Pattern Generator", desc: "Develop pattern-based programs using loops and logic." },
-          { num: 5, title: "String Utility Tool", desc: "Build programs to manipulate and process strings." },
-          { num: 6, title: "Array-Based Programs", desc: "Solve real-world problems using arrays and data structures." },
-          { num: 7, title: "File Handling Project", desc: "Create applications to read, write, and manage files." },
-          { num: 8, title: "OOP-Based Application", desc: "Develop a project using object-oriented programming concepts." },
-          { num: 9, title: "Mini Game or Utility App", desc: "Build a small game or utility application using programming logic." },
-          { num: 10, title: "Final Multi-Language Project", desc: "Design and build a complete application using Python, Java, or C++ with strong logic and real-world use cases." },
-  ],
-      },
-  
-      certificate: {
-        heading: "Program Certificate & Learning Recognition",
-        description:
-          "Students who successfully complete the Programming Masters Program will receive an official Certificate of Completion by SkillzRevo Academy Junior. This certificate recognizes their expertise in Python, Java, and C++ programming, along with strong problem-solving and logical thinking skills. It highlights their practical experience gained through hands-on coding, real-world projects, and the successful development of a comprehensive capstone project using multiple programming languages.",
-        requirements: [
-          "Attend the required live sessions",
-          "Complete coding assignments and practice exercises in Python, Java, and C++",
-          "Actively participate in hands-on activities",
-          "Successfully build and present the final multi-language capstone project",
-        ],
-      },
-  
-  reviews: [
-    {
-      name: "Rohan Khanna",
-      rating: 5,
-      text: "The Programming Masters course was excellent. I learned Python, Java, and C++ in a very simple and structured way.",
-      avatar: "RK",
-    },
-    {
-      name: "Sanya Mehta",
-      rating: 5,
-      text: "The instructors made coding easy to understand. I really enjoyed building programs and improving my logic.",
-      avatar: "SM",
-    },
-    {
-      name: "Kunal Verma",
-      rating: 5,
-      text: "Learning multiple programming languages in one course was the best part. My problem-solving skills improved a lot.",
-      avatar: "KV",
-    },
-    {
-      name: "Priya Sharma",
-      rating: 5,
-      text: "A perfect course for beginners who want to learn coding deeply and build a strong foundation.",
-      avatar: "PS",
-    },
-    {
-      name: "Devansh Gupta",
-      rating: 5,
-      text: "The projects were very interesting. I built games, tools, and applications using different programming languages.",
-      avatar: "DG",
-    },
-    {
-      name: "Anushka Jain",
-      rating: 5,
-      text: "The final project helped me apply everything I learned in Python, Java, and C++. It was a great learning experience!",
-      avatar: "AJ",
-    },
-  ],
-  faqs: [
-  {
-    q: "What is this Programming Masters course about?",
-    a: "This course teaches students Python, Java, and C++ programming in a structured and practical way. Students build strong coding fundamentals, improve logic, and create real-world applications using multiple languages.",
-  },
-  {
-    q: "Who is this program suitable for?",
-    a: "The program is designed for students from Grade 8–12. It is beginner-friendly and ideal for students who want to learn programming from scratch.",
-  },
-  {
-    q: "Does my child need coding experience?",
-    a: "No prior coding experience is required. The course starts from basics and gradually moves to advanced programming concepts.",
-  },
-  {
-    q: "Why learn three programming languages in one course?",
-    a: "Learning Python, Java, and C++ helps students build strong logic, understand different programming styles, and become more confident coders.",
-  },
-  {
-    q: "What will my child be able to build after this course?",
-    a: "Students will be able to build programs, solve logic-based problems, create applications, and develop projects using Python, Java, and C++.",
-  },
-  {
-    q: "How is this course different from regular coding classes?",
-    a: "This course focuses on logic building and multi-language learning, helping students master programming concepts instead of learning just one language.",
-  },
-  {
-    q: "Are the classes live or recorded?",
-    a: "Classes are live and instructor-led, and recorded sessions are also provided for revision.",
-  },
-  {
-    q: "How many students are there in one batch?",
-    a: "We maintain small batch sizes to ensure personalized attention and better learning for every student.",
-  },
-  {
-    q: "What kind of projects will students work on?",
-    a: "Students will work on projects like calculators, games, data-based programs, and real-world applications, along with a final capstone project.",
-  },
-  {
-    q: "Is this course suitable for beginners?",
-    a: "Yes, the course is designed for beginners and gradually builds up to advanced-level programming skills.",
-  },
-  {
-    q: "What tools or software are required?",
-    a: "Students will need a laptop or desktop, internet connection, and tools like VS Code, Python, Java, and C++ compilers. All tools used are free.",
-  },
-  {
-    q: "Will my child get a certificate?",
-    a: "Yes, students will receive a Certificate of Completion after successfully completing the Programming Masters course.",
-  },
-  {
-    q: "How will this course help my child in the future?",
-    a: "This course builds strong programming and problem-solving skills, which are essential for careers in software development, AI, and technology.",
-  },
-  {
-    q: "Can parents track their child’s progress?",
-    a: "Yes, parents will receive regular updates, project reviews, and final project presentations to track progress.",
-  },
-  {
-    q: "What if a student misses a class?",
-    a: "Recorded sessions and support materials will be provided so students can catch up easily.",
-  },
-  {
-    q: "Is there a demo class available?",
-    a: "Yes, you can book a free demo class to experience the course before enrolling.",
-  }
-]
-
-  ,
-      recommendedCourses: [
+      ],
+      capstoneProjects: [
         {
-          title: "Tech Titans",
-          desc: "Master web development, Python programming, and cyber security by building real-world projects.",
-          grade: "8-12",
-          slug: "tech-titans",
-          icon: "",
+          num: 1,
+          title: "Basic Programs",
+          desc: "Write simple programs in Python, Java, and C++ using variables and input/output.",
         },
         {
-          title: "AI Innovators",
-          desc: "Discover the power of Artificial Intelligence and build smart applications that solve real-world problems.",
-          grade: "8-12",
-          slug: "ai-innovators",
-          icon: "",
+          num: 2,
+          title: "Calculator Application",
+          desc: "Build a calculator using programming logic and operations.",
         },
         {
-          title: "Full Stack Cloud Creators",
-          desc: "Design, build, and deploy full-stack cloud applications using modern technologies.",
-          grade: "8-12",
-          slug: "full-stack-cloud-creators",
-          icon: "",
+          num: 3,
+          title: "Number Guessing Game",
+          desc: "Create a game using conditions and loops.",
+        },
+        {
+          num: 4,
+          title: "Pattern Generator",
+          desc: "Develop pattern-based programs using loops and logic.",
+        },
+        {
+          num: 5,
+          title: "String Utility Tool",
+          desc: "Build programs to manipulate and process strings.",
+        },
+        {
+          num: 6,
+          title: "Array-Based Programs",
+          desc: "Solve real-world problems using arrays and data structures.",
+        },
+        {
+          num: 7,
+          title: "File Handling Project",
+          desc: "Create applications to read, write, and manage files.",
+        },
+        {
+          num: 8,
+          title: "OOP-Based Application",
+          desc: "Develop a project using object-oriented programming concepts.",
+        },
+        {
+          num: 9,
+          title: "Mini Game or Utility App",
+          desc: "Build a small game or utility application using programming logic.",
+        },
+        {
+          num: 10,
+          title: "Final Multi-Language Project",
+          desc: "Design and build a complete application using Python, Java, or C++ with strong logic and real-world use cases.",
         },
       ],
     },
-    {
-      slug: "tech-titans",
-      title: "Tech Titans",
-      type: "bundle",
-      subtitle: "Become a Complete Tech Expert",
+
+    certificate: {
+      heading: "Program Certificate & Learning Recognition",
       description:
-        "Students learn how to build websites, write Python programs, and protect systems using cybersecurity skills.", 
-     lessons: 68,
+        "Students who successfully complete the Programming Masters Program will receive an official Certificate of Completion by SkillzRevo Academy Junior. This certificate recognizes their expertise in Python, Java, and C++ programming, along with strong problem-solving and logical thinking skills. It highlights their practical experience gained through hands-on coding, real-world projects, and the successful development of a comprehensive capstone project using multiple programming languages.",
+      requirements: [
+        "Attend the required live sessions",
+        "Complete coding assignments and practice exercises in Python, Java, and C++",
+        "Actively participate in hands-on activities",
+        "Successfully build and present the final multi-language capstone project",
+      ],
+    },
+
+    reviews: [
+      {
+        name: "Rohan Khanna",
+        rating: 5,
+        text: "The Programming Masters course was excellent. I learned Python, Java, and C++ in a very simple and structured way.",
+        avatar: "RK",
+      },
+      {
+        name: "Sanya Mehta",
+        rating: 5,
+        text: "The instructors made coding easy to understand. I really enjoyed building programs and improving my logic.",
+        avatar: "SM",
+      },
+      {
+        name: "Kunal Verma",
+        rating: 5,
+        text: "Learning multiple programming languages in one course was the best part. My problem-solving skills improved a lot.",
+        avatar: "KV",
+      },
+      {
+        name: "Priya Sharma",
+        rating: 5,
+        text: "A perfect course for beginners who want to learn coding deeply and build a strong foundation.",
+        avatar: "PS",
+      },
+      {
+        name: "Devansh Gupta",
+        rating: 5,
+        text: "The projects were very interesting. I built games, tools, and applications using different programming languages.",
+        avatar: "DG",
+      },
+      {
+        name: "Anushka Jain",
+        rating: 5,
+        text: "The final project helped me apply everything I learned in Python, Java, and C++. It was a great learning experience!",
+        avatar: "AJ",
+      },
+    ],
+    faqs: [
+      {
+        q: "What is this Programming Masters course about?",
+        a: "This course teaches students Python, Java, and C++ programming in a structured and practical way. Students build strong coding fundamentals, improve logic, and create real-world applications using multiple languages.",
+      },
+      {
+        q: "Who is this program suitable for?",
+        a: "The program is designed for students from Grade 8–12. It is beginner-friendly and ideal for students who want to learn programming from scratch.",
+      },
+      {
+        q: "Does my child need coding experience?",
+        a: "No prior coding experience is required. The course starts from basics and gradually moves to advanced programming concepts.",
+      },
+      {
+        q: "Why learn three programming languages in one course?",
+        a: "Learning Python, Java, and C++ helps students build strong logic, understand different programming styles, and become more confident coders.",
+      },
+      {
+        q: "What will my child be able to build after this course?",
+        a: "Students will be able to build programs, solve logic-based problems, create applications, and develop projects using Python, Java, and C++.",
+      },
+      {
+        q: "How is this course different from regular coding classes?",
+        a: "This course focuses on logic building and multi-language learning, helping students master programming concepts instead of learning just one language.",
+      },
+      {
+        q: "Are the classes live or recorded?",
+        a: "Classes are live and instructor-led, and recorded sessions are also provided for revision.",
+      },
+      {
+        q: "How many students are there in one batch?",
+        a: "We maintain small batch sizes to ensure personalized attention and better learning for every student.",
+      },
+      {
+        q: "What kind of projects will students work on?",
+        a: "Students will work on projects like calculators, games, data-based programs, and real-world applications, along with a final capstone project.",
+      },
+      {
+        q: "Is this course suitable for beginners?",
+        a: "Yes, the course is designed for beginners and gradually builds up to advanced-level programming skills.",
+      },
+      {
+        q: "What tools or software are required?",
+        a: "Students will need a laptop or desktop, internet connection, and tools like VS Code, Python, Java, and C++ compilers. All tools used are free.",
+      },
+      {
+        q: "Will my child get a certificate?",
+        a: "Yes, students will receive a Certificate of Completion after successfully completing the Programming Masters course.",
+      },
+      {
+        q: "How will this course help my child in the future?",
+        a: "This course builds strong programming and problem-solving skills, which are essential for careers in software development, AI, and technology.",
+      },
+      {
+        q: "Can parents track their child’s progress?",
+        a: "Yes, parents will receive regular updates, project reviews, and final project presentations to track progress.",
+      },
+      {
+        q: "What if a student misses a class?",
+        a: "Recorded sessions and support materials will be provided so students can catch up easily.",
+      },
+      {
+        q: "Is there a demo class available?",
+        a: "Yes, you can book a free demo class to experience the course before enrolling.",
+      },
+    ],
+
+    recommendedCourses: [
+      {
+        title: "Tech Titans",
+        desc: "Master web development, Python programming, and cyber security by building real-world projects.",
+        grade: "8-12",
+        slug: "tech-titans",
+        icon: "",
+      },
+      {
+        title: "AI Innovators",
+        desc: "Discover the power of Artificial Intelligence and build smart applications that solve real-world problems.",
+        grade: "8-12",
+        slug: "ai-innovators",
+        icon: "",
+      },
+      {
+        title: "Full Stack Cloud Creators",
+        desc: "Design, build, and deploy full-stack cloud applications using modern technologies.",
+        grade: "8-12",
+        slug: "full-stack-cloud-creators",
+        icon: "",
+      },
+    ],
+  },
+  {
+    slug: "tech-titans",
+    title: "Tech Titans",
+    type: "bundle",
+    subtitle: "Become a Complete Tech Expert",
+    description:
+      "Students learn how to build websites, write Python programs, and protect systems using cybersecurity skills.",
+    lessons: 68,
     age: "12-18",
     grade: "8-12",
     durationMonths: "8 - 10",
     durationWeeks: "35",
     durationClasses: "45-60",
     activities: "140+",
-      heroImage: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
-      color: "#1d8fff",
-  
-      journeySection: {
-        heading: "Start Your Complete Tech Journey",
-        subtitle:
-          "Learn Web Development, Python Programming, and Cyber Security in one powerful program. Build websites, develop applications, and understand how to protect systems from cyber threats.",
-        cards: [
-          {
-            icon: "📚",
-            title: "What You'll Learn",
-            type: "checklist",
-            items: [
-      "Website development using HTML, CSS & JavaScript",
-      "Python programming from basics to advanced",
-      "Understanding how the internet and websites work",
-      "Cyber security fundamentals and digital safety",
-      "Networking basics and system security",
-      "JavaScript interactivity & DOM manipulation",
-      "Ethical hacking concepts and cyber attack understanding",
-      "Building real-world projects across all domains",
-            ],
-          },
-          {
-            icon: "🚀",
-            title: "Skills You'll Gain",
-            type: "bullets",
-            items: [
-      "Frontend development skills",
-      "Strong programming & coding logic",
-      "Cyber security awareness and protection skills",
-      "Problem-solving and analytical thinking",
-      "Website design and deployment",
-      "Python application development",
-      "Understanding of cyber threats and defense",
-      "Real-world project building",
-            ],
-          },
-          {
-            icon: "🏆",
-            title: "What You'll Achieve",
-            type: "trophy",
-            items: [
-      "Web Development Certificate",
-      "Python Programming Certificate",
-      "Cyber Security Certificate",
-      "10+ Real-world Projects",
-      "Hands-on coding & security experience",
-      "Access to learning community",
-            ],
-          },
-        ],
-      },
-  
-      programOverview: {
-        heading: "Program Overview",
-        description:
-          "The Complete Tech Bundle Program is designed to provide students with a strong foundation in Web Development, Python Programming, and Cyber Security. Throughout the program, students learn how to build websites from scratch, develop real-world Python applications, and understand cyber threats along with essential digital safety practices. The course is carefully structured into multiple modules that combine coding, development, and security skills through hands-on projects and practical learning. By the end of the program, students will be able to build interactive websites, create Python-based applications, perform basic cyber security analysis, and confidently present a complete capstone project.",
-        highlights: [
-          { icon: "🎓", label: "68 Live Instructor-Led Lectures" },
-          { icon: "📅", label: "8-10-Month Structured Learning Program" },
-          { icon: "📦", label: "22 Modules Covering Under Tech Titans" },
-          { icon: "🛠️", label: "3-in-1 Learning (Web + Python + Cyber Security)" },
-          { icon: "🛠️", label: "Hands-on Activities and Real Projects" },
-          { icon: "🖥️", label: "Final Capstone Project" },
-          { icon: "🕐", label: "Weekend & Weekday Batch Options" },
-        ],
-      },
-  
-      curriculum: {
-        heading: "Course Delivery Plan",
-        modules: [
-          {
-            id: "01",
-            title: "AI Around Us",
-            lectures: [
-              {
-                num: 1,
-                title: "What is AI?",
-                desc: "Understand what Artificial Intelligence is, how AI differs from human intelligence, and explore AI applications used in daily life.",
-              },
-              {
-                num: 2,
-                title: "How AI Learns",
-                desc: "Learn how machines learn from data using machine learning concepts, recommendation systems, and bias in AI.",
-              },
-            ],
-          },
-          {
-            id: "02",
-            title: "Python for AI",
-            lectures: [
-              {
-                num: 3,
-                title: "Python Introduction",
-                desc: "Understand why Python is used in AI and set up the development environment.",
-              },
-              {
-                num: 4,
-                title: "Variables and Operators",
-                desc: "Learn Python variables, user input, and basic operators through coding exercises.",
-              },
-              {
-                num: 5,
-                title: "Conditions",
-                desc: "Understand if-else logic and build small decision-based programs.",
-              },
-              {
-                num: 6,
-                title: "Loops",
-                desc: "Use loops to automate repetitive tasks and build simple programs.",
-              },
-              {
-                num: 7,
-                title: "Data Structures",
-                desc: "Work with lists, dictionaries, tuples, and sets.",
-              },
-              {
-                num: 8,
-                title: "NumPy Fundamentals",
-                desc: "Understand arrays and numerical computing using NumPy.",
-              },
-              {
-                num: 9,
-                title: "Pandas Introduction",
-                desc: "Load datasets and explore tabular data using Pandas.",
-              },
-              {
-                num: 10,
-                title: "Data Analysis Basics",
-                desc: "Analyze datasets and extract insights.",
-              },
-              {
-                num: 11,
-                title: "Data Visualization",
-                desc: "Create simple charts and graphs using Python.",
-              },
-              {
-                num: 12,
-                title: "Python Mini Project",
-                desc: "Analyze a dataset and present insights.",
-              },
-  
-            ],
-          },
-          {
-            id: "03",
-            title: "Statistics for AI",
-            lectures: [
-              {
-                num: 13,
-                title: "Introduction to Statistics",
-                desc: "Understand descriptive and inferential statistics.[-",
-              },
-              {
-                num: 14,
-                title: "Mean, Median, Mode",
-                desc: "Analyze datasets using measures of central tendency.",
-              },
-              {
-                num: 15,
-                title: "Probability Basics",
-                desc: "Understand probability through real-world examples.",
-              },
-              {
-                num: 16,
-                title: "Correlation",
-                desc: "Learn how relationships between variables work.",
-              },
-              {
-                num: 17,
-                title: "Data Cleaning & EDA",
-                desc: "Perform data type corrections and data exploration.",
-              },
-              {
-                num: 18,
-                title: "Visualization for Analysis",
-                desc: "Visualize data patterns and trends.",
-              },
-              {
-                num: 19,
-                title: "Hypothesis Testing",
-                desc: "Understand the basics of hypothesis testing.",
-              },
-            ],
-          },
-          {
-            id: "04",
-            title: "Machine Learning",
-            lectures: [
-              {
-                num: 20,
-                title: "Introduction to Machine Learning",
-                desc: "Understand how machine learning models work.",
-              },
-              {
-                num: 21,
-                title: "Types of Machine Learning",
-                desc: "Learn supervised and unsupervised learning.",
-              },
-              {
-                num: 22,
-                title: "Linear Regression",
-                desc: "Build models to predict numerical values.",
-              },
-              {
-                num: 23,
-                title: "Logistic Regression",
-                desc: "Understand classification problems.",
-              },
-              {
-                num: 24,
-                title: "Decision Trees",
-                desc: "Learn tree-based models for prediction.",
-              },
-              {
-                num: 25,
-                title: "Model Validation",
-                desc: "Understand train-test split and evaluation.",
-              },
-              {
-                num: 26,
-                title: "Clustering",
-                desc: "Group data using clustering algorithms.",
-              },
-              {
-                num: 27,
-                title: "Elbow Method",
-                desc: "Visualize clusters and determine optimal groups.",
-              },
-              {
-                num: 28,
-                title: "Market Basket Analysis",
-                desc: "Discover relationships between products.",
-              },
-              {
-                num: 29,
-                title: "Association Rules",
-                desc: "Generate frequent itemsets and rules.",
-              },
-              {
-                num: 30,
-                title: "Naive Bayes Classifier",
-                desc: "Build a simple email spam classifier.",
-              },
-              {
-                num: 31,
-                title: "Mini ML Project",
-                desc: "Develop a student performance prediction model.",
-              },
+    heroImage:
+      "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80",
+    color: "#1d8fff",
+
+    journeySection: {
+      heading: "Start Your Complete Tech Journey",
+      subtitle:
+        "Learn Web Development, Python Programming, and Cyber Security in one powerful program. Build websites, develop applications, and understand how to protect systems from cyber threats.",
+      cards: [
+        {
+          icon: "📚",
+          title: "What You'll Learn",
+          type: "checklist",
+          items: [
+            "Website development using HTML, CSS & JavaScript",
+            "Python programming from basics to advanced",
+            "Understanding how the internet and websites work",
+            "Cyber security fundamentals and digital safety",
+            "Networking basics and system security",
+            "JavaScript interactivity & DOM manipulation",
+            "Ethical hacking concepts and cyber attack understanding",
+            "Building real-world projects across all domains",
           ],
-          },
-        ],
-      },
-  
-      projects: {
-        heading: "Hands-on Activities & Student Projects",
-        description:
-         "Students will work on exciting real-world projects across web development, Python programming, and cybersecurity, gaining practical exposure to multiple technology domains. Upon successful completion of the Tech Titans Program, students will receive an official Certificate of Completion by SkillzRevo Academy Junior, recognizing their skills in coding, development, and digital security. Throughout the journey, students engage in hands-on activities, assignments, and project-based learning, leading to a final capstone project that showcases their ability to build applications and understand system security in real-world scenarios.",
-    activities: [
+        },
+        {
+          icon: "🚀",
+          title: "Skills You'll Gain",
+          type: "bullets",
+          items: [
+            "Frontend development skills",
+            "Strong programming & coding logic",
+            "Cyber security awareness and protection skills",
+            "Problem-solving and analytical thinking",
+            "Website design and deployment",
+            "Python application development",
+            "Understanding of cyber threats and defense",
+            "Real-world project building",
+          ],
+        },
+        {
+          icon: "🏆",
+          title: "What You'll Achieve",
+          type: "trophy",
+          items: [
+            "Web Development Certificate",
+            "Python Programming Certificate",
+            "Cyber Security Certificate",
+            "10+ Real-world Projects",
+            "Hands-on coding & security experience",
+            "Access to learning community",
+          ],
+        },
+      ],
+    },
+
+    programOverview: {
+      heading: "Program Overview",
+      description:
+        "The Complete Tech Bundle Program is designed to provide students with a strong foundation in Web Development, Python Programming, and Cyber Security. Throughout the program, students learn how to build websites from scratch, develop real-world Python applications, and understand cyber threats along with essential digital safety practices. The course is carefully structured into multiple modules that combine coding, development, and security skills through hands-on projects and practical learning. By the end of the program, students will be able to build interactive websites, create Python-based applications, perform basic cyber security analysis, and confidently present a complete capstone project.",
+      highlights: [
+        { icon: "🎓", label: "68 Live Instructor-Led Lectures" },
+        { icon: "📅", label: "8-10-Month Structured Learning Program" },
+        { icon: "📦", label: "22 Modules Covering Under Tech Titans" },
+        {
+          icon: "🛠️",
+          label: "3-in-1 Learning (Web + Python + Cyber Security)",
+        },
+        { icon: "🛠️", label: "Hands-on Activities and Real Projects" },
+        { icon: "🖥️", label: "Final Capstone Project" },
+        { icon: "🕐", label: "Weekend & Weekday Batch Options" },
+      ],
+    },
+
+    curriculum: {
+      heading: "Course Delivery Plan",
+      modules: [
+        {
+          id: "01",
+          title: "AI Around Us",
+          lectures: [
+            {
+              num: 1,
+              title: "What is AI?",
+              desc: "Understand what Artificial Intelligence is, how AI differs from human intelligence, and explore AI applications used in daily life.",
+            },
+            {
+              num: 2,
+              title: "How AI Learns",
+              desc: "Learn how machines learn from data using machine learning concepts, recommendation systems, and bias in AI.",
+            },
+          ],
+        },
+        {
+          id: "02",
+          title: "Python for AI",
+          lectures: [
+            {
+              num: 3,
+              title: "Python Introduction",
+              desc: "Understand why Python is used in AI and set up the development environment.",
+            },
+            {
+              num: 4,
+              title: "Variables and Operators",
+              desc: "Learn Python variables, user input, and basic operators through coding exercises.",
+            },
+            {
+              num: 5,
+              title: "Conditions",
+              desc: "Understand if-else logic and build small decision-based programs.",
+            },
+            {
+              num: 6,
+              title: "Loops",
+              desc: "Use loops to automate repetitive tasks and build simple programs.",
+            },
+            {
+              num: 7,
+              title: "Data Structures",
+              desc: "Work with lists, dictionaries, tuples, and sets.",
+            },
+            {
+              num: 8,
+              title: "NumPy Fundamentals",
+              desc: "Understand arrays and numerical computing using NumPy.",
+            },
+            {
+              num: 9,
+              title: "Pandas Introduction",
+              desc: "Load datasets and explore tabular data using Pandas.",
+            },
+            {
+              num: 10,
+              title: "Data Analysis Basics",
+              desc: "Analyze datasets and extract insights.",
+            },
+            {
+              num: 11,
+              title: "Data Visualization",
+              desc: "Create simple charts and graphs using Python.",
+            },
+            {
+              num: 12,
+              title: "Python Mini Project",
+              desc: "Analyze a dataset and present insights.",
+            },
+          ],
+        },
+        {
+          id: "03",
+          title: "Statistics for AI",
+          lectures: [
+            {
+              num: 13,
+              title: "Introduction to Statistics",
+              desc: "Understand descriptive and inferential statistics.[-",
+            },
+            {
+              num: 14,
+              title: "Mean, Median, Mode",
+              desc: "Analyze datasets using measures of central tendency.",
+            },
+            {
+              num: 15,
+              title: "Probability Basics",
+              desc: "Understand probability through real-world examples.",
+            },
+            {
+              num: 16,
+              title: "Correlation",
+              desc: "Learn how relationships between variables work.",
+            },
+            {
+              num: 17,
+              title: "Data Cleaning & EDA",
+              desc: "Perform data type corrections and data exploration.",
+            },
+            {
+              num: 18,
+              title: "Visualization for Analysis",
+              desc: "Visualize data patterns and trends.",
+            },
+            {
+              num: 19,
+              title: "Hypothesis Testing",
+              desc: "Understand the basics of hypothesis testing.",
+            },
+          ],
+        },
+        {
+          id: "04",
+          title: "Machine Learning",
+          lectures: [
+            {
+              num: 20,
+              title: "Introduction to Machine Learning",
+              desc: "Understand how machine learning models work.",
+            },
+            {
+              num: 21,
+              title: "Types of Machine Learning",
+              desc: "Learn supervised and unsupervised learning.",
+            },
+            {
+              num: 22,
+              title: "Linear Regression",
+              desc: "Build models to predict numerical values.",
+            },
+            {
+              num: 23,
+              title: "Logistic Regression",
+              desc: "Understand classification problems.",
+            },
+            {
+              num: 24,
+              title: "Decision Trees",
+              desc: "Learn tree-based models for prediction.",
+            },
+            {
+              num: 25,
+              title: "Model Validation",
+              desc: "Understand train-test split and evaluation.",
+            },
+            {
+              num: 26,
+              title: "Clustering",
+              desc: "Group data using clustering algorithms.",
+            },
+            {
+              num: 27,
+              title: "Elbow Method",
+              desc: "Visualize clusters and determine optimal groups.",
+            },
+            {
+              num: 28,
+              title: "Market Basket Analysis",
+              desc: "Discover relationships between products.",
+            },
+            {
+              num: 29,
+              title: "Association Rules",
+              desc: "Generate frequent itemsets and rules.",
+            },
+            {
+              num: 30,
+              title: "Naive Bayes Classifier",
+              desc: "Build a simple email spam classifier.",
+            },
+            {
+              num: 31,
+              title: "Mini ML Project",
+              desc: "Develop a student performance prediction model.",
+            },
+          ],
+        },
+      ],
+    },
+
+    projects: {
+      heading: "Hands-on Activities & Student Projects",
+      description:
+        "Students will work on exciting real-world projects across web development, Python programming, and cybersecurity, gaining practical exposure to multiple technology domains. Upon successful completion of the Tech Titans Program, students will receive an official Certificate of Completion by SkillzRevo Academy Junior, recognizing their skills in coding, development, and digital security. Throughout the journey, students engage in hands-on activities, assignments, and project-based learning, leading to a final capstone project that showcases their ability to build applications and understand system security in real-world scenarios.",
+      activities: [
         "Understand how websites and the internet work and explore real-world web structures",
         "Build and design responsive web pages using HTML, CSS, and JavaScript",
         "Create interactive web features like forms, to-do apps, and quiz applications",
@@ -7387,157 +6528,197 @@ export const courses = [
         "Understand cyber security fundamentals, digital safety, and common cyber threats",
         "Perform basic security analysis and explore ethical hacking concepts",
         "Work on real-world projects combining web development, Python, and cyber security",
-  ],   
-    capstoneProjects: [
-        { num: 1, title: "Basic Web Page", desc: "Create a simple website using HTML and CSS with text and images." },
-        { num: 2, title: "Personal Portfolio Website", desc: "Design a personal portfolio to showcase profile and projects." },
-        { num: 3, title: "JavaScript To-Do App", desc: "Build an interactive to-do application using JavaScript and DOM." },
-        { num: 4, title: "Quiz Web Application", desc: "Create a quiz app with questions, answers, and scoring system." },
-        { num: 5, title: "Python Calculator", desc: "Develop a calculator using Python with basic operations." },
-        { num: 6, title: "Python Mini Game", desc: "Build a simple game using Python logic and conditions." },
-        { num: 7, title: "File Handling System", desc: "Create a Python project to read, write, and manage files." },
-        { num: 8, title: "Password Generator Tool", desc: "Build a secure password generator using Python." },
-        { num: 9, title: "Phishing Detection Project", desc: "Understand and simulate phishing detection techniques." },
-        { num: 10, title: "Final Tech Project", desc: "Design and build a complete project combining web development, Python, and cyber security concepts." },
-  ],
-      },
-  
-      certificate: {
-        heading: "Program Certificate & Learning Recognition",
-        description:
-          "Students who successfully complete the Tech Titans Program will receive an official Certificate of Completion by SkillzRevo Academy Junior. This certificate recognizes their multi-domain expertise in web development, Python programming, and cyber security. It highlights their practical experience gained through hands-on activities, real-world projects, and the successful development of a comprehensive capstone project integrating coding, application development, and system security.",
-        requirements: [
-          "Attend the required live sessions",
-          "Complete all assignments and assessments",
-          "Actively participate in hands-on activities",
-          "Successfully build and present the final Tech Titans project",
-        ],
-      },
-  
-  reviews: [
-    {
-      name: "Aarav Sharma",
-      rating: 5,
-      text: "The Tech Titans course was amazing. I learned how to build websites, code in Python, and understand cyber security basics.",
-      avatar: "AS",
-    },
-    {
-      name: "Ishita Verma",
-      rating: 5,
-      text: "The instructors made everything very easy to understand. I enjoyed both coding and learning about digital security.",
-      avatar: "IV",
-    },
-    {
-      name: "Vivaan Gupta",
-      rating: 5,
-      text: "Building websites and Python projects was really fun. The cyber security part was also very interesting.",
-      avatar: "VG",
-    },
-    {
-      name: "Anika Singh",
-      rating: 5,
-      text: "A perfect course for students who want to learn coding and technology in a practical and easy way.",
-      avatar: "AS",
-    },
-    {
-      name: "Reyansh Mehta",
-      rating: 5,
-      text: "The projects were very engaging. I built apps, worked on Python, and learned how to stay safe online.",
-      avatar: "RM",
-    },
-    {
-      name: "Diya Kapoor",
-      rating: 5,
-      text: "The final project helped me combine everything I learned into one complete application. It was a great experience!",
-      avatar: "DK",
-    },
-  ],
-  faqs: [
-    {
-      q: "What is this Tech Titans course about?",
-      a: "This course teaches students web development, Python programming, and cyber security in a fun and practical way. Students learn to build websites, develop applications, and understand digital safety through real-world projects.",
-    },
-    {
-      q: "Who is this program suitable for?",
-      a: "The program is designed for students from Grade 8–12. It is beginner-friendly and suitable for students who want to learn coding and technology from scratch.",
-    },
-    {
-      q: "Does my child need coding experience?",
-      a: "No prior coding experience is required. The course starts from basics and gradually moves to intermediate-level concepts.",
-    },
-    {
-      q: "What will my child be able to build after this course?",
-      a: "By the end of the program, students will be able to build websites, create Python applications, perform basic cyber security analysis, and complete a final capstone project combining all skills.",
-    },
-    {
-      q: "How is this course different from regular coding classes?",
-      a: "This program offers a complete learning experience by combining web development, programming, and cyber security, focusing on practical projects instead of just theory.",
-    },
-    {
-      q: "Are the classes live or recorded?",
-      a: "Classes are live and instructor-led, allowing students to interact, ask questions, and participate in activities in real time.",
-    },
-    {
-      q: "How many students are there in one batch?",
-      a: "We maintain small batch sizes to ensure personalized attention and better learning for every student.",
-    },
-    {
-      q: "What kind of projects will students work on?",
-      a: "Students will work on projects like portfolio websites, JavaScript apps, Python programs, password generators, and basic cyber security analysis projects, along with a final capstone project.",
-    },
-    {
-      q: "Is this course suitable for beginners?",
-      a: "Yes, the course is designed for beginners and gradually builds up to intermediate-level skills across all three domains.",
-    },
-    {
-      q: "What tools or software are required?",
-      a: "Students will need a laptop or desktop, internet connection, browser, VS Code, Python, and basic security tools. All tools used are free.",
-    },
-    {
-      q: "Will my child get a certificate?",
-      a: "Yes, students will receive certificates for Web Development, Python Programming, and Cyber Security after successfully completing the course.",
-    },
-    {
-      q: "How will this course help my child in the future?",
-      a: "This course helps students build strong coding skills, problem-solving ability, and awareness of digital security, preparing them for future careers in technology.",
-    },
-    {
-      q: "Can parents track their child’s progress?",
-      a: "Yes, parents can track progress through regular updates, project reviews, and final project presentations.",
-    },
-    {
-      q: "What if a student misses a class?",
-      a: "Recorded sessions or support materials will be provided so students can catch up easily without missing important content.",
-    },
-    {
-      q: "Is there a demo class available?",
-      a: "Yes, you can book a free demo class to experience the teaching style and course structure before enrolling.",
-    }
-  ],
-      recommendedCourses: [
+      ],
+      capstoneProjects: [
         {
-          title: "Programming Masters",
-          desc: "Learn programming fundamentals with Python, Java and C++ through fun projects.",
-          grade: "8-12",
-          slug: "programming-masters",
-          icon: "",
+          num: 1,
+          title: "Basic Web Page",
+          desc: "Create a simple website using HTML and CSS with text and images.",
         },
         {
-          title: "AI Innovators",
-          desc: "Discover the power of Artificial Intelligence and build smart applications that solve real-world problems.",
-          grade: "8-12",
-          slug: "ai-innovators",
-          icon: "",
+          num: 2,
+          title: "Personal Portfolio Website",
+          desc: "Design a personal portfolio to showcase profile and projects.",
         },
         {
-          title: "Full Stack Cloud Creators",
-          desc: "Design, build, and deploy full-stack cloud applications using modern technologies.",
-          grade: "8-12",
-          slug: "full-stack-cloud-creators",
-          icon: "",
+          num: 3,
+          title: "JavaScript To-Do App",
+          desc: "Build an interactive to-do application using JavaScript and DOM.",
+        },
+        {
+          num: 4,
+          title: "Quiz Web Application",
+          desc: "Create a quiz app with questions, answers, and scoring system.",
+        },
+        {
+          num: 5,
+          title: "Python Calculator",
+          desc: "Develop a calculator using Python with basic operations.",
+        },
+        {
+          num: 6,
+          title: "Python Mini Game",
+          desc: "Build a simple game using Python logic and conditions.",
+        },
+        {
+          num: 7,
+          title: "File Handling System",
+          desc: "Create a Python project to read, write, and manage files.",
+        },
+        {
+          num: 8,
+          title: "Password Generator Tool",
+          desc: "Build a secure password generator using Python.",
+        },
+        {
+          num: 9,
+          title: "Phishing Detection Project",
+          desc: "Understand and simulate phishing detection techniques.",
+        },
+        {
+          num: 10,
+          title: "Final Tech Project",
+          desc: "Design and build a complete project combining web development, Python, and cyber security concepts.",
         },
       ],
     },
+
+    certificate: {
+      heading: "Program Certificate & Learning Recognition",
+      description:
+        "Students who successfully complete the Tech Titans Program will receive an official Certificate of Completion by SkillzRevo Academy Junior. This certificate recognizes their multi-domain expertise in web development, Python programming, and cyber security. It highlights their practical experience gained through hands-on activities, real-world projects, and the successful development of a comprehensive capstone project integrating coding, application development, and system security.",
+      requirements: [
+        "Attend the required live sessions",
+        "Complete all assignments and assessments",
+        "Actively participate in hands-on activities",
+        "Successfully build and present the final Tech Titans project",
+      ],
+    },
+
+    reviews: [
+      {
+        name: "Aarav Sharma",
+        rating: 5,
+        text: "The Tech Titans course was amazing. I learned how to build websites, code in Python, and understand cyber security basics.",
+        avatar: "AS",
+      },
+      {
+        name: "Ishita Verma",
+        rating: 5,
+        text: "The instructors made everything very easy to understand. I enjoyed both coding and learning about digital security.",
+        avatar: "IV",
+      },
+      {
+        name: "Vivaan Gupta",
+        rating: 5,
+        text: "Building websites and Python projects was really fun. The cyber security part was also very interesting.",
+        avatar: "VG",
+      },
+      {
+        name: "Anika Singh",
+        rating: 5,
+        text: "A perfect course for students who want to learn coding and technology in a practical and easy way.",
+        avatar: "AS",
+      },
+      {
+        name: "Reyansh Mehta",
+        rating: 5,
+        text: "The projects were very engaging. I built apps, worked on Python, and learned how to stay safe online.",
+        avatar: "RM",
+      },
+      {
+        name: "Diya Kapoor",
+        rating: 5,
+        text: "The final project helped me combine everything I learned into one complete application. It was a great experience!",
+        avatar: "DK",
+      },
+    ],
+    faqs: [
+      {
+        q: "What is this Tech Titans course about?",
+        a: "This course teaches students web development, Python programming, and cyber security in a fun and practical way. Students learn to build websites, develop applications, and understand digital safety through real-world projects.",
+      },
+      {
+        q: "Who is this program suitable for?",
+        a: "The program is designed for students from Grade 8–12. It is beginner-friendly and suitable for students who want to learn coding and technology from scratch.",
+      },
+      {
+        q: "Does my child need coding experience?",
+        a: "No prior coding experience is required. The course starts from basics and gradually moves to intermediate-level concepts.",
+      },
+      {
+        q: "What will my child be able to build after this course?",
+        a: "By the end of the program, students will be able to build websites, create Python applications, perform basic cyber security analysis, and complete a final capstone project combining all skills.",
+      },
+      {
+        q: "How is this course different from regular coding classes?",
+        a: "This program offers a complete learning experience by combining web development, programming, and cyber security, focusing on practical projects instead of just theory.",
+      },
+      {
+        q: "Are the classes live or recorded?",
+        a: "Classes are live and instructor-led, allowing students to interact, ask questions, and participate in activities in real time.",
+      },
+      {
+        q: "How many students are there in one batch?",
+        a: "We maintain small batch sizes to ensure personalized attention and better learning for every student.",
+      },
+      {
+        q: "What kind of projects will students work on?",
+        a: "Students will work on projects like portfolio websites, JavaScript apps, Python programs, password generators, and basic cyber security analysis projects, along with a final capstone project.",
+      },
+      {
+        q: "Is this course suitable for beginners?",
+        a: "Yes, the course is designed for beginners and gradually builds up to intermediate-level skills across all three domains.",
+      },
+      {
+        q: "What tools or software are required?",
+        a: "Students will need a laptop or desktop, internet connection, browser, VS Code, Python, and basic security tools. All tools used are free.",
+      },
+      {
+        q: "Will my child get a certificate?",
+        a: "Yes, students will receive certificates for Web Development, Python Programming, and Cyber Security after successfully completing the course.",
+      },
+      {
+        q: "How will this course help my child in the future?",
+        a: "This course helps students build strong coding skills, problem-solving ability, and awareness of digital security, preparing them for future careers in technology.",
+      },
+      {
+        q: "Can parents track their child’s progress?",
+        a: "Yes, parents can track progress through regular updates, project reviews, and final project presentations.",
+      },
+      {
+        q: "What if a student misses a class?",
+        a: "Recorded sessions or support materials will be provided so students can catch up easily without missing important content.",
+      },
+      {
+        q: "Is there a demo class available?",
+        a: "Yes, you can book a free demo class to experience the teaching style and course structure before enrolling.",
+      },
+    ],
+    recommendedCourses: [
+      {
+        title: "Programming Masters",
+        desc: "Learn programming fundamentals with Python, Java and C++ through fun projects.",
+        grade: "8-12",
+        slug: "programming-masters",
+        icon: "",
+      },
+      {
+        title: "AI Innovators",
+        desc: "Discover the power of Artificial Intelligence and build smart applications that solve real-world problems.",
+        grade: "8-12",
+        slug: "ai-innovators",
+        icon: "",
+      },
+      {
+        title: "Full Stack Cloud Creators",
+        desc: "Design, build, and deploy full-stack cloud applications using modern technologies.",
+        grade: "8-12",
+        slug: "full-stack-cloud-creators",
+        icon: "",
+      },
+    ],
+  },
 ];
 
 export function getCourseBySlug(slug) {

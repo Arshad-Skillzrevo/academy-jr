@@ -2,6 +2,7 @@
 import React from "react";
 import { Trophy, CheckCircle, GraduationCap, Award, PlayCircle, Star, Medal, Sparkles } from "lucide-react";
 import { FloatIcon } from "./FloatIcon";
+import { CTARow } from "./CTARow";
 
 const FLOAT_ICONS = [
   { icon: Star,     style: { top: "10%", left: "5%", opacity: 0.6 },     color: "text-yellow-300" },
@@ -10,7 +11,7 @@ const FLOAT_ICONS = [
 ];
 
 
-export function CertificateSection({ heading, description, requirements }) {
+export function CertificateSection({ courseTitle, heading, description, requirements }) {
   return (
     <section
       className="py-20 relative overflow-hidden"
@@ -81,12 +82,7 @@ export function CertificateSection({ heading, description, requirements }) {
             </p>
             
             <div className="flex gap-3 justify-center flex-wrap">
-              <button className="kid-btn kid-btn-outline text-white border-white/50 hover:bg-white hover:text-indigo-600 text-xs px-5 py-2">
-                <Award className="w-3.5 h-3.5" /> View Sample
-              </button>
-              <button className="kid-btn kid-btn-orange text-xs px-5 py-2">
-                <PlayCircle className="w-3.5 h-3.5" /> Free Demo
-              </button>
+              <CTARow title={courseTitle} />
             </div>
           </div>
         </div>

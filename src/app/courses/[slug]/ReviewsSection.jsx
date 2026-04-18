@@ -2,6 +2,7 @@ import React from "react";
 import { Heart, MessageCircle, Star, PlayCircle } from "lucide-react";
 import { Stars } from "./Stars";
 import { WobblyStarSVG } from "./WobblyStarSVG";
+import { CTARow } from "./CTARow";
 
 const REVIEW_COLORS = [
   "from-violet-50 to-purple-50 border-violet-200",
@@ -21,7 +22,7 @@ const AVATAR_COLORS = [
  * ReviewsSection Component
  * Displays a grid of colorful testimonial cards with ratings and avatars.
  */
-export function ReviewsSection({ reviews }) {
+export function ReviewsSection({ courseTitle, reviews }) {
   return (
     <section className="py-20 bg-white relative">
       {/* Decorative Background Element */}
@@ -68,12 +69,7 @@ export function ReviewsSection({ reviews }) {
 
         {/* Footer Actions */}
         <div className="flex flex-wrap justify-center gap-4 mt-10">
-          <button className="kid-btn kid-btn-outline">
-            <Star className="w-4 h-4" /> View More Reviews
-          </button>
-          <button className="kid-btn kid-btn-blue">
-            <PlayCircle className="w-4 h-4" /> Try a Free Demo
-          </button>
+          <CTARow title={courseTitle}/>
         </div>
       </div>
     </section>

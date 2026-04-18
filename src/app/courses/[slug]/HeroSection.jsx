@@ -1,70 +1,151 @@
 import React from "react";
 import {
-  Code2, GraduationCap, BookOpen, Activity,
-  PlayCircle, Phone, Award, Trophy, CheckCircle,
-  Star, Rocket, Target, Palette, Lightbulb, Sparkles,
+  Code2,
+  GraduationCap,
+  BookOpen,
+  Activity,
+  PlayCircle,
+  Phone,
+  Award,
+  Trophy,
+  CheckCircle,
+  Star,
+  Rocket,
+  Target,
+  Palette,
+  Lightbulb,
+  Sparkles,
+  PlayCircleIcon,
 } from "lucide-react";
 import { FloatIcon } from "./FloatIcon";
 import { WobblyStarSVG } from "./WobblyStarSVG";
 import { KidMascot } from "./KidMascot";
+import CTAButton from "../../components/CTAbutton";
 
 const HERO_FLOAT_ICONS = [
-  { icon: Star,      style: { top: "12%",    left: "5%"   }, color: "text-amber-400"  },
-  { icon: Palette,   style: { top: "20%",    right: "8%"  }, color: "text-pink-400"   },
-  { icon: Rocket,    style: { bottom: "25%", left: "8%"   }, color: "text-indigo-400" },
-  { icon: Lightbulb, style: { top: "60%",    right: "5%"  }, color: "text-yellow-400" },
-  { icon: Target,    style: { bottom: "15%", right: "20%" }, color: "text-orange-400" },
-  { icon: Sparkles,  style: { top: "35%",    left: "15%"  }, color: "text-violet-400" },
+  { icon: Star, style: { top: "12%", left: "5%" }, color: "text-amber-400" },
+  { icon: Palette, style: { top: "20%", right: "8%" }, color: "text-pink-400" },
+  {
+    icon: Rocket,
+    style: { bottom: "25%", left: "8%" },
+    color: "text-indigo-400",
+  },
+  {
+    icon: Lightbulb,
+    style: { top: "60%", right: "5%" },
+    color: "text-yellow-400",
+  },
+  {
+    icon: Target,
+    style: { bottom: "15%", right: "20%" },
+    color: "text-orange-400",
+  },
+  {
+    icon: Sparkles,
+    style: { top: "35%", left: "15%" },
+    color: "text-violet-400",
+  },
 ];
 
 /**
  * HeroSection Component
- * The main landing page header featuring animated icons, stat bubbles, 
+ * The main landing page header featuring animated icons, stat bubbles,
  * and a stylized mascot.
  */
 export function HeroSection({
-  title, subtitle, description, grade, lessons, activities, heroImage,
+  title,
+  subtitle,
+  description,
+  grade,
+  lessons,
+  activities,
+  heroImage,
 }) {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #eef2ff 0%, #fdf4ff 40%, #fff7ed 100%)" }}
+      style={{
+        background:
+          "linear-gradient(135deg, #eef2ff 0%, #fdf4ff 40%, #fff7ed 100%)",
+      }}
     >
       {/* Decorative Background Blobs */}
-      <div className="absolute top-10 left-10 w-40 h-40 rounded-full opacity-30 pointer-events-none"
-        style={{ background: "radial-gradient(circle, #818cf8, #c4b5fd)" }} />
-      <div className="absolute bottom-10 right-10 w-56 h-56 rounded-full opacity-20 pointer-events-none"
-        style={{ background: "radial-gradient(circle, #fb923c, #fbbf24)" }} />
-      <div className="absolute top-1/2 right-1/4 w-24 h-24 rounded-full opacity-20 pointer-events-none"
-        style={{ background: "radial-gradient(circle, #34d399, #06b6d4)" }} />
+      <div
+        className="absolute top-10 left-10 w-40 h-40 rounded-full opacity-30 pointer-events-none"
+        style={{ background: "radial-gradient(circle, #818cf8, #c4b5fd)" }}
+      />
+      <div
+        className="absolute bottom-10 right-10 w-56 h-56 rounded-full opacity-20 pointer-events-none"
+        style={{ background: "radial-gradient(circle, #fb923c, #fbbf24)" }}
+      />
+      <div
+        className="absolute top-1/2 right-1/4 w-24 h-24 rounded-full opacity-20 pointer-events-none"
+        style={{ background: "radial-gradient(circle, #34d399, #06b6d4)" }}
+      />
 
       {/* Floating Background Icons */}
       {HERO_FLOAT_ICONS.map((fi, i) => (
-        <FloatIcon key={i} icon={fi.icon} style={fi.style} color={fi.color} size={24} />
+        <FloatIcon
+          key={i}
+          icon={fi.icon}
+          style={fi.style}
+          color={fi.color}
+          size={24}
+        />
       ))}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 grid lg:grid-cols-2 gap-12 items-center relative z-10">
-
         {/* ── Left Column: Text & CTA ── */}
         <div className="animate-slideUp">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-indigo-100 rounded-full mb-5">
             <Code2 className="w-3.5 h-3.5 text-indigo-500" />
-            <span className="text-xs font-black text-indigo-600 uppercase tracking-wider">Web Development</span>
-            <WobblyStarSVG size={16} color="#f97316" className="inline-block ml-1" />
+            <span className="text-xs font-black text-indigo-600 uppercase tracking-wider">
+              Web Development
+            </span>
+            <WobblyStarSVG
+              size={16}
+              color="#f97316"
+              className="inline-block ml-1"
+            />
           </div>
 
           <h1 className="font-fredoka text-4xl md:text-5xl lg:text-6xl leading-tighter text-gray-900 mb-2">
             <span className="squiggle-underline">{title}</span>
           </h1>
-          <p className="font-fredoka text-2xl md:text-3xl text-indigo-500 mb-4">{subtitle}</p>
-          <p className="text-gray-600 text-base max-w-lg leading-relaxed mb-8">{description}</p>
+          <p className="font-fredoka text-2xl md:text-3xl text-indigo-500 mb-4">
+            {subtitle}
+          </p>
+          <p className="text-gray-600 text-base max-w-lg leading-relaxed mb-8">
+            {description}
+          </p>
 
           {/* Stat bubbles */}
           <div className="flex flex-wrap gap-3 mb-8">
             {[
-              { label: "Grade",      value: grade,      icon: GraduationCap, bg: "bg-violet-100",  color: "text-violet-600",  bdr: "border-violet-200"  },
-              { label: "Lessons",    value: lessons,    icon: BookOpen,      bg: "bg-sky-100",     color: "text-sky-600",     bdr: "border-sky-200"     },
-              { label: "Activities", value: activities, icon: Activity,      bg: "bg-emerald-100", color: "text-emerald-600", bdr: "border-emerald-200" },
+              {
+                label: "Grade",
+                value: grade,
+                icon: GraduationCap,
+                bg: "bg-violet-100",
+                color: "text-violet-600",
+                bdr: "border-violet-200",
+              },
+              {
+                label: "Lessons",
+                value: lessons,
+                icon: BookOpen,
+                bg: "bg-sky-100",
+                color: "text-sky-600",
+                bdr: "border-sky-200",
+              },
+              {
+                label: "Activities",
+                value: activities,
+                icon: Activity,
+                bg: "bg-emerald-100",
+                color: "text-emerald-600",
+                bdr: "border-emerald-200",
+              },
             ].map((s, i) => (
               <div
                 key={s.label}
@@ -79,12 +160,22 @@ export function HeroSection({
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <button className="kid-btn kid-btn-blue">
-              <PlayCircle className="w-4 h-4" /> Book a Free Demo
-            </button>
-            <button className="kid-btn kid-btn-orange">
-              <Phone className="w-4 h-4" /> Schedule a Call
-            </button>
+            <CTAButton
+              label="Book a Free Demo"
+              // icon={PlayCircleIcon}
+              ctaLabel={"Book a Free Demo-" + title}
+              pageContext={title}
+              courseName={title}
+              className="kid-btn kid-btn-blue"
+            />
+            <CTAButton
+              label="Schedule a Call"
+              // icon={PlayCircleIcon}
+              ctaLabel={"Schedule a Call-" + title}
+              pageContext={title}
+              courseName={title}
+              className="kid-btn kid-btn-orange"
+            />
           </div>
         </div>
 
@@ -115,7 +206,9 @@ export function HeroSection({
               <p className="text-xs font-black text-gray-800 flex items-center gap-1">
                 <Trophy className="w-3.5 h-3.5 text-amber-500" /> Certificate
               </p>
-              <p className="text-xs text-gray-400 font-semibold">Upon Completion</p>
+              <p className="text-xs text-gray-400 font-semibold">
+                Upon Completion
+              </p>
             </div>
           </div>
 
@@ -141,8 +234,15 @@ export function HeroSection({
 
       {/* Decorative Wave Divider */}
       <div className="relative h-16 overflow-hidden">
-        <svg viewBox="0 0 1440 64" className="absolute bottom-0 left-0 w-full" preserveAspectRatio="none">
-          <path d="M0,32 C360,64 1080,0 1440,32 L1440,64 L0,64 Z" fill="white" />
+        <svg
+          viewBox="0 0 1440 64"
+          className="absolute bottom-0 left-0 w-full"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,32 C360,64 1080,0 1440,32 L1440,64 L0,64 Z"
+            fill="white"
+          />
         </svg>
       </div>
     </section>

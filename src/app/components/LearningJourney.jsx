@@ -325,9 +325,9 @@ export default function LearningJourney() {
         >
           <CTAButton
             label="Book a Free Demo Class"
-            Icon={Rocket}
+            icon={Rocket}
             text="Book a Free Demo Class"
-            className="bg-linear-120 from-blue-500 to-blue-700 text-white rounded-2xl px-8 py-3.5 text-sm font-bold transition-all duration-200 hover:scale-105 active:scale-95 "
+            className="flex gap-2 items-center justify-center bg-linear-120 from-blue-500 to-blue-700 text-white rounded-2xl px-8 py-3.5 text-sm font-bold transition-all duration-200 hover:scale-105 active:scale-95 "
             ctaLabel="Book a Free Demo CLass"
             pageContext="Homepage"
           />

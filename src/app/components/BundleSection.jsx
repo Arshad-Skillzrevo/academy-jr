@@ -497,6 +497,9 @@ function BundleCard({
             >
               {formatINR(bundle.price)}
             </span>
+            <p className="text-[12px] text-gray-500 font-normal">
+               inclusive of all taxes
+            </p>
           </div>
           <div className="flex items-center gap-1.5">
             <motion.button

@@ -35,6 +35,7 @@ import PopularCourses from "./components/PopularCourses";
 import ReviewsSlider from "./components/ReviewsSlider";
 import WhyChooseUs from "./components/Whychooseus";
 import BundleSection from "./components/BundleSection";
+import TrainersCarousel from "./components/TrainersCarousel";
 
 
 export default function Page() {
@@ -51,7 +52,8 @@ export default function Page() {
       <WhyChooseUs/>
       <ReviewsSlider />
       <LearningJourney/>
-      <OurTeam/>
+      {/* <OurTeam/> */}
+      <TrainersCarousel />
       <BookDemo />
     </>
   );

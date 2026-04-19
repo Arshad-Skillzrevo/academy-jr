@@ -782,6 +782,7 @@ import { FAQSection } from "./FAQSection";
 // Icons
 import { Code, Rocket, Brain, Star, Palette, Zap } from "lucide-react";
 import { CTARow } from "./CTARow";
+import { SkillsCovered } from "./SkillsCovered";
 
 
 // ✅ 1. STATIC PARAMS
@@ -839,6 +840,7 @@ export default async function CoursePage({ params }) {
     durationMonths,
     durationClasses,
     durationWeeks,
+    skills,
   } = course;
 
   const overviewIcons = [Code, Brain, Rocket, Star, Palette, Zap];
@@ -886,6 +888,7 @@ export default async function CoursePage({ params }) {
         grade = {grade}
         activities={activities}
       />
+      {/* <SkillsCovered skills={skills} /> */}
 
       <ProjectsSection
         courseTitle={title}

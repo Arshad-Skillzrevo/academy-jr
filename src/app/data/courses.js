@@ -19,6 +19,19 @@ export const courses = [
     heroImage:
       "https://images.unsplash.com/photo-1547658719-da2b51169166?w=640&h=400&fit=crop&q=80",
     color: "#1d8fff",
+    skills: [
+      "Understanding Internet & Website Fundamentals",
+      "Planning Website Structure & Layout (Wireframing)",
+      "Building Web Pages using HTML",
+      "Creating Forms, Tables & Structured Content",
+      "Designing Websites with CSS (Colors, Fonts, Layouts)",
+      "Developing Responsive Web Designs (Mobile-Friendly)",
+      "Adding Interactivity using JavaScript",
+      "Implementing Logic with Conditions, Loops & Functions",
+      "Manipulating Web Pages using DOM (Dynamic Content)",
+      "Building Complete Real-World Website Projects",
+    ],
+    tools : ["VS Code", "Web Browsers", "Developer Tools"],
 
     journeySection: {
       heading: "Start Your Web Development Journey",

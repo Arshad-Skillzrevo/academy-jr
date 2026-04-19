@@ -515,21 +515,7 @@ function BundleCard({
             >
               Enroll <ArrowRight size={isMobile ? 10 : 12} strokeWidth={2.5} />
             </motion.button>
-            {!isMobile && (
-              <motion.button
-                whileHover={{ scale: 1.06 }}
-                whileTap={{ scale: 0.95 }}
-                className="bundle-card-btn flex items-center gap-1.5 rounded-xl border-2 px-4 py-2 text-[13px] font-bold"
-                style={{
-                  color: bundle.accent,
-                  borderColor: `${bundle.accent}35`,
-                  background: `${bundle.accent}08`,
-                  fontFamily: "'Fredoka One', cursive",
-                }}
-              >
-                <CalendarDays size={13} strokeWidth={2} /> Demo
-              </motion.button>
-            )}
+
           </div>
         </div>
       </div>
@@ -962,7 +948,7 @@ export default function BundleSection() {
                         setActive(idx);
                         startAuto();
                       }}
-                      onEnroll={() => router.push(`/courses/${bundle.slug}`)}
+                      onEnroll={() => window.open(`/courses/${bundle.slug}`, "_blank")}
                     />
                   </div>
                 );

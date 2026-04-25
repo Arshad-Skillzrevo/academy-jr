@@ -592,9 +592,9 @@ export default function Footer() {
             <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center" }}>
               {[
                 { label: "Privacy Policy",           href: "/privacypolicy"                   },
-                // { label: "Terms & Conditions",       href: "/terms-and-conditions"               },
-                // { label: "Refund Policy",            href: "/cancellation-refund-policy"       },
-                // { label: "Shipping & Delivery",      href: "/shipping-and-delivery"              },
+                { label: "Terms & Conditions",       href: "/TermsandConditions"               },
+                { label: "Refund Policy",            href: "/cancellation-refund-policy"       },
+                { label: "Shipping & Delivery",      href: "/ShippingandDelivery"              },
               ].map(({ label, href }) => (
                 <a key={label} href={href}
                   style={{ fontSize: 12, color: "#6b7280", fontWeight: 700, textDecoration: "none" }}
@@ -607,9 +607,7 @@ export default function Footer() {
             </div>
 
             {/* Made with love */}
-            <p style={{ fontSize: 12, color: "#6b7280", margin: 0, fontWeight: 700, display: "flex", alignItems: "center", gap: 5 }}>
-              Made with <Heart size={11} style={{ color: B.rose }} fill={B.rose} /> for future innovators
-            </p>
+            
           </div>
         </div>
 

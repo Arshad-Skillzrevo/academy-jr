@@ -489,7 +489,7 @@ export default function Footer() {
 
         {/* ── MAIN CONTENT ── */}
         <div style={{ position: "relative", zIndex: 10, maxWidth: 1200, margin: "0 auto", padding: "56px 24px 48px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "240px 1fr", gap: 48 }}>
+          <div className="grid grid-col-1 md:grid-col-2 gap-20">
 
             {/* ── BRAND COLUMN ── */}
             <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
@@ -532,7 +532,7 @@ export default function Footer() {
             </div>
 
             {/* ── LINKS GRID ── */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "32px 24px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))", gap: "32px 24px" }}>
 
               {/* Explore */}
               <LinkColumn title="Explore" color={B.violet} links={[

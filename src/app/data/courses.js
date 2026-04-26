@@ -1182,7 +1182,7 @@ export const courses = [
   },
   {
     slug: "cpp-coders",
-    title: "C++ Coders",
+    title: "Cpp Coders",
     id: "prog",
     cat: "prog",
     type: "single",

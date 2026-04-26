@@ -80,6 +80,7 @@ export function CertificateSection({ courseTitle, heading, description, requirem
             <p className="text-white/50 text-xs mb-6 border-t border-white/20 pt-4 font-semibold">
               Issued by Skillzrevo Solutions
             </p>
+
             
             <div className="flex gap-3 justify-center flex-wrap">
               <CTARow title={courseTitle} />

@@ -743,142 +743,142 @@ export const bundle = [
       heading: "Hands-on Activities & Student Projects",
       description:
        "Students will work on exciting real-world projects across Python, Java, and C++ programming, gaining strong coding skills and practical exposure to multiple programming languages. Upon successful completion of the Programming Masters Program, students will receive an official Certificate of Completion by SkillzRevo Academy Junior, recognizing their expertise in programming, problem-solving, and software development. Throughout the journey, students engage in hands-on coding exercises, assignments, and project-based learning, leading to a final capstone project that showcases their ability to build applications, apply programming logic, and solve real-world problems using multiple languages.",
-	activities: [
-		  "Understand programming fundamentals and explore how code works in real-world applications",
-		  "Write programs using Python, Java, and C++ with proper syntax and structure",
-		  "Build strong logic using conditions, loops, and problem-solving exercises",
-		  "Create functions and reusable code for efficient programming",
-		  "Work with arrays, strings, and data structures across multiple languages",
-		  "Learn object-oriented programming concepts like classes, objects, inheritance, and polymorphism",
-		  "Debug and fix errors to improve code performance and efficiency",
-		  "Work on real-world projects using Python, Java, and C++ programming",
-], 
-	capstoneProjects: [
-		  { num: 1, title: "Basic Programs", desc: "Write simple programs in Python, Java, and C++ using variables and input/output." },
-			  { num: 2, title: "Calculator Application", desc: "Build a calculator using programming logic and operations." },
-			  { num: 3, title: "Number Guessing Game", desc: "Create a game using conditions and loops." },
-			  { num: 4, title: "Pattern Generator", desc: "Develop pattern-based programs using loops and logic." },
-			  { num: 5, title: "String Utility Tool", desc: "Build programs to manipulate and process strings." },
-			  { num: 6, title: "Array-Based Programs", desc: "Solve real-world problems using arrays and data structures." },
-			  { num: 7, title: "File Handling Project", desc: "Create applications to read, write, and manage files." },
-			  { num: 8, title: "OOP-Based Application", desc: "Develop a project using object-oriented programming concepts." },
-			  { num: 9, title: "Mini Game or Utility App", desc: "Build a small game or utility application using programming logic." },
-			  { num: 10, title: "Final Multi-Language Project", desc: "Design and build a complete application using Python, Java, or C++ with strong logic and real-world use cases." },
-],
-    },
+    activities: [
+        "Understand programming fundamentals and explore how code works in real-world applications",
+        "Write programs using Python, Java, and C++ with proper syntax and structure",
+        "Build strong logic using conditions, loops, and problem-solving exercises",
+        "Create functions and reusable code for efficient programming",
+        "Work with arrays, strings, and data structures across multiple languages",
+        "Learn object-oriented programming concepts like classes, objects, inheritance, and polymorphism",
+        "Debug and fix errors to improve code performance and efficiency",
+        "Work on real-world projects using Python, Java, and C++ programming",
+      ], 
+    capstoneProjects: [
+        { num: 1, title: "Basic Programs", desc: "Write simple programs in Python, Java, and C++ using variables and input/output." },
+          { num: 2, title: "Calculator Application", desc: "Build a calculator using programming logic and operations." },
+          { num: 3, title: "Number Guessing Game", desc: "Create a game using conditions and loops." },
+          { num: 4, title: "Pattern Generator", desc: "Develop pattern-based programs using loops and logic." },
+          { num: 5, title: "String Utility Tool", desc: "Build programs to manipulate and process strings." },
+          { num: 6, title: "Array-Based Programs", desc: "Solve real-world problems using arrays and data structures." },
+          { num: 7, title: "File Handling Project", desc: "Create applications to read, write, and manage files." },
+          { num: 8, title: "OOP-Based Application", desc: "Develop a project using object-oriented programming concepts." },
+          { num: 9, title: "Mini Game or Utility App", desc: "Build a small game or utility application using programming logic." },
+          { num: 10, title: "Final Multi-Language Project", desc: "Design and build a complete application using Python, Java, or C++ with strong logic and real-world use cases." },
+        ],
+      },
 
-    certificate: {
-      heading: "Program Certificate & Learning Recognition",
-      description:
-        "Students who successfully complete the Programming Masters Program will receive an official Certificate of Completion by SkillzRevo Academy Junior. This certificate recognizes their expertise in Python, Java, and C++ programming, along with strong problem-solving and logical thinking skills. It highlights their practical experience gained through hands-on coding, real-world projects, and the successful development of a comprehensive capstone project using multiple programming languages.",
-      requirements: [
-        "Attend the required live sessions",
-        "Complete coding assignments and practice exercises in Python, Java, and C++",
-        "Actively participate in hands-on activities",
-        "Successfully build and present the final multi-language capstone project",
+      certificate: {
+        heading: "Program Certificate & Learning Recognition",
+        description:
+          "Students who successfully complete the Programming Masters Program will receive an official Certificate of Completion by SkillzRevo Academy Junior. This certificate recognizes their expertise in Python, Java, and C++ programming, along with strong problem-solving and logical thinking skills. It highlights their practical experience gained through hands-on coding, real-world projects, and the successful development of a comprehensive capstone project using multiple programming languages.",
+        requirements: [
+          "Attend the required live sessions",
+          "Complete coding assignments and practice exercises in Python, Java, and C++",
+          "Actively participate in hands-on activities",
+          "Successfully build and present the final multi-language capstone project",
+        ],
+      },
+
+    reviews: [
+      {
+        name: "Rohan Khanna",
+        rating: 5,
+        text: "The Programming Masters course was excellent. I learned Python, Java, and C++ in a very simple and structured way.",
+        avatar: "RK",
+      },
+      {
+        name: "Sanya Mehta",
+        rating: 5,
+        text: "The instructors made coding easy to understand. I really enjoyed building programs and improving my logic.",
+        avatar: "SM",
+      },
+      {
+        name: "Kunal Verma",
+        rating: 5,
+        text: "Learning multiple programming languages in one course was the best part. My problem-solving skills improved a lot.",
+        avatar: "KV",
+      },
+      {
+        name: "Priya Sharma",
+        rating: 5,
+        text: "A perfect course for beginners who want to learn coding deeply and build a strong foundation.",
+        avatar: "PS",
+      },
+      {
+        name: "Devansh Gupta",
+        rating: 5,
+        text: "The projects were very interesting. I built games, tools, and applications using different programming languages.",
+        avatar: "DG",
+      },
+      {
+        name: "Anushka Jain",
+        rating: 5,
+        text: "The final project helped me apply everything I learned in Python, Java, and C++. It was a great learning experience!",
+        avatar: "AJ",
+      },
       ],
-    },
-
-reviews: [
-  {
-    name: "Rohan Khanna",
-    rating: 5,
-    text: "The Programming Masters course was excellent. I learned Python, Java, and C++ in a very simple and structured way.",
-    avatar: "RK",
-  },
-  {
-    name: "Sanya Mehta",
-    rating: 5,
-    text: "The instructors made coding easy to understand. I really enjoyed building programs and improving my logic.",
-    avatar: "SM",
-  },
-  {
-    name: "Kunal Verma",
-    rating: 5,
-    text: "Learning multiple programming languages in one course was the best part. My problem-solving skills improved a lot.",
-    avatar: "KV",
-  },
-  {
-    name: "Priya Sharma",
-    rating: 5,
-    text: "A perfect course for beginners who want to learn coding deeply and build a strong foundation.",
-    avatar: "PS",
-  },
-  {
-    name: "Devansh Gupta",
-    rating: 5,
-    text: "The projects were very interesting. I built games, tools, and applications using different programming languages.",
-    avatar: "DG",
-  },
-  {
-    name: "Anushka Jain",
-    rating: 5,
-    text: "The final project helped me apply everything I learned in Python, Java, and C++. It was a great learning experience!",
-    avatar: "AJ",
-  },
-],
-faqs: [
-  {
-    q: "What is this Tech Titans course about?",
-    a: "This course teaches students web development, Python programming, and cyber security in a fun and practical way. Students learn to build websites, develop applications, and understand digital safety through real-world projects.",
-  },
-  {
-    q: "Who is this program suitable for?",
-    a: "The program is designed for students from Grade 8–12. It is beginner-friendly and suitable for students who want to learn coding and technology from scratch.",
-  },
-  {
-    q: "Does my child need coding experience?",
-    a: "No prior coding experience is required. The course starts from basics and gradually moves to intermediate-level concepts.",
-  },
-  {
-    q: "What will my child be able to build after this course?",
-    a: "By the end of the program, students will be able to build websites, create Python applications, perform basic cyber security analysis, and complete a final capstone project combining all skills.",
-  },
-  {
-    q: "How is this course different from regular coding classes?",
-    a: "This program offers a complete learning experience by combining web development, programming, and cyber security, focusing on practical projects instead of just theory.",
-  },
-  {
-    q: "Are the classes live or recorded?",
-    a: "Classes are live and instructor-led, allowing students to interact, ask questions, and participate in activities in real time.",
-  },
-  {
-    q: "How many students are there in one batch?",
-    a: "We maintain small batch sizes to ensure personalized attention and better learning for every student.",
-  },
-  {
-    q: "What kind of projects will students work on?",
-    a: "Students will work on projects like portfolio websites, JavaScript apps, Python programs, password generators, and basic cyber security analysis projects, along with a final capstone project.",
-  },
-  {
-    q: "Is this course suitable for beginners?",
-    a: "Yes, the course is designed for beginners and gradually builds up to intermediate-level skills across all three domains.",
-  },
-  {
-    q: "What tools or software are required?",
-    a: "Students will need a laptop or desktop, internet connection, browser, VS Code, Python, and basic security tools. All tools used are free.",
-  },
-  {
-    q: "Will my child get a certificate?",
-    a: "Yes, students will receive certificates for Web Development, Python Programming, and Cyber Security after successfully completing the course.",
-  },
-  {
-    q: "How will this course help my child in the future?",
-    a: "This course helps students build strong coding skills, problem-solving ability, and awareness of digital security, preparing them for future careers in technology.",
-  },
-  {
-    q: "Can parents track their child’s progress?",
-    a: "Yes, parents can track progress through regular updates, project reviews, and final project presentations.",
-  },
-  {
-    q: "What if a student misses a class?",
-    a: "Recorded sessions or support materials will be provided so students can catch up easily without missing important content.",
-  },
-  {
-    q: "Is there a demo class available?",
-    a: "Yes, you can book a free demo class to experience the teaching style and course structure before enrolling.",
-  }
-],
+    faqs: [
+      {
+        q: "What is this Tech Titans course about?",
+        a: "This course teaches students web development, Python programming, and cyber security in a fun and practical way. Students learn to build websites, develop applications, and understand digital safety through real-world projects.",
+      },
+      {
+        q: "Who is this program suitable for?",
+        a: "The program is designed for students from Grade 8–12. It is beginner-friendly and suitable for students who want to learn coding and technology from scratch.",
+      },
+      {
+        q: "Does my child need coding experience?",
+        a: "No prior coding experience is required. The course starts from basics and gradually moves to intermediate-level concepts.",
+      },
+      {
+        q: "What will my child be able to build after this course?",
+        a: "By the end of the program, students will be able to build websites, create Python applications, perform basic cyber security analysis, and complete a final capstone project combining all skills.",
+      },
+      {
+        q: "How is this course different from regular coding classes?",
+        a: "This program offers a complete learning experience by combining web development, programming, and cyber security, focusing on practical projects instead of just theory.",
+      },
+      {
+        q: "Are the classes live or recorded?",
+        a: "Classes are live and instructor-led, allowing students to interact, ask questions, and participate in activities in real time.",
+      },
+      {
+        q: "How many students are there in one batch?",
+        a: "We maintain small batch sizes to ensure personalized attention and better learning for every student.",
+      },
+      {
+        q: "What kind of projects will students work on?",
+        a: "Students will work on projects like portfolio websites, JavaScript apps, Python programs, password generators, and basic cyber security analysis projects, along with a final capstone project.",
+      },
+      {
+        q: "Is this course suitable for beginners?",
+        a: "Yes, the course is designed for beginners and gradually builds up to intermediate-level skills across all three domains.",
+      },
+      {
+        q: "What tools or software are required?",
+        a: "Students will need a laptop or desktop, internet connection, browser, VS Code, Python, and basic security tools. All tools used are free.",
+      },
+      {
+        q: "Will my child get a certificate?",
+        a: "Yes, students will receive certificates for Web Development, Python Programming, and Cyber Security after successfully completing the course.",
+      },
+      {
+        q: "How will this course help my child in the future?",
+        a: "This course helps students build strong coding skills, problem-solving ability, and awareness of digital security, preparing them for future careers in technology.",
+      },
+      {
+        q: "Can parents track their child’s progress?",
+        a: "Yes, parents can track progress through regular updates, project reviews, and final project presentations.",
+      },
+      {
+        q: "What if a student misses a class?",
+        a: "Recorded sessions or support materials will be provided so students can catch up easily without missing important content.",
+      },
+      {
+        q: "Is there a demo class available?",
+        a: "Yes, you can book a free demo class to experience the teaching style and course structure before enrolling.",
+      }
+    ],
     recommendedCourses: [
       {
         title: "Tech Titans",
@@ -1172,165 +1172,165 @@ faqs: [
       heading: "Hands-on Activities & Student Projects",
       description:
        "Students will work on exciting real-world projects across web development, Python programming, and cybersecurity, gaining practical exposure to multiple technology domains. Upon successful completion of the Tech Titans Program, students will receive an official Certificate of Completion by SkillzRevo Academy Junior, recognizing their skills in coding, development, and digital security. Throughout the journey, students engage in hands-on activities, assignments, and project-based learning, leading to a final capstone project that showcases their ability to build applications and understand system security in real-world scenarios.",
-	activities: [
-		  "Understand how websites and the internet work and explore real-world web structures",
-		  "Build and design responsive web pages using HTML, CSS, and JavaScript",
-		  "Create interactive web features like forms, to-do apps, and quiz applications",
-		  "Learn Python programming by building logical programs and mini applications",
-		  "Work with data structures, functions, and real-world Python use cases",
-		  "Understand cyber security fundamentals, digital safety, and common cyber threats",
-		  "Perform basic security analysis and explore ethical hacking concepts",
-		  "Work on real-world projects combining web development, Python, and cyber security",
-],   
-	capstoneProjects: [
-		  { num: 1, title: "Basic Web Page", desc: "Create a simple website using HTML and CSS with text and images." },
-		  { num: 2, title: "Personal Portfolio Website", desc: "Design a personal portfolio to showcase profile and projects." },
-		  { num: 3, title: "JavaScript To-Do App", desc: "Build an interactive to-do application using JavaScript and DOM." },
-		  { num: 4, title: "Quiz Web Application", desc: "Create a quiz app with questions, answers, and scoring system." },
-		  { num: 5, title: "Python Calculator", desc: "Develop a calculator using Python with basic operations." },
-		  { num: 6, title: "Python Mini Game", desc: "Build a simple game using Python logic and conditions." },
-		  { num: 7, title: "File Handling System", desc: "Create a Python project to read, write, and manage files." },
-		  { num: 8, title: "Password Generator Tool", desc: "Build a secure password generator using Python." },
-		  { num: 9, title: "Phishing Detection Project", desc: "Understand and simulate phishing detection techniques." },
-		  { num: 10, title: "Final Tech Project", desc: "Design and build a complete project combining web development, Python, and cyber security concepts." },
-],
-    },
-
-    certificate: {
-      heading: "Program Certificate & Learning Recognition",
-      description:
-        "Students who successfully complete the Tech Titans Program will receive an official Certificate of Completion by SkillzRevo Academy Junior. This certificate recognizes their multi-domain expertise in web development, Python programming, and cyber security. It highlights their practical experience gained through hands-on activities, real-world projects, and the successful development of a comprehensive capstone project integrating coding, application development, and system security.",
-      requirements: [
-        "Attend the required live sessions",
-        "Complete all assignments and assessments",
-        "Actively participate in hands-on activities",
-        "Successfully build and present the final Tech Titans project",
-      ],
-    },
-
-reviews: [
-  {
-    name: "Aarav Sharma",
-    rating: 5,
-    text: "The Tech Titans course was amazing. I learned how to build websites, code in Python, and understand cyber security basics.",
-    avatar: "AS",
-  },
-  {
-    name: "Ishita Verma",
-    rating: 5,
-    text: "The instructors made everything very easy to understand. I enjoyed both coding and learning about digital security.",
-    avatar: "IV",
-  },
-  {
-    name: "Vivaan Gupta",
-    rating: 5,
-    text: "Building websites and Python projects was really fun. The cyber security part was also very interesting.",
-    avatar: "VG",
-  },
-  {
-    name: "Anika Singh",
-    rating: 5,
-    text: "A perfect course for students who want to learn coding and technology in a practical and easy way.",
-    avatar: "AS",
-  },
-  {
-    name: "Reyansh Mehta",
-    rating: 5,
-    text: "The projects were very engaging. I built apps, worked on Python, and learned how to stay safe online.",
-    avatar: "RM",
-  },
-  {
-    name: "Diya Kapoor",
-    rating: 5,
-    text: "The final project helped me combine everything I learned into one complete application. It was a great experience!",
-    avatar: "DK",
-  },
-],
-faqs: [
-  {
-    q: "What is this Tech Titans course about?",
-    a: "This course teaches students web development, Python programming, and cyber security in a fun and practical way. Students learn to build websites, develop applications, and understand digital safety through real-world projects.",
-  },
-  {
-    q: "Who is this program suitable for?",
-    a: "The program is designed for students from Grade 8–12. It is beginner-friendly and suitable for students who want to learn coding and technology from scratch.",
-  },
-  {
-    q: "Does my child need coding experience?",
-    a: "No prior coding experience is required. The course starts from basics and gradually moves to intermediate-level concepts.",
-  },
-  {
-    q: "What will my child be able to build after this course?",
-    a: "By the end of the program, students will be able to build websites, create Python applications, perform basic cyber security analysis, and complete a final capstone project combining all skills.",
-  },
-  {
-    q: "How is this course different from regular coding classes?",
-    a: "This program offers a complete learning experience by combining web development, programming, and cyber security, focusing on practical projects instead of just theory.",
-  },
-  {
-    q: "Are the classes live or recorded?",
-    a: "Classes are live and instructor-led, allowing students to interact, ask questions, and participate in activities in real time.",
-  },
-  {
-    q: "How many students are there in one batch?",
-    a: "We maintain small batch sizes to ensure personalized attention and better learning for every student.",
-  },
-  {
-    q: "What kind of projects will students work on?",
-    a: "Students will work on projects like portfolio websites, JavaScript apps, Python programs, password generators, and basic cyber security analysis projects, along with a final capstone project.",
-  },
-  {
-    q: "Is this course suitable for beginners?",
-    a: "Yes, the course is designed for beginners and gradually builds up to intermediate-level skills across all three domains.",
-  },
-  {
-    q: "What tools or software are required?",
-    a: "Students will need a laptop or desktop, internet connection, browser, VS Code, Python, and basic security tools. All tools used are free.",
-  },
-  {
-    q: "Will my child get a certificate?",
-    a: "Yes, students will receive certificates for Web Development, Python Programming, and Cyber Security after successfully completing the course.",
-  },
-  {
-    q: "How will this course help my child in the future?",
-    a: "This course helps students build strong coding skills, problem-solving ability, and awareness of digital security, preparing them for future careers in technology.",
-  },
-  {
-    q: "Can parents track their child’s progress?",
-    a: "Yes, parents can track progress through regular updates, project reviews, and final project presentations.",
-  },
-  {
-    q: "What if a student misses a class?",
-    a: "Recorded sessions or support materials will be provided so students can catch up easily without missing important content.",
-  },
-  {
-    q: "Is there a demo class available?",
-    a: "Yes, you can book a free demo class to experience the teaching style and course structure before enrolling.",
-  }
-],
-    recommendedCourses: [
-      {
-        title: "Programming Masters",
-        desc: "Learn programming fundamentals with Python, Java and C++ through fun projects.",
-        grade: "8-12",
-        slug: "programming-masters",
-        icon: "",
-      },
-      {
-        title: "AI Innovators",
-        desc: "Discover the power of Artificial Intelligence and build smart applications that solve real-world problems.",
-        grade: "8-12",
-        slug: "ai-innovators",
-        icon: "",
-      },
-      {
-        title: "Full Stack Cloud Creators",
-        desc: "Design, build, and deploy full-stack cloud applications using modern technologies.",
-        grade: "8-12",
-        slug: "full-stack-cloud-creators",
-        icon: "",
-      },
+    activities: [
+        "Understand how websites and the internet work and explore real-world web structures",
+        "Build and design responsive web pages using HTML, CSS, and JavaScript",
+        "Create interactive web features like forms, to-do apps, and quiz applications",
+        "Learn Python programming by building logical programs and mini applications",
+        "Work with data structures, functions, and real-world Python use cases",
+        "Understand cyber security fundamentals, digital safety, and common cyber threats",
+        "Perform basic security analysis and explore ethical hacking concepts",
+        "Work on real-world projects combining web development, Python, and cyber security",
+    ],   
+    capstoneProjects: [
+        { num: 1, title: "Basic Web Page", desc: "Create a simple website using HTML and CSS with text and images." },
+        { num: 2, title: "Personal Portfolio Website", desc: "Design a personal portfolio to showcase profile and projects." },
+        { num: 3, title: "JavaScript To-Do App", desc: "Build an interactive to-do application using JavaScript and DOM." },
+        { num: 4, title: "Quiz Web Application", desc: "Create a quiz app with questions, answers, and scoring system." },
+        { num: 5, title: "Python Calculator", desc: "Develop a calculator using Python with basic operations." },
+        { num: 6, title: "Python Mini Game", desc: "Build a simple game using Python logic and conditions." },
+        { num: 7, title: "File Handling System", desc: "Create a Python project to read, write, and manage files." },
+        { num: 8, title: "Password Generator Tool", desc: "Build a secure password generator using Python." },
+        { num: 9, title: "Phishing Detection Project", desc: "Understand and simulate phishing detection techniques." },
+        { num: 10, title: "Final Tech Project", desc: "Design and build a complete project combining web development, Python, and cyber security concepts." },
     ],
+      },
+
+      certificate: {
+        heading: "Program Certificate & Learning Recognition",
+        description:
+          "Students who successfully complete the Tech Titans Program will receive an official Certificate of Completion by SkillzRevo Academy Junior. This certificate recognizes their multi-domain expertise in web development, Python programming, and cyber security. It highlights their practical experience gained through hands-on activities, real-world projects, and the successful development of a comprehensive capstone project integrating coding, application development, and system security.",
+        requirements: [
+          "Attend the required live sessions",
+          "Complete all assignments and assessments",
+          "Actively participate in hands-on activities",
+          "Successfully build and present the final Tech Titans project",
+        ],
+      },
+
+    reviews: [
+    {
+      name: "Aarav Sharma",
+      rating: 5,
+      text: "The Tech Titans course was amazing. I learned how to build websites, code in Python, and understand cyber security basics.",
+      avatar: "AS",
+    },
+    {
+      name: "Ishita Verma",
+      rating: 5,
+      text: "The instructors made everything very easy to understand. I enjoyed both coding and learning about digital security.",
+      avatar: "IV",
+    },
+    {
+      name: "Vivaan Gupta",
+      rating: 5,
+      text: "Building websites and Python projects was really fun. The cyber security part was also very interesting.",
+      avatar: "VG",
+    },
+    {
+      name: "Anika Singh",
+      rating: 5,
+      text: "A perfect course for students who want to learn coding and technology in a practical and easy way.",
+      avatar: "AS",
+    },
+    {
+      name: "Reyansh Mehta",
+      rating: 5,
+      text: "The projects were very engaging. I built apps, worked on Python, and learned how to stay safe online.",
+      avatar: "RM",
+    },
+    {
+      name: "Diya Kapoor",
+      rating: 5,
+      text: "The final project helped me combine everything I learned into one complete application. It was a great experience!",
+      avatar: "DK",
+    },
+    ],
+    faqs: [
+    {
+      q: "What is this Tech Titans course about?",
+      a: "This course teaches students web development, Python programming, and cyber security in a fun and practical way. Students learn to build websites, develop applications, and understand digital safety through real-world projects.",
+    },
+    {
+      q: "Who is this program suitable for?",
+      a: "The program is designed for students from Grade 8–12. It is beginner-friendly and suitable for students who want to learn coding and technology from scratch.",
+    },
+    {
+      q: "Does my child need coding experience?",
+      a: "No prior coding experience is required. The course starts from basics and gradually moves to intermediate-level concepts.",
+    },
+    {
+      q: "What will my child be able to build after this course?",
+      a: "By the end of the program, students will be able to build websites, create Python applications, perform basic cyber security analysis, and complete a final capstone project combining all skills.",
+    },
+    {
+      q: "How is this course different from regular coding classes?",
+      a: "This program offers a complete learning experience by combining web development, programming, and cyber security, focusing on practical projects instead of just theory.",
+    },
+    {
+      q: "Are the classes live or recorded?",
+      a: "Classes are live and instructor-led, allowing students to interact, ask questions, and participate in activities in real time.",
+    },
+    {
+      q: "How many students are there in one batch?",
+      a: "We maintain small batch sizes to ensure personalized attention and better learning for every student.",
+    },
+    {
+      q: "What kind of projects will students work on?",
+      a: "Students will work on projects like portfolio websites, JavaScript apps, Python programs, password generators, and basic cyber security analysis projects, along with a final capstone project.",
+    },
+    {
+      q: "Is this course suitable for beginners?",
+      a: "Yes, the course is designed for beginners and gradually builds up to intermediate-level skills across all three domains.",
+    },
+    {
+      q: "What tools or software are required?",
+      a: "Students will need a laptop or desktop, internet connection, browser, VS Code, Python, and basic security tools. All tools used are free.",
+    },
+    {
+      q: "Will my child get a certificate?",
+      a: "Yes, students will receive certificates for Web Development, Python Programming, and Cyber Security after successfully completing the course.",
+    },
+    {
+      q: "How will this course help my child in the future?",
+      a: "This course helps students build strong coding skills, problem-solving ability, and awareness of digital security, preparing them for future careers in technology.",
+    },
+    {
+      q: "Can parents track their child’s progress?",
+      a: "Yes, parents can track progress through regular updates, project reviews, and final project presentations.",
+    },
+    {
+      q: "What if a student misses a class?",
+      a: "Recorded sessions or support materials will be provided so students can catch up easily without missing important content.",
+    },
+    {
+      q: "Is there a demo class available?",
+      a: "Yes, you can book a free demo class to experience the teaching style and course structure before enrolling.",
+    }
+    ],
+      recommendedCourses: [
+        {
+          title: "Programming Masters",
+          desc: "Learn programming fundamentals with Python, Java and C++ through fun projects.",
+          grade: "8-12",
+          slug: "programming-masters",
+          icon: "",
+        },
+        {
+          title: "AI Innovators",
+          desc: "Discover the power of Artificial Intelligence and build smart applications that solve real-world problems.",
+          grade: "8-12",
+          slug: "ai-innovators",
+          icon: "",
+        },
+        {
+          title: "Full Stack Cloud Creators",
+          desc: "Design, build, and deploy full-stack cloud applications using modern technologies.",
+          grade: "8-12",
+          slug: "full-stack-cloud-creators",
+          icon: "",
+        },
+      ],
   },
 ];
 

@@ -10,16 +10,14 @@ export function CertificateModal({ isOpen, onClose, courseTitle, certs }) {
     return () => window.removeEventListener("keydown", onKey);
   }, [isOpen, onClose]);
 
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [isOpen]);
-
+  // ✅ FIX 2: Don't block page scroll — removed the overflow hidden logic entirely
+  
   if (!isOpen) return null;
 
   const hasNasscom = !!certs?.nasscom;
 
   return (
+    // ✅ FIX 1: Click anywhere on backdrop → closes modal
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto"
       style={{ backgroundColor: "rgba(0,0,0,0.80)", backdropFilter: "blur(6px)" }}
@@ -27,7 +25,7 @@ export function CertificateModal({ isOpen, onClose, courseTitle, certs }) {
     >
       <div
         className="relative w-full max-w-2xl my-auto"
-        onClick={(e) => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()} // prevents closing when clicking the cert itself
       >
         {/* Close button */}
         <button
@@ -38,8 +36,6 @@ export function CertificateModal({ isOpen, onClose, courseTitle, certs }) {
         </button>
 
         <div className="flex flex-col gap-4">
-
-          {/* SkillzRevo Certificate */}
           {certs?.single ? (
             <div className="flex flex-col items-center gap-2">
               {hasNasscom && (
@@ -62,7 +58,6 @@ export function CertificateModal({ isOpen, onClose, courseTitle, certs }) {
             </div>
           )}
 
-          {/* Nasscom Certificate (bundles only) */}
           {hasNasscom && (
             <div className="flex flex-col items-center gap-2">
               <span className="text-white/70 text-xs font-bold uppercase tracking-widest">
@@ -75,7 +70,6 @@ export function CertificateModal({ isOpen, onClose, courseTitle, certs }) {
               />
             </div>
           )}
-
         </div>
       </div>
     </div>

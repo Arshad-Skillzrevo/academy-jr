@@ -480,14 +480,10 @@ function BundleCard({
 
         {/* Price + CTA */}
         <div className="flex items-center justify-between gap-2">
-          <div className="flex items-baseline gap-0.5">
-            <IndianRupee
-              size={isMobile ? 11 : 13}
-              strokeWidth={2.5}
-              style={{ color: BRAND.orange, marginBottom: 1 }}
-            />
+          <div className="flex flex-col items-baseline gap-0.5">
+
             <span
-              className="bundle-card-price"
+              className="bundle-card-price flex"
               style={{
                 fontFamily: "'Fredoka One', cursive",
                 fontSize: "1.3rem",
@@ -495,11 +491,20 @@ function BundleCard({
                 lineHeight: 1,
               }}
             >
+              <IndianRupee
+              size={isMobile ? 11 : 13}
+              strokeWidth={2.5}
+              style={{ color: BRAND.orange, marginBottom: 1 }}
+            />
               {formatINR(bundle.price)}
             </span>
             <p className="text-[12px] text-gray-500 font-normal">
                inclusive of all taxes
             </p>
+            <p className="text-[15px] text-orange-500 font-normal">
+               20% Off
+            </p>
+
           </div>
           <div className="flex items-center gap-1.5">
             <motion.button
